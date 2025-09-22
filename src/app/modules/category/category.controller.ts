@@ -15,7 +15,6 @@ const createCategory = catchAsync(async (req, res) => {
 
 const getCategories = catchAsync(async (req, res) => {
      const result = await CategoryService.getCategoriesFromDB();
-
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,

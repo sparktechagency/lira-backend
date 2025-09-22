@@ -4,9 +4,6 @@ import { CategoryController } from './category.controller';
 import { CategoryValidation } from './category.validation';
 import validateRequest from '../../middleware/validateRequest';
 import auth from '../../middleware/auth';
-import fileUploadHandler from '../../middleware/fileUploadHandler';
-import parseFileData from '../../middleware/parseFileData';
-import { FOLDER_NAMES } from '../../../enums/files';
 const router = express.Router();
 
 router.post('/create-service', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), validateRequest(CategoryValidation.createCategoryZodSchema), CategoryController.createCategory);

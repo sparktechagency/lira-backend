@@ -1,62 +1,61 @@
 import { StatusCodes } from 'http-status-codes';
-import { ICategory } from './group.interface';
-import { Category } from './group.model';
 import unlinkFile from '../../../shared/unlinkFile';
-import { Bookmark } from '../bookmark/bookmark.model';
 import AppError from '../../../errors/AppError';
+import { Group } from './group.model';
+import { IGroup } from './group.interface';
 
-const createCategoryToDB = async (payload: ICategory) => {
+const createGroupToDB = async (payload: IGroup) => {
      const { name, image } = payload;
-     const isExistName = await Category.findOne({ name: name });
+     const isExistName = await Group.findOne({ name: name });
 
      if (isExistName) {
           unlinkFile(image);
-          throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
+          throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Group Name Already Exist');
      }
 
-     const createCategory: any = await Category.create(payload);
-     if (!createCategory) {
+     const createGroup: any = await Group.create(payload);
+     if (!createGroup) {
           unlinkFile(image);
-          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create Category');
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create Group');
      }
 
-     return createCategory;
+     return createGroup;
 };
 
-const getCategoriesFromDB = async (): Promise<ICategory[]> => {
-     const result = await Category.find({});
+const getGroupsFromDB = async (): Promise<IGroup[]> => {
+     const result = await Group.find({});
      return result;
 };
 
-const updateCategoryToDB = async (id: string, payload: ICategory) => {
-     const isExistCategory: any = await Category.findById(id);
+const updateGroupToDB = async (id: string, payload: IGroup) => {
+     const isExistGroup: any = await Group.findById(id);
 
-     if (!isExistCategory) {
-          throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
+     if (!isExistGroup) {
+          throw new AppError(StatusCodes.BAD_REQUEST, "Group doesn't exist");
      }
 
      if (payload.image) {
-          unlinkFile(isExistCategory?.image);
+          unlinkFile(isExistGroup?.image);
      }
 
-     const updateCategory = await Category.findOneAndUpdate({ _id: id }, payload, {
+     const updateCategory = await Group.findOneAndUpdate({ _id: id }, payload, {
           new: true,
      });
 
      return updateCategory;
 };
 
-const deleteCategoryToDB = async (id: string): Promise<ICategory | null> => {
-     const deleteCategory = await Category.findByIdAndDelete(id);
-     if (!deleteCategory) {
-          throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
+const deleteGroupToDB = async (id: string): Promise<IGroup | null> => {
+     const deleteGroup = await Group.findByIdAndDelete(id);
+     if (!deleteGroup) {
+          throw new AppError(StatusCodes.BAD_REQUEST, "Group doesn't exist");
      }
-     return deleteCategory;
+     return deleteGroup;
 };
 
-export const CategoryService = {
-     createCategoryToDB,
-     getCategoriesFromDB,
-     updateCategoryToDB,
-     deleteCategoryToDB,
+export const GroupService = {
+     createGroupToDB,
+     getGroupsFromDB,
+     updateGroupToDB,
+     deleteGroupToDB,
 };

@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 1
+    },
+    "auditLog": "R:\\projects\\lira-backend\\winston\\error\\.9b740fde61954cb3233620f0ce221323516f9792-audit.json",
+    "files": [
+        {
+            "date": 1758522638483,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\22-09-2025-12-error.log",
+            "hash": "cd1c1c457b893ba2942abb86404d0ed0d54678c19402c7b2eeaadfe6dadb6177"
+        }
+    ],
+    "hashType": "sha256"
+}

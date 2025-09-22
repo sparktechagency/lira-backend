@@ -9,11 +9,12 @@ import parseFileData from '../../middleware/parseFileData';
 import { FOLDER_NAMES } from '../../../enums/files';
 const router = express.Router();
 
-router.post('/create-service', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGE), validateRequest(CategoryValidation.createCategoryZodSchema), CategoryController.createCategory);
+router.post('/create-service', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), validateRequest(CategoryValidation.createCategoryZodSchema), CategoryController.createCategory);
+router.post('/shuffle-serial', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.shuffleCategorySerial);
 
 router
      .route('/:id')
-     .patch(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGE), CategoryController.updateCategory)
+     .patch(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.updateCategory)
      .delete(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.deleteCategory);
 
 router.get('/', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER), CategoryController.getCategories);

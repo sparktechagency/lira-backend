@@ -49,9 +49,20 @@ const deleteCategory = catchAsync(async (req, res) => {
      });
 });
 
+const shuffleCategorySerial = catchAsync(async (req, res) => {
+     const result = await CategoryService.shuffleCategorySerial(req.body);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: 'Category serial shuffled successfully',
+          data: result,
+     });
+});
+
 export const CategoryController = {
      createCategory,
      getCategories,
      updateCategory,
      deleteCategory,
+     shuffleCategorySerial,
 };

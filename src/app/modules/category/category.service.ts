@@ -6,17 +6,15 @@ import { Bookmark } from '../bookmark/bookmark.model';
 import AppError from '../../../errors/AppError';
 
 const createCategoryToDB = async (payload: ICategory) => {
-     const { name, image } = payload;
+     const { name } = payload;
      const isExistName = await Category.findOne({ name: name });
 
      if (isExistName) {
-          unlinkFile(image);
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
      }
 
      const createCategory: any = await Category.create(payload);
      if (!createCategory) {
-          unlinkFile(image);
           throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create Category');
      }
 
@@ -34,11 +32,6 @@ const updateCategoryToDB = async (id: string, payload: ICategory) => {
      if (!isExistCategory) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
      }
-
-     if (payload.image) {
-          unlinkFile(isExistCategory?.image);
-     }
-
      const updateCategory = await Category.findOneAndUpdate({ _id: id }, payload, {
           new: true,
      });
@@ -53,10 +46,19 @@ const deleteCategoryToDB = async (id: string): Promise<ICategory | null> => {
      }
      return deleteCategory;
 };
+const shuffleCategorySerial = async (categoryOrder: Array<{ _id: string; serial: number }>) => {
+     if (!categoryOrder || !Array.isArray(categoryOrder) || categoryOrder.length === 0) {
+          return;
+     }
+     const updatePromises = categoryOrder.map((item) => Category.findByIdAndUpdate(item._id, { serial: item.serial }, { new: true }));
 
+     const result = await Promise.all(updatePromises);
+     return result;
+};
 export const CategoryService = {
      createCategoryToDB,
      getCategoriesFromDB,
      updateCategoryToDB,
      deleteCategoryToDB,
+     shuffleCategorySerial
 };

@@ -12,11 +12,7 @@ const serviceSchema = new Schema<ICategory, CategoryModel>(
                type: String,
                required: true,
                unique: true,
-          },
-          image: {
-               type: String,
-               required: true,
-          },
+          }
      },
      { timestamps: true },
 );

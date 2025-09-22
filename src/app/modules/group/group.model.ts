@@ -13,11 +13,7 @@ const groupSchema = new Schema<IGroup, GroupModel>(
                type: String,
                required: true,
                unique: true,
-          },
-          image: {
-               type: String,
-               required: true,
-          },
+          }
      },
      { timestamps: true },
 );

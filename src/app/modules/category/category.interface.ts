@@ -1,6 +1,7 @@
 import { Model } from 'mongoose';
 
 export type ICategory = {
+     serial: number;
      name: string;
      image: string;
 };

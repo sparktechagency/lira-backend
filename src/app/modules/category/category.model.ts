@@ -3,6 +3,11 @@ import { ICategory, CategoryModel } from './category.interface';
 
 const serviceSchema = new Schema<ICategory, CategoryModel>(
      {
+          serial: {
+               type: Number,
+               required: false,
+               default: 1,
+          },
           name: {
                type: String,
                required: true,

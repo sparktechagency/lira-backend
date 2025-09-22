@@ -1,18 +1,18 @@
 import { z } from 'zod';
 
-const createCategoryZodSchema = z.object({
+const createGroupZodSchema = z.object({
      body: z.object({
-          name: z.string({ required_error: 'Category name is required' }),
+          name: z.string({ required_error: 'Group name is required' }),
      }),
 });
 
-const updateCategoryZodSchema = z.object({
+const updateGroupZodSchema = z.object({
      body: z.object({
           name: z.string().optional(),
      }),
 });
 
-export const CategoryValidation = {
-     createCategoryZodSchema,
-     updateCategoryZodSchema,
+export const GroupValidation = {
+     createGroupZodSchema,
+     updateGroupZodSchema,
 };

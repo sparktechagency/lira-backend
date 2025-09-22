@@ -2,22 +2,11 @@ import { Request, Response } from 'express';
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { CategoryService } from './group.service';
+import { GroupService } from './group.service';
 
-const createCategory = catchAsync(async (req: Request, res: Response) => {
-     const serviceData = req.body;
 
-     let image = '';
-     if (req.files && 'image' in req.files && req.files.image[0]) {
-          image = `/images/${req.files.image[0].filename}`;
-     }
-     const data = {
-          ...serviceData,
-          image,
-     };
-
-     const result = await CategoryService.createCategoryToDB(data);
-
+const createGroup = catchAsync(async (req, res) => {
+     const result = await GroupService.createGroupToDB(req.body);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
@@ -26,55 +15,52 @@ const createCategory = catchAsync(async (req: Request, res: Response) => {
      });
 });
 
-const getCategories = catchAsync(async (req: Request, res: Response) => {
-     const result = await CategoryService.getCategoriesFromDB();
+const getGroups = catchAsync(async (req, res) => {
+     const result = await GroupService.getGroupsFromDB();
 
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
-          message: 'Category retrieved successfully',
+          message: 'Group retrieved successfully',
           data: result,
      });
 });
 
-const updateCategory = catchAsync(async (req: Request, res: Response) => {
+const updateGroup = catchAsync(async (req, res) => {
      const id = req.params.id;
-     const updateCategoryData = req.body;
-
-     let image;
-     if (req.files && 'image' in req.files && req.files.image[0]) {
-          image = `/images/${req.files.image[0].filename}`;
-     }
-     const data = {
-          ...updateCategoryData,
-          image,
-     };
-
-     const result = await CategoryService.updateCategoryToDB(id, data);
-
+     const result = await GroupService.updateGroupToDB(id, req.body);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
-          message: 'Category updated successfully',
+          message: 'Group updated successfully',
           data: result,
      });
 });
 
-const deleteCategory = catchAsync(async (req: Request, res: Response) => {
+const deleteGroup = catchAsync(async (req, res) => {
      const id = req.params.id;
-     const result = await CategoryService.deleteCategoryToDB(id);
+     const result = await GroupService.deleteGroupToDB(id);
 
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
-          message: 'Category delete successfully',
+          message: 'Group delete successfully',
           data: result,
      });
 });
-
-export const CategoryController = {
-     createCategory,
-     getCategories,
-     updateCategory,
-     deleteCategory,
+const shuffleGroupSerial = catchAsync(async (req, res) => {
+     const result = await GroupService.shuffleGroupSerial(req.body);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: 'Group serial shuffled successfully',
+          data: result,
+     });
+});
+export const GroupController = {
+     createGroup,
+     getGroups,
+     updateGroup,
+     deleteGroup,
+     shuffleGroupSerial,
 };

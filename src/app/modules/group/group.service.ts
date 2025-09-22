@@ -52,10 +52,19 @@ const deleteGroupToDB = async (id: string): Promise<IGroup | null> => {
      }
      return deleteGroup;
 };
+const shuffleGroupSerial = async (groupOrder: Array<{ _id: string; serial: number }>) => {
+     if (!groupOrder || !Array.isArray(groupOrder) || groupOrder.length === 0) {
+          return;
+     }
+     const updatePromises = groupOrder.map((item) => Group.findByIdAndUpdate(item._id, { serial: item.serial }, { new: true }));
 
+     const result = await Promise.all(updatePromises);
+     return result;
+};
 export const GroupService = {
      createGroupToDB,
      getGroupsFromDB,
      updateGroupToDB,
      deleteGroupToDB,
+     shuffleGroupSerial,
 };

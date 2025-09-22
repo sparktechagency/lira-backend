@@ -4,6 +4,11 @@ import { GroupModel, IGroup } from './group.interface';
 
 const groupSchema = new Schema<IGroup, GroupModel>(
      {
+          serial:{
+               type: Number,
+               required: true,
+               default: 1,
+          },
           name: {
                type: String,
                required: true,

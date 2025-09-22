@@ -7,7 +7,7 @@ import auth from '../../middleware/auth';
 import fileUploadHandler from '../../middleware/fileUploadHandler';
 const router = express.Router();
 
-router.post('/create-service', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), fileUploadHandler(), validateRequest(CategoryValidation.createCategoryZodSchema), CategoryController.createCategory);
+router.post('/create-group', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), fileUploadHandler(), validateRequest(CategoryValidation.createCategoryZodSchema), CategoryController.createCategory);
 
 router
      .route('/:id')

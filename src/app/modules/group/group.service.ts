@@ -20,7 +20,7 @@ const createGroupToDB = async (payload: IGroup) => {
 };
 
 const getGroupsFromDB = async (): Promise<IGroup[]> => {
-     const result = await Group.find({});
+     const result = await Group.find({}).sort({ serial: 1 });
      return result;
 };
 

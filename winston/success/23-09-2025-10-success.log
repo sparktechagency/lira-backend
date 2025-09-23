@@ -43,3 +43,23 @@ Tue Sep 23 2025 10:29:23 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/groups/sh
 Tue Sep 23 2025 10:31:29 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/groups/68d21f94dd68b7214c680ddc 200 - 6.660 ms
 Tue Sep 23 2025 10:31:47 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/groups/68d21f94dd68b7214c680ddc 200 - 9.053 ms
 Tue Sep 23 2025 10:32:38 [SERVER-NAME] info: 10.10.7.62 - DELETE /api/v1/groups/68d21f94dd68b7214c680ddc 200 - 21.332 ms
+Tue Sep 23 2025 10:36:22 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups/ 200 - 34.593 ms
+Tue Sep 23 2025 10:37:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 23 2025 10:37:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 23 2025 10:37:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 23 2025 10:37:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 23 2025 10:37:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 23 2025 10:37:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 23 2025 10:37:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 23 2025 10:37:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 23 2025 10:37:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 23 2025 10:37:33 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 23 2025 10:37:33 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 23 2025 10:37:33 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 23 2025 10:37:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 23 2025 10:37:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 23 2025 10:37:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 23 2025 10:37:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 23 2025 10:38:15 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 265.142 ms
+Tue Sep 23 2025 10:38:42 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 215.175 ms
+Tue Sep 23 2025 10:38:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups/ 200 - 15.123 ms

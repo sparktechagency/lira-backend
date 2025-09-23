@@ -6,7 +6,7 @@ import validateRequest from '../../middleware/validateRequest';
 import auth from '../../middleware/auth';
 const router = express.Router();
 
-router.post('/create-group', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), validateRequest(GroupValidation.createGroupZodSchema), GroupController.createGroup);
+router.post('/create', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), validateRequest(GroupValidation.createGroupZodSchema), GroupController.createGroup);
 router.post('/shuffle', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), GroupController.shuffleGroupSerial);
 router
      .route('/:id')

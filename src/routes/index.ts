@@ -2,6 +2,8 @@ import express from 'express';
 import { UserRouter } from '../app/modules/user/user.route';
 import { AuthRouter } from '../app/modules/auth/auth.route';
 import SettingsRouter from '../app/modules/settings/settings.route';
+import { CategoryRoutes } from '../app/modules/category/category.route';
+import { GroupRoutes } from '../app/modules/group/group.route';
 
 const router = express.Router();
 const routes = [
@@ -16,6 +18,14 @@ const routes = [
      {
           path: '/settings',
           route: SettingsRouter,
+     },
+     {
+          path: '/categories',
+          route: CategoryRoutes,
+     },
+     {
+          path: '/groups',
+          route: GroupRoutes,
      }
 ];
 

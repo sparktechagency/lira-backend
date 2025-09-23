@@ -6,7 +6,7 @@ const groupSchema = new Schema<IGroup, GroupModel>(
      {
           serial:{
                type: Number,
-               required: true,
+               required: false,
                default: 1,
           },
           name: {

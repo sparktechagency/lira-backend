@@ -1,6 +1,6 @@
 import express from 'express';
 import { USER_ROLES } from '../../../enums/user';
-import { RuleController } from './rule.controller';
+import { RuleController } from './unit-type.controller';
 import auth from '../../middleware/auth';
 const router = express.Router();
 

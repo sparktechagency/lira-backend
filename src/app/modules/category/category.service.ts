@@ -32,15 +32,41 @@ const getCategoriesFromDB = async (): Promise<ICategory[]> => {
 };
 
 const updateCategoryToDB = async (id: string, payload: ICategory) => {
-     const isExistCategory: any = await Category.findById(id);
-
+     const { name, groupId } = payload;
+     // Check if category exists
+     const isExistCategory = await Category.findById(id);
      if (!isExistCategory) {
           throw new AppError(StatusCodes.BAD_REQUEST, "Category doesn't exist");
      }
-     const updateCategory = await Category.findOneAndUpdate({ _id: id }, payload, {
-          new: true,
-     });
 
+     if (name) {
+          const isExistName = await Category.findOne({
+               name: name,
+               _id: { $ne: id }
+          });
+
+          if (isExistName) {
+               throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
+          }
+     }
+     // If groupId is provided, validate and set group name
+     if (groupId) {
+          const group = await Group.findById(groupId);
+          if (!group) {
+               throw new AppError(StatusCodes.BAD_REQUEST, 'Group not found');
+          }
+          payload.group = group.name;
+     }
+
+     const updateCategory = await Category.findOneAndUpdate(
+          { _id: id },
+          payload,
+          { new: true }
+     );
+
+     if (!updateCategory) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to update Category');
+     }
      return updateCategory;
 };
 

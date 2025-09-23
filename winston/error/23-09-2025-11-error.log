@@ -1,0 +1,2 @@
+Tue Sep 23 2025 11:6:31 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/groups/create 403 - 47.072 ms
+Tue Sep 23 2025 11:49:38 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/categorys/shuffle-serial 404 - 16.793 ms

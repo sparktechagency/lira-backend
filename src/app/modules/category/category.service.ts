@@ -1,17 +1,22 @@
 import { StatusCodes } from 'http-status-codes';
 import { ICategory } from './category.interface';
 import { Category } from './category.model';
-import unlinkFile from '../../../shared/unlinkFile';
-import { Bookmark } from '../bookmark/bookmark.model';
 import AppError from '../../../errors/AppError';
+import { Group } from '../group/group.model';
 
 const createCategoryToDB = async (payload: ICategory) => {
-     const { name } = payload;
+     const { name, groupId } = payload;
      const isExistName = await Category.findOne({ name: name });
 
      if (isExistName) {
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
      }
+
+     const group = await Group.findById(groupId);
+     if (!group) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Group not found');
+     }
+     payload.group = group.name;
 
      const createCategory: any = await Category.create(payload);
      if (!createCategory) {

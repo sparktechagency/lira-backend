@@ -12,6 +12,10 @@ const categorySchema = new Schema<ICategory, CategoryModel>(
                required: true,
                unique: true,
           },
+          url: {
+               type: String,
+               required: true,
+          },
           groupId: {
                type: Schema.Types.ObjectId,
                ref: 'Group',

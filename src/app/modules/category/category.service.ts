@@ -26,8 +26,12 @@ const createCategoryToDB = async (payload: ICategory) => {
      return createCategory;
 };
 
-const getCategoriesFromDB = async (): Promise<ICategory[]> => {
-     const result = await Category.find({});
+const getCategoriesFromDB = async (id: string): Promise<ICategory[]> => {
+     if (id) {
+          const result = await Category.find({ groupId: id }).sort({ serial: 1 });
+          return result;
+     }
+     const result = await Category.find({}).sort({ serial: 1 });
      return result;
 };
 

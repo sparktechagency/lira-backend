@@ -7,21 +7,21 @@ import { IUnitType } from './unit-type.interface';
 const createUnitTypeToDB = async (payload: IUnitType) => {
      // check if unit type exist or not
      const isExistUnitType = await UnitType.findOne({ content: payload.content, type: payload.type });
-     if (!isExistUnitType){
+     if (isExistUnitType) {
           throw new AppError(StatusCodes.BAD_REQUEST, `${payload.type} and ${payload.content} already exist!`);
      }
      const result = await UnitType.create(payload);
      return result;
 };
-const getUnitTypeFromDB = async (type: 'type' | 'unit') => {
-     const result = await UnitType.findOne({ type });
+const getUnitTypeFromDB = async (key: 'type' | 'unit') => {
+     const result = await UnitType.find({ type: key });
      if (!result) {
-          throw new AppError(StatusCodes.BAD_REQUEST, `Unit type ${type} doesn't exist!`);
+          throw new AppError(StatusCodes.BAD_REQUEST, `Unit type ${key} doesn't exist!`);
      }
      return result;
 };
 
-export const RuleService = {
+export const UnitTypeService = {
      createUnitTypeToDB,
      getUnitTypeFromDB,
 };

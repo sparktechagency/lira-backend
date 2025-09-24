@@ -1,0 +1,10 @@
+Wed Sep 24 2025 12:12:40 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create 404 - 9.315 ms
+Wed Sep 24 2025 12:13:52 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create/type 401 - 10.512 ms
+Wed Sep 24 2025 12:14:1 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create/type 400 - 17.405 ms
+Wed Sep 24 2025 12:14:55 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create/type 400 - 5.436 ms
+Wed Sep 24 2025 12:14:57 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create/type 400 - 9.305 ms
+Wed Sep 24 2025 12:14:57 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create/type 400 - 4.210 ms
+Wed Sep 24 2025 12:15:44 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create 400 - 20.097 ms
+Wed Sep 24 2025 12:17:5 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create 400 - 18.073 ms
+Wed Sep 24 2025 12:17:37 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create 400 - 22.267 ms
+Wed Sep 24 2025 12:18:30 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/unit-type/create 400 - 6.378 ms

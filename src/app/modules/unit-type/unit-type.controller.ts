@@ -1,12 +1,12 @@
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { RuleService } from './unit-type.service';
+import { UnitTypeService } from './unit-type.service';
 
 //unit type
 const createUnitType = catchAsync(async (req, res) => {
      const { ...unitTypeData } = req.body;
-     const result = await RuleService.createUnitTypeToDB(unitTypeData);
+     const result = await UnitTypeService.createUnitTypeToDB(unitTypeData);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
@@ -17,7 +17,7 @@ const createUnitType = catchAsync(async (req, res) => {
 
 const getUnitType = catchAsync(async (req, res) => {
      const { type } = req.params as { type: 'type' | 'unit' };
-     const result = await RuleService.getUnitTypeFromDB(type);
+     const result = await UnitTypeService.getUnitTypeFromDB(type);
 
      sendResponse(res, {
           success: true,
@@ -29,7 +29,7 @@ const getUnitType = catchAsync(async (req, res) => {
 
 
 
-export const RuleController = {
+export const UnitTypeController = {
      createUnitType,
      getUnitType,
 };

@@ -4,6 +4,7 @@ import { AuthRouter } from '../app/modules/auth/auth.route';
 import SettingsRouter from '../app/modules/settings/settings.route';
 import { CategoryRoutes } from '../app/modules/category/category.route';
 import { GroupRoutes } from '../app/modules/group/group.route';
+import { UnitTypeRoute } from '../app/modules/unit-type/unit-type.route';
 
 const router = express.Router();
 const routes = [
@@ -26,7 +27,11 @@ const routes = [
      {
           path: '/groups',
           route: GroupRoutes,
-     }
+     },
+     {
+          path: '/unit-type',
+          route: UnitTypeRoute,
+     },
 ];
 
 routes.forEach((element) => {

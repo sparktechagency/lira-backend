@@ -1,7 +1,7 @@
 import { model, Schema } from 'mongoose';
 import { IUnitType, UnitTypeModel } from './unit-type.interface';
 
-const ruleSchema = new Schema<IUnitType, UnitTypeModel>({
+const unitTypeSchema = new Schema<IUnitType, UnitTypeModel>({
      content: {
           type: String,
           required: true,
@@ -13,4 +13,4 @@ const ruleSchema = new Schema<IUnitType, UnitTypeModel>({
      },
 });
 
-export const UnitType = model<IUnitType, UnitTypeModel>('UnitType', ruleSchema);
+export const UnitType = model<IUnitType, UnitTypeModel>('UnitType', unitTypeSchema);

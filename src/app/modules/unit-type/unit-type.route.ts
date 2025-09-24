@@ -1,10 +1,12 @@
 import express from 'express';
 import { USER_ROLES } from '../../../enums/user';
-import { RuleController } from './unit-type.controller';
+import { UnitTypeController } from './unit-type.controller';
 import auth from '../../middleware/auth';
 const router = express.Router();
 
 //unit type
-router.route('/:type').post(auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), RuleController.createUnitType).get(RuleController.getUnitType);
+router.post('/create', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), UnitTypeController.createUnitType)
+router.get('/:type', UnitTypeController.getUnitType);
+
 
 export const UnitTypeRoute = router;

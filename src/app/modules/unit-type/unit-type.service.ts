@@ -21,7 +21,26 @@ const getUnitTypeFromDB = async (key: 'type' | 'unit') => {
      return result;
 };
 
+const updateUnitTypeToDB = async (id: string, payload: IUnitType) => {
+     const result = await UnitType.findByIdAndUpdate(id, payload, {
+          new: true,
+          runValidators: true,
+     });
+     if (!result) {
+          throw new AppError(StatusCodes.BAD_REQUEST, `Unit type ${id} doesn't exist!`);
+     }
+     return result;
+};
+const deleteUnitTypeFromDB = async (id: string) => {
+     const result = await UnitType.findByIdAndDelete(id);
+     if (!result) {
+          throw new AppError(StatusCodes.BAD_REQUEST, `Unit type ${id} doesn't exist!`);
+     }
+     return result;
+};
 export const UnitTypeService = {
      createUnitTypeToDB,
      getUnitTypeFromDB,
+     updateUnitTypeToDB,
+     deleteUnitTypeFromDB,
 };

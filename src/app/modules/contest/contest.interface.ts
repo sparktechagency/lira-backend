@@ -1,33 +1,64 @@
 import { Types } from "mongoose";
 // State
-export type State = 
-  | "Alabama" | "Alaska" | "Arizona" | "Arkansas" | "California" | "Colorado" | "Connecticut"
+export type US_STATES =
+    | "Alabama" | "Alaska" | "Arizona" | "Arkansas" | "California" | "Colorado" | "Connecticut"
     | "Delaware" | "Florida" | "Georgia" | "Hawaii" | "Idaho" | "Illinois" | "Indiana" | "Iowa"
     | "Kansas" | "Kentucky" | "Louisiana" | "Maine" | "Maryland" | "Massachusetts" | "Michigan"
     | "Minnesota" | "Mississippi" | "Missouri" | "Montana" | "Nebraska" | "Nevada" | "New Hampshire"
     | "New Jersey" | "New Mexico" | "New York" | "North Carolina" | "North Dakota" | "Ohio" | "Oklahoma"
     | "Oregon" | "Pennsylvania" | "Rhode Island" | "South Carolina" | "South Dakota" | "Tennessee"
     | "Texas" | "Utah" | "Vermont" | "Virginia" | "Washington" | "West Virginia" | "Wisconsin" | "Wyoming";
-
+export interface IPriceTier {
+    min: number;
+    max: number;
+    pricePerPrediction: number;
+}
+// Pricing model types
+export type PricingModel = "flat" | "tiered" | "tiered_percentage";
 export interface IContest {
     name: string;
     category: string;
     categoryId: Types.ObjectId;
     description: string;
-    state: State[];
-    price: {
+    state: US_STATES[];
+    prize: {
         title: string;
         type: string;
     }
-    predictions:{
+    predictions: {
         min: number;
         max: number;
         increment: number;
+        unit: string;
+        numberOfEntriesPerPrediction: number;
+        predictionType?: string;
+        dataSource?: string;
+    };
+
+    pricing: {
+        model: PricingModel;
+        flat?: number;
+        tiered?: IPriceTier[];
+        tieredPercentage?: IPriceTier[];
+        currentPrice?: number;
+        priceChange?: string;
+        lastUpdated?: Date;
     }
+    results?: {
+        actualValue: number;
+        winningPredictions: Types.ObjectId[];
+        prizeDistributed: boolean;
+        endedAt: Date;
+    };
     startTime: Date;
     endTime: Date;
+    endOffset: number;
     image: string;
     isActive: boolean;
+    isDraft: boolean;
+    totalEntries?: number;
+    maxEntries?: number;
+    createdBy?: Types.ObjectId;
 }
 
 // StateEnum

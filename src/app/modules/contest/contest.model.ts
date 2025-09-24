@@ -51,8 +51,7 @@ const ContestSchema = new Schema<IContest>({
         type: { 
             type: String, 
             required: [true, 'Prize type is required'] 
-        },
-        amount: { type: Number, min: 0 }
+        }
     },
 
     predictions: {

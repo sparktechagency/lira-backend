@@ -36,7 +36,6 @@ export interface IContest extends Document {
     prize: {
         title: string;
         type: string;
-        amount?: number;
     };
     
     predictions: {

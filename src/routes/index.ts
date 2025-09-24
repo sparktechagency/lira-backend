@@ -5,6 +5,7 @@ import SettingsRouter from '../app/modules/settings/settings.route';
 import { CategoryRoutes } from '../app/modules/category/category.route';
 import { GroupRoutes } from '../app/modules/group/group.route';
 import { UnitTypeRoute } from '../app/modules/unit-type/unit-type.route';
+import { ContestRoutes } from '../app/modules/contest/contest.route';
 
 const router = express.Router();
 const routes = [
@@ -31,6 +32,10 @@ const routes = [
      {
           path: '/unit-type',
           route: UnitTypeRoute,
+     },
+     {
+          path: '/contest',
+          route: ContestRoutes,
      },
 ];
 

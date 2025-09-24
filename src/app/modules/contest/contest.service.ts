@@ -9,8 +9,8 @@ const createContest = async (payload: IContest) => {
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Contest creation failed');
     }
-
     return result;
 
 }
+
 export const ContestService = { createContest }

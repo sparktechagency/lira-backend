@@ -1,8 +1,7 @@
-import mongoose, { Schema, Document, Types } from "mongoose";
-import { IContest, IPriceTier } from "./contest.interface";
+import mongoose, { Schema } from "mongoose";
+import { IContest, IGeneratedPrediction, IPredictionTier } from "./contest.interface";
 
-// State enum
-export const US_STATES = [
+const US_STATES_ARRAY = [
     "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
     "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
     "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",
@@ -12,124 +11,283 @@ export const US_STATES = [
     "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ] as const;
 
-
-// Schemas
-const PriceTierSchema = new Schema<IPriceTier>({
-    min: { type: Number, required: true },
-    max: { type: Number, required: true },
-    pricePerPrediction: { type: Number, required: true }
-}, { _id: false });
-
-
 const ContestSchema = new Schema<IContest>({
-    name: { 
-        type: String, 
-        required: true,
-        trim: true 
+    name: {
+        type: String,
+        required: [true, 'Contest name is required'],
+        trim: true,
+        maxlength: [200, 'Contest name cannot exceed 200 characters']
     },
-    category: { 
-        type: String, 
-        required: true 
+    category: {
+        type: String,
+        required: [true, 'Category is required'],
+        trim: true
     },
-    categoryId: { 
-        type: Schema.Types.ObjectId, 
+    categoryId: {
+        type: Schema.Types.ObjectId,
         ref: 'ContestCategory',
-        required: true 
+        required: [true, 'Category ID is required']
     },
-    description: { 
-        type: String, 
-        required: true,
-        trim: true 
+    description: {
+        type: String,
+        required: [true, 'Description is required'],
+        trim: true,
+        maxlength: [1000, 'Description cannot exceed 1000 characters']
     },
-    state: [{ 
-        type: String, 
-        enum: US_STATES,
-        required: true 
-    }],
-    
-    prize: {
-        title: { type: String, required: true },
-        type: { type: String, required: true },
-    },
-    
-    predictions: {
-        min: { type: Number, required: true },
-        max: { type: Number, required: true },
-        increment: { type: Number, required: true },
-        unit: { type: String, required: true },
-        numberOfEntriesPerPrediction: { type: Number, default: 1 },
-        predictionType: { type: String },
-        dataSource: { type: String }
-    },
-    
-    pricing: {
-        model: { 
-            type: String, 
-            enum: ['flat', 'tiered', 'tiered_percentage'],
-            required: true 
+    state: [{
+        type: String,
+        enum: {
+            values: US_STATES_ARRAY,
+            message: 'Invalid state provided'
         },
-        flat: { type: Number },
-        tiered: [PriceTierSchema],
-        tieredPercentage: [PriceTierSchema],
-        currentPrice: { type: Number },
-        priceChange: { type: String },
-        lastUpdated: { type: Date }
+        required: true
+    }],
+
+    prize: {
+        title: { 
+            type: String, 
+            required: [true, 'Prize title is required'] 
+        },
+        type: { 
+            type: String, 
+            required: [true, 'Prize type is required'] 
+        },
+        amount: { type: Number, min: 0 }
     },
-    
-    startTime: { 
-        type: Date, 
-        required: true 
+
+    predictions: {
+        increment: { 
+            type: Number, 
+            required: [true, 'Increment is required'],
+            min: [1, 'Increment must be at least 1']
+        },
+        unit: { 
+            type: String, 
+            required: [true, 'Unit is required'] 
+        },
+        numberOfEntriesPerPrediction: { 
+            type: Number, 
+            default: 1,
+            min: [1, 'Number of entries must be at least 1']
+        },
+        predictionType: { type: String },
+        dataSource: { type: String },
+        tiers: [{
+            id: { 
+                type: String, 
+                required: [true, 'Tier ID is required'] 
+            },
+            name: { 
+                type: String, 
+                required: [true, 'Tier name is required'] 
+            },
+            min: { 
+                type: Number, 
+                required: [true, 'Tier min value is required'] 
+            },
+            max: { 
+                type: Number, 
+                required: [true, 'Tier max value is required'] 
+            },
+            pricePerPrediction: { 
+                type: Number, 
+                required: [true, 'Price per prediction is required'],
+                min: [0, 'Price cannot be negative']
+            },
+            isActive: { 
+                type: Boolean, 
+                default: true 
+            }
+        }],
+        generatedPredictions: [{
+            value: { 
+                type: Number, 
+                required: [true, 'Prediction value is required'] 
+            },
+            tierId: { 
+                type: String, 
+                required: [true, 'Tier ID is required'] 
+            },
+            currentEntries: { 
+                type: Number, 
+                default: 0,
+                min: [0, 'Current entries cannot be negative']
+            },
+            maxEntries: { 
+                type: Number, 
+                required: [true, 'Max entries is required'],
+                min: [1, 'Max entries must be at least 1']
+            },
+            isAvailable: { 
+                type: Boolean, 
+                default: true 
+            }
+        }]
     },
-    endTime: { 
-        type: Date, 
-        required: true 
+
+    startTime: {
+        type: Date,
+        required: [true, 'Start time is required']
     },
-    endOffset: { type: Number },
+    endTime: {
+        type: Date,
+        required: [true, 'End time is required']
+    },
+
     image: { type: String },
-    isActive: { 
-        type: Boolean, 
-        default: true 
+
+    isActive: {
+        type: Boolean,
+        default: true
     },
-    isDraft: { 
-        type: Boolean, 
-        default: false 
+    isDraft: {
+        type: Boolean,
+        default: true // Default to draft when creating
     },
-    totalEntries: { 
-        type: Number, 
-        default: 0 
+
+    totalEntries: {
+        type: Number,
+        default: 0,
+        min: [0, 'Total entries cannot be negative']
     },
-    maxEntries: { type: Number },
-    
-    createdBy: { 
-        type: Schema.Types.ObjectId, 
-        ref: 'User' 
+    maxEntries: { 
+        type: Number,
+        min: [1, 'Max entries must be at least 1']
     },
+
+    createdBy: {
+        type: Schema.Types.ObjectId,
+        ref: 'User'
+    },
+
     results: {
         actualValue: { type: Number },
-        winningPredictions: [{ type: Schema.Types.ObjectId, ref: 'ContestEntry' }],
-        prizeDistributed: { type: Boolean, default: false },
+        winningPredictions: [{ 
+            type: Schema.Types.ObjectId, 
+            ref: 'ContestEntry' 
+        }],
+        prizeDistributed: { 
+            type: Boolean, 
+            default: false 
+        },
         endedAt: { type: Date }
     }
 }, {
     timestamps: true
 });
 
-
-
-// Indexes
-ContestSchema.index({ isActive: 1, startTime: 1 });
+// Indexes for performance
+ContestSchema.index({ isActive: 1, isDraft: 1, startTime: 1 });
 ContestSchema.index({ categoryId: 1 });
-ContestSchema.index({ state: 1 });
-ContestSchema.index({ endTime: 1 });
 ContestSchema.index({ createdBy: 1 });
+ContestSchema.index({ endTime: 1 });
 
+// Pre-save validation
+ContestSchema.pre('save', function(next) {
+    // Validate end time is after start time
+    if (this.endTime <= this.startTime) {
+        return next(new Error('End time must be after start time'));
+    }
+    
+    // Validate tiers don't overlap and are in correct order
+    const sortedTiers = this.predictions.tiers
+        .filter(tier => tier.isActive)
+        .sort((a, b) => a.min - b.min);
+        
+    for (let i = 0; i < sortedTiers.length - 1; i++) {
+        if (sortedTiers[i].max >= sortedTiers[i + 1].min) {
+            return next(new Error('Prediction tiers cannot overlap'));
+        }
+    }
+    
+    next();
+});
 
+// Instance Methods
+ContestSchema.methods.generatePredictions = function(): Promise<IContest> {
+    const generatedPredictions: IGeneratedPrediction[] = [];
 
+    this.predictions.tiers.forEach((tier: IPredictionTier) => {
+        if (!tier.isActive) return;
 
+        const start = tier.min;
+        const end = tier.max;
+        const increment = this.predictions.increment;
 
+        for (let value = start; value <= end; value += increment) {
+            generatedPredictions.push({
+                value,
+                tierId: tier.id,
+                currentEntries: 0,
+                maxEntries: this.predictions.numberOfEntriesPerPrediction,
+                isAvailable: true
+            });
+        }
+    });
 
+    this.predictions.generatedPredictions = generatedPredictions;
+    return this.save();
+};
 
-// Static methods
+ContestSchema.methods.updatePredictionEntries = function(predictionValue: number): Promise<IContest> {
+    const prediction = this.predictions.generatedPredictions?.find(
+        (p: IGeneratedPrediction) => p.value === predictionValue
+    );
+    
+    if (!prediction) {
+        throw new Error(`Prediction with value ${predictionValue} not found`);
+    }
+    
+    if (!prediction.isAvailable) {
+        throw new Error('This prediction is no longer available');
+    }
+    
+    if (prediction.currentEntries >= prediction.maxEntries) {
+        throw new Error('Prediction limit reached');
+    }
+    
+    prediction.currentEntries += 1;
+    prediction.isAvailable = prediction.currentEntries < prediction.maxEntries;
+    this.totalEntries += 1;
+    
+    return this.save();
+};
+
+ContestSchema.methods.getPriceForPrediction = function(predictionValue: number): number {
+    const prediction = this.predictions.generatedPredictions?.find(
+        (p: IGeneratedPrediction) => p.value === predictionValue
+    );
+    
+    if (!prediction) {
+        throw new Error(`Prediction with value ${predictionValue} not found`);
+    }
+    
+    const tier = this.predictions.tiers.find((t: IPredictionTier) => t.id === prediction.tierId);
+    
+    if (!tier) {
+        throw new Error('Associated tier not found');
+    }
+    
+    return tier.pricePerPrediction;
+};
+
+ContestSchema.methods.getAvailablePredictions = function(): IGeneratedPrediction[] {
+    return this.predictions.generatedPredictions?.filter(
+        (p: IGeneratedPrediction) => p.isAvailable
+    ) || [];
+};
+
+ContestSchema.methods.getTotalCostForPredictions = function(predictionValues: number[]): number {
+    let totalCost = 0;
+    
+    predictionValues.forEach(value => {
+        totalCost += this.getPriceForPrediction(value);
+    });
+    
+    return totalCost;
+};
+
+// Static Methods
 ContestSchema.statics.getActiveContests = function() {
     return this.find({ 
         isActive: true, 
@@ -147,5 +305,4 @@ ContestSchema.statics.getUpcomingContests = function() {
     }).populate('categoryId');
 };
 
-// Models
 export const Contest = mongoose.model<IContest>('Contest', ContestSchema);

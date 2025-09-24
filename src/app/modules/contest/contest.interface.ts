@@ -1,4 +1,36 @@
-// StateEnum.ts
+import { Types } from "mongoose";
+// State
+export type State = 
+  | "Alabama" | "Alaska" | "Arizona" | "Arkansas" | "California" | "Colorado" | "Connecticut"
+    | "Delaware" | "Florida" | "Georgia" | "Hawaii" | "Idaho" | "Illinois" | "Indiana" | "Iowa"
+    | "Kansas" | "Kentucky" | "Louisiana" | "Maine" | "Maryland" | "Massachusetts" | "Michigan"
+    | "Minnesota" | "Mississippi" | "Missouri" | "Montana" | "Nebraska" | "Nevada" | "New Hampshire"
+    | "New Jersey" | "New Mexico" | "New York" | "North Carolina" | "North Dakota" | "Ohio" | "Oklahoma"
+    | "Oregon" | "Pennsylvania" | "Rhode Island" | "South Carolina" | "South Dakota" | "Tennessee"
+    | "Texas" | "Utah" | "Vermont" | "Virginia" | "Washington" | "West Virginia" | "Wisconsin" | "Wyoming";
+
+export interface IContest {
+    name: string;
+    category: string;
+    categoryId: Types.ObjectId;
+    description: string;
+    state: State[];
+    price: {
+        title: string;
+        type: string;
+    }
+    predictions:{
+        min: number;
+        max: number;
+        increment: number;
+    }
+    startTime: Date;
+    endTime: Date;
+    image: string;
+    isActive: boolean;
+}
+
+// StateEnum
 export enum StateEnum {
     ALABAMA = 'Alabama',
     ALASKA = 'Alaska',

@@ -4,6 +4,7 @@ import { IContest } from "./contest.interface";
 import { Contest } from "./contest.model";
 
 const createContest = async (payload: IContest) => {
+        // console.log("createContest req body",   payload);
     const result = await Contest.create(payload);
 
     if (!result) {

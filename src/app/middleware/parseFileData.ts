@@ -14,6 +14,8 @@ const parseFileData = (...fields: FieldInput[]) => {
           try {
                const fileData: Record<string, string | string[] | null> = {};
                let fieldsToProcess: FileFieldConfig[] = [];
+
+               // Process fields input
                fields.forEach(field => {
                     if (typeof field === 'string') {
                          fieldsToProcess.push({ fieldName: field });
@@ -22,13 +24,15 @@ const parseFileData = (...fields: FieldInput[]) => {
                     }
                });
 
-               fieldsToProcess.forEach(({ fieldName, forceMultiple, forceSingle }) => {
+               // Handle files for each field
+               for (const { fieldName, forceMultiple, forceSingle } of fieldsToProcess) {
                     try {
                          if (!req.files) {
                               fileData[fieldName] = null;
                               console.log(`No files found for field: ${fieldName}`);
-                              return;
+                              continue;
                          }
+
                          let filesForField: Express.Multer.File[] | undefined;
 
                          if (Array.isArray(req.files)) {
@@ -40,8 +44,9 @@ const parseFileData = (...fields: FieldInput[]) => {
                          if (!filesForField || filesForField.length === 0) {
                               fileData[fieldName] = null;
                               console.log(`No files found for field: ${fieldName}`);
-                              return;
+                              continue;
                          }
+
                          if (forceSingle) {
                               try {
                                    const filePath = getSingleFilePath(req.files, fieldName);
@@ -83,19 +88,20 @@ const parseFileData = (...fields: FieldInput[]) => {
                                    }
                               }
                          }
-                    } catch (error: any) {
+                    } catch (error) {
                          fileData[fieldName] = null;
-                         console.log(`Error processing files for field: ${fieldName}`, error.message);
+                         console.log(`Error processing files for field: ${fieldName}`, error instanceof Error ? error.message : 'Unknown error');
                     }
-               });
+               }
 
-               // Handle additional data if present
+               // Parse and merge additional data if present
                if (req.body && req.body.data) {
                     try {
                          const data = JSON.parse(req.body.data);
                          req.body = { ...fileData, ...data };
                     } catch (parseError) {
-                         req.body = { ...fileData, ...req.body };
+                         console.log('Error parsing body data:', parseError instanceof Error ? parseError.message : 'Unknown error');  // Added log for better debugging
+                         req.body = { ...fileData, ...req.body };  // Fall back to just file data if parsing fails
                     }
                } else {
                     req.body = { ...fileData, ...req.body };
@@ -103,7 +109,7 @@ const parseFileData = (...fields: FieldInput[]) => {
 
                next();
           } catch (error) {
-               next(error);
+               next(error);  // Pass the error to the next middleware for handling
           }
      };
 };

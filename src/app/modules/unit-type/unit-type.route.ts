@@ -6,7 +6,7 @@ const router = express.Router();
 
 //unit type
 router.post('/create', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), UnitTypeController.createUnitType)
-router.get('/:type', UnitTypeController.getUnitType);
+router.get('/', UnitTypeController.getUnitType);
 
 
 export const UnitTypeRoute = router;

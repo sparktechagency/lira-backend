@@ -6,7 +6,7 @@ const unitTypeSchema = new Schema<IUnitType, UnitTypeModel>({
           type: String,
           required: true,
      },
-     type: {
+     key: {
           type: String,  
           enum: ['type', 'unit'],
           select: 0,

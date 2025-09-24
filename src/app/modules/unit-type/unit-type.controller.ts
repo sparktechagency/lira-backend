@@ -16,7 +16,7 @@ const createUnitType = catchAsync(async (req, res) => {
 });
 
 const getUnitType = catchAsync(async (req, res) => {
-     const { type } = req.params as { type: 'type' | 'unit' };
+     const { type } = req.query as { type: 'type' | 'unit' };
      const result = await UnitTypeService.getUnitTypeFromDB(type);
 
      sendResponse(res, {

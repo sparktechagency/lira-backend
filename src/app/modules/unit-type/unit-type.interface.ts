@@ -2,7 +2,7 @@ import { Model } from 'mongoose';
 
 export type IUnitType = {
      content: string;
-     type: 'type' | 'unit';
+     key: 'type' | 'unit';
 };
 
 export type UnitTypeModel = Model<IUnitType, Record<string, unknown>>;

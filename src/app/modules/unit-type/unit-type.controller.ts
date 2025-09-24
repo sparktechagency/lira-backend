@@ -3,25 +3,26 @@ import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { RuleService } from './unit-type.service';
 
-//privacy policy
-const createPrivacyPolicy = catchAsync(async (req, res) => {
-     const { ...privacyData } = req.body;
-     const result = await RuleService.createPrivacyPolicyToDB(privacyData);
+//unit type
+const createUnitType = catchAsync(async (req, res) => {
+     const { ...unitTypeData } = req.body;
+     const result = await RuleService.createUnitTypeToDB(unitTypeData);
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
-          message: 'Privacy policy created successfully',
+          message: 'Unit type created successfully',
           data: result,
      });
 });
 
-const getPrivacyPolicy = catchAsync(async (req, res) => {
-     const result = await RuleService.getPrivacyPolicyFromDB();
+const getUnitType = catchAsync(async (req, res) => {
+     const { type } = req.params as { type: 'type' | 'unit' };
+     const result = await RuleService.getUnitTypeFromDB(type);
 
      sendResponse(res, {
           success: true,
           statusCode: StatusCodes.OK,
-          message: 'Privacy policy retrieved successfully',
+          message: `${type} retrieved successfully`,
           data: result,
      });
 });
@@ -29,6 +30,6 @@ const getPrivacyPolicy = catchAsync(async (req, res) => {
 
 
 export const RuleController = {
-     createPrivacyPolicy,
-     getPrivacyPolicy,
+     createUnitType,
+     getUnitType,
 };

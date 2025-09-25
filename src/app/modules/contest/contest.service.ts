@@ -29,7 +29,7 @@ const createContest = async (payload: Partial<IContest>) => {
     return result;
 };
 const getAllContests = async (query: Record<string, unknown>) => {
-    const queryBuilder = new QueryBuilder(Contest.find(), query)
+    const queryBuilder = new QueryBuilder(Contest.find().populate('categoryId'), query)
 
     const result = await queryBuilder.filter()
         .sort()
@@ -45,5 +45,12 @@ const getAllContests = async (query: Record<string, unknown>) => {
         result
     }
 };
+const getContestById = async (id: string) => {
 
-export const ContestService = { createContest, getAllContests }
+    const result = await Contest.findById(id).populate('categoryId');
+    if (!result) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+    return result;
+};
+export const ContestService = { createContest, getAllContests, getContestById }

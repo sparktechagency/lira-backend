@@ -33,7 +33,7 @@ const createContest = async (payload: Partial<IContest>) => {
     return result;
 };
 const getAllContests = async (query: Record<string, unknown>) => {
-    const queryBuilder = new QueryBuilder(Contest.find().populate('categoryId'), query)
+    const queryBuilder = new QueryBuilder(Contest.find().populate('categoryId', 'name url group'), query)
 
     const result = await queryBuilder.filter()
         .sort()

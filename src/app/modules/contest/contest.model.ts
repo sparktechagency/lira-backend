@@ -206,38 +206,87 @@ ContestSchema.index({ endTime: 1 });
 
 
 
-// Instance Methods
+// // Instance Methods
+// ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
+//     const generatedPredictions: IGeneratedPrediction[] = [];
+
+//     // Use predictions min/max instead of tiers
+//     const start = this.predictions.minPrediction;
+//     const end = this.predictions.maxPrediction;
+//     const increment = this.predictions.increment;
+
+//     // Generate all possible predictions based on min, max, increment
+//     for (let value = start; value <= end; value += increment) {
+//         // Find which tier this prediction belongs to
+//         const tier = this.pricing.tiers.find((t: IPredictionTier) =>
+//             t.isActive && value >= t.min && value <= t.max
+//         );
+
+//         if (tier) {
+//             generatedPredictions.push({
+//                 value,
+//                 tierId: tier.id,
+//                 price: tier.pricePerPrediction,
+//                 currentEntries: 0,
+//                 maxEntries: this.predictions.numberOfEntriesPerPrediction,
+//                 isAvailable: true
+//             });
+//         }
+//     }
+
+//     this.predictions.generatedPredictions = generatedPredictions;
+//     return this.save();
+// };
 ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
+    console.log('=== Generate Predictions Debug ===');
+    
     const generatedPredictions: IGeneratedPrediction[] = [];
-
-    // Use predictions min/max instead of tiers
+    
     const start = this.predictions.minPrediction;
-    const end = this.predictions.maxPrediction;
+    const end = this.predictions.maxPrediction; // Note: should be maxPrediction (not maxPredictions)
     const increment = this.predictions.increment;
+    
+    console.log(`Prediction Range: ${start} to ${end} with increment ${increment}`);
 
-    // Generate all possible predictions based on min, max, increment
+    
+    // Generate all possible predictions
+    const allPossiblePredictions = [];
     for (let value = start; value <= end; value += increment) {
-        // Find which tier this prediction belongs to
-        const tier = this.pricing.tiers.find((t: IPredictionTier) =>
-            t.isActive && value >= t.min && value <= t.max
-        );
-
+        allPossiblePredictions.push(value);
+    }
+    console.log(`All Possible Predictions:`, allPossiblePredictions);
+    
+    // Check which predictions fall into tiers
+    for (let value = start; value <= end; value += increment) {
+        console.log(`\nChecking prediction: ${value}`);
+        
+        const tier = this.pricing.tiers.find((t: IPredictionTier) => {
+            const inRange = t.isActive && value >= t.min && value <= t.max;
+            console.log(`  Tier ${t.name} (${t.min}-${t.max}): ${inRange ? 'MATCH' : 'NO MATCH'}`);
+            return inRange;
+        });
+        
         if (tier) {
+            console.log(`  ✓ Added to tier: ${tier.name}`);
             generatedPredictions.push({
                 value,
-                tierId: tier.id,
+                tierId: tier.id || `tier_${tier.name.replace(/\s/g, '_')}`, // Generate ID if missing
                 price: tier.pricePerPrediction,
                 currentEntries: 0,
                 maxEntries: this.predictions.numberOfEntriesPerPrediction,
                 isAvailable: true
             });
+        } else {
+            console.log(`  ✗ No tier found for value: ${value}`);
         }
     }
-
+    
+    console.log(`\nFinal Generated Predictions: ${generatedPredictions.length}`);
+    console.log('Generated Predictions:', generatedPredictions);
+    
     this.predictions.generatedPredictions = generatedPredictions;
     return this.save();
 };
-
 ContestSchema.methods.updatePredictionEntries = function (predictionValue: number): Promise<IContest> {
     const prediction = this.predictions.generatedPredictions?.find(
         (p: IGeneratedPrediction) => p.value === predictionValue

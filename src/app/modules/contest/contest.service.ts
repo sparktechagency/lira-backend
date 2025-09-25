@@ -44,8 +44,6 @@ const getAllContests = async (query: Record<string, unknown>) => {
         meta,
         result
     }
-
-
 };
 
-export const ContestService = { createContest }
+export const ContestService = { createContest, getAllContests }

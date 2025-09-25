@@ -25,8 +25,8 @@ const getAllContests = catchAsync(async (req, res) => {
         success: true,
         statusCode: StatusCodes.OK,
         message: 'Contests retrieved successfully',
-        data: result.data,
-        meta: result.pagination
+        data: result.result,
+        meta: result.meta
     });
 });
 

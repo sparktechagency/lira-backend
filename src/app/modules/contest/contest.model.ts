@@ -69,6 +69,11 @@ const ContestSchema = new Schema<IContest>({
             default: 1,
             min: [1, 'Number of entries must be at least 1']
         },
+        placePercentages: {
+            type: Map,
+            of: Number,
+            default: () => new Map()
+        },
         predictionType: { type: String },
         dataSource: { type: String },
         tiers: [{
@@ -135,13 +140,10 @@ const ContestSchema = new Schema<IContest>({
 
     image: { type: String },
 
-    isActive: {
-        type: Boolean,
-        default: true
-    },
-    isDraft: {
-        type: Boolean,
-        default: true // Default to draft when creating
+    status: {
+        type: String,
+        enum: ['Draft', 'Published', 'Active', 'Deleted'],
+        default: 'Draft'
     },
 
     totalEntries: {

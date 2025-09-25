@@ -42,6 +42,7 @@ export interface IContest extends Document {
         increment: number;
         unit: string;
         numberOfEntriesPerPrediction: number;
+        placePercentages: Map<string, number>;
         predictionType?: string;
         dataSource?: string;
         tiers: IPredictionTier[];
@@ -52,8 +53,7 @@ export interface IContest extends Document {
     endTime: Date;
     
     image?: string;
-    isActive: boolean;
-    isDraft: boolean;
+    status: 'Draft' | 'Published' | 'Active' | 'Deleted';
     
     totalEntries: number;
     maxEntries?: number;

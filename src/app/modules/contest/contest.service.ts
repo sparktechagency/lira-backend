@@ -22,10 +22,6 @@ const createContest = async (payload: Partial<IContest>) => {
 
     const result = await Contest.create(payload);
 
-    if (result) {
-        await result.generatePredictions();
-    }
-
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Contest creation failed');
     }
@@ -67,7 +63,7 @@ const updateContest = async (id: string, payload: Partial<IContest>) => {
     }
 
     // Don't allow updating if contest has already started (unless it's draft)
-    if (!existingContest.isDraft && existingContest.startTime <= new Date()) {
+    if (existingContest.status !== 'Draft' && existingContest.startTime <= new Date()) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Cannot update contest that has already started');
     }
 
@@ -96,5 +92,26 @@ const deleteContest = async (id: string) => {
     const result = await Contest.findByIdAndDelete(id);
     return result;
 };
+const publishContest = async (id: string) => {
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest }
+    const contest = await Contest.findById(id);
+    if (!contest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    if (contest.status !== 'Draft') {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Contest is already published');
+    }
+
+    // Generate predictions before publishing
+    if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
+        await contest.generatePredictions();
+    }
+
+    contest.status = 'Published';
+    const result = await contest.save();
+
+    return result;
+};
+
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest }

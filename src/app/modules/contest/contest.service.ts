@@ -78,4 +78,19 @@ const updateContest = async (id: string, payload: Partial<IContest>) => {
 
     return result;
 };
+const deleteContest = async (id: string) => {
+    
+    const contest = await Contest.findById(id);
+    if (!contest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    // Don't allow deleting if contest has entries
+    if (contest.totalEntries > 0) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Cannot delete contest with existing entries');
+    }
+
+    const result = await Contest.findByIdAndDelete(id);
+    return result;
+};
 export const ContestService = { createContest, getAllContests, getContestById, updateContest }

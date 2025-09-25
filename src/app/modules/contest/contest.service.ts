@@ -113,5 +113,18 @@ const publishContest = async (id: string) => {
 
     return result;
 };
+const generateContestPredictions = async (id: string) => {
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest }
+    const contest = await Contest.findById(id);
+    if (!contest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    if (contest.predictions.tiers.length === 0) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'No prediction tiers found');
+    }
+
+    const result = await contest.generatePredictions();
+    return result;
+};
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions }

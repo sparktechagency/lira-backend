@@ -44,6 +44,7 @@ const getContestById = catchAsync(async (req, res) => {
 
 const updateContest = catchAsync(async (req, res) => {
     const { id } = req.params;
+    console.log("hi...........................................");
     const result = await ContestService.updateContest(id, req.body);
 
     sendResponse(res, {

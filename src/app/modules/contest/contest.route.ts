@@ -5,6 +5,8 @@ import { USER_ROLES } from '../../../enums/user';
 import fileUploadHandler from '../../middleware/fileUploadHandler';
 import parseFileData from '../../middleware/parseFileData';
 import { FOLDER_NAMES } from '../../../enums/files';
+import validateRequest from '../../middleware/validateRequest';
+import { ContestValidation } from './contest.validation';
 
 const router = express.Router();
 
@@ -14,11 +16,12 @@ router.post(
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     fileUploadHandler(),
     parseFileData(FOLDER_NAMES.IMAGE),
+    validateRequest(ContestValidation.contestSchema),
     ContestController.createContest
 );
 
 router.get(
-    '/all',
+    '/',
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     ContestController.getAllContests
 );

@@ -25,7 +25,7 @@ const ContestSchema = new Schema<IContest>({
     },
     categoryId: {
         type: Schema.Types.ObjectId,
-        ref: 'ContestCategory',
+        ref: 'Category',
         required: [true, 'Category ID is required']
     },
     description: {
@@ -169,7 +169,7 @@ const ContestSchema = new Schema<IContest>({
             type: Boolean, 
             default: false 
         },
-        endedAt: { type: Date }
+        endedAt: { type: Date , default: null}
     }
 }, {
     timestamps: true

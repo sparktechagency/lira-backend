@@ -6,11 +6,6 @@
     "auditLog": "R:\\projects\\lira-backend\\winston\\error\\.9b740fde61954cb3233620f0ce221323516f9792-audit.json",
     "files": [
         {
-            "date": 1758715464800,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\24-09-2025-18-error.log",
-            "hash": "199a95e5fb6721ca12eb0debe886bf7c46709970dc0b2611802332b536832f58"
-        },
-        {
             "date": 1758720734026,
             "name": "R:\\projects\\lira-backend\\winston\\error\\24-09-2025-19-error.log",
             "hash": "8d867cb0bc49658f6a6d3df4b85b3c5753cafc1aa7b41c8f188416c89380dabc"
@@ -44,6 +39,11 @@
             "date": 1758793099671,
             "name": "R:\\projects\\lira-backend\\winston\\error\\25-09-2025-15-error.log",
             "hash": "6e039e240c284d1c08beefa1e84971811ff151589c1a6338366b23bd2842a920"
+        },
+        {
+            "date": 1758805471378,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\25-09-2025-19-error.log",
+            "hash": "78c89d9307789822d162430be923d0674ac826d47848025f77a3d5bbc4bedb05"
         }
     ],
     "hashType": "sha256"

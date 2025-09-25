@@ -59,7 +59,6 @@ const getContestById = async (id: string) => {
 };
 const updateContest = async (id: string, payload: Partial<IContest>) => {
 
-
     // Check if contest exists
     const existingContest = await Contest.findById(id);
     if (!existingContest) {
@@ -71,7 +70,7 @@ const updateContest = async (id: string, payload: Partial<IContest>) => {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Cannot update contest that has already started');
     }
 
-    const result = await Contest.findByIdAndUpdate(id, payload, {
+    const result = await Contest.findOneAndUpdate({ _id: id }, payload, {
         new: true,
         runValidators: true
     }).populate('categoryId');

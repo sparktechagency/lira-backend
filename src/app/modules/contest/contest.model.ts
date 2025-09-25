@@ -239,33 +239,33 @@ ContestSchema.index({ endTime: 1 });
 // };
 ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
     console.log('=== Generate Predictions Debug ===');
-    
+
     const generatedPredictions: IGeneratedPrediction[] = [];
-    
+
     const start = this.predictions.minPrediction;
     const end = this.predictions.maxPrediction; // Note: should be maxPrediction (not maxPredictions)
     const increment = this.predictions.increment;
-    
+
     console.log(`Prediction Range: ${start} to ${end} with increment ${increment}`);
 
-    
+
     // Generate all possible predictions
     const allPossiblePredictions = [];
     for (let value = start; value <= end; value += increment) {
         allPossiblePredictions.push(value);
     }
     console.log(`All Possible Predictions:`, allPossiblePredictions);
-    
+
     // Check which predictions fall into tiers
     for (let value = start; value <= end; value += increment) {
         console.log(`\nChecking prediction: ${value}`);
-        
+
         const tier = this.pricing.tiers.find((t: IPredictionTier) => {
             const inRange = t.isActive && value >= t.min && value <= t.max;
             console.log(`  Tier ${t.name} (${t.min}-${t.max}): ${inRange ? 'MATCH' : 'NO MATCH'}`);
             return inRange;
         });
-        
+
         if (tier) {
             console.log(`  ✓ Added to tier: ${tier.name}`);
             generatedPredictions.push({
@@ -280,10 +280,10 @@ ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
             console.log(`  ✗ No tier found for value: ${value}`);
         }
     }
-    
+
     console.log(`\nFinal Generated Predictions: ${generatedPredictions.length}`);
     console.log('Generated Predictions:', generatedPredictions);
-    
+
     this.predictions.generatedPredictions = generatedPredictions;
     return this.save();
 };
@@ -372,7 +372,25 @@ ContestSchema.statics.getUpcomingContests = function () {
         startTime: { $gt: new Date() }
     }).populate('categoryId');
 };
+ContestSchema.pre('findOneAndUpdate', function (next) {
+    const update: any = this.getUpdate() || {};
+    const set = update.$set || {};
 
+    const touchesPredictions =
+        Object.keys(set).some(k => k.startsWith('predictions.')) ||
+        update.predictions; // in case plain replaces
+
+    const touchesPricing =
+        Object.keys(set).some(k => k.startsWith('pricing.')) ||
+        update.pricing;
+
+    if (touchesPredictions || touchesPricing) {
+        // ensure reset happens "before" the update is applied
+        update.$set = { 'predictions.generatedPredictions': [], ...set };
+        this.setUpdate(update);
+    }
+    next();
+});
 // Query Middleware
 ContestSchema.pre('find', function (next) {
     this.find({ isDeleted: { $ne: true } });

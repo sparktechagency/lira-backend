@@ -2,6 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
 import { IContest } from "./contest.interface";
 import { Contest } from "./contest.model";
+import QueryBuilder from "../../builder/QueryBuilder";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -27,6 +28,24 @@ const createContest = async (payload: Partial<IContest>) => {
 
     return result;
 };
+const getAllContests = async (query: Record<string, unknown>) => {
+    const queryBuilder = new QueryBuilder(Contest.find(), query)
 
+    const result = await queryBuilder.filter()
+        .sort()
+        .paginate()
+        .fields()
+        .search(['name', 'description'])
+        .modelQuery.exec()
+
+    const meta = await queryBuilder.countTotal()
+
+    return {
+        meta,
+        result
+    }
+
+
+};
 
 export const ContestService = { createContest }

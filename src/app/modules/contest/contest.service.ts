@@ -5,16 +5,19 @@ import { Contest } from "./contest.model";
 import QueryBuilder from "../../builder/QueryBuilder";
 
 const createContest = async (payload: Partial<IContest>) => {
+    // console.log(payload, "createContest payload");
     // Validate required fields
     if (!payload.name || !payload.categoryId || !payload.description) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Name, categoryId, and description are required');
     }
-
-    // Validate predictions tiers
-    if (!payload.predictions?.tiers || payload.predictions.tiers.length === 0) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'At least one prediction tier is required');
+    // Validate predictions fields
+    if (!payload.predictions?.minPrediction || !payload.predictions?.maxPrediction || !payload.predictions?.increment) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Prediction min, max, and increment are required');
     }
-
+    // Validate pricing tiers
+    if (!payload.pricing?.tiers || payload.pricing.tiers.length === 0) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'At least one pricing tier is required');
+    }
     // Validate time
     if (payload.startTime && payload.endTime && new Date(payload.endTime) <= new Date(payload.startTime)) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'End time must be after start time');
@@ -25,6 +28,7 @@ const createContest = async (payload: Partial<IContest>) => {
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Contest creation failed');
     }
+
 
     return result;
 };
@@ -89,7 +93,13 @@ const deleteContest = async (id: string) => {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Cannot delete contest with existing entries');
     }
 
-    const result = await Contest.findByIdAndDelete(id);
+    const result = await Contest.findByIdAndUpdate(id, { status: 'Deleted' }, {
+        new: true,
+        runValidators: true
+    });
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Contest update failed');
+    }
     return result;
 };
 const publishContest = async (id: string) => {
@@ -120,8 +130,8 @@ const generateContestPredictions = async (id: string) => {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
 
-    if (contest.predictions.tiers.length === 0) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'No prediction tiers found');
+    if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
+        await contest.generatePredictions();
     }
 
     const result = await contest.generatePredictions();

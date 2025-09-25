@@ -12,11 +12,25 @@ export type US_STATES =
 export interface IGeneratedPrediction {
     value: number;
     tierId: string;
+    price: number;
     currentEntries: number;
     maxEntries: number;
     isAvailable: boolean;
 }
+export interface IPrediction {
+    minPrediction: number;
+    maxPrediction: number;
+    increment: number;
+    unit: '$' | '%' | 'points' | 'unit';
+    numberOfEntriesPerPrediction: number;
+    generatedPredictions: IGeneratedPrediction[];
+    placePercentages: Map<string, number>;
+}
+export interface IPricing {
+    predictionType: 'percentage' | 'tier' | 'priceOnly';
+    tiers: IPredictionTier[];
 
+}
 export interface IPredictionTier {
     id: string;
     name: string; // "118k - 118.5k"
@@ -32,40 +46,27 @@ export interface IContest extends Document {
     categoryId: Types.ObjectId;
     description: string;
     state: US_STATES[];
-    
+
     prize: {
         title: string;
         type: string;
     };
-    
-    predictions: {
-        increment: number;
-        unit: string;
-        numberOfEntriesPerPrediction: number;
-        placePercentages: Map<string, number>;
-        predictionType?: string;
-        dataSource?: string;
-        tiers: IPredictionTier[];
-        generatedPredictions?: IGeneratedPrediction[];
-    };
-    
+    predictions: IPrediction;
+    pricing: IPricing;
     startTime: Date;
     endTime: Date;
-    
     image?: string;
     status: 'Draft' | 'Published' | 'Active' | 'Deleted';
-    
     totalEntries: number;
     maxEntries?: number;
     createdBy?: Types.ObjectId;
-    
     results?: {
         actualValue: number;
         winningPredictions: Types.ObjectId[];
         prizeDistributed: boolean;
         endedAt: Date;
     };
-    
+
     // Instance methods
     generatePredictions(): Promise<this>;
     updatePredictionEntries(predictionValue: number): Promise<this>;

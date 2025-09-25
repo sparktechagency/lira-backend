@@ -59,18 +59,33 @@ const getContestById = async (id: string) => {
 };
 const updateContest = async (id: string, payload: Partial<IContest>) => {
 
-    // Check if contest exists
+
     const existingContest = await Contest.findById(id);
     if (!existingContest) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
 
-    // Don't allow updating if contest has already started (unless it's draft)
-    if (existingContest.status !== 'Draft' && existingContest.startTime <= new Date()) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'Cannot update contest that has already started');
+    // Check if critical fields are being updated
+    const criticalFieldsUpdated =
+        payload.predictions?.minPrediction !== undefined ||
+        payload.predictions?.maxPrediction !== undefined ||
+        payload.predictions?.increment !== undefined ||
+        payload.predictions?.numberOfEntriesPerPrediction !== undefined ||
+        payload.pricing?.tiers !== undefined;
+
+    if (criticalFieldsUpdated) {
+        console.log('Critical prediction fields being updated - will trigger regeneration');
+
+        // Don't allow updating critical fields if contest is active and has entries
+        if (existingContest.status === 'Active' && existingContest.totalEntries > 0) {
+            throw new AppError(
+                StatusCodes.BAD_REQUEST,
+                'Cannot update prediction structure of active contest with existing entries'
+            );
+        }
     }
 
-    const result = await Contest.findOneAndUpdate({ _id: id }, payload, {
+    const result = await Contest.findByIdAndUpdate(id, payload, {
         new: true,
         runValidators: true
     }).populate('categoryId');
@@ -114,7 +129,15 @@ const publishContest = async (id: string) => {
 
     // Generate predictions before publishing
     if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
+        console.log('No generated predictions found - auto-generating before publish');
         await contest.generatePredictions();
+    }
+    // Validate that predictions were generated successfully
+    if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
+        throw new AppError(
+            StatusCodes.BAD_REQUEST,
+            'Cannot publish contest: No predictions could be generated. Check prediction ranges and tiers.'
+        );
     }
 
     contest.status = 'Published';

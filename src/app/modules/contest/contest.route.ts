@@ -8,7 +8,55 @@ import { FOLDER_NAMES } from '../../../enums/files';
 
 const router = express.Router();
 
-router.post('/create', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), fileUploadHandler(), parseFileData(FOLDER_NAMES.IMAGE), ContestController.createContest);
+// Admin routes
+router.post(
+    '/create',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    fileUploadHandler(),
+    parseFileData(FOLDER_NAMES.IMAGE),
+    ContestController.createContest
+);
 
+router.get(
+    '/all',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.getAllContests
+);
+
+router.get(
+    '/:id',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.getContestById
+);
+
+router.patch(
+    '/:id',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    fileUploadHandler(),
+    parseFileData(FOLDER_NAMES.IMAGE),
+    ContestController.updateContest
+);
+
+router.delete(
+    '/:id',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.deleteContest
+);
+
+router.post(
+    '/:id/generate-predictions',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.generatePredictions
+);
+
+router.patch(
+    '/:id/publish',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.publishContest
+);
+
+// Public routes (for users)
+router.get('/active/list', ContestController.getActiveContests);
+router.get('/upcoming/list', ContestController.getUpcomingContests);
 
 export const ContestRoutes = router;

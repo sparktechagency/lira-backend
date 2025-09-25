@@ -127,4 +127,22 @@ const generateContestPredictions = async (id: string) => {
     const result = await contest.generatePredictions();
     return result;
 };
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions }
+const getActiveContests = async () => {
+    const result = await Contest.find({
+        status: 'Active',
+        startTime: { $lte: new Date() },
+        endTime: { $gte: new Date() }
+    }).populate('categoryId');
+
+    return result;
+};
+
+const getUpcomingContests = async () => {
+    const result = await Contest.find({
+        status: 'Active',
+        startTime: { $gt: new Date() }
+    }).populate('categoryId');
+
+    return result;
+};
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getUpcomingContests }

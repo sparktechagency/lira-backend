@@ -22,6 +22,10 @@ const createContest = async (payload: Partial<IContest>) => {
 
     const result = await Contest.create(payload);
 
+    if (result) {
+        await result.generatePredictions();
+    }
+
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Contest creation failed');
     }
@@ -79,7 +83,6 @@ const updateContest = async (id: string, payload: Partial<IContest>) => {
     return result;
 };
 const deleteContest = async (id: string) => {
-    
     const contest = await Contest.findById(id);
     if (!contest) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
@@ -93,4 +96,5 @@ const deleteContest = async (id: string) => {
     const result = await Contest.findByIdAndDelete(id);
     return result;
 };
-export const ContestService = { createContest, getAllContests, getContestById, updateContest }
+
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest }

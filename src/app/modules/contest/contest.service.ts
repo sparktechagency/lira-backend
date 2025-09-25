@@ -140,7 +140,7 @@ const publishContest = async (id: string) => {
         );
     }
 
-    contest.status = 'Published';
+    contest.status = 'Active';
     const result = await contest.save();
 
     return result;

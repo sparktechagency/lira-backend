@@ -163,7 +163,7 @@ const ContestSchema = new Schema<IContest>({
 
     status: {
         type: String,
-        enum: ['Draft', 'Published', 'Active', 'Deleted'],
+        enum: ['Draft', 'Active', 'Done', 'Deleted'],
         default: 'Draft'
     },
 
@@ -372,52 +372,52 @@ ContestSchema.statics.getUpcomingContests = function () {
         startTime: { $gt: new Date() }
     }).populate('categoryId');
 };
-ContestSchema.pre('save', function(next) {
+ContestSchema.pre('save', function (next) {
     // Auto-generate tier IDs if missing
     this.pricing.tiers.forEach((tier, index) => {
         if (!tier.id) {
             tier.id = `tier_${index + 1}_${tier.name.replace(/\s/g, '_').toLowerCase()}`;
         }
     });
-    
+
     // Check if key prediction fields have changed
-    if (this.isModified('predictions.minPrediction') || 
-        this.isModified('predictions.maxPredictions') || 
+    if (this.isModified('predictions.minPrediction') ||
+        this.isModified('predictions.maxPredictions') ||
         this.isModified('predictions.increment') ||
         this.isModified('predictions.numberOfEntriesPerPrediction') ||
         this.isModified('pricing.tiers')) {
-        
+
         console.log('Key prediction fields modified - clearing generated predictions');
-        
+
         // Clear generated predictions to force regeneration
         this.predictions.generatedPredictions = [];
-        
+
         // Reset total entries since predictions are being regenerated
         this.totalEntries = 0;
-        
+
         // Mark as draft if it was published (since structure changed)
-        if (this.status === 'Published' || this.status === 'Active') {
+        if (this.status === 'Active') {
             console.log('Contest structure changed - reverting to Draft status');
             this.status = 'Draft';
         }
     }
-    
+
     // Validate end time is after start time
     if (this.endTime <= this.startTime) {
         return next(new Error('End time must be after start time'));
     }
-    
+
     // Validate tiers don't overlap and are in correct order
     const sortedTiers = this.pricing.tiers
         .filter(tier => tier.isActive)
         .sort((a, b) => a.min - b.min);
-        
+
     for (let i = 0; i < sortedTiers.length - 1; i++) {
         if (sortedTiers[i].max >= sortedTiers[i + 1].min) {
             return next(new Error(`Pricing tiers overlap: ${sortedTiers[i].name} and ${sortedTiers[i + 1].name}`));
         }
     }
-    
+
     next();
 });
 // Query Middleware

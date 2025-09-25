@@ -44,7 +44,6 @@ const getContestById = catchAsync(async (req, res) => {
 
 const updateContest = catchAsync(async (req, res) => {
     const { id } = req.params;
-    console.log("hi...........................................");
     const result = await ContestService.updateContest(id, req.body);
 
     sendResponse(res, {
@@ -80,13 +79,14 @@ const generatePredictions = catchAsync(async (req, res) => {
 });
 
 const getActiveContests = catchAsync(async (req, res) => {
-    const result = await ContestService.getActiveContests();
+    const result = await ContestService.getActiveContests(req.query);
 
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
         message: 'Active contests retrieved successfully',
-        data: result
+        data: result.result,
+        meta: result.meta
     });
 });
 

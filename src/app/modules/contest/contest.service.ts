@@ -159,14 +159,20 @@ const generateContestPredictions = async (id: string) => {
     const result = await contest.generatePredictions();
     return result;
 };
-const getActiveContests = async () => {
-    const result = await Contest.find({
+const getActiveContests = async (query: Record<string, unknown>) => {
+    const queryBuilder = new QueryBuilder(Contest.find({
         status: 'Active',
-        startTime: { $lte: new Date() },
-        endTime: { $gte: new Date() }
-    }).populate('categoryId');
+        // startTime: { $lte: new Date() },
+        // endTime: { $gte: new Date() }
+    }).populate('categoryId'), query);
 
-    return result;
+    const result = await queryBuilder.priceRange().fields().filter().search([]).sort().modelQuery.exec();
+    const meta = await queryBuilder.countTotal();
+
+    return {
+        meta,
+        result
+    };
 };
 
 const getUpcomingContests = async () => {

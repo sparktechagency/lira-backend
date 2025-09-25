@@ -4,16 +4,12 @@ import sendResponse from "../../../shared/sendResponse";
 import { ContestService } from "./contest.service";
 
 const createContest = catchAsync(async (req, res) => {
-    console.log("createContest req body", JSON.stringify(req.body, null, 2));
-    
-    // Add createdBy from authenticated user
+    const { id } = req.user as { id: string };
     const payload = {
         ...req.body,
-        createdBy: req.user?.id
+        createdBy: id
     };
-
     const result = await ContestService.createContest(payload);
-    
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.CREATED,
@@ -24,7 +20,7 @@ const createContest = catchAsync(async (req, res) => {
 
 const getAllContests = catchAsync(async (req, res) => {
     const result = await ContestService.getAllContests(req.query);
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -37,7 +33,7 @@ const getAllContests = catchAsync(async (req, res) => {
 const getContestById = catchAsync(async (req, res) => {
     const { id } = req.params;
     const result = await ContestService.getContestById(id);
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -49,7 +45,7 @@ const getContestById = catchAsync(async (req, res) => {
 const updateContest = catchAsync(async (req, res) => {
     const { id } = req.params;
     const result = await ContestService.updateContest(id, req.body);
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -61,7 +57,7 @@ const updateContest = catchAsync(async (req, res) => {
 const deleteContest = catchAsync(async (req, res) => {
     const { id } = req.params;
     await ContestService.deleteContest(id);
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -73,7 +69,7 @@ const deleteContest = catchAsync(async (req, res) => {
 const generatePredictions = catchAsync(async (req, res) => {
     const { id } = req.params;
     const result = await ContestService.generateContestPredictions(id);
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -84,7 +80,7 @@ const generatePredictions = catchAsync(async (req, res) => {
 
 const getActiveContests = catchAsync(async (req, res) => {
     const result = await ContestService.getActiveContests();
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -95,7 +91,7 @@ const getActiveContests = catchAsync(async (req, res) => {
 
 const getUpcomingContests = catchAsync(async (req, res) => {
     const result = await ContestService.getUpcomingContests();
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -107,7 +103,7 @@ const getUpcomingContests = catchAsync(async (req, res) => {
 const publishContest = catchAsync(async (req, res) => {
     const { id } = req.params;
     const result = await ContestService.publishContest(id);
-    
+
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
@@ -116,7 +112,7 @@ const publishContest = catchAsync(async (req, res) => {
     });
 });
 
-export const ContestController = { 
+export const ContestController = {
     createContest,
     getAllContests,
     getContestById,

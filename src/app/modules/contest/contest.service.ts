@@ -53,4 +53,29 @@ const getContestById = async (id: string) => {
     }
     return result;
 };
-export const ContestService = { createContest, getAllContests, getContestById }
+const updateContest = async (id: string, payload: Partial<IContest>) => {
+
+
+    // Check if contest exists
+    const existingContest = await Contest.findById(id);
+    if (!existingContest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    // Don't allow updating if contest has already started (unless it's draft)
+    if (!existingContest.isDraft && existingContest.startTime <= new Date()) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Cannot update contest that has already started');
+    }
+
+    const result = await Contest.findByIdAndUpdate(id, payload, {
+        new: true,
+        runValidators: true
+    }).populate('categoryId');
+
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Contest update failed');
+    }
+
+    return result;
+};
+export const ContestService = { createContest, getAllContests, getContestById, updateContest }

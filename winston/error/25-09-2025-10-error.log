@@ -1,5 +1,0 @@
-Thu Sep 25 2025 10:53:17 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/contest/create 400 - 21.610 ms
-Thu Sep 25 2025 10:53:40 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/contest/create 400 - 15.551 ms
-Thu Sep 25 2025 10:55:0 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/contest/create 400 - 55.423 ms
-Thu Sep 25 2025 10:57:24 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/ 400 - 37.067 ms
-Thu Sep 25 2025 10:58:44 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/ 400 - 24.852 ms

@@ -25,7 +25,7 @@ const userSchema = new Schema<IUser, UserModel>(
           },
           password: {
                type: String,
-               required: function() {
+               required: function () {
                     // Password is only required for non-OAuth users
                     return !this.oauthProvider;
                },
@@ -66,6 +66,10 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                enum: ['google', 'facebook'],
           },
+          agreeWithTerms: {
+               type: Boolean,
+               default: false,
+          },
           authentication: {
                type: {
                     isResetPassword: {
@@ -83,20 +87,20 @@ const userSchema = new Schema<IUser, UserModel>(
                },
                select: false,
           },
-             onlineStatus: {
-                  isOnline: {
-                        type: Boolean,
-                        default: false,
-                  },
-                  lastSeen: {
-                        type: Date,
-                        default: Date.now,
-                  },
-                  lastHeartbeat: {
-                        type: Date,
-                        default: Date.now,
-                  },
-            },
+          onlineStatus: {
+               isOnline: {
+                    type: Boolean,
+                    default: false,
+               },
+               lastSeen: {
+                    type: Date,
+                    default: Date.now,
+               },
+               lastHeartbeat: {
+                    type: Date,
+                    default: Date.now,
+               },
+          },
      },
      { timestamps: true },
 );
@@ -143,33 +147,33 @@ userSchema.pre('save', async function (next) {
 });
 // ✅ Online Status Methods
 userSchema.statics.setUserOnline = async (userId: string) => {
-      await User.findByIdAndUpdate(userId, {
-            'onlineStatus.isOnline': true,
-            'onlineStatus.lastSeen': new Date(),
-            'onlineStatus.lastHeartbeat': new Date(),
-      });
+     await User.findByIdAndUpdate(userId, {
+          'onlineStatus.isOnline': true,
+          'onlineStatus.lastSeen': new Date(),
+          'onlineStatus.lastHeartbeat': new Date(),
+     });
 };
 
 userSchema.statics.setUserOffline = async (userId: string) => {
-      await User.findByIdAndUpdate(userId, {
-            'onlineStatus.isOnline': false,
-            'onlineStatus.lastSeen': new Date(),
-      });
+     await User.findByIdAndUpdate(userId, {
+          'onlineStatus.isOnline': false,
+          'onlineStatus.lastSeen': new Date(),
+     });
 };
 
 userSchema.statics.updateHeartbeat = async (userId: string) => {
-      await User.findByIdAndUpdate(userId, {
-            'onlineStatus.lastHeartbeat': new Date(),
-            'onlineStatus.lastSeen': new Date(),
-      });
+     await User.findByIdAndUpdate(userId, {
+          'onlineStatus.lastHeartbeat': new Date(),
+          'onlineStatus.lastSeen': new Date(),
+     });
 };
 
 userSchema.statics.getOnlineUsers = async () => {
-      return await User.find({ 'onlineStatus.isOnline': true }).select('name userName profile onlineStatus');
+     return await User.find({ 'onlineStatus.isOnline': true }).select('name userName profile onlineStatus');
 };
 
 userSchema.statics.bulkUserStatus = async (userIds: string[]) => {
-      return await User.find({ _id: { $in: userIds } }).select('name userName profile onlineStatus');
+     return await User.find({ _id: { $in: userIds } }).select('name userName profile onlineStatus');
 };
 // Query Middleware
 userSchema.pre('find', function (next) {

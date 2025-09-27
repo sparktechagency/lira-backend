@@ -5,7 +5,6 @@ import { UserService } from './user.service';
 import config from '../../../config';
 import bcrypt from 'bcrypt';
 import { USER_ROLES } from '../../../enums/user';
-import auth from '../../middleware/auth';
 
 const createUser = catchAsync(async (req, res) => {
      const { ...userData } = req.body;

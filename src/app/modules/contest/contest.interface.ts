@@ -56,6 +56,7 @@ export interface IContest extends Document {
     startTime: Date;
     endTime: Date;
     image?: string;
+    endOffsetTime: Date;
     status: 'Draft' | 'Published' | 'Active' | 'Deleted';
     totalEntries: number;
     maxEntries?: number;

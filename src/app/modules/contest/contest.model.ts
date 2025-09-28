@@ -158,7 +158,10 @@ const ContestSchema = new Schema<IContest>({
         type: Date,
         required: [true, 'End time is required']
     },
-
+    endOffsetTime: {
+        type: Date,
+        required: [true, 'End of selection time is required']
+    },
     image: { type: String },
 
     status: {
@@ -174,7 +177,8 @@ const ContestSchema = new Schema<IContest>({
     },
     maxEntries: {
         type: Number,
-        min: [1, 'Max entries must be at least 1']
+        default: 0,
+        min: [0, 'Max entries cannot be negative']
     },
 
     createdBy: {

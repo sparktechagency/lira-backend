@@ -61,6 +61,8 @@ router.patch(
 // Public routes (for users)
 router.get('/active/list', ContestController.getActiveContests);
 
+router.get('/:id/tiers', ContestController.getTiersContest);
+
 router.get('/upcoming/list', ContestController.getUpcomingContests);
 
 export const ContestRoutes = router;

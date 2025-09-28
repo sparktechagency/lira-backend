@@ -113,6 +113,18 @@ const publishContest = catchAsync(async (req, res) => {
     });
 });
 
+const getTiersContest = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const result = await ContestService.getTiersContest(id);
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest tiers retrieved successfully',
+        data: result
+    });
+});
+
 export const ContestController = {
     createContest,
     getAllContests,
@@ -122,5 +134,6 @@ export const ContestController = {
     generatePredictions,
     getActiveContests,
     getUpcomingContests,
-    publishContest
+    publishContest,
+    getTiersContest
 };

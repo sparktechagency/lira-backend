@@ -184,10 +184,12 @@ const getUpcomingContests = async () => {
     return result;
 };
 const getTiersContest = async (id: string) => {
-    const result = await Contest.findById(id);
-    if (!result) {
+    const contest = await Contest.findById(id);
+    if (!contest) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
-    const vl = result?.pricing;
+    const result = contest?.pricing;
+
+    return result;
 }
 export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getUpcomingContests, getTiersContest }

@@ -1,23 +1,12 @@
 import { z } from "zod";
-
-// Define the Zod schema for predictions tier
-const TierSchema = z.object({
-    name: z.string().min(1, "Tier name is required"),
-    min: z.number().min(0, "Tier min value must be at least 0"),
-    max: z.number().min(0, "Tier max value must be at least 0"),
-    pricePerPrediction: z.number().min(0, "Price per prediction must be non-negative"),
-    isActive: z.boolean().default(true),
-});
+    
 
 // Define the Zod schema for the `prize` object
 const PrizeSchema = z.object({
     title: z.string().min(1, "Prize title is required"),
     type: z.string().min(1, "Prize type is required"),
 });
-const PricingSchema = z.object({
-    predictionType: z.string().optional(),
-    tiers: z.array(TierSchema),
-});
+
 
 // Define the Zod schema for the contest `predictions`
 const PredictionSchema = z.object({
@@ -43,15 +32,7 @@ const contestSchema = z.object({
         description: z.string().min(1, "Description is required").max(1000, "Description cannot exceed 1000 characters"),
         prize: PrizeSchema,
         predictions: PredictionSchema,
-        pricing: PricingSchema,
         image: z.string().optional(),
-        maxEntries: z.number().min(1, "Max entries must be at least 1"),
-        results: z.object({
-            actualValue: z.number().optional(),
-            winningPredictions: z.array(z.string()).optional(),
-            prizeDistributed: z.boolean().default(false),
-            endedAt: z.string().optional().nullable(),
-        }).optional(),
     })
 });
 

@@ -16,6 +16,12 @@ router.post(
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     fileUploadHandler(),
     parseFileData(FOLDER_NAMES.IMAGE),
+    // (req, res, next) => {
+    //     if (req.body.predictions) {
+    //         req.body.predictions = JSON.parse(req.body.predictions);
+    //     }
+    //     next();
+    // },
     validateRequest(ContestValidation.contestSchema),
     ContestController.createContest
 );

@@ -10,7 +10,37 @@ const US_STATES_ARRAY = [
     "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee",
     "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ] as const;
-
+const tierSchema = new mongoose.Schema({
+  tiers: [
+    {
+      name: {
+        type: String,
+        required: false, // Optional field
+      },
+      min: {
+        type: Number,
+        required: false, // Optional field
+      },
+      max: {
+        type: Number,
+        required: false, // Optional field
+      },
+      pricePerPrediction: {
+        type: Number,
+        required: false, // Optional field
+        min: [0, 'Price cannot be negative'],
+      },
+      isActive: {
+        type: Boolean,
+        default: false, // Default value
+      },
+      default: {
+        type: Array,
+        default: [], // Default as an empty array
+      },
+    },
+  ],
+});
 const ContestSchema = new Schema<IContest>({
     name: {
         type: String,
@@ -125,30 +155,12 @@ const ContestSchema = new Schema<IContest>({
             enum: ['percentage', 'tier', 'priceOnly'],
             required: [true, 'Prediction type is required']
         },
-        tiers: [{
-            name: {
-                type: String,
-                required: [true, 'Tier name is required']
-            },
-            min: {
-                type: Number,
-                required: [true, 'Tier min value is required']
-            },
-            max: {
-                type: Number,
-                required: [true, 'Tier max value is required']
-            },
-            pricePerPrediction: {
-                type: Number,
-                required: [true, 'Price per prediction is required'],
-                min: [0, 'Price cannot be negative']
-            },
-            isActive: {
-                type: Boolean,
-                default: true
-            }
-        }],
-
+        flatPrice: {
+            type: Number,
+            default: 0,
+            min: [0, 'Flat price cannot be negative']
+        },
+        tiers: tierSchema,
     },
     startTime: {
         type: Date,
@@ -258,7 +270,6 @@ ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
     for (let value = start; value <= end; value += increment) {
         allPossiblePredictions.push(value);
     }
-    console.log(`All Possible Predictions:`, allPossiblePredictions);
 
     // Check which predictions fall into tiers
     for (let value = start; value <= end; value += increment) {
@@ -284,9 +295,6 @@ ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
             console.log(`  ✗ No tier found for value: ${value}`);
         }
     }
-
-    console.log(`\nFinal Generated Predictions: ${generatedPredictions.length}`);
-    console.log('Generated Predictions:', generatedPredictions);
 
     this.predictions.generatedPredictions = generatedPredictions;
     return this.save();

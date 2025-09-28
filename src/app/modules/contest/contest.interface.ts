@@ -28,6 +28,7 @@ export interface IPrediction {
 }
 export interface IPricing {
     predictionType: 'percentage' | 'tier' | 'priceOnly';
+    flatPrice: number;
     tiers: IPredictionTier[];
 
 }

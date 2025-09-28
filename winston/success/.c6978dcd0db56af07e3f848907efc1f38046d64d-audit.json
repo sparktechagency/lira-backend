@@ -6,19 +6,49 @@
     "auditLog": "R:\\projects\\lira-backend\\winston\\success\\.c6978dcd0db56af07e3f848907efc1f38046d64d-audit.json",
     "files": [
         {
-            "date": 1758950352566,
-            "name": "R:\\projects\\lira-backend\\winston\\success\\27-09-2025-11-success.log",
-            "hash": "d466a82d52617d948c7061f9aca2a7356dab8926d68a8eebb9b3a3e95dbbffd0"
-        },
-        {
-            "date": 1758955786757,
-            "name": "R:\\projects\\lira-backend\\winston\\success\\27-09-2025-12-success.log",
-            "hash": "b49a0c0bee032153494b159071efd74da38de8927171ffd0fb45caccd9605b7c"
-        },
-        {
             "date": 1758965360314,
             "name": "R:\\projects\\lira-backend\\winston\\success\\27-09-2025-15-success.log",
             "hash": "e9d0df6e5fc07c09bf82fb161b6ddb67f93fa5d2bf030768aae054551095ee24"
+        },
+        {
+            "date": 1758967696323,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\27-09-2025-16-success.log",
+            "hash": "1ff56793691e32672696dbb01cdd89c417b1e2a7710c5b843db189bf75a62655"
+        },
+        {
+            "date": 1758971242077,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\27-09-2025-17-success.log",
+            "hash": "a44f928fb744d00b8393e4ef320cba0d14706736277436817d240e55ca93a301"
+        },
+        {
+            "date": 1759032825874,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\28-09-2025-10-success.log",
+            "hash": "bcfe09bc4f81e79729635ceb0b1c13e5208055927b0f71cd0022f67831495a8d"
+        },
+        {
+            "date": 1759036793576,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\28-09-2025-11-success.log",
+            "hash": "a819e48131fcff6914f13a54d428bd324bf386bb4078029ce4d5a9f51ffb7aa6"
+        },
+        {
+            "date": 1759040226953,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\28-09-2025-12-success.log",
+            "hash": "95f6818d2f0aa00905f5d0f28292c40b253b13478a70ea4486d98361da1238b2"
+        },
+        {
+            "date": 1759043023868,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\28-09-2025-13-success.log",
+            "hash": "14ff296edc301c7178da090597550a6e6109f2e3ef59826f8b9e3b5e607c627c"
+        },
+        {
+            "date": 1759049551032,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\28-09-2025-14-success.log",
+            "hash": "50b1351a115fa3e87b7326fb68951a9be131da88dfb985cb6f9b0ecab33a8325"
+        },
+        {
+            "date": 1759050051770,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\28-09-2025-15-success.log",
+            "hash": "5b308e20a4b60f972b318b8fa48263d7c0a5d57fbc385827ebf676e0470cedc7"
         }
     ],
     "hashType": "sha256"

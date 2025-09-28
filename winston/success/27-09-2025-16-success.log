@@ -1,0 +1,27 @@
+Sat Sep 27 2025 16:8:17 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Sep 27 2025 16:8:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Sep 27 2025 16:8:17 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Sep 27 2025 16:8:17 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Sep 27 2025 16:10:36 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/users/register 200 - 237.546 ms
+Sat Sep 27 2025 16:12:39 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/users/register 200 - 226.189 ms
+Sat Sep 27 2025 16:15:1 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/users/register 200 - 223.767 ms
+Sat Sep 27 2025 16:15:29 [SERVER-NAME] info: [34mSIGINT received. Shutting down gracefully...[39m
+Sat Sep 27 2025 16:15:29 [SERVER-NAME] info: [32mHTTP server closed successfully[39m
+Sat Sep 27 2025 16:15:29 [SERVER-NAME] info: [32mSocket.io server closed successfully[39m
+Sat Sep 27 2025 16:15:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Sep 27 2025 16:15:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Sep 27 2025 16:15:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Sep 27 2025 16:15:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Sep 27 2025 16:15:39 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/users/register 200 - 248.360 ms
+Sat Sep 27 2025 16:15:47 [SERVER-NAME] info: Mail send successfully
+Sat Sep 27 2025 16:17:53 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/verify-email 200 - 15.925 ms
+Sat Sep 27 2025 16:18:46 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 210.672 ms
+Sat Sep 27 2025 16:20:11 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/forget-password 200 - 6.596 ms
+Sat Sep 27 2025 16:20:18 [SERVER-NAME] info: Mail send successfully
+Sat Sep 27 2025 16:20:44 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/verify-email 200 - 25.956 ms
+Sat Sep 27 2025 16:21:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Sep 27 2025 16:21:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Sep 27 2025 16:21:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Sep 27 2025 16:21:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Sep 27 2025 16:21:58 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/reset-password 200 - 238.983 ms
+Sat Sep 27 2025 16:26:39 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 12.409 ms

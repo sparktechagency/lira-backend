@@ -47,3 +47,5 @@ Sun Sep 28 2025 17:52:42 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/pro
 Sun Sep 28 2025 17:52:53 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 403 - 5.954 ms
 Sun Sep 28 2025 17:54:7 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 403 - 5.281 ms
 Sun Sep 28 2025 17:54:33 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 403 - 5.462 ms
+Sun Sep 28 2025 17:57:21 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/contest/create 400 - 38.955 ms
+Sun Sep 28 2025 17:57:52 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/contest/create 400 - 43.785 ms

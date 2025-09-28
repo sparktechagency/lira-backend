@@ -1,3 +1,0 @@
-Sat Sep 27 2025 17:0:55 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/users/register 400 - 0.994 ms
-Sat Sep 27 2025 17:4:55 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/users/register 400 - 1.239 ms
-Sat Sep 27 2025 17:13:38 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/users/register 409 - 10.190 ms

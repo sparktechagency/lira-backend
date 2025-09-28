@@ -11,35 +11,35 @@ const US_STATES_ARRAY = [
     "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ] as const;
 const tierSchema = new mongoose.Schema({
-  tiers: [
-    {
-      name: {
-        type: String,
-        required: false, // Optional field
-      },
-      min: {
-        type: Number,
-        required: false, // Optional field
-      },
-      max: {
-        type: Number,
-        required: false, // Optional field
-      },
-      pricePerPrediction: {
-        type: Number,
-        required: false, // Optional field
-        min: [0, 'Price cannot be negative'],
-      },
-      isActive: {
-        type: Boolean,
-        default: false, // Default value
-      },
-      default: {
-        type: Array,
-        default: [], // Default as an empty array
-      },
-    },
-  ],
+    tiers: [
+        {
+                name: {
+                    type: String,
+                    required: false, // Optional field
+                },
+                min: {
+                    type: Number,
+                    required: false, // Optional field
+                },
+                max: {
+                    type: Number,
+                    required: false, // Optional field
+                },
+                pricePerPrediction: {
+                    type: Number,
+                    required: false, // Optional field
+                    min: [0, 'Price cannot be negative'],
+                },
+            isActive: {
+                type: Boolean,
+                default: false, // Default value
+            },
+            default: {
+                type: Array,
+                default: [], // Default as an empty array
+            },
+        },
+    ],
 });
 const ContestSchema = new Schema<IContest>({
     name: {
@@ -160,7 +160,7 @@ const ContestSchema = new Schema<IContest>({
             default: 0,
             min: [0, 'Flat price cannot be negative']
         },
-        tiers: tierSchema,
+        tiers: [tierSchema],
     },
     startTime: {
         type: Date,
@@ -255,47 +255,93 @@ ContestSchema.index({ endTime: 1 });
 // };
 ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
     console.log('=== Generate Predictions Debug ===');
+    console.log('Prediction Type:', this.pricing.predictionType);
 
     const generatedPredictions: IGeneratedPrediction[] = [];
-
     const start = this.predictions.minPrediction;
-    const end = this.predictions.maxPrediction; // Note: should be maxPrediction (not maxPredictions)
+    const end = this.predictions.maxPrediction;
     const increment = this.predictions.increment;
 
     console.log(`Prediction Range: ${start} to ${end} with increment ${increment}`);
 
-
-    // Generate all possible predictions
-    const allPossiblePredictions = [];
-    for (let value = start; value <= end; value += increment) {
-        allPossiblePredictions.push(value);
-    }
-
-    // Check which predictions fall into tiers
+    // Generate all possible predictions based on predictionType
     for (let value = start; value <= end; value += increment) {
         console.log(`\nChecking prediction: ${value}`);
 
-        const tier = this.pricing.tiers.find((t: IPredictionTier) => {
-            const inRange = t.isActive && value >= t.min && value <= t.max;
-            console.log(`  Tier ${t.name} (${t.min}-${t.max}): ${inRange ? 'MATCH' : 'NO MATCH'}`);
-            return inRange;
-        });
+        let prediction: IGeneratedPrediction | null = null;
 
-        if (tier) {
-            console.log(`  ✓ Added to tier: ${tier.name}`);
-            generatedPredictions.push({
-                value,
-                tierId: tier.id || `tier_${tier.name.replace(/\s/g, '_')}`, // Generate ID if missing
-                price: tier.pricePerPrediction,
-                currentEntries: 0,
-                maxEntries: this.predictions.numberOfEntriesPerPrediction,
-                isAvailable: true
-            });
-        } else {
-            console.log(`  ✗ No tier found for value: ${value}`);
+        switch (this.pricing.predictionType) {
+            case 'priceOnly':
+                // For priceOnly type, use flatPrice for all predictions
+                console.log(`  PriceOnly mode: Using flatPrice ${this.pricing.flatPrice}`);
+                prediction = {
+                    value,
+                    tierId: 'flat_price', // Simple tierId for priceOnly
+                    price: this.pricing.flatPrice,
+                    currentEntries: 0,
+                    maxEntries: this.predictions.numberOfEntriesPerPrediction,
+                    isAvailable: true
+                };
+                break;
+
+            case 'percentage':
+                // For percentage type, find the appropriate tier based on percentage ranges
+                const percentageTier = this.pricing.tiers.find((t: IPredictionTier) => {
+                    const inRange = t.isActive && value >= t.min && value <= t.max;
+                    console.log(`  Percentage Tier ${t.name} (${t.min}%-${t.max}%): ${inRange ? 'MATCH' : 'NO MATCH'}`);
+                    return inRange;
+                });
+
+                if (percentageTier) {
+                    console.log(`  ✓ Added to percentage tier: ${percentageTier.name}`);
+                    prediction = {
+                        value,
+                        tierId: percentageTier.id || `percentage_tier_${percentageTier.name.replace(/\s/g, '_')}`,
+                        price: percentageTier.pricePerPrediction,
+                        currentEntries: 0,
+                        maxEntries: this.predictions.numberOfEntriesPerPrediction,
+                        isAvailable: true
+                    };
+                } else {
+                    console.log(`  ✗ No percentage tier found for value: ${value}%`);
+                }
+                break;
+
+            case 'tier':
+                // For tier type, find the appropriate tier (existing logic)
+                const tier = this.pricing.tiers.find((t: IPredictionTier) => {
+                    const inRange = t.isActive && value >= t.min && value <= t.max;
+                    console.log(`  Tier ${t.name} (${t.min}-${t.max}): ${inRange ? 'MATCH' : 'NO MATCH'}`);
+                    return inRange;
+                });
+
+                if (tier) {
+                    console.log(`  ✓ Added to tier: ${tier.name}`);
+                    prediction = {
+                        value,
+                        tierId: tier.id || `tier_${tier.name.replace(/\s/g, '_')}`,
+                        price: tier.pricePerPrediction,
+                        currentEntries: 0,
+                        maxEntries: this.predictions.numberOfEntriesPerPrediction,
+                        isAvailable: true
+                    };
+                } else {
+                    console.log(`  ✗ No tier found for value: ${value}`);
+                }
+                break;
+
+            default:
+                console.log(`  ✗ Invalid prediction type: ${this.pricing.predictionType}`);
+        }
+
+        // Add prediction if it was created
+        if (prediction) {
+            generatedPredictions.push(prediction);
+            console.log(`  ✓ Added prediction: ${value} with price ${prediction.price}`);
         }
     }
 
+    console.log(`\nTotal generated predictions: ${generatedPredictions.length}`);
     this.predictions.generatedPredictions = generatedPredictions;
     return this.save();
 };

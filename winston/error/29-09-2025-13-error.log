@@ -1,0 +1,8 @@
+Mon Sep 29 2025 13:6:9 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 39.955 ms
+Mon Sep 29 2025 13:7:48 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 11.152 ms
+Mon Sep 29 2025 13:8:56 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 14.172 ms
+Mon Sep 29 2025 13:9:58 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 10.170 ms
+Mon Sep 29 2025 13:11:54 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 9.250 ms
+Mon Sep 29 2025 13:18:26 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 38.270 ms
+Mon Sep 29 2025 13:19:56 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 12.167 ms
+Mon Sep 29 2025 13:27:41 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 9.912 ms

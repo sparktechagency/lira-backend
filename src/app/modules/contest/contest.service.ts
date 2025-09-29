@@ -166,9 +166,9 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         status: 'Active',
         // startTime: { $lte: new Date() },
         // endTime: { $gte: new Date() }
-    }).populate('categoryId', "name url group"), query);
+    }), query);
 
-    const result = await queryBuilder.priceRange().fields().filter().search([]).sort().modelQuery.exec();
+    const result = await queryBuilder.priceRange().fields().filter().search(["name", "category"]).sort().modelQuery.exec();
     const meta = await queryBuilder.countTotal();
 
     return {
@@ -177,14 +177,7 @@ const getActiveContests = async (query: Record<string, unknown>) => {
     };
 };
 
-const getUpcomingContests = async () => {
-    const result = await Contest.find({
-        status: 'Active',
-        startTime: { $gt: new Date() }
-    }).populate('categoryId');
 
-    return result;
-};
 const getTiersContest = async (id: string) => {
     const contest = await Contest.findById(id);
     if (!contest) {
@@ -194,4 +187,15 @@ const getTiersContest = async (id: string) => {
 
     return result;
 }
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getUpcomingContests, getTiersContest }
+const getPredictionTiers = async (contestId: string, tierId: string) => {
+    const result = await Contest.findById(contestId);
+    if (!result) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Prediction not found');
+    }
+    const tier = result.predictions.generatedPredictions.filter((tier) => tier.tierId === tierId);
+    if (!tier) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Tier not found');
+    }
+    return tier;
+};
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest }

@@ -5,8 +5,6 @@ import { USER_ROLES } from '../../../enums/user';
 import fileUploadHandler from '../../middleware/fileUploadHandler';
 import parseFileData from '../../middleware/parseFileData';
 import { FOLDER_NAMES } from '../../../enums/files';
-import validateRequest from '../../middleware/validateRequest';
-import { ContestValidation } from './contest.validation';
 
 const router = express.Router();
 
@@ -62,6 +60,6 @@ router.get('/active/list', ContestController.getActiveContests);
 
 router.get('/:id/tiers', ContestController.getTiersContest);
 
-router.get('/upcoming/list', ContestController.getUpcomingContests);
+router.get('/contest/prediction/:contestId/tiers/:tierId', ContestController.getPredictionTiers);
 
 export const ContestRoutes = router;

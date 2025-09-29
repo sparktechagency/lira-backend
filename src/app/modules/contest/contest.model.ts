@@ -107,10 +107,6 @@ const ContestSchema = new Schema<IContest>({
         },
         unit: {
             type: String,
-            enum: {
-                values: ['$', '%', 'points', 'unit'],
-                message: 'Invalid unit provided'
-            },
             required: [true, 'Unit is required']
         },
         numberOfEntriesPerPrediction: {

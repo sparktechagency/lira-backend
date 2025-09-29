@@ -90,8 +90,9 @@ const getActiveContests = catchAsync(async (req, res) => {
     });
 });
 
-const getUpcomingContests = catchAsync(async (req, res) => {
-    const result = await ContestService.getUpcomingContests();
+const getPredictionTiers = catchAsync(async (req, res) => {
+  const { contestId, tierId } = req.params;
+    const result = await ContestService.getPredictionTiers(contestId, tierId);
 
     sendResponse(res, {
         success: true,
@@ -133,7 +134,7 @@ export const ContestController = {
     deleteContest,
     generatePredictions,
     getActiveContests,
-    getUpcomingContests,
+    getPredictionTiers,
     publishContest,
     getTiersContest
 };

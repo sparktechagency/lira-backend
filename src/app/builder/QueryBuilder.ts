@@ -40,7 +40,7 @@ class QueryBuilder<T> {
           this.modelQuery = this.modelQuery.sort(sort as string);
           return this;
      }
-
+    
      paginate(defaultLimit = 10) {
           const page = Number(this.query?.page) || 1;
           const limit = Number(this.query?.limit) || defaultLimit;

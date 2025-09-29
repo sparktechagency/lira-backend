@@ -1,0 +1,16 @@
+Mon Sep 29 2025 14:57:51 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/group 404 - 1.943 ms
+Mon Sep 29 2025 14:58:47 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 8.601 ms
+Mon Sep 29 2025 14:59:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 0.827 ms
+Mon Sep 29 2025 14:59:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.363 ms
+Mon Sep 29 2025 14:59:21 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.231 ms
+Mon Sep 29 2025 14:59:21 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 0.698 ms
+Mon Sep 29 2025 14:59:24 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.224 ms
+Mon Sep 29 2025 14:59:24 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1undefined 404 - 0.537 ms
+Mon Sep 29 2025 14:59:37 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.726 ms
+Mon Sep 29 2025 14:59:37 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/groups 401 - 3.921 ms
+Mon Sep 29 2025 14:59:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.168 ms
+Mon Sep 29 2025 14:59:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/groups 401 - 1.546 ms
+Mon Sep 29 2025 14:59:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 2.930 ms
+Mon Sep 29 2025 14:59:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/groups 401 - 0.615 ms
+Mon Sep 29 2025 14:59:50 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.457 ms
+Mon Sep 29 2025 14:59:50 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/groups 401 - 1.793 ms

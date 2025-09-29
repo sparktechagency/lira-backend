@@ -21,7 +21,7 @@ export interface IPrediction {
     minPrediction: number;
     maxPrediction: number;
     increment: number;
-    unit: '$' | '%' | 'points' | 'unit';
+    unit: string;
     numberOfEntriesPerPrediction: number;
     generatedPredictions: IGeneratedPrediction[];
     placePercentages: Map<string, number>;

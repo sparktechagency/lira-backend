@@ -39,3 +39,61 @@ Mon Sep 29 2025 15:4:11 [SERVER-NAME] info: [32mConfig validation successful.[
 Mon Sep 29 2025 15:4:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Mon Sep 29 2025 15:4:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Mon Sep 29 2025 15:4:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:5:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list 200 - 26.292 ms
+Mon Sep 29 2025 15:5:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/68d5100417ca099d45e5e16d/tiers 200 - 16.149 ms
+Mon Sep 29 2025 15:6:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68d5100417ca099d45e5e16d/tiers/68d5573ad553da39d0f57c2b 200 - 7.791 ms
+Mon Sep 29 2025 15:7:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68d5100417ca099d45e5e16d/tiers/68d5573ad553da39d0f57c2b 200 - 5.713 ms
+Mon Sep 29 2025 15:8:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:8:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:8:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:8:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:9:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:9:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:9:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:9:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:10:52 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.789 ms
+Mon Sep 29 2025 15:10:52 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.112 ms
+Mon Sep 29 2025 15:10:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 8.946 ms
+Mon Sep 29 2025 15:10:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 12.456 ms
+Mon Sep 29 2025 15:16:53 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:16:53 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:16:53 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:16:53 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:16:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:16:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:16:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:16:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:6 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:7 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:7 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:7 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:15 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:15 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:23 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:43 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:43 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:43 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:43 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:17:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:17:44 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:17:44 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:17:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:18:45 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 30.223 ms
+Mon Sep 29 2025 15:19:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/68d92547848dcdfe11da8529 200 - 8.645 ms

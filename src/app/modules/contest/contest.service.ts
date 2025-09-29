@@ -198,4 +198,11 @@ const getPredictionTiers = async (contestId: string, tierId: string) => {
     }
     return tier;
 };
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest }
+const getContestByIdUser = async (id: string) => {
+    const result = await Contest.findById(id);
+    if (!result) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+    return result;
+}
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser }

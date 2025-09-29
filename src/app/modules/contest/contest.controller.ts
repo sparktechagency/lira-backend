@@ -126,6 +126,18 @@ const getTiersContest = catchAsync(async (req, res) => {
     });
 });
 
+const getContestByIdUser = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const result = await ContestService.getContestByIdUser(id);
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest retrieved successfully',
+        data: result
+    });
+});
+
 export const ContestController = {
     createContest,
     getAllContests,
@@ -136,5 +148,6 @@ export const ContestController = {
     getActiveContests,
     getPredictionTiers,
     publishContest,
-    getTiersContest
+    getTiersContest,
+    getContestByIdUser
 };

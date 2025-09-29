@@ -1,0 +1,75 @@
+Mon Sep 29 2025 11:0:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 4.455 ms
+Mon Sep 29 2025 11:0:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.100 ms
+Mon Sep 29 2025 11:0:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 13.566 ms
+Mon Sep 29 2025 11:1:16 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 7.151 ms
+Mon Sep 29 2025 11:1:17 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.066 ms
+Mon Sep 29 2025 11:1:17 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 19.077 ms
+Mon Sep 29 2025 11:4:24 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 4.941 ms
+Mon Sep 29 2025 11:4:25 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.110 ms
+Mon Sep 29 2025 11:4:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 12.765 ms
+Mon Sep 29 2025 11:33:31 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 13.652 ms
+Mon Sep 29 2025 11:36:43 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 4.664 ms
+Mon Sep 29 2025 11:36:43 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.121 ms
+Mon Sep 29 2025 11:36:43 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 24.466 ms
+Mon Sep 29 2025 11:45:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 8.575 ms
+Mon Sep 29 2025 11:45:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.159 ms
+Mon Sep 29 2025 11:45:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 11.664 ms
+Mon Sep 29 2025 11:51:42 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 101.528 ms
+Mon Sep 29 2025 11:52:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/ 200 - 15.611 ms
+Mon Sep 29 2025 11:54:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:54:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:54:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:54:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:54:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:54:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:54:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:54:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:54:31 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:54:31 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:54:31 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:54:31 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:56:35 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 20.494 ms
+Mon Sep 29 2025 11:57:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:57:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:57:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:57:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:8 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:8 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:25 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:25 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:25 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:33 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:33 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:33 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:36 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:36 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:52 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:52 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:52 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:52 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:58:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:58:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:58:58 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:58:58 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 11:59:0 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 11:59:0 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 11:59:0 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 11:59:0 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m

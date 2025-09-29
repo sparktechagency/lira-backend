@@ -1,0 +1,6 @@
+Mon Sep 29 2025 9:52:26 [SERVER-NAME] info: 10.10.7.47 - POST /api/v1/auth/login 200 - 305.744 ms
+Mon Sep 29 2025 9:52:26 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 10.233 ms
+Mon Sep 29 2025 9:52:26 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 10.025 ms
+Mon Sep 29 2025 9:52:26 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 6.774 ms
+Mon Sep 29 2025 9:52:37 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 4.166 ms
+Mon Sep 29 2025 9:57:53 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/ 200 - 76.282 ms

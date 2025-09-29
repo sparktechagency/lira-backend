@@ -29,6 +29,8 @@ export interface IPrediction {
 export interface IPricing {
     predictionType: 'percentage' | 'tier' | 'priceOnly';
     flatPrice: number;
+    minTierPrice: number;
+    maxTierPrice: number;
     tiers: IPredictionTier[];
 
 }
@@ -47,7 +49,6 @@ export interface IContest extends Document {
     categoryId: Types.ObjectId;
     description: string;
     state: US_STATES[];
-
     prize: {
         title: string;
         type: string;

@@ -160,6 +160,16 @@ const ContestSchema = new Schema<IContest>({
             default: 0,
             min: [0, 'Flat price cannot be negative']
         },
+        minTierPrice: {
+            type: Number,
+            default: 0,
+            min: [0, 'Min tier price cannot be negative']
+        },
+        maxTierPrice: {
+            type: Number,
+            default: 0,
+            min: [0, 'Max tier price cannot be negative']
+        },
         tiers: [tierSchema],
     },
     startTime: {

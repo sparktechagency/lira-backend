@@ -1,6 +1,6 @@
 import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
-import { IContest } from "./contest.interface";
+import { IContest, IPredictionTier } from "./contest.interface";
 import { Contest } from "./contest.model";
 import QueryBuilder from "../../builder/QueryBuilder";
 
@@ -22,6 +22,8 @@ const createContest = async (payload: Partial<IContest>) => {
     if (payload.startTime && payload.endTime && new Date(payload.endTime) <= new Date(payload.startTime)) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'End time must be after start time');
     }
+    payload.pricing.minTierPrice = Math.min(...payload.pricing.tiers.map(t => t.min))
+    payload.pricing.maxTierPrice = Math.max(...payload.pricing.tiers.map(t => t.max))
 
     const result = await Contest.create(payload);
 

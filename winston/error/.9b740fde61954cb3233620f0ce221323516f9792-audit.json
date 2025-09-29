@@ -6,16 +6,6 @@
     "auditLog": "R:\\projects\\lira-backend\\winston\\error\\.9b740fde61954cb3233620f0ce221323516f9792-audit.json",
     "files": [
         {
-            "date": 1758974644736,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\27-09-2025-18-error.log",
-            "hash": "6b9b0add493e0b9c79ca8fe5a76ccf4bf746e88d3ff2df8083cbb3683b4b0fa0"
-        },
-        {
-            "date": 1759032825880,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\28-09-2025-10-error.log",
-            "hash": "43bdc037e689509aa490255c88d5ff33f1f0e95858b6ea82835152fd45110b73"
-        },
-        {
             "date": 1759039541976,
             "name": "R:\\projects\\lira-backend\\winston\\error\\28-09-2025-12-error.log",
             "hash": "1fdf90bba3a7d329d5060c7ce206da88a2e4aa264a3051ba518902dd1623c1c6"
@@ -49,6 +39,26 @@
             "date": 1759060994868,
             "name": "R:\\projects\\lira-backend\\winston\\error\\28-09-2025-18-error.log",
             "hash": "e2e2470c04087432add753b21b4b885f11e9267d1ef39164ac63945549fd99c1"
+        },
+        {
+            "date": 1759117838626,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\29-09-2025-09-error.log",
+            "hash": "9cc4ad78c0246f7ffa58679a36413f9b9c678557cbfb340e53be1802ea37d27a"
+        },
+        {
+            "date": 1759120883972,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\29-09-2025-10-error.log",
+            "hash": "0bddea68757ac19117437b3e3ca9bc466d5d66c3d7042a26e1d16279b69104f2"
+        },
+        {
+            "date": 1759125252538,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\29-09-2025-11-error.log",
+            "hash": "1cbe4a99d3f1b418980b822f69abd7a13ca004eddaabd98fb5687b0e20f12b69"
+        },
+        {
+            "date": 1759125682548,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\29-09-2025-12-error.log",
+            "hash": "40513d9229bbf8b1b625bf5c3437fa8efb874c862f33a0b83e02e527f6fbd9ec"
         }
     ],
     "hashType": "sha256"

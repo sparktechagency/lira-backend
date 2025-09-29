@@ -23,7 +23,7 @@ app.use(Morgan.errorHandler);
 //body parser
 app.use(
      cors({
-          origin: config.allowed_origins || '*',
+          origin: ["http://10.10.7.47:3000"],
           credentials: true,
      }),
 );

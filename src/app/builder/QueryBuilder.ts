@@ -27,7 +27,7 @@ class QueryBuilder<T> {
      }
 
      filter() {
-          const excludeFields = ['searchTerm', 'sort', 'limit', 'page', 'fields', 'maxPrice', 'minPrice', 'dateRange', 'year', 'month', 'day', 'dateFilter'];
+          const excludeFields = ['searchTerm', 'sort', 'limit', 'page', 'fields', 'maxPrice', 'minPrice', 'dateRange', 'year', 'month', 'day', 'dateFilter', 'prizeType'];
           const queryObj = { ...this.query };
           excludeFields.forEach((el) => delete queryObj[el]);
 
@@ -40,7 +40,7 @@ class QueryBuilder<T> {
           this.modelQuery = this.modelQuery.sort(sort as string);
           return this;
      }
-    
+
      paginate(defaultLimit = 10) {
           const page = Number(this.query?.page) || 1;
           const limit = Number(this.query?.limit) || defaultLimit;
@@ -65,6 +65,17 @@ class QueryBuilder<T> {
           if (minPrice !== undefined || maxPrice !== undefined) {
                this.modelQuery = this.modelQuery.find({
                     price: priceFilter,
+               } as FilterQuery<T>);
+          }
+
+          return this;
+     }
+     prizeTypeFilter() {
+          const prizeType = this.query?.prizeType as string;
+
+          if (prizeType) {
+               this.modelQuery = this.modelQuery.find({
+                    'prize.type': { $regex: prizeType, $options: 'i' }
                } as FilterQuery<T>);
           }
 

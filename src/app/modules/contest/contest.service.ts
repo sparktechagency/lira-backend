@@ -168,7 +168,7 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         // endTime: { $gte: new Date() }
     }), query);
 
-    const result = await queryBuilder.priceRange().fields().filter().search(["name", "category"]).sort().modelQuery.exec();
+    const result = await queryBuilder.priceRange().fields().filter().search(["name", "category"]).prizeTypeFilter().sort().modelQuery.exec();
     const meta = await queryBuilder.countTotal();
 
     return {

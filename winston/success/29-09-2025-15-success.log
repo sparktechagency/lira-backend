@@ -97,3 +97,40 @@ Mon Sep 29 2025 15:17:44 [SERVER-NAME] info: [33m♻️  Socket is listening on
 Mon Sep 29 2025 15:17:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
 Mon Sep 29 2025 15:18:45 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 30.223 ms
 Mon Sep 29 2025 15:19:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/68d92547848dcdfe11da8529 200 - 8.645 ms
+Mon Sep 29 2025 15:24:28 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 67.330 ms
+Mon Sep 29 2025 15:26:0 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 4.515 ms
+Mon Sep 29 2025 15:26:0 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 47.366 ms
+Mon Sep 29 2025 15:30:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:30:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:30:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:30:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:30:39 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:30:39 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:30:39 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:30:39 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:31:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?prizeType%20=Cash 200 - 21.995 ms
+Mon Sep 29 2025 15:31:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 15.984 ms
+Mon Sep 29 2025 15:31:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 8.724 ms
+Mon Sep 29 2025 15:31:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 9.131 ms
+Mon Sep 29 2025 15:31:42 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?prizeType%20=Cash 200 - 5.163 ms
+Mon Sep 29 2025 15:31:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:31:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:31:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:31:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:31:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:31:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:31:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:31:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:31:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?prizeType%20=Cash 200 - 16.130 ms
+Mon Sep 29 2025 15:31:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?prizeType%20=Cash 200 - 4.663 ms
+Mon Sep 29 2025 15:31:59 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?prizeType%20=Cash 200 - 5.485 ms
+Mon Sep 29 2025 15:32:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?prizeType%20=Cash 200 - 4.581 ms
+Mon Sep 29 2025 15:32:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?prizeType=Cash 200 - 35.760 ms
+Mon Sep 29 2025 15:36:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:36:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:36:15 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:36:15 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 15:37:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 15:37:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 15:37:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 15:37:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m

@@ -86,6 +86,11 @@ const ContestSchema = new Schema<IContest>({
         type: {
             type: String,
             required: [true, 'Prize type is required']
+        },
+        prizePool: {
+            type: Number,
+            required: [true, 'Prize pool is required'],
+            min: [0, 'Prize pool cannot be negative']
         }
     },
 

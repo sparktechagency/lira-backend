@@ -1,6 +1,6 @@
 import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
-import { IContest, IPredictionTier } from "./contest.interface";
+import { IContest } from "./contest.interface";
 import { Contest } from "./contest.model";
 import QueryBuilder from "../../builder/QueryBuilder";
 

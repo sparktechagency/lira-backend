@@ -45,6 +45,7 @@ export interface IPredictionTier {
 
 export interface IContest extends Document {
     name: string;
+    serial: number;
     category: string;
     categoryId: Types.ObjectId;
     description: string;

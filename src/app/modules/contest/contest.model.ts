@@ -48,6 +48,11 @@ const ContestSchema = new Schema<IContest>({
         trim: true,
         maxlength: [200, 'Contest name cannot exceed 200 characters']
     },
+    serial: {
+        type: Number,
+        required: [false, 'Serial number is required'],
+        default: 1,
+    },
     category: {
         type: String,
         required: [true, 'Category is required'],

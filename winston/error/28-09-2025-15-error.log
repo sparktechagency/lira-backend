@@ -1,5 +1,0 @@
-Sun Sep 28 2025 15:19:15 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.569 ms
-Sun Sep 28 2025 15:23:1 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/auth/login 400 - 5.180 ms
-Sun Sep 28 2025 15:23:40 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 403 - 3.360 ms
-Sun Sep 28 2025 15:23:40 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 403 - 3.548 ms
-Sun Sep 28 2025 15:23:40 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 403 - 5.095 ms

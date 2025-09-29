@@ -10,37 +10,59 @@ const US_STATES_ARRAY = [
     "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee",
     "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ] as const;
-const tierSchema = new mongoose.Schema({
-    tiers: [
-        {
-                name: {
-                    type: String,
-                    required: false, // Optional field
-                },
-                min: {
-                    type: Number,
-                    required: false, // Optional field
-                },
-                max: {
-                    type: Number,
-                    required: false, // Optional field
-                },
-                pricePerPrediction: {
-                    type: Number,
-                    required: false, // Optional field
-                    min: [0, 'Price cannot be negative'],
-                },
-            isActive: {
-                type: Boolean,
-                default: false, // Default value
-            },
-            default: {
-                type: Array,
-                default: [], // Default as an empty array
-            },
+const GeneratePrediction = new Schema<IGeneratedPrediction>({
+    value: {
+        type: Number,
+        required: false,
+    },
+    tierId: {
+        type: String,
+        required: false,
+    },
+    price: {
+        type: Number,
+        required: false,
+        default: 0,
+    },
+    currentEntries: {
+        type: Number,
+        default: 0,
+    },
+    maxEntries: {
+        type: Number,
+        required: false,
+        default: 0,
+    },
+    isAvailable: {
+        type: Boolean,
+        default: true
+    }
+})
+const tierSchema = new Schema<IPredictionTier>(
+    {
+        name: {
+            type: String,
+            required: false, // Optional field
         },
-    ],
-});
+        min: {
+            type: Number,
+            required: false, // Optional field
+        },
+        max: {
+            type: Number,
+            required: false, // Optional field
+        },
+        pricePerPrediction: {
+            type: Number,
+            required: false, // Optional field
+            min: [0, 'Price cannot be negative'],
+        },
+        isActive: {
+            type: Boolean,
+            default: false, // Default value
+        }
+    }
+)
 const ContestSchema = new Schema<IContest>({
     name: {
         type: String,
@@ -124,35 +146,10 @@ const ContestSchema = new Schema<IContest>({
             of: Number,
             default: () => new Map()
         },
-        generatedPredictions: [{
-            value: {
-                type: Number,
-                required: [true, 'Prediction value is required']
-            },
-            tierId: {
-                type: String,
-                required: [true, 'Tier ID is required']
-            },
-            price: {
-                type: Number,
-                required: [true, 'Price is required'],
-                min: [0, 'Price cannot be negative']
-            },
-            currentEntries: {
-                type: Number,
-                default: 0,
-                min: [0, 'Current entries cannot be negative']
-            },
-            maxEntries: {
-                type: Number,
-                required: [true, 'Max entries is required'],
-                min: [1, 'Max entries must be at least 1']
-            },
-            isAvailable: {
-                type: Boolean,
-                default: true
-            }
-        }]
+        generatedPredictions: {
+            type: [GeneratePrediction],
+            default: []
+        }
     },
 
     pricing: {
@@ -176,7 +173,11 @@ const ContestSchema = new Schema<IContest>({
             default: 0,
             min: [0, 'Max tier price cannot be negative']
         },
-        tiers: [tierSchema],
+        tiers: {
+            type: [tierSchema],
+            default: []
+
+        },
     },
     startTime: {
         type: Date,

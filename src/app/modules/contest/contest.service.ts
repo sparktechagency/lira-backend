@@ -3,9 +3,9 @@ import AppError from "../../../errors/AppError";
 import { IContest } from "./contest.interface";
 import { Contest } from "./contest.model";
 import QueryBuilder from "../../builder/QueryBuilder";
+import { Category } from "../category/category.model";
 
 const createContest = async (payload: Partial<IContest>) => {
-    // console.log(payload, "createContest payload");
     // Validate required fields
     if (!payload.name || !payload.categoryId || !payload.description) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Name, categoryId, and description are required');
@@ -14,16 +14,23 @@ const createContest = async (payload: Partial<IContest>) => {
     if (!payload.predictions?.minPrediction || !payload.predictions?.maxPrediction || !payload.predictions?.increment) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Prediction min, max, and increment are required');
     }
-    // Validate pricing tiers
-    if (!payload.pricing?.tiers || payload.pricing.tiers.length === 0) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'At least one pricing tier is required');
-    }
     // Validate time
     if (payload.startTime && payload.endTime && new Date(payload.endTime) <= new Date(payload.startTime)) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'End time must be after start time');
     }
-    payload.pricing.minTierPrice = Math.min(...payload.pricing.tiers.map(t => t.min))
-    payload.pricing.maxTierPrice = Math.max(...payload.pricing.tiers.map(t => t.max))
+    if (payload.categoryId) {
+        const category = await Category.findById(payload.categoryId);
+        if (!category) {
+            throw new AppError(StatusCodes.BAD_REQUEST, 'Category not found');
+        }
+        payload.categoryId = category._id;
+        payload.category = category.name;
+    }
+    if (payload.pricing?.tiers) {
+        payload.pricing.minTierPrice = Math.min(...payload.pricing.tiers.map(t => t.min))
+        payload.pricing.maxTierPrice = Math.max(...payload.pricing.tiers.map(t => t.max))
+
+    }
 
     const result = await Contest.create(payload);
 

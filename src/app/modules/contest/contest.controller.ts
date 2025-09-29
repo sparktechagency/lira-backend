@@ -91,7 +91,7 @@ const getActiveContests = catchAsync(async (req, res) => {
 });
 
 const getPredictionTiers = catchAsync(async (req, res) => {
-  const { contestId, tierId } = req.params;
+    const { contestId, tierId } = req.params;
     const result = await ContestService.getPredictionTiers(contestId, tierId);
 
     sendResponse(res, {

@@ -13,6 +13,6 @@ router
      .patch(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), GroupController.updateGroup)
      .delete(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), GroupController.deleteGroup);
 
-router.get('/', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER), GroupController.getGroups);
+router.get('/', GroupController.getGroups);
 
 export const GroupRoutes = router;

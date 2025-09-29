@@ -14,6 +14,6 @@ router
      .patch(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.updateCategory)
      .delete(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.deleteCategory);
 
-router.get('/', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER), CategoryController.getCategories);
+router.get('/', CategoryController.getCategories);
 
 export const CategoryRoutes = router;

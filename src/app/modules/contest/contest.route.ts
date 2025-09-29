@@ -58,8 +58,8 @@ router.patch(
 // Public routes (for users)
 router.get('/active/list', ContestController.getActiveContests);
 
-router.get('/:id/tiers', ContestController.getTiersContest);
+router.get('/:id/tiers', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getTiersContest);
 
-router.get('/contest/prediction/:contestId/tiers/:tierId', ContestController.getPredictionTiers);
+router.get('/contest/prediction/:contestId/tiers/:tierId', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getPredictionTiers);
 
 export const ContestRoutes = router;

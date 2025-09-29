@@ -1,4 +1,0 @@
-Sun Sep 28 2025 14:52:31 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 222.053 ms
-Sun Sep 28 2025 14:53:14 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 215.807 ms
-Sun Sep 28 2025 14:54:35 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 211.545 ms
-Sun Sep 28 2025 14:55:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.431 ms

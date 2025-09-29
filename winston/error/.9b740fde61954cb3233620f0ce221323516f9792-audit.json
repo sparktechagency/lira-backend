@@ -54,6 +54,11 @@
             "date": 1759136271576,
             "name": "R:\\projects\\lira-backend\\winston\\error\\29-09-2025-14-error.log",
             "hash": "3f50f7bd677d3a3479c48ea9041824f297e49a33ad818b5b2f93cf8a5380f030"
+        },
+        {
+            "date": 1759136526390,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\29-09-2025-15-error.log",
+            "hash": "f454c3c1dbac9b2c3bc4dc4a89a4fa9a35d811436fdbc7e0cb99e8d42a980d0e"
         }
     ],
     "hashType": "sha256"

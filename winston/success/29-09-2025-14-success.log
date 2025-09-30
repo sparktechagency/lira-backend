@@ -1,8 +1,0 @@
-Mon Sep 29 2025 14:49:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d2610c4434ddde1b82301c 200 - 26.440 ms
-Mon Sep 29 2025 14:49:19 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups/ 200 - 8.221 ms
-Mon Sep 29 2025 14:53:4 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 7.524 ms
-Mon Sep 29 2025 14:53:5 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 1.424 ms
-Mon Sep 29 2025 14:53:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 200 - 39.477 ms
-Mon Sep 29 2025 14:57:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 6.750 ms
-Mon Sep 29 2025 14:57:45 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.420 ms
-Mon Sep 29 2025 14:57:55 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.956 ms

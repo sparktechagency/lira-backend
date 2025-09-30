@@ -1,0 +1,17 @@
+Tue Sep 30 2025 17:19:19 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 54.012 ms
+Tue Sep 30 2025 17:19:21 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.019 ms
+Tue Sep 30 2025 17:19:26 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 3.169 ms
+Tue Sep 30 2025 17:19:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.176 ms
+Tue Sep 30 2025 17:19:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1contest/contest/:id68dbab449d7a99664cb61d19 404 - 14.891 ms
+Tue Sep 30 2025 17:19:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.482 ms
+Tue Sep 30 2025 17:19:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1contest/contest/68dbab449d7a99664cb61d19 404 - 0.569 ms
+Tue Sep 30 2025 17:19:50 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.259 ms
+Tue Sep 30 2025 17:19:50 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1contest/contest/68dbab449d7a99664cb61d19 404 - 1.379 ms
+Tue Sep 30 2025 17:19:59 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 2.120 ms
+Tue Sep 30 2025 17:19:59 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1contest/contest/68dbab449d7a99664cb61d19 404 - 0.585 ms
+Tue Sep 30 2025 17:20:2 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 0.982 ms
+Tue Sep 30 2025 17:20:2 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1contest/contest/68dbab449d7a99664cb61d19 404 - 0.334 ms
+Tue Sep 30 2025 17:20:8 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.712 ms
+Tue Sep 30 2025 17:20:8 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1contest/contest/68dbab449d7a99664cb61d19 404 - 1.273 ms
+Tue Sep 30 2025 17:20:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 0.838 ms
+Tue Sep 30 2025 17:20:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68dbab449d7a99664cb61d19 401 - 1.537 ms

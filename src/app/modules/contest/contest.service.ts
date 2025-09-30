@@ -206,6 +206,7 @@ const getPredictionTiers = async (contestId: string, tierId: string) => {
     }
     return tier;
 };
+
 const getContestByIdUser = async (id: string) => {
     const result = await Contest.findById(id).select("-predictions.generatedPredictions -pricing.tiers -results -state -predictions.placePercentages -predictions.numberOfEntriesPerPrediction -predictions.unit -predictions.increment -createdBy -createdAt -updatedAt -maxEntries -startTime -status -categoryId -serial");
     if (!result) {

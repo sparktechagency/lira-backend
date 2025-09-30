@@ -1,0 +1,6 @@
+Tue Sep 30 2025 18:14:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 10.425 ms
+Tue Sep 30 2025 18:14:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 10.494 ms
+Tue Sep 30 2025 18:14:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68da7d7d42f1bec0a1ae14c0 401 - 4.948 ms
+Tue Sep 30 2025 18:14:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68da7d7d42f1bec0a1ae14c0 401 - 6.537 ms
+Tue Sep 30 2025 18:14:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.426 ms
+Tue Sep 30 2025 18:14:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68da7d7d42f1bec0a1ae14c0 401 - 0.893 ms

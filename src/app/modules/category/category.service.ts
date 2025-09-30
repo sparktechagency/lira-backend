@@ -90,10 +90,19 @@ const shuffleCategorySerial = async (categoryOrder: Array<{ _id: string; serial:
      const result = await Promise.all(updatePromises);
      return result;
 };
+
+const getCategoryByGroupId = async (id: string) => {
+     const result = await Category.find({ groupId: id }).select("-createdBy -updatedAt");
+     if (!result) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'Category not found');
+     }
+     return result;
+}
 export const CategoryService = {
      createCategoryToDB,
      getCategoriesFromDB,
      updateCategoryToDB,
      deleteCategoryToDB,
-     shuffleCategorySerial
+     shuffleCategorySerial,
+     getCategoryByGroupId
 };

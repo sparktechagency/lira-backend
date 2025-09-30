@@ -2,6 +2,7 @@ import { StatusCodes } from 'http-status-codes';
 import AppError from '../../../errors/AppError';
 import { Group } from './group.model';
 import { IGroup } from './group.interface';
+import { Category } from '../category/category.model';
 
 const createGroupToDB = async (payload: IGroup) => {
      const { name } = payload;
@@ -53,6 +54,7 @@ const shuffleGroupSerial = async (groupOrder: Array<{ _id: string; serial: numbe
      const result = await Promise.all(updatePromises);
      return result;
 };
+
 export const GroupService = {
      createGroupToDB,
      getGroupsFromDB,

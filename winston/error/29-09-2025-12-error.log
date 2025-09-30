@@ -1,9 +1,0 @@
-Mon Sep 29 2025 12:23:40 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 3.523 ms
-Mon Sep 29 2025 12:23:43 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.241 ms
-Mon Sep 29 2025 12:23:46 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.094 ms
-Mon Sep 29 2025 12:24:55 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 0.949 ms
-Mon Sep 29 2025 12:25:9 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.858 ms
-Mon Sep 29 2025 12:25:22 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.008 ms
-Mon Sep 29 2025 12:31:30 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/unit-type?key=type 401 - 6.911 ms
-Mon Sep 29 2025 12:48:56 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 24.698 ms
-Mon Sep 29 2025 12:56:43 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 87.439 ms

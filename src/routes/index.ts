@@ -6,6 +6,7 @@ import { CategoryRoutes } from '../app/modules/category/category.route';
 import { GroupRoutes } from '../app/modules/group/group.route';
 import { UnitTypeRoute } from '../app/modules/unit-type/unit-type.route';
 import { ContestRoutes } from '../app/modules/contest/contest.route';
+import { UserManagementsRouter } from '../app/modules/userManagements/userManagements.router';
 
 const router = express.Router();
 const routes = [
@@ -37,6 +38,11 @@ const routes = [
           path: '/contest',
           route: ContestRoutes,
      },
+     {
+          path: '/user-managements',
+          route: UserManagementsRouter,
+     },
+
 ];
 
 routes.forEach((element) => {

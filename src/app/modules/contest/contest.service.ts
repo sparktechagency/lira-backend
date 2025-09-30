@@ -174,8 +174,9 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         // startTime: { $lte: new Date() },
         // endTime: { $gte: new Date() }
     }), query);
-
-    const result = await queryBuilder.priceRange().fields().filter().search(["name", "category"]).prizeTypeFilter().sort().modelQuery.exec();
+    const notAllowedFields = "-predictions.generatedPredictions -pricing.tiers -results -state -predictions.placePercentages -predictions.numberOfEntriesPerPrediction -predictions.unit -predictions.increment -createdBy -createdAt -updatedAt -maxEntries -startTime -status -description -categoryId -serial";
+    
+    const result = await queryBuilder.priceRange().fields().filter().search(["name", "category"]).prizeTypeFilter().sort().modelQuery.select(notAllowedFields).exec();
     const meta = await queryBuilder.countTotal();
 
     return {

@@ -58,10 +58,22 @@ const shuffleCategorySerial = catchAsync(async (req, res) => {
      });
 });
 
+const getCategoryByGroupId = catchAsync(async (req, res) => {
+     const id = req.params.id;
+     const result = await CategoryService.getCategoryByGroupId(id);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: 'Category retrieved successfully',
+          data: result,
+     });
+});
+
 export const CategoryController = {
      createCategory,
      getCategories,
      updateCategory,
      deleteCategory,
      shuffleCategorySerial,
+     getCategoryByGroupId,
 };

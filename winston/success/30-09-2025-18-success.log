@@ -91,3 +91,52 @@ Tue Sep 30 2025 18:15:25 [SERVER-NAME] info: [32mConfig validation successful.
 Tue Sep 30 2025 18:15:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Tue Sep 30 2025 18:15:25 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Tue Sep 30 2025 18:15:25 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 30 2025 18:15:39 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 200 - 11.892 ms
+Tue Sep 30 2025 18:15:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 30 2025 18:15:44 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 30 2025 18:15:44 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 30 2025 18:15:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 30 2025 18:16:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 30 2025 18:16:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 30 2025 18:16:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 30 2025 18:16:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 30 2025 18:16:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 30 2025 18:16:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 30 2025 18:16:8 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 30 2025 18:16:8 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 30 2025 18:16:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Sep 30 2025 18:16:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Sep 30 2025 18:16:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Sep 30 2025 18:16:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Sep 30 2025 18:16:30 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 200 - 12.512 ms
+Tue Sep 30 2025 18:16:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 19.210 ms
+Tue Sep 30 2025 18:16:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.130 ms
+Tue Sep 30 2025 18:16:40 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.164 ms
+Tue Sep 30 2025 18:16:40 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.045 ms
+Tue Sep 30 2025 18:16:40 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 9.856 ms
+Tue Sep 30 2025 18:16:41 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 372.922 ms
+Tue Sep 30 2025 18:16:45 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 227.095 ms
+Tue Sep 30 2025 18:16:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/category-by-group/68d2610c4434ddde1b82301c 200 - 4.883 ms
+Tue Sep 30 2025 18:30:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 36.803 ms
+Tue Sep 30 2025 18:30:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.288 ms
+Tue Sep 30 2025 18:31:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.707 ms
+Tue Sep 30 2025 18:31:44 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.566 ms
+Tue Sep 30 2025 18:32:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.390 ms
+Tue Sep 30 2025 18:54:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 50.161 ms
+Tue Sep 30 2025 18:54:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68dbab449d7a99664cb61d19 200 - 54.051 ms
+Tue Sep 30 2025 18:54:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 9.705 ms
+Tue Sep 30 2025 18:56:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 65.555 ms
+Tue Sep 30 2025 18:56:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.473 ms
+Tue Sep 30 2025 18:56:51 [SERVER-NAME] info: 10.10.7.14 - GET /image/566ff94183139bca8ea3fcde1b45bd20-1759226692440.jpg 200 - 16.659 ms
+Tue Sep 30 2025 18:58:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 6.785 ms
+Tue Sep 30 2025 18:58:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.887 ms
+Tue Sep 30 2025 18:58:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 6.783 ms
+Tue Sep 30 2025 18:58:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.484 ms
+Tue Sep 30 2025 18:58:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 1.296 ms
+Tue Sep 30 2025 18:58:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68d2347954018e3fff04f286 200 - 95.839 ms
+Tue Sep 30 2025 18:58:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.962 ms
+Tue Sep 30 2025 18:58:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.535 ms
+Tue Sep 30 2025 18:58:39 [SERVER-NAME] info: 10.10.7.14 - GET /image/566ff94183139bca8ea3fcde1b45bd20-1759226692440.jpg 200 - 3.397 ms
+Tue Sep 30 2025 18:59:49 [SERVER-NAME] info: 10.10.7.14 - GET /image/566ff94183139bca8ea3fcde1b45bd20-1759226692440.jpg 200 - 0.900 ms
+Tue Sep 30 2025 18:59:51 [SERVER-NAME] info: 10.10.7.14 - GET /image/screenshot-2025-07-09-160658-1759149437476.png 200 - 3.320 ms
+Tue Sep 30 2025 18:59:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68da7d7d42f1bec0a1ae14c0 200 - 6.403 ms

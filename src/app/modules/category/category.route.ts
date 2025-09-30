@@ -8,6 +8,7 @@ const router = express.Router();
 
 router.post('/create', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), validateRequest(CategoryValidation.createCategoryZodSchema), CategoryController.createCategory);
 router.post('/shuffle-serial', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.shuffleCategorySerial);
+router.get('/category-by-group/:id', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.getCategoryByGroupId);
 
 router
      .route('/:id')

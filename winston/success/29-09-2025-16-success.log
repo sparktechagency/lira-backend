@@ -410,3 +410,5 @@ Mon Sep 29 2025 16:39:29 [SERVER-NAME] info: [32mConfig validation successful.
 Mon Sep 29 2025 16:39:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Mon Sep 29 2025 16:39:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Mon Sep 29 2025 16:39:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 16:42:39 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 2.288 ms
+Mon Sep 29 2025 16:42:39 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 43.450 ms

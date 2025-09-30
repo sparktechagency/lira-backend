@@ -1,0 +1,14 @@
+Mon Sep 29 2025 17:2:57 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 1.689 ms
+Mon Sep 29 2025 17:2:57 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 38.811 ms
+Mon Sep 29 2025 17:3:20 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.341 ms
+Mon Sep 29 2025 17:3:20 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 12.709 ms
+Mon Sep 29 2025 17:3:52 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest/create 204 - 0.109 ms
+Mon Sep 29 2025 17:3:52 [SERVER-NAME] info: 10.10.7.47 - POST /api/v1/contest/create 201 - 216.468 ms
+Mon Sep 29 2025 17:4:39 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.099 ms
+Mon Sep 29 2025 17:4:39 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 6.286 ms
+Mon Sep 29 2025 17:49:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Sep 29 2025 17:49:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Sep 29 2025 17:49:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Sep 29 2025 17:49:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Sep 29 2025 17:49:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 68.570 ms
+Mon Sep 29 2025 17:49:19 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 25.892 ms

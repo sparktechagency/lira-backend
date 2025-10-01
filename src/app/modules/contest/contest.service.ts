@@ -23,6 +23,8 @@ const createContest = async (payload: Partial<IContest>) => {
         if (!category) {
             throw new AppError(StatusCodes.BAD_REQUEST, 'Category not found');
         }
+        category.count += 1;
+        await category.save();
         payload.categoryId = category._id;
         payload.category = category.name;
     }
@@ -109,6 +111,13 @@ const deleteContest = async (id: string) => {
     const contest = await Contest.findById(id);
     if (!contest) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+    if (contest.categoryId) {
+        const category = await Category.findById(contest.categoryId);
+        if (category) {
+            category.count -= 1;
+            await category.save();
+        }
     }
 
     // Don't allow deleting if contest has entries

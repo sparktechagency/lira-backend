@@ -1,11 +1,11 @@
 import { StatusCodes } from 'http-status-codes';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
-import { ProductOrderService } from './order.service';
+import { OrderService } from './order.service';
 
 const createProductOrder = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
-     const result = await ProductOrderService.createProductOrder(id, req.body);
+     const result = await OrderService.createProductOrder(id, req.body);
      sendResponse(res, {
           statusCode: StatusCodes.CREATED,
           success: true,
@@ -15,7 +15,7 @@ const createProductOrder = catchAsync(async (req, res) => {
 });
 
 const getAllProductOrders = catchAsync(async (req, res) => {
-     const result = await ProductOrderService.getAllProductOrders(req.query);
+     const result = await OrderService.getAllProductOrders(req.query);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -28,7 +28,7 @@ const getAllProductOrders = catchAsync(async (req, res) => {
 
 const getSingleProductOrder = catchAsync(async (req, res) => {
      const { id } = req.params;
-     const result = await ProductOrderService.getSingleProductOrder(id);
+     const result = await OrderService.getSingleProductOrder(id);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -40,7 +40,7 @@ const getSingleProductOrder = catchAsync(async (req, res) => {
 
 const updateProductOrder = catchAsync(async (req, res) => {
      const { id } = req.params;
-     const result = await ProductOrderService.updateProductOrder(id, req.body);
+     const result = await OrderService.updateProductOrder(id, req.body);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -65,7 +65,7 @@ const updateProductOrder = catchAsync(async (req, res) => {
 const createCheckoutSession = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
      const { orderId } = req.params;
-     const result = await ProductOrderService.createCheckoutSession(orderId, id);
+     const result = await OrderService.createCheckoutSession(orderId, id);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -85,7 +85,7 @@ const orderSuccess = catchAsync(async (req, res) => {
 
 const getUserOrders = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
-     const result = await ProductOrderService.getUserOrders(id, req.query);
+     const result = await OrderService.getUserOrders(id, req.query);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -98,7 +98,7 @@ const getUserOrders = catchAsync(async (req, res) => {
 
 const createOrderAndCheckout = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
-     const result = await ProductOrderService.createOrderAndCheckout(id, req.body);
+     const result = await OrderService.createOrderAndCheckout(id, req.body);
      sendResponse(res, {
           statusCode: StatusCodes.OK,
           success: true,
@@ -109,23 +109,23 @@ const createOrderAndCheckout = catchAsync(async (req, res) => {
           },
      });
 });
-const analysisOrders = catchAsync(async (req, res) => {
-     const result = await ProductOrderService.analysisOrders();
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'Order analysis retrieved successfully',
-          data: result,
-     });
-});
+// const analysisOrders = catchAsync(async (req, res) => {
+//      const result = await ProductOrderService.analysisOrders();
+//      sendResponse(res, {
+//           statusCode: StatusCodes.OK,
+//           success: true,
+//           message: 'Order analysis retrieved successfully',
+//           data: result,
+//      });
+// });
 
-export const ProductOrderController = {
+export const OrderController = {
      createProductOrder,
      getAllProductOrders,
      getSingleProductOrder,
      updateProductOrder,
      // cancelProductOrder,
-     analysisOrders,
+     // analysisOrders,
      createCheckoutSession,
      orderSuccess,
      getUserOrders,

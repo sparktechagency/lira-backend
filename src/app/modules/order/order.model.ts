@@ -13,34 +13,12 @@ const productOrderSchema = new Schema<IProductOrder>(
                ref: 'User',
                required: true,
           },
-          promoCodeId: {
-               type: Schema.Types.ObjectId,
-               ref: 'PromoCode',
-               default: null,
-          },
-          products: [
+          predictionIds: [
                {
-                    productId: {
+                    predictionId: {
                          type: Schema.Types.ObjectId,
-                         ref: 'Inventory',
+                         ref: 'Prediction',
                          required: true,
-                    },
-                    quantity: {
-                         type: Number,
-                         required: true,
-                         min: 1,
-                    },
-                    price: {
-                         type: Number,
-                         required: true,
-                    },
-                    creditEarn: {
-                         type: Number,
-                         default: 0,
-                    },
-                    csAuraEarn: {
-                         type: Number,
-                         default: 0,
                     },
                },
           ],
@@ -56,53 +34,11 @@ const productOrderSchema = new Schema<IProductOrder>(
                type: Number,
                required: true,
           },
-          finalAmount: {
-               type: Number,
-               required: true,
-          },
-          deliveryType: {
-               type: String,
-               default: '',
-          },
-          comments: {
-               type: String,
-               default: '',
-          },
-          deliveryFee: {
-               type: Number,
-               default: 0,
-          },
-          deliveryDate: {
-               type: Date,
-               default: '',
-          },
-          deliveryTime: {
-               type: String,
-               default: '',
-          },
-          discount: {
-               type: Number,
-               default: 0,
-          },
-          offer: {
-               type: String,
-               default: function () {
-                    return (this as any).discount > 0 ? 'Yes' : 'No';
-               },
-          },
-
+    
           status: {
                type: String,
                enum: ['pending', 'processing', 'shipping', 'delivered', 'cancel'],
                default: 'pending',
-          },
-          shippingAddress: {
-               type: String,
-               default: '',
-          },
-          previousOrderId: {
-               type: String,
-               default: '',
           },
           paymentId: {
                type: Schema.Types.ObjectId,

@@ -9,6 +9,7 @@ import config from '../../../config';
 import { User } from '../user/user.model';
 import QueryBuilder from '../../builder/QueryBuilder';
 import generateOrderNumber from '../../../utils/generateOrderNumber';
+import { Contest } from '../contest/contest.model';
 
 
 const createProductOrder = async (userId: string, payload: Partial<IProductOrder>) => {
@@ -23,8 +24,8 @@ const createProductOrder = async (userId: string, payload: Partial<IProductOrder
 
      const products = [];
      let totalAmount: number = 0;
-     for (const item of payload.products || []) {
-          const product = await Inventory.findById(item.productId);
+     for (const item of payload.prediction || []) {
+          const product = await Contest.findById(item.productId);
           if (!product) {
                throw new AppError(StatusCodes.NOT_FOUND, `Product with ID ${item.productId} not found`);
           }
@@ -283,7 +284,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
           const lineItems = [
                {
                     price_data: {
-                         currency: 'aed',
+                         currency: 'usd',
                          product_data: {
                               name: `${order.orderId}`,
                          },
@@ -298,14 +299,14 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                payment_method_types: ['card'],
                line_items: lineItems,
                mode: 'payment',
-               success_url: `${config.stripe.paymentSuccess_url}/api/v1/product-orders/success?session_id={CHECKOUT_SESSION_ID}`,
-               cancel_url: `${config.stripe.paymentCancel_url}/product-orders/cancel`,
+               success_url: `${config.stripe.paymentSuccess_url}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+               cancel_url: `${config.stripe.paymentCancel_url}/orders/cancel`,
                customer_email: user.email, // Add customer email if available
                metadata: {
                     orderId: order._id.toString(),
                     userId: userId,
                     paymentId: payment._id.toString(),
-                    type: 'product_order',
+                    type: 'order',
                },
           });
 
@@ -323,6 +324,12 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
           console.error('Error creating checkout session:', error);
           throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to create checkout session: ${error.message}`);
      }
+};
+const createOrderAndCheckout = async (userId: string, payload: Partial<IProductOrder>): Promise<{ sessionId: string; url: string | null }> => {
+     // First create the order
+     const order = await createProductOrder(userId, payload);
+     // Then create the checkout session
+     return createCheckoutSession(order.orderId, userId);
 };
 // const handleSuccessfulPayment = async (sessionId: string) => {
 //      try {
@@ -385,72 +392,67 @@ const getUserOrders = async (userId: string, query: Record<string, unknown>) => 
      };
 };
 
-const createOrderAndCheckout = async (userId: string, payload: Partial<IProductOrder>): Promise<{ sessionId: string; url: string | null }> => {
-     // First create the order
-     const order = await createProductOrder(userId, payload);
-     // Then create the checkout session
-     return createCheckoutSession(order.orderId, userId);
-};
-const analysisOrders = async () => {
-     try {
-          // Method 1: Using aggregation pipeline (more efficient for large datasets)
-          const orderAnalysis = await ProductOrder.aggregate([
-               {
-                    $match: {
-                         isDeleted: { $ne: true }, // Only count non-deleted orders
-                    },
-               },
-               {
-                    $group: {
-                         _id: '$status',
-                         count: { $sum: 1 },
-                    },
-               },
-               {
-                    $group: {
-                         _id: null,
-                         orders: {
-                              $push: {
-                                   status: '$_id',
-                                   count: '$count',
-                              },
-                         },
-                         totalOrders: { $sum: '$count' },
-                    },
-               },
-          ]);
 
-          // Transform the result into a more readable format
-          const result = {
-               pending: 0,
-               processing: 0,
-               shipping: 0,
-               delivered: 0,
-               cancel: 0,
-               totalOrders: 0,
-          };
+// const analysisOrders = async () => {
+//      try {
+//           // Method 1: Using aggregation pipeline (more efficient for large datasets)
+//           const orderAnalysis = await ProductOrder.aggregate([
+//                {
+//                     $match: {
+//                          isDeleted: { $ne: true }, // Only count non-deleted orders
+//                     },
+//                },
+//                {
+//                     $group: {
+//                          _id: '$status',
+//                          count: { $sum: 1 },
+//                     },
+//                },
+//                {
+//                     $group: {
+//                          _id: null,
+//                          orders: {
+//                               $push: {
+//                                    status: '$_id',
+//                                    count: '$count',
+//                               },
+//                          },
+//                          totalOrders: { $sum: '$count' },
+//                     },
+//                },
+//           ]);
 
-          if (orderAnalysis.length > 0) {
-               result.totalOrders = orderAnalysis[0].totalOrders;
+//           // Transform the result into a more readable format
+//           const result = {
+//                pending: 0,
+//                processing: 0,
+//                shipping: 0,
+//                delivered: 0,
+//                cancel: 0,
+//                totalOrders: 0,
+//           };
 
-               orderAnalysis[0].orders.forEach((order: any) => {
-                    result[order.status as keyof typeof result] = order.count;
-               });
-          }
+//           if (orderAnalysis.length > 0) {
+//                result.totalOrders = orderAnalysis[0].totalOrders;
 
-          return result;
-     } catch (error) {
-          console.error('Error analyzing orders:', error);
-          throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, 'Failed to analyze orders');
-     }
-};
-export const ProductOrderService = {
+//                orderAnalysis[0].orders.forEach((order: any) => {
+//                     result[order.status as keyof typeof result] = order.count;
+//                });
+//           }
+
+//           return result;
+//      } catch (error) {
+//           console.error('Error analyzing orders:', error);
+//           throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, 'Failed to analyze orders');
+//      }
+// };
+export const OrderService = {
      createProductOrder,
      getAllProductOrders,
      getSingleProductOrder,
      updateProductOrder,
      // cancelProductOrder,
-     analysisOrders,
+     // analysisOrders,
      createCheckoutSession,
      getUserOrders,
      createOrderAndCheckout,

@@ -8,7 +8,7 @@ import config from '../../config';
 import stripe from '../../config/stripe';
 import AppError from '../../errors/AppError';
 import { handleCheckoutSessionExpired } from './handlers/handleCheckoutSessionExpired';
-import { handleCheckoutSessionSuccessful } from './handlers/handleSuccessfulPayment ';
+import { handleCheckoutSessionSuccessful } from './handlers/handleCheckoutSessionSuccessful';
 
 const handleStripeWebhook = async (req: Request, res: Response) => {
      // Extract Stripe signature and webhook secret

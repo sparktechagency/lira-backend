@@ -1,7 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 import AppError from '../../../errors/AppError';
 import { IProductOrder } from './order.interface';
-import { Payment } from '../payments/payments.model';
 import stripe from '../../../config/stripe';
 import config from '../../../config';
 

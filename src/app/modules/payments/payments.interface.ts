@@ -11,7 +11,6 @@ export interface IPaymentMetadata {
 export interface IPayment extends Document {
     orderId: string;
     userId: Types.ObjectId;
-    productIds?: Types.ObjectId[]; // Optional for contest orders
     contestId?: Types.ObjectId; // For contest orders
     predictionIds?: Types.ObjectId[]; // Track which predictions were purchased
     amount: number;

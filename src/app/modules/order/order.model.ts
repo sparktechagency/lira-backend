@@ -13,7 +13,7 @@ const orderSchema = new Schema<IProductOrder>(
                ref: 'User',
                required: true,
           },
-          predictionIds: [
+          predictions: [
                {
                     predictionId: {
                          type: Schema.Types.ObjectId,

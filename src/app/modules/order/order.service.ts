@@ -9,6 +9,7 @@ import QueryBuilder from '../../builder/QueryBuilder';
 import generateOrderNumber from '../../../utils/generateOrderNumber';
 import { Contest } from '../contest/contest.model';
 import { Order } from './order.model';
+import { Payment } from '../payments/payments.model';
 
 
 interface IPredictionIdItem {
@@ -103,6 +104,7 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
           orderId,
           userId,
           contestId: contest._id,
+          contestName: contest.name,
           phone: user.phone || '',
           email: user.email || '',
           predictions: orderedPredictions,
@@ -135,7 +137,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
      try {
           // Create payment record
           const payment = await Payment.create({
-               orderId: order.orderId,
+               orderId: order._id.toString(),
                userId: order.userId._id,
                contestId: order.contestId,
                amount: order.totalAmount,
@@ -145,7 +147,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                metadata: {
                     type: 'contest_order',
                     orderId: order.orderId,
-                    contestName: order.contestId.name,
+                    contestName: order.contestName,
                },
                isDeleted: false,
           });
@@ -156,7 +158,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                     price_data: {
                          currency: 'usd',
                          product_data: {
-                              name: `Contest Entry - ${order.contestId.name}`,
+                              name: `Contest Entry - ${order.contestName}`,
                               description: `${order.predictions.length} Prediction(s) | Order: ${order.orderId}`,
                          },
                          unit_amount: Math.round(order.totalAmount * 100),
@@ -176,7 +178,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                metadata: {
                     orderId: order._id.toString(),
                     userId: userId,
-                    paymentId: payment._id.toString(),
+                    paymentId: (payment as any)._id.toString(),
                     contestId: order.contestId._id.toString(),
                     type: 'contest_order',
                },
@@ -188,7 +190,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
           });
 
           // Update order with payment ID
-          await ProductOrder.findByIdAndUpdate(order._id, {
+          await Order.findByIdAndUpdate(order._id, {
                paymentId: payment._id,
           });
 
@@ -213,34 +215,34 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
 const createOrderAndCheckout = async (
      userId: string,
      payload: IOrderPayload
-): Promise<{ sessionId: string; url: string | null; orderDetails: any }> => {
+) => {
      // Create order
      const order = await createContestOrder(userId, payload);
 
      // Create checkout session
-     return createCheckoutSession(order._id.toString(), userId);
+     // return createCheckoutSession(order._id.toString(), userId);
 };
-const getAllProductOrders = async (query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(ProductOrder.find({ isDeleted: false }), query);
-     const result = await queryBuilder
-          .filter()
-          .sort()
-          .paginate()
-          .fields()
-          .search(['orderId'])
-          .dateFilter('createdAt')
-          .modelQuery.populate('userId', 'userName')
-          .populate('products.productId', 'name sku')
-          .exec();
-     const meta = await queryBuilder.countTotal();
-     return {
-          meta,
-          result,
-     };
-};
+// const getAllProductOrders = async (query: Record<string, unknown>) => {
+//      const queryBuilder = new QueryBuilder(ProductOrder.find({ isDeleted: false }), query);
+//      const result = await queryBuilder
+//           .filter()
+//           .sort()
+//           .paginate()
+//           .fields()
+//           .search(['orderId'])
+//           .dateFilter('createdAt')
+//           .modelQuery.populate('userId', 'userName')
+//           .populate('products.productId', 'name sku')
+//           .exec();
+//      const meta = await queryBuilder.countTotal();
+//      return {
+//           meta,
+//           result,
+//      };
+// };
 
 const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> => {
-     const result = await ProductOrder.findById(id).populate('userId', 'name email').populate('products.productId', 'name sku images').populate('paymentId');
+     const result = await Order.findById(id).populate('userId', 'name email').populate('products.productId', 'name sku images').populate('paymentId');
 
      if (!result) {
           throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
@@ -249,28 +251,28 @@ const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> 
      return result;
 };
 
-const updateProductOrder = async (id: string, payload: Partial<IProductOrder>): Promise<IProductOrder | null> => {
-     const order = await ProductOrder.findById(id);
+// const updateProductOrder = async (id: string, payload: Partial<IProductOrder>): Promise<IProductOrder | null> => {
+//      const order = await Order.findById(id);
 
-     if (!order) {
-          throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
-     }
+//      if (!order) {
+//           throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
+//      }
 
-     // If status is being updated to 'completed', update product stock
-     if (payload.status === 'shipping' && order.status !== 'delivered') {
-          // Update product stock
-          for (const item of order.products) {
-               await Inventory.findByIdAndUpdate(item.productId, { $inc: { stock: -item.quantity } });
-          }
-     }
+//      // If status is being updated to 'completed', update product stock
+//      if (payload.status === 'shipping' && order.status !== 'delivered') {
+//           // Update product stock
+//           for (const item of order.products) {
+//                await Inventory.findByIdAndUpdate(item.productId, { $inc: { stock: -item.quantity } });
+//           }
+//      }
 
-     const result = await ProductOrder.findByIdAndUpdate(id, payload, {
-          new: true,
-          runValidators: true,
-     });
+//      const result = await ProductOrder.findByIdAndUpdate(id, payload, {
+//           new: true,
+//           runValidators: true,
+//      });
 
-     return result;
-};
+//      return result;
+// };
 
 // const cancelProductOrder = async (id: string): Promise<IProductOrder | null> => {
 //      const order = await ProductOrder.findById(id);
@@ -416,18 +418,18 @@ const updateProductOrder = async (id: string, payload: Partial<IProductOrder>): 
 //      }
 // };
 
-const getUserOrders = async (userId: string, query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(ProductOrder.find({ userId }), query).filter().sort().paginate().fields().dateFilter('createdAt');
+// const getUserOrders = async (userId: string, query: Record<string, unknown>) => {
+//      const queryBuilder = new QueryBuilder(ProductOrder.find({ userId }), query).filter().sort().paginate().fields().dateFilter('createdAt');
 
-     const result = await queryBuilder.modelQuery.populate('products.productId', 'name sku images').populate('paymentId').exec();
+//      const result = await queryBuilder.modelQuery.populate('products.productId', 'name sku images').populate('paymentId').exec();
 
-     const meta = await queryBuilder.countTotal();
+//      const meta = await queryBuilder.countTotal();
 
-     return {
-          meta,
-          result,
-     };
-};
+//      return {
+//           meta,
+//           result,
+//      };
+// };
 
 
 // const analysisOrders = async () => {
@@ -484,13 +486,13 @@ const getUserOrders = async (userId: string, query: Record<string, unknown>) => 
 //      }
 // };
 export const OrderService = {
-     createProductOrder,
-     getAllProductOrders,
+     // createProductOrder,
+     // getAllProductOrders,
      getSingleProductOrder,
-     updateProductOrder,
+     // updateProductOrder,
      // cancelProductOrder,
      // analysisOrders,
      createCheckoutSession,
-     getUserOrders,
+     // getUserOrders,
      createOrderAndCheckout,
 };

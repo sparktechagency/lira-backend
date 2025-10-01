@@ -3,28 +3,28 @@ import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { OrderService } from './order.service';
 
-const createProductOrder = catchAsync(async (req, res) => {
-     const { id } = req.user as { id: string };
-     const result = await OrderService.createProductOrder(id, req.body);
-     sendResponse(res, {
-          statusCode: StatusCodes.CREATED,
-          success: true,
-          message: 'Order created successfully',
-          data: result,
-     });
-});
+// const createProductOrder = catchAsync(async (req, res) => {
+//      const { id } = req.user as { id: string };
+//      const result = await OrderService.createProductOrder(id, req.body);
+//      sendResponse(res, {
+//           statusCode: StatusCodes.CREATED,
+//           success: true,
+//           message: 'Order created successfully',
+//           data: result,
+//      });
+// });
 
-const getAllProductOrders = catchAsync(async (req, res) => {
-     const result = await OrderService.getAllProductOrders(req.query);
+// const getAllProductOrders = catchAsync(async (req, res) => {
+//      const result = await OrderService.getAllProductOrders(req.query);
 
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'Orders retrieved successfully',
-          data: result.result,
-          meta: result.meta,
-     });
-});
+//      sendResponse(res, {
+//           statusCode: StatusCodes.OK,
+//           success: true,
+//           message: 'Orders retrieved successfully',
+//           data: result.result,
+//           meta: result.meta,
+//      });
+// });
 
 const getSingleProductOrder = catchAsync(async (req, res) => {
      const { id } = req.params;
@@ -40,13 +40,13 @@ const getSingleProductOrder = catchAsync(async (req, res) => {
 
 const updateProductOrder = catchAsync(async (req, res) => {
      const { id } = req.params;
-     const result = await OrderService.updateProductOrder(id, req.body);
+     // const result = await OrderService.updateProductOrder(id, req.body);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
           success: true,
           message: 'Order updated successfully',
-          data: result,
+          // data: result,
      });
 });
 
@@ -83,18 +83,18 @@ const orderSuccess = catchAsync(async (req, res) => {
      res.render('success');
 });
 
-const getUserOrders = catchAsync(async (req, res) => {
-     const { id } = req.user as { id: string };
-     const result = await OrderService.getUserOrders(id, req.query);
+// const getUserOrders = catchAsync(async (req, res) => {
+//      const { id } = req.user as { id: string };
+//      const result = await OrderService.getUserOrders(id, req.query);
 
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'User orders retrieved successfully',
-          data: result.result,
-          meta: result.meta,
-     });
-});
+//      sendResponse(res, {
+//           statusCode: StatusCodes.OK,
+//           success: true,
+//           message: 'User orders retrieved successfully',
+//           data: result.result,
+//           meta: result.meta,
+//      });
+// });
 
 const createOrderAndCheckout = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
@@ -103,10 +103,10 @@ const createOrderAndCheckout = catchAsync(async (req, res) => {
           statusCode: StatusCodes.OK,
           success: true,
           message: 'Order created and checkout session generated successfully',
-          data: {
-               sessionId: result.sessionId,
-               url: result.url,
-          },
+          // data: {
+          //      sessionId: result.sessionId,
+          //      url: result.url,
+          // },
      });
 });
 // const analysisOrders = catchAsync(async (req, res) => {
@@ -120,14 +120,14 @@ const createOrderAndCheckout = catchAsync(async (req, res) => {
 // });
 
 export const OrderController = {
-     createProductOrder,
-     getAllProductOrders,
+     // createProductOrder,
+     // getAllProductOrders,
      getSingleProductOrder,
      updateProductOrder,
      // cancelProductOrder,
      // analysisOrders,
      createCheckoutSession,
      orderSuccess,
-     getUserOrders,
+     // getUserOrders,
      createOrderAndCheckout,
 };

@@ -14,14 +14,6 @@ const paymentSchema = new Schema<IPayment>(
             required: true,
             index: true,
         },
-        // Made optional for contest orders (no products)
-        productIds: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Product',
-                required: false,
-            },
-        ],
         // Added for contest orders
         contestId: {
             type: Schema.Types.ObjectId,

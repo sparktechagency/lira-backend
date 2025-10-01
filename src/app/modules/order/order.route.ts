@@ -10,12 +10,12 @@ const router = express.Router();
 // Create order and checkout in one step
 router.post('/create-and-checkout', auth(USER_ROLES.USER),  OrderController.createOrderAndCheckout);
 
-// Get all orders (admin only)
-router.get('/get-all', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);
-// Get all orders (admin only)
-router.get('/get-order-revenue', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);
-// Get user's orders
-router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getUserOrders);
+// // Get all orders (admin only)
+// router.get('/get-all', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);
+// // Get all orders (admin only)
+// router.get('/get-order-revenue', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);
+// // Get user's orders
+// router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getUserOrders);
 
 // Get a single order
 router.get('/get-single/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getSingleProductOrder);

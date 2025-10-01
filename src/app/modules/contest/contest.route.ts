@@ -24,6 +24,14 @@ router.get(
 );
 
 router.get(
+    '/category/:id',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.getContestByCategoryId
+);
+
+
+
+router.get(
     '/:id',
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     ContestController.getContestById

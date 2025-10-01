@@ -215,7 +215,7 @@ const getContestByIdUser = async (id: string) => {
     return result;
 }
 const getContestByCategoryId = async (id: string) => {
-    const result = await Contest.find({ categoryId: id });
+    const result = await Contest.find({ categoryId: id }).select("name category createdBy createdAt updatedAt maxEntries startTime status categoryId serial");
     if (!result) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }

@@ -138,6 +138,18 @@ const getContestByIdUser = catchAsync(async (req, res) => {
     });
 });
 
+const getContestByCategoryId = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const result = await ContestService.getContestByCategoryId(id);
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest retrieved successfully',
+        data: result
+    });
+});
+
 export const ContestController = {
     createContest,
     getAllContests,
@@ -149,5 +161,6 @@ export const ContestController = {
     getPredictionTiers,
     publishContest,
     getTiersContest,
-    getContestByIdUser
+    getContestByIdUser,
+    getContestByCategoryId
 };

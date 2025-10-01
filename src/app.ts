@@ -11,9 +11,10 @@ import path from 'path';
 import passport from './config/passport';
 import setupTimeManagement from './utils/cronJobs';
 import getUploadDirectory from './utils/getUploadDirectory';
+import handleStripeWebhook from './helpers/stripe/handleStripeWebhook';
 
 const app: Application = express();
-
+app.post('/api/v1/stripe/webhook', express.raw({ type: 'application/json' }), handleStripeWebhook);
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 //morgan

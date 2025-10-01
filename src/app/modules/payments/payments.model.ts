@@ -104,12 +104,6 @@ const paymentSchema = new Schema<IPayment>(
      }
 );
 
-// Indexes for better query performance
-paymentSchema.index({ paymentSessionId: 1 });
-paymentSchema.index({ contestId: 1, status: 1 });
-paymentSchema.index({ userId: 1, status: 1 });
-paymentSchema.index({ 'metadata.paymentType': 1 });
-
 // Query Middleware
 paymentSchema.pre('find', function (next) {
      this.find({ isDeleted: { $ne: true } });

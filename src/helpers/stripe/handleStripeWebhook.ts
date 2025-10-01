@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import Stripe from 'stripe';
 import colors from 'colors';
-import { handleAccountUpdatedEvent, handleSubscriptionCreated, handleSubscriptionDeleted, handleSubscriptionUpdated } from './handlers';
+import { handleSubscriptionCreated, handleSubscriptionDeleted, handleSubscriptionUpdated } from './handlers';
 import { StatusCodes } from 'http-status-codes';
 import { logger } from '../../shared/logger';
 import config from '../../config';
@@ -45,7 +45,12 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
                case 'customer.subscription.deleted':
                     handleSubscriptionDeleted(data as Stripe.Subscription);
                     break;
-
+               case 'checkout.session.completed':
+                    handleCheckoutSessionCompleted(data as Stripe.Checkout.Session);
+                    break;
+               case 'checkout.session.expired':
+                    handleCheckoutSessionExpired(data as Stripe.Checkout.Session);
+                    break;
                default:
                     logger.warn(colors.bgGreen.bold(`Unhandled event type: ${eventType}`));
           }

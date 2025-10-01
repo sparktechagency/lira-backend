@@ -5,7 +5,7 @@ import stripe from "../../../config/stripe";
 import AppError from "../../../errors/AppError";
 import { Contest } from "../../../app/modules/contest/contest.model";
 
-const handleSuccessfulPayment = async (sessionId: string) => {
+export const handleCheckoutSessionSuccessful = async (sessionId: string) => {
     try {
         const session = await stripe.checkout.sessions.retrieve(sessionId);
         const { orderId, paymentId, contestId } = session.metadata || {};

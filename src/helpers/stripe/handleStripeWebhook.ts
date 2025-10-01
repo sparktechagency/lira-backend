@@ -7,6 +7,8 @@ import { logger } from '../../shared/logger';
 import config from '../../config';
 import stripe from '../../config/stripe';
 import AppError from '../../errors/AppError';
+import { handleCheckoutSessionExpired } from './handlers/handleCheckoutSessionExpired';
+import { handleCheckoutSessionSuccessful } from './handlers/handleSuccessfulPayment ';
 
 const handleStripeWebhook = async (req: Request, res: Response) => {
      // Extract Stripe signature and webhook secret
@@ -46,10 +48,10 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
                     handleSubscriptionDeleted(data as Stripe.Subscription);
                     break;
                case 'checkout.session.completed':
-                    handleCheckoutSessionCompleted(data as Stripe.Checkout.Session);
+                    handleCheckoutSessionSuccessful(data.id);
                     break;
                case 'checkout.session.expired':
-                    handleCheckoutSessionExpired(data as Stripe.Checkout.Session);
+                    handleCheckoutSessionExpired(data.id);
                     break;
                default:
                     logger.warn(colors.bgGreen.bold(`Unhandled event type: ${eventType}`));

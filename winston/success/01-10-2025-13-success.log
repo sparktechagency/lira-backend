@@ -1,0 +1,34 @@
+Wed Oct 01 2025 13:3:52 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 01 2025 13:3:52 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 01 2025 13:3:52 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 01 2025 13:3:52 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 01 2025 13:3:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 1.184 ms
+Wed Oct 01 2025 13:3:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.153 ms
+Wed Oct 01 2025 13:3:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.132 ms
+Wed Oct 01 2025 13:3:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.087 ms
+Wed Oct 01 2025 13:3:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 27.195 ms
+Wed Oct 01 2025 13:3:55 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 660.606 ms
+Wed Oct 01 2025 13:13:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.931 ms
+Wed Oct 01 2025 13:18:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.571 ms
+Wed Oct 01 2025 13:18:20 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.571 ms
+Wed Oct 01 2025 13:23:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.927 ms
+Wed Oct 01 2025 13:23:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.186 ms
+Wed Oct 01 2025 13:23:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.242 ms
+Wed Oct 01 2025 13:23:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.605 ms
+Wed Oct 01 2025 13:23:53 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.842 ms
+Wed Oct 01 2025 13:24:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.663 ms
+Wed Oct 01 2025 13:25:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.986 ms
+Wed Oct 01 2025 13:25:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.282 ms
+Wed Oct 01 2025 13:25:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.053 ms
+Wed Oct 01 2025 13:25:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.175 ms
+Wed Oct 01 2025 13:25:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.020 ms
+Wed Oct 01 2025 13:25:56 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.442 ms
+Wed Oct 01 2025 13:32:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.561 ms
+Wed Oct 01 2025 13:34:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.683 ms
+Wed Oct 01 2025 13:34:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68dbab449d7a99664cb61d19 200 - 21.361 ms
+Wed Oct 01 2025 13:34:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/68dbab449d7a99664cb61d19/tiers 200 - 8.100 ms
+Wed Oct 01 2025 13:34:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.648 ms
+Wed Oct 01 2025 13:34:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.424 ms
+Wed Oct 01 2025 13:34:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68dbab449d7a99664cb61d19 200 - 5.036 ms
+Wed Oct 01 2025 13:34:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/68dbab449d7a99664cb61d19/tiers 200 - 7.512 ms
+Wed Oct 01 2025 13:39:44 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.129 ms

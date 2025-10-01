@@ -214,4 +214,11 @@ const getContestByIdUser = async (id: string) => {
     }
     return result;
 }
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser }
+const getContestByCategoryId = async (id: string) => {
+    const result = await Contest.find({ categoryId: id });
+    if (!result) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+    return result;
+}
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId }

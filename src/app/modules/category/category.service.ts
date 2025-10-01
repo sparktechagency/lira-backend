@@ -11,12 +11,15 @@ const createCategoryToDB = async (payload: ICategory) => {
      if (isExistName) {
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
      }
+     isExistName!.count += 1;
+     await isExistName!.save();
 
      const group = await Group.findById(groupId);
      if (!group) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Group not found');
      }
      payload.group = group.name;
+
 
      const createCategory: any = await Category.create(payload);
      if (!createCategory) {

@@ -16,6 +16,10 @@ const categorySchema = new Schema<ICategory, CategoryModel>(
                type: String,
                required: true,
           },
+          count: {
+               type: Number,
+               default: 0,
+          },
           groupId: {
                type: Schema.Types.ObjectId,
                ref: 'Group',

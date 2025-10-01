@@ -1,7 +1,7 @@
 import { Schema, model } from 'mongoose';
 import { IProductOrder } from './order.interface';
 
-const productOrderSchema = new Schema<IProductOrder>(
+const orderSchema = new Schema<IProductOrder>(
      {
           orderId: {
                type: String,
@@ -58,19 +58,19 @@ const productOrderSchema = new Schema<IProductOrder>(
 );
 
 // Query middleware to exclude deleted documents
-productOrderSchema.pre('find', function (this: any, next) {
+orderSchema.pre('find', function (this: any, next) {
      this.find({ isDeleted: { $ne: true } });
      next();
 });
 
-productOrderSchema.pre('findOne', function (this: any, next) {
+orderSchema.pre('findOne', function (this: any, next) {
      this.find({ isDeleted: { $ne: true } });
      next();
 });
 
-productOrderSchema.pre('aggregate', function (this: any, next) {
+orderSchema.pre('aggregate', function (this: any, next) {
      this.pipeline().unshift({ $match: { isDeleted: { $ne: true } } });
      next();
 });
 
-export const ProductOrder = model<IProductOrder>('ProductOrder', productOrderSchema);
+export const Order = model<IProductOrder>('Order', orderSchema);

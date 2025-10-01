@@ -11,6 +11,7 @@ const US_STATES_ARRAY = [
     "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"
 ] as const;
 const GeneratePrediction = new Schema<IGeneratedPrediction>({
+   
     value: {
         type: Number,
         required: false,

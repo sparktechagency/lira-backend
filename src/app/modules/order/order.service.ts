@@ -1,7 +1,6 @@
 import { StatusCodes } from 'http-status-codes';
 import AppError from '../../../errors/AppError';
 import { IProductOrder } from './order.interface';
-import { ProductOrder } from './order.model';
 import { Payment } from '../payments/payments.model';
 import stripe from '../../../config/stripe';
 import config from '../../../config';
@@ -10,72 +9,218 @@ import { User } from '../user/user.model';
 import QueryBuilder from '../../builder/QueryBuilder';
 import generateOrderNumber from '../../../utils/generateOrderNumber';
 import { Contest } from '../contest/contest.model';
+import { Order } from './order.model';
 
 
-const createProductOrder = async (userId: string, payload: Partial<IProductOrder>) => {
-     // Generate a unique order ID
-     const orderId = generateOrderNumber('ORD');
-     const { promoCodeId, promoCode = '', finalAmount, deliveryType = '', comments = '', deliveryFee = 0, deliveryDate, discount = 0, previousOrderId = '', paymentId, shippingAddress = '' } = payload;
-     // Validate products and calculate total amount
-     const isExisting = await User.findById(userId);
-     if (!isExisting) {
-          throw new AppError(StatusCodes.NOT_FOUND, 'This user not found!');
+interface IPredictionIdItem {
+     id: string; // Generated prediction's _id from the array
+}
+
+interface IOrderPayload {
+     contestId: string;
+     generatedPredictionsIds: IPredictionIdItem[];
+}
+
+const createContestOrder = async (userId: string, payload: IOrderPayload) => {
+     const { contestId, generatedPredictionsIds } = payload;
+
+     // Validate user exists
+     const user = await User.findById(userId);
+     if (!user) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'User not found!');
      }
 
-     const products = [];
-     let totalAmount: number = 0;
-     for (const item of payload.prediction || []) {
-          const product = await Contest.findById(item.productId);
-          if (!product) {
-               throw new AppError(StatusCodes.NOT_FOUND, `Product with ID ${item.productId} not found`);
+     // Validate contest exists and is active
+     const contest = await Contest.findById(contestId);
+     if (!contest) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found!');
+     }
+
+     // Check contest status
+     if (contest.status !== 'Active') {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Contest is not active!');
+     }
+
+     // Check contest time validity
+     const now = new Date();
+     if (now < contest.startTime) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Contest has not started yet!');
+     }
+
+     if (now > contest.endOffsetTime) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Contest selection time has ended!');
+     }
+
+     // Validate predictions and calculate total
+     let totalAmount = 0;
+     const orderedPredictions = [];
+
+     for (const item of generatedPredictionsIds) {
+          // Find prediction by _id in generatedPredictions array
+          const prediction = contest.predictions.generatedPredictions?.find(
+               (p: any) => p._id.toString() === item.id
+          );
+
+          if (!prediction) {
+               throw new AppError(
+                    StatusCodes.NOT_FOUND,
+                    `Prediction with ID ${item.id} not found in this contest!`
+               );
           }
 
-          if (product.isStock === false) {
-               throw new AppError(StatusCodes.BAD_REQUEST, `Product ${product.name} is out of stock`);
+          // Check if prediction is available
+          if (!prediction.isAvailable) {
+               throw new AppError(
+                    StatusCodes.BAD_REQUEST,
+                    `Prediction with value ${prediction.value} is no longer available!`
+               );
           }
 
-          if (product.stock <= item.quantity) {
-               throw new AppError(StatusCodes.BAD_REQUEST, `Not enough stock for product ${product.name}. Available: ${product.stock}`);
+          // Check if max entries reached (each user can take 1 entry per prediction)
+          if (prediction.currentEntries >= prediction.maxEntries) {
+               throw new AppError(
+                    StatusCodes.BAD_REQUEST,
+                    `Maximum entries reached for prediction ${prediction.value}!`
+               );
           }
 
-          // Add product to order with validated price
-          products.push({
-               productId: product._id,
-               quantity: item.quantity,
-               price: product.price,
-               creditEarn: product.creditEarn,
-               csAuraEarn: product.csAuraEarn,
+          // Add to total amount
+          totalAmount += prediction.price;
+
+          // Store prediction details for order
+          orderedPredictions.push({
+               predictionId: (prediction as any)._id,
+               predictionValue: prediction.value,
+               tierId: prediction.tierId,
+               price: prediction.price,
           });
-
-          // Calculate total amount
-          totalAmount += product.price * item.quantity;
      }
-     // Calculate final amount (total - discount + delivery fee)
-     // const finalAmount = Number(totalAmount) - Number(discount) + Number(deliveryFee);
-     // Create the order
-     const order = await ProductOrder.create({
+
+     // Generate unique order ID
+     const orderId = generateOrderNumber('ORD');
+
+     // Create the order (payment pending)
+     const order = await Order.create({
           orderId,
           userId,
-          promoCodeId,
-          promoCode,
-          phone: isExisting.contact,
-          email: isExisting.email,
-          products,
-          finalAmount,
+          contestId: contest._id,
+          phone: user.phone || '',
+          email: user.email || '',
+          predictions: orderedPredictions,
           totalAmount,
-          deliveryType,
-          comments,
-          deliveryFee,
-          deliveryDate,
-          discount,
-          previousOrderId,
-          paymentId,
-          shippingAddress: isExisting?.address || shippingAddress,
+          status: 'pending',
      });
 
+     // DO NOT update contest entries yet - will update after successful payment
      return order;
 };
 
+const createCheckoutSession = async (orderId: string, userId: string) => {
+     const order = await Order.findById(orderId)
+          .populate('contestId', 'name category prize')
+          .populate('userId', 'email');
+
+     if (!order) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
+     }
+
+     if (order.userId._id.toString() !== userId) {
+          throw new AppError(StatusCodes.FORBIDDEN, 'You are not authorized to access this order');
+     }
+
+     const user = await User.findById(userId);
+     if (!user) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
+     }
+
+     try {
+          // Create payment record
+          const payment = await Payment.create({
+               orderId: order.orderId,
+               userId: order.userId._id,
+               contestId: order.contestId,
+               amount: order.totalAmount,
+               currency: 'usd',
+               paymentMethod: 'stripe',
+               status: 'pending',
+               metadata: {
+                    type: 'contest_order',
+                    orderId: order.orderId,
+                    contestName: order.contestId.name,
+               },
+               isDeleted: false,
+          });
+
+          // Create Stripe line items
+          const lineItems = [
+               {
+                    price_data: {
+                         currency: 'usd',
+                         product_data: {
+                              name: `Contest Entry - ${order.contestId.name}`,
+                              description: `${order.predictions.length} Prediction(s) | Order: ${order.orderId}`,
+                         },
+                         unit_amount: Math.round(order.totalAmount * 100),
+                    },
+                    quantity: 1,
+               },
+          ];
+
+          // Create Stripe session
+          const session = await stripe.checkout.sessions.create({
+               payment_method_types: ['card'],
+               line_items: lineItems,
+               mode: 'payment',
+               success_url: `${config.stripe.paymentSuccess_url}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+               cancel_url: `${config.stripe.paymentCancel_url}/orders/cancel`,
+               customer_email: user.email,
+               metadata: {
+                    orderId: order._id.toString(),
+                    userId: userId,
+                    paymentId: payment._id.toString(),
+                    contestId: order.contestId._id.toString(),
+                    type: 'contest_order',
+               },
+          });
+
+          // Update payment with session ID
+          await Payment.findByIdAndUpdate(payment._id, {
+               paymentSessionId: session.id,
+          });
+
+          // Update order with payment ID
+          await ProductOrder.findByIdAndUpdate(order._id, {
+               paymentId: payment._id,
+          });
+
+          return {
+               sessionId: session.id,
+               url: session.url,
+               orderDetails: {
+                    orderId: order.orderId,
+                    totalAmount: order.totalAmount,
+                    predictionsCount: order.predictions.length,
+               },
+          };
+     } catch (error: any) {
+          console.error('Error creating checkout session:', error);
+          throw new AppError(
+               StatusCodes.INTERNAL_SERVER_ERROR,
+               `Failed to create checkout session: ${error.message}`
+          );
+     }
+};
+
+const createOrderAndCheckout = async (
+     userId: string,
+     payload: IOrderPayload
+): Promise<{ sessionId: string; url: string | null; orderDetails: any }> => {
+     // Create order
+     const order = await createContestOrder(userId, payload);
+
+     // Create checkout session
+     return createCheckoutSession(order._id.toString(), userId);
+};
 const getAllProductOrders = async (query: Record<string, unknown>) => {
      const queryBuilder = new QueryBuilder(ProductOrder.find({ isDeleted: false }), query);
      const result = await queryBuilder
@@ -223,114 +368,7 @@ const updateProductOrder = async (id: string, payload: Partial<IProductOrder>): 
 //           throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to create checkout session: ${error.message}`);
 //      }
 // };
-const createCheckoutSession = async (orderId: string, userId: string) => {
-     // Find the order
-     const order = await ProductOrder.findOne({ orderId }).populate('products.productId', 'name images sku');
 
-     if (!order) {
-          throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
-     }
-
-     if (order.userId.toString() !== userId) {
-          throw new AppError(StatusCodes.FORBIDDEN, 'You are not authorized to access this order');
-     }
-
-     // Get user email
-     const user = await User.findById(userId);
-     if (!user) {
-          throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
-     }
-
-     // Helper function to validate and filter URLs
-     // const validateImageUrls = (images: string[] | undefined): string[] => {
-     //      if (!images || !Array.isArray(images)) {
-     //           return [];
-     //      }
-
-     //      return images
-     //           .filter((url) => {
-     //                if (!url || typeof url !== 'string') return false;
-
-     //                try {
-     //                     // Check if it's a valid URL
-     //                     new URL(url);
-     //                     // Check if it starts with http or https
-     //                     return url.startsWith('http://') || url.startsWith('https://');
-     //                } catch {
-     //                     return false;
-     //                }
-     //           })
-     //           .slice(0, 8); // Stripe allows max 8 images
-     // };
-
-     try {
-          // Create a payment record
-          const payment = await Payment.create({
-               orderId: order.orderId,
-               userId: order.userId,
-               productIds: order.products.map((item) => item.productId),
-               amount: order.finalAmount,
-               currency: 'aed',
-               paymentMethod: 'stripe',
-               status: 'pending',
-               metadata: {
-                    type: 'product_order',
-                    orderId: order.orderId,
-                    promoCode: order.promoCode,
-               },
-               isDeleted: false,
-          });
-
-          const lineItems = [
-               {
-                    price_data: {
-                         currency: 'usd',
-                         product_data: {
-                              name: `${order.orderId}`,
-                         },
-                         unit_amount: Math.round(order.finalAmount * 100),
-                    },
-                    quantity: 1,
-               },
-          ];
-
-          // Create Stripe checkout session
-          const session = await stripe.checkout.sessions.create({
-               payment_method_types: ['card'],
-               line_items: lineItems,
-               mode: 'payment',
-               success_url: `${config.stripe.paymentSuccess_url}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
-               cancel_url: `${config.stripe.paymentCancel_url}/orders/cancel`,
-               customer_email: user.email, // Add customer email if available
-               metadata: {
-                    orderId: order._id.toString(),
-                    userId: userId,
-                    paymentId: payment._id.toString(),
-                    type: 'order',
-               },
-          });
-
-          // Update payment with session ID
-          await Payment.findByIdAndUpdate(payment._id, { paymentSessionId: session.id });
-
-          // Update order with payment ID
-          await ProductOrder.findByIdAndUpdate(order._id, { paymentId: payment._id });
-
-          return {
-               sessionId: session.id,
-               url: session.url,
-          };
-     } catch (error: any) {
-          console.error('Error creating checkout session:', error);
-          throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to create checkout session: ${error.message}`);
-     }
-};
-const createOrderAndCheckout = async (userId: string, payload: Partial<IProductOrder>): Promise<{ sessionId: string; url: string | null }> => {
-     // First create the order
-     const order = await createProductOrder(userId, payload);
-     // Then create the checkout session
-     return createCheckoutSession(order.orderId, userId);
-};
 // const handleSuccessfulPayment = async (sessionId: string) => {
 //      try {
 //           // Retrieve the session

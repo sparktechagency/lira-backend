@@ -8,7 +8,7 @@ import { ProductOrderValidation } from './order.validation';
 const router = express.Router();
 
 // Create order and checkout in one step
-router.post('/create-and-checkout', auth(USER_ROLES.USER), validateRequest(ProductOrderValidation.createProductOrderZodSchema), OrderController.createOrderAndCheckout);
+router.post('/create-and-checkout', auth(USER_ROLES.USER),  OrderController.createOrderAndCheckout);
 
 // Get all orders (admin only)
 router.get('/get-all', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);

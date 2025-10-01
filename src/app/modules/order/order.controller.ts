@@ -1,0 +1,133 @@
+import { StatusCodes } from 'http-status-codes';
+import catchAsync from '../../../shared/catchAsync';
+import sendResponse from '../../../shared/sendResponse';
+import { ProductOrderService } from './order.service';
+
+const createProductOrder = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await ProductOrderService.createProductOrder(id, req.body);
+     sendResponse(res, {
+          statusCode: StatusCodes.CREATED,
+          success: true,
+          message: 'Order created successfully',
+          data: result,
+     });
+});
+
+const getAllProductOrders = catchAsync(async (req, res) => {
+     const result = await ProductOrderService.getAllProductOrders(req.query);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Orders retrieved successfully',
+          data: result.result,
+          meta: result.meta,
+     });
+});
+
+const getSingleProductOrder = catchAsync(async (req, res) => {
+     const { id } = req.params;
+     const result = await ProductOrderService.getSingleProductOrder(id);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Order retrieved successfully',
+          data: result,
+     });
+});
+
+const updateProductOrder = catchAsync(async (req, res) => {
+     const { id } = req.params;
+     const result = await ProductOrderService.updateProductOrder(id, req.body);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Order updated successfully',
+          data: result,
+     });
+});
+
+// const cancelProductOrder = catchAsync(async (req, res) => {
+//      const { id } = req.params;
+//      const result = await ProductOrderService.cancelProductOrder(id);
+
+//      sendResponse(res, {
+//           statusCode: StatusCodes.OK,
+//           success: true,
+//           message: 'Order canceled successfully',
+//           data: result,
+//      });
+// });
+
+const createCheckoutSession = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const { orderId } = req.params;
+     const result = await ProductOrderService.createCheckoutSession(orderId, id);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Checkout session created successfully',
+          data: {
+               sessionId: result.sessionId,
+               url: result.url,
+          },
+     });
+});
+
+const orderSuccess = catchAsync(async (req, res) => {
+     // Render success page or redirect to frontend success page
+     res.render('success');
+});
+
+const getUserOrders = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await ProductOrderService.getUserOrders(id, req.query);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'User orders retrieved successfully',
+          data: result.result,
+          meta: result.meta,
+     });
+});
+
+const createOrderAndCheckout = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await ProductOrderService.createOrderAndCheckout(id, req.body);
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Order created and checkout session generated successfully',
+          data: {
+               sessionId: result.sessionId,
+               url: result.url,
+          },
+     });
+});
+const analysisOrders = catchAsync(async (req, res) => {
+     const result = await ProductOrderService.analysisOrders();
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Order analysis retrieved successfully',
+          data: result,
+     });
+});
+
+export const ProductOrderController = {
+     createProductOrder,
+     getAllProductOrders,
+     getSingleProductOrder,
+     updateProductOrder,
+     // cancelProductOrder,
+     analysisOrders,
+     createCheckoutSession,
+     orderSuccess,
+     getUserOrders,
+     createOrderAndCheckout,
+};

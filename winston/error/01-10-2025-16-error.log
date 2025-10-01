@@ -1,0 +1,4 @@
+Wed Oct 01 2025 16:17:19 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/user-managements/ 401 - 5.277 ms
+Wed Oct 01 2025 16:19:52 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/user-managements/?page=1 401 - 1.200 ms
+Wed Oct 01 2025 16:21:48 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/user-managements/?page=1 401 - 1.063 ms
+Wed Oct 01 2025 16:39:41 [SERVER-NAME] error: 10.10.7.47 - PATCH /api/v1/contest/68dd0482cf3c6e7dd5f695d8/publish 400 - 5.948 ms

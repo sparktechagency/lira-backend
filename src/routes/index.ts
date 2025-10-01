@@ -7,6 +7,7 @@ import { GroupRoutes } from '../app/modules/group/group.route';
 import { UnitTypeRoute } from '../app/modules/unit-type/unit-type.route';
 import { ContestRoutes } from '../app/modules/contest/contest.route';
 import { UserManagementsRouter } from '../app/modules/userManagements/userManagements.router';
+import { PaymentRoutes } from '../app/modules/payments/payment.route';
 
 const router = express.Router();
 const routes = [
@@ -41,6 +42,10 @@ const routes = [
      {
           path: '/user-managements',
           route: UserManagementsRouter,
+     },
+     {
+          path: '/payments',
+          route: PaymentRoutes,
      },
 
 ];

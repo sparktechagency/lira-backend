@@ -7,7 +7,7 @@ import { User } from "../user/user.model";
 // get all users
 const allUser = async (query: Record<string, unknown>) => {
   const queryBuilder = new QueryBuilder(
-    User.find({ role: { $nin: [USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN] } }).select('firstName lastName email image phone role address gender status'), // Exclude users with SUPER_ADMIN or ADMIN roles
+    User.find({ role: { $nin: [USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN] } }).select('name email image phone role address gender status agreeWithTerms verified status createdAt'), // Exclude users with SUPER_ADMIN or ADMIN roles
     query, // Additional filters or query parameters passed in
   );
 

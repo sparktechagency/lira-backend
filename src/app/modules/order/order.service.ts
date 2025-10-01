@@ -8,11 +8,12 @@ import config from '../../../config';
 
 import { User } from '../user/user.model';
 import QueryBuilder from '../../builder/QueryBuilder';
+import generateOrderNumber from '../../../utils/generateOrderNumber';
 
 
 const createProductOrder = async (userId: string, payload: Partial<IProductOrder>) => {
      // Generate a unique order ID
-     const orderId = generateOrderNumber('PRD');
+     const orderId = generateOrderNumber('ORD');
      const { promoCodeId, promoCode = '', finalAmount, deliveryType = '', comments = '', deliveryFee = 0, deliveryDate, discount = 0, previousOrderId = '', paymentId, shippingAddress = '' } = payload;
      // Validate products and calculate total amount
      const isExisting = await User.findById(userId);

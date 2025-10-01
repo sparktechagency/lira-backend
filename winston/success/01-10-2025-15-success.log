@@ -270,3 +270,33 @@ Wed Oct 01 2025 15:42:17 [SERVER-NAME] info: [32mConfig validation successful.
 Wed Oct 01 2025 15:42:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Wed Oct 01 2025 15:42:17 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Wed Oct 01 2025 15:42:17 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 01 2025 15:42:59 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.723 ms
+Wed Oct 01 2025 15:42:59 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 10.958 ms
+Wed Oct 01 2025 15:42:59 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.114 ms
+Wed Oct 01 2025 15:42:59 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 8.159 ms
+Wed Oct 01 2025 15:43:6 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.061 ms
+Wed Oct 01 2025 15:43:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 2.386 ms
+Wed Oct 01 2025 15:43:6 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.122 ms
+Wed Oct 01 2025 15:43:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 4.329 ms
+Wed Oct 01 2025 15:43:34 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.070 ms
+Wed Oct 01 2025 15:43:34 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.057 ms
+Wed Oct 01 2025 15:43:34 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 200 - 11.219 ms
+Wed Oct 01 2025 15:43:35 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 287.470 ms
+Wed Oct 01 2025 15:43:42 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest/68da67981443172e5dc09ef4 204 - 0.072 ms
+Wed Oct 01 2025 15:43:42 [SERVER-NAME] info: 10.10.7.47 - DELETE /api/v1/contest/68da67981443172e5dc09ef4 200 - 21.604 ms
+Wed Oct 01 2025 15:43:48 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.061 ms
+Wed Oct 01 2025 15:43:48 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.055 ms
+Wed Oct 01 2025 15:43:48 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 200 - 4.572 ms
+Wed Oct 01 2025 15:43:48 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 200 - 255.118 ms
+Wed Oct 01 2025 15:44:49 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 0.074 ms
+Wed Oct 01 2025 15:44:49 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.046 ms
+Wed Oct 01 2025 15:44:49 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 200 - 10.904 ms
+Wed Oct 01 2025 15:44:49 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 200 - 18.001 ms
+Wed Oct 01 2025 15:44:52 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.065 ms
+Wed Oct 01 2025 15:44:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 2.758 ms
+Wed Oct 01 2025 15:44:52 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.066 ms
+Wed Oct 01 2025 15:44:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 4.788 ms
+Wed Oct 01 2025 15:44:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f8bdd68b7214c680dd7 204 - 0.054 ms
+Wed Oct 01 2025 15:44:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f8bdd68b7214c680dd7 200 - 3.881 ms
+Wed Oct 01 2025 15:44:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d2610c4434ddde1b82301c 204 - 0.048 ms
+Wed Oct 01 2025 15:44:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d2610c4434ddde1b82301c 200 - 3.490 ms

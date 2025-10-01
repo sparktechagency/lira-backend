@@ -11,7 +11,9 @@
           "format": "prettier . --write",
           "seed": "ts-node src/seed/seedAdmin.ts",
           "build": "tsc",
-          "start": "node dist/server.js"
+          "start": "node dist/server.js",
+          "stripe": "stripe listen --forward-to=http://10.10.7.62:7008/api/v1/stripe/webhook",
+          "dev:stripe": "concurrently \"ts-node-dev --respawn --transpile-only src/server.ts\" \"npm run stripe\""
      },
      "keywords": [],
      "author": "",
@@ -23,6 +25,7 @@
           "bcrypt": "^5.1.1",
           "colors": "^1.4.0",
           "compression": "^1.8.0",
+          "concurrently": "^9.2.1",
           "cors": "^2.8.5",
           "dotenv": "^16.4.7",
           "ejs": "^3.1.10",

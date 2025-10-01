@@ -137,21 +137,21 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
      try {
           // Create payment record
           const payment = await Payment.create({
-               orderId: order._id.toString(),
+               orderId: order.orderId,
                userId: order.userId._id,
-               contestId: order.contestId,
+               contestId: order.contestId._id,
+               predictionIds: order.predictions.map((p) => p.predictionId),
                amount: order.totalAmount,
                currency: 'usd',
                paymentMethod: 'stripe',
                status: 'pending',
                metadata: {
-                    type: 'contest_order',
+                    paymentType: 'contest_order', // Changed from 'type'
                     orderId: order.orderId,
                     contestName: order.contestName,
                },
                isDeleted: false,
           });
-
           // Create Stripe line items
           const lineItems = [
                {

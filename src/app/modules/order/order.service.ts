@@ -221,24 +221,24 @@ const createOrderAndCheckout = async (
      // Create checkout session
      return createCheckoutSession(order._id.toString(), userId);
 };
-// const getAllProductOrders = async (query: Record<string, unknown>) => {
-//      const queryBuilder = new QueryBuilder(ProductOrder.find({ isDeleted: false }), query);
-//      const result = await queryBuilder
-//           .filter()
-//           .sort()
-//           .paginate()
-//           .fields()
-//           .search(['orderId'])
-//           .dateFilter('createdAt')
-//           .modelQuery.populate('userId', 'userName')
-//           .populate('products.productId', 'name sku')
-//           .exec();
-//      const meta = await queryBuilder.countTotal();
-//      return {
-//           meta,
-//           result,
-//      };
-// };
+const getAllPredictionOrders = async (query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Order.find({ isDeleted: false }), query);
+     const result = await queryBuilder
+          .filter()
+          .sort()
+          .paginate()
+          .fields()
+          .search(['orderId'])
+          .dateFilter('createdAt')
+          .modelQuery.populate('userId', 'userName')
+          .populate('products.productId', 'name sku')
+          .exec();
+     const meta = await queryBuilder.countTotal();
+     return {
+          meta,
+          result,
+     };
+};
 
 
 // const updateProductOrder = async (id: string, payload: Partial<IProductOrder>): Promise<IProductOrder | null> => {
@@ -418,7 +418,7 @@ const getUserOrders = async (userId: string, query: Record<string, unknown>) => 
      };
 };
 
-const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> => {
+const getSinglePredictionOrder = async (id: string): Promise<IProductOrder | null> => {
      const result = await Order.findById(id).populate('userId', 'name email').populate('contestId', "name image endTime startTime totalEntries endOffsetTime prize").exec();
 
      if (!result) {
@@ -482,8 +482,8 @@ const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> 
 // };
 export const OrderService = {
      // createProductOrder,
-     // getAllProductOrders,
-     getSingleProductOrder,
+     getAllPredictionOrders,
+     getSinglePredictionOrder,
      // updateProductOrder,
      // cancelProductOrder,
      // analysisOrders,

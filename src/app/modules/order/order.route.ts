@@ -11,14 +11,14 @@ const router = express.Router();
 router.post('/create-and-checkout', auth(USER_ROLES.USER),  OrderController.createOrderAndCheckout);
 
 // // Get all orders (admin only)
-// router.get('/get-all', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);
+router.get('/get-all', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllPredictionOrders);
+router.get('/single-order/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getSinglePredictionOrder);
 // // Get all orders (admin only)
 // router.get('/get-order-revenue', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);
 // // Get user's orders
 router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getUserOrders);
 
 // Get a single order
-router.get('/get-single/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getSingleProductOrder);
 
 // Update an order (admin only)
 router.patch('/update/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), validateRequest(ProductOrderValidation.updateProductOrderZodSchema), OrderController.updateProductOrder);

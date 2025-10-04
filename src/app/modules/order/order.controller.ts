@@ -14,21 +14,21 @@ import { OrderService } from './order.service';
 //      });
 // });
 
-// const getAllProductOrders = catchAsync(async (req, res) => {
-//      const result = await OrderService.getAllProductOrders(req.query);
+const getAllPredictionOrders = catchAsync(async (req, res) => {
+     const result = await OrderService.getAllPredictionOrders(req.query);
 
-//      sendResponse(res, {
-//           statusCode: StatusCodes.OK,
-//           success: true,
-//           message: 'Orders retrieved successfully',
-//           data: result.result,
-//           meta: result.meta,
-//      });
-// });
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Orders retrieved successfully',
+          data: result.result,
+          meta: result.meta,
+     });
+});
 
-const getSingleProductOrder = catchAsync(async (req, res) => {
+const getSinglePredictionOrder = catchAsync(async (req, res) => {
      const { id } = req.params;
-     const result = await OrderService.getSingleProductOrder(id);
+     const result = await OrderService.getSinglePredictionOrder(id);
 
      sendResponse(res, {
           statusCode: StatusCodes.OK,
@@ -126,8 +126,8 @@ const createOrderAndCheckout = catchAsync(async (req, res) => {
 
 export const OrderController = {
      // createProductOrder,
-     // getAllProductOrders,
-     getSingleProductOrder,
+     getAllPredictionOrders,
+     getSinglePredictionOrder,
      updateProductOrder,
      // cancelProductOrder,
      // analysisOrders,

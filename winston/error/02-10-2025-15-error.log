@@ -1,3 +1,0 @@
-Thu Oct 02 2025 15:35:22 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 8.638 ms
-Thu Oct 02 2025 15:38:51 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68dbab449d7a99664cb61d19/tiers/68dbab449d7a99664cb61d1b 404 - 4.000 ms
-Thu Oct 02 2025 15:54:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68dbab449d7a99664cb61d19 404 - 4.169 ms

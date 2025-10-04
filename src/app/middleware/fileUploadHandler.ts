@@ -85,8 +85,7 @@ const FIELD_CONFIGS: FieldConfig[] = [
      { fieldName: 'banner', folderName: 'banner', fileType: 'image', maxCount: 5 },
      { fieldName: 'permits', folderName: 'permits', fileType: 'image', maxCount: 1 },
      { fieldName: 'insurance', folderName: 'insurance', fileType: 'image', maxCount: 1 },
-     { fieldName: 'driverLicense', folderName: 'driverLicense', fileType: 'image', maxCount: 1 },
-     
+     { fieldName: 'driverLicense', folderName: 'driverLicense', fileType: 'image', maxCount: 1 }, 
      // Media fields
      { fieldName: 'audio', folderName: 'audio', fileType: 'audio', maxCount: 5 },
      { fieldName: 'video', folderName: 'video', fileType: 'video', maxCount: 5 },

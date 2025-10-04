@@ -3,7 +3,6 @@ import AppError from '../../../errors/AppError';
 import { IProductOrder } from './order.interface';
 import stripe from '../../../config/stripe';
 import config from '../../../config';
-
 import { User } from '../user/user.model';
 import QueryBuilder from '../../builder/QueryBuilder';
 import generateOrderNumber from '../../../utils/generateOrderNumber';
@@ -172,7 +171,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                payment_method_types: ['card'],
                line_items: lineItems,
                mode: 'payment',
-               success_url: `${config.stripe.paymentSuccess_url}/api/v1/orders/success?session_id={CHECKOUT_SESSION_ID}`,
+               success_url: `${config.stripe.paymentSuccess_url}/orders/success?session_id={CHECKOUT_SESSION_ID}`,
                cancel_url: `${config.stripe.paymentCancel_url}/orders/cancel`,
                customer_email: user.email,
                metadata: {
@@ -247,7 +246,6 @@ const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> 
      if (!result) {
           throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
      }
-
      return result;
 };
 

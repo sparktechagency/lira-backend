@@ -8,16 +8,13 @@ const REFERRAL_POINTS = 10;
 
 // Generate a unique referral code
 const generateReferralCode = async (userId: string): Promise<string> => {
-  // Create a base code using the first part of userId and random bytes
   const isExistUser = await User.findById(userId).select('name');
-
   const referralCode = isExistUser?.name?.replace(/\s+/g, '')?.substring(0, 5) + crypto.randomBytes(3).toString('hex');
   const upperCaseReferralCode = referralCode.toUpperCase();
 
   // Check if code already exists
   const existingUser = await User.findOne({ referralCode: upperCaseReferralCode });
 
-  // If code exists, generate a new one recursively
   if (existingUser) {
     return generateReferralCode(userId);
   }

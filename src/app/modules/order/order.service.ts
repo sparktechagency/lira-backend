@@ -9,6 +9,7 @@ import generateOrderNumber from '../../../utils/generateOrderNumber';
 import { Contest } from '../contest/contest.model';
 import { Order } from './order.model';
 import { Payment } from '../payments/payments.model';
+import { Types } from 'mongoose';
 
 
 interface IPredictionIdItem {
@@ -427,142 +428,62 @@ const getSinglePredictionOrder = async (id: string): Promise<IProductOrder | nul
      return result;
 };
 
-const analysisOrders = async (
-     userId?: string,
-     startDate?: Date,
-     endDate?: Date
-) => {
+
+const analysisOrders = async (userId: string) => {
      try {
-          // Build query filter
-          const matchFilter: any = {
-               isDeleted: false,
-          };
-
-          if (userId) {
-               matchFilter.userId = userId;
-          }
-
-          if (startDate || endDate) {
-               matchFilter.createdAt = {};
-               if (startDate) matchFilter.createdAt.$gte = startDate;
-               if (endDate) matchFilter.createdAt.$lte = endDate;
-          }
-
-          // Aggregate pipeline for comprehensive analysis
-          const analysisResult = await Order.aggregate([
-               { $match: matchFilter },
+          const result = await Order.aggregate([
+               {
+                    $match: {
+                         userId: new Types.ObjectId(userId),
+                         isDeleted: false,
+                    },
+               },
                {
                     $lookup: {
                          from: 'contests',
                          localField: 'contestId',
                          foreignField: '_id',
-                         as: 'contestDetails',
+                         as: 'contest',
                     },
                },
-               { $unwind: { path: '$contestDetails', preserveNullAndEmptyArrays: true } },
+               {
+                    $unwind: {
+                         path: '$contest',
+                         preserveNullAndEmptyArrays: true,
+                    },
+               },
                {
                     $group: {
-                         _id: '$contestId',
-                         contestName: { $first: '$contestName' },
-                         totalOrders: { $sum: 1 },
+                         _id: null,
+                         totalContests: { $addToSet: '$contestId' },
                          totalEntries: { $sum: { $size: '$predictions' } },
-                         revenue: { $sum: '$totalAmount' },
-                         prizePool: { $first: '$contestDetails.prize.prizePool' },
-                         placePercentages: { $first: '$contestDetails.predictions.placePercentages' },
-                         orders: { $push: '$$ROOT' },
+                         totalIncome: { $sum: '$totalAmount' },
+                         totalPrizePool: { $sum: { $ifNull: ['$contest.prize.prizePool', 0] } },
                     },
                },
                {
                     $project: {
-                         contestId: '$_id',
-                         contestName: 1,
-                         totalOrders: 1,
+                         _id: 0,
+                         totalContests: { $size: '$totalContests' },
                          totalEntries: 1,
-                         revenue: 1,
-                         prizePool: 1,
-                         placePercentages: 1,
-                         potentialEarnings: {
-                              $subtract: ['$revenue', { $ifNull: ['$prizePool', 0] }],
-                         },
+                         totalRevenue: '$totalPrizePool',
                     },
                },
           ]);
 
-          // Get status breakdown
-          const statusBreakdown = await Order.aggregate([
-               { $match: matchFilter },
-               {
-                    $group: {
-                         _id: '$status',
-                         count: { $sum: 1 },
-                    },
-               },
-          ]);
-
-          // Get date range
-          const dateRangeResult = await Order.aggregate([
-               { $match: matchFilter },
-               {
-                    $group: {
-                         _id: null,
-                         minDate: { $min: '$createdAt' },
-                         maxDate: { $max: '$createdAt' },
-                    },
-               },
-          ]);
-
-          // Format status breakdown
-          const statusObj = {
-               pending: 0,
-               processing: 0,
-               shipping: 0,
-               delivered: 0,
-               cancel: 0,
+          return result[0] || {
+               totalContests: 0,
+               totalEntries: 0,
+               totalRevenue: 0,
           };
-
-          statusBreakdown.forEach((item) => {
-               if (item._id in statusObj) {
-                    statusObj[item._id as keyof typeof statusObj] = item.count;
-               }
-          });
-
-          // Calculate totals
-          const totalOrders = analysisResult.reduce((sum, item) => sum + item.totalOrders, 0);
-          const totalEntries = analysisResult.reduce((sum, item) => sum + item.totalEntries, 0);
-          const totalRevenue = analysisResult.reduce((sum, item) => sum + item.revenue, 0);
-          const totalPotentialEarnings = analysisResult.reduce(
-               (sum, item) => sum + item.potentialEarnings,
-               0
-          );
-
-          // Format contest breakdown
-          const contestBreakdown = analysisResult.map((item) => ({
-               contestId: item.contestId.toString(),
-               contestName: item.contestName,
-               totalOrders: item.totalOrders,
-               totalEntries: item.totalEntries,
-               revenue: item.revenue,
-               potentialEarnings: item.potentialEarnings,
-          }));
-
-          return {
-               totalOrders,
-               totalContests: analysisResult.length,
-               totalEntries,
-               totalRevenue,
-               totalPotentialEarnings,
-               contestBreakdown,
-               statusBreakdown: statusObj,
-               dateRange: {
-                    from: dateRangeResult[0]?.minDate || null,
-                    to: dateRangeResult[0]?.maxDate || null,
-               },
-          };
-     } catch (error) {
+     } catch (error: any) {
           console.error('Error analyzing orders:', error);
-          throw new Error('Failed to analyze orders');
+          throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to analyze orders: ${error.message}`);
      }
 };
+
+
+export default analysisOrders;
 export const OrderService = {
      // createProductOrder,
      getAllPredictionOrders,

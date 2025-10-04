@@ -18,7 +18,7 @@ const getAllHelpsDataFromDb = async (query: Record<string, unknown>) => {
         .modelQuery
         .exec();
 
-    const meta = queryBuilder.countTotal;
+    const meta = await queryBuilder.countTotal();
 
     return {
         result,

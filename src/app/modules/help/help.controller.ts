@@ -22,7 +22,8 @@ const getAllHelps = catchAsync(async (req, res) => {
         success: true,
         statusCode: StatusCodes.OK,
         message: 'Help retrieved successfully',
-        data: result,
+        data: result.result,
+        meta: result.meta,
     });
 });
 const getSingleHelp = catchAsync(async (req, res) => {

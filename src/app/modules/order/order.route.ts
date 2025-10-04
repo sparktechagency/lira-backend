@@ -15,7 +15,7 @@ router.post('/create-and-checkout', auth(USER_ROLES.USER),  OrderController.crea
 // // Get all orders (admin only)
 // router.get('/get-order-revenue', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getAllProductOrders);
 // // Get user's orders
-// router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getUserOrders);
+router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getUserOrders);
 
 // Get a single order
 router.get('/get-single/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.getSingleProductOrder);
@@ -25,8 +25,7 @@ router.patch('/update/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), vali
 // router.get('/analysis', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), OrderController.analysisOrders);
 // Delete an order (admin only)
 // router.delete('/cancel/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ProductOrderController.cancelProductOrder);
-
 // Handle successful payment
 router.get('/success', OrderController.orderSuccess);
-
+router.get('/cancel', OrderController.orderCancel);
 export const OrderRoutes = router;

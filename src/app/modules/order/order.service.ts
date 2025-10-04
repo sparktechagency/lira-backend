@@ -240,14 +240,6 @@ const createOrderAndCheckout = async (
 //      };
 // };
 
-const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> => {
-     const result = await Order.findById(id).populate('userId', 'name email').populate('products.productId', 'name sku images').populate('paymentId');
-
-     if (!result) {
-          throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
-     }
-     return result;
-};
 
 // const updateProductOrder = async (id: string, payload: Partial<IProductOrder>): Promise<IProductOrder | null> => {
 //      const order = await Order.findById(id);
@@ -416,19 +408,24 @@ const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> 
 //      }
 // };
 
-// const getUserOrders = async (userId: string, query: Record<string, unknown>) => {
-//      const queryBuilder = new QueryBuilder(ProductOrder.find({ userId }), query).filter().sort().paginate().fields().dateFilter('createdAt');
+const getUserOrders = async (userId: string, query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Order.find({ userId }), query).filter().sort().paginate().fields().dateFilter('createdAt');
+     const result = await queryBuilder.modelQuery.populate('contestId', "name image endTime startTime totalEntries endOffsetTime prize").exec();
+     const meta = await queryBuilder.countTotal();
+     return {
+          meta,
+          result,
+     };
+};
 
-//      const result = await queryBuilder.modelQuery.populate('products.productId', 'name sku images').populate('paymentId').exec();
+const getSingleProductOrder = async (id: string): Promise<IProductOrder | null> => {
+     const result = await Order.findById(id).populate('userId', 'name email').populate('contestId', "name image endTime startTime totalEntries endOffsetTime prize").exec();
 
-//      const meta = await queryBuilder.countTotal();
-
-//      return {
-//           meta,
-//           result,
-//      };
-// };
-
+     if (!result) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'Order not found');
+     }
+     return result;
+};
 
 // const analysisOrders = async () => {
 //      try {
@@ -491,6 +488,6 @@ export const OrderService = {
      // cancelProductOrder,
      // analysisOrders,
      createCheckoutSession,
-     // getUserOrders,
+     getUserOrders,
      createOrderAndCheckout,
 };

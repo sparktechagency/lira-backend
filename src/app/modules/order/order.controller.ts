@@ -83,18 +83,23 @@ const orderSuccess = catchAsync(async (req, res) => {
      res.render('success');
 });
 
-// const getUserOrders = catchAsync(async (req, res) => {
-//      const { id } = req.user as { id: string };
-//      const result = await OrderService.getUserOrders(id, req.query);
+const orderCancel = catchAsync(async (req, res) => {
+     // Render cancel page or redirect to frontend cancel page
+     res.render('cancel');
+});
 
-//      sendResponse(res, {
-//           statusCode: StatusCodes.OK,
-//           success: true,
-//           message: 'User orders retrieved successfully',
-//           data: result.result,
-//           meta: result.meta,
-//      });
-// });
+const getUserOrders = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await OrderService.getUserOrders(id, req.query);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'User orders retrieved successfully',
+          data: result.result,
+          meta: result.meta,
+     });
+});
 
 const createOrderAndCheckout = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
@@ -128,6 +133,7 @@ export const OrderController = {
      // analysisOrders,
      createCheckoutSession,
      orderSuccess,
-     // getUserOrders,
+     orderCancel,
+     getUserOrders,
      createOrderAndCheckout,
 };

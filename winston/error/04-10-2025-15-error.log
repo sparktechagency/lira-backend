@@ -4,3 +4,5 @@ Sat Oct 04 2025 15:10:57 [SERVER-NAME] error: 10.10.7.47 - DELETE /api/v1/groups
 Sat Oct 04 2025 15:16:48 [SERVER-NAME] error: 10.10.7.47 - PUT /api/v1/groups/68e0e5f23135abc3cdfdf869 404 - 0.536 ms
 Sat Oct 04 2025 15:25:57 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 0.886 ms
 Sat Oct 04 2025 15:26:0 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 0.723 ms
+Sat Oct 04 2025 15:46:26 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 6.329 ms
+Sat Oct 04 2025 15:46:28 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 0.990 ms

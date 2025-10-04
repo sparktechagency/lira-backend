@@ -26,6 +26,11 @@ export type IUser = {
           lastSeen?: Date;
           lastHeartbeat?: Date;
      };
+     // Referral System
+     referralCode?: string;
+     referredBy?: string;
+     referralCount?: number;
+     points?: number;
 };
 
 export type UserModel = {

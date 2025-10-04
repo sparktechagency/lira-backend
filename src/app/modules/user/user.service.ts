@@ -16,9 +16,39 @@ const createUserToDB = async (payload: IUser): Promise<IUser> => {
           throw new AppError(StatusCodes.CONFLICT, 'Email already exists');
      }
      payload.role = USER_ROLES.USER;
+     
+     // Handle referral code if provided
+     const referralCode = payload.referralCode;
+     delete payload.referralCode; // Remove from payload as it's not in the user model directly
+     
      const createUser = await User.create(payload);
      if (!createUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create user');
+     }
+
+     // Process referral if code was provided
+     if (referralCode) {
+          try {
+               const referrer = await User.findOne({ referralCode });
+               if (referrer) {
+                    // Set referredBy for the new user
+                    await User.findByIdAndUpdate(createUser._id, { 
+                         referredBy: referrer._id,
+                         points: 10 // Award points to the new user
+                    });
+                    
+                    // Update referrer stats
+                    await User.findByIdAndUpdate(referrer._id, {
+                         $inc: { 
+                              referralCount: 1,
+                              points: 10 // Award points to the referrer
+                         }
+                    });
+               }
+          } catch (error) {
+               console.error('Error processing referral:', error);
+               // Continue with user creation even if referral processing fails
+          }
      }
 
      //send email

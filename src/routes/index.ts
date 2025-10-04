@@ -8,6 +8,8 @@ import { UnitTypeRoute } from '../app/modules/unit-type/unit-type.route';
 import { ContestRoutes } from '../app/modules/contest/contest.route';
 import { UserManagementsRouter } from '../app/modules/userManagements/userManagements.router';
 import { OrderRoutes } from '../app/modules/order/order.route';
+import { ReferralRoutes } from '../app/modules/referral/referral.routes';
+import { PaymentRoutes } from '../app/modules/payments/payments.route';
 
 const router = express.Router();
 const routes = [
@@ -46,6 +48,14 @@ const routes = [
      {
           path: '/orders',
           route: OrderRoutes,
+     },
+     {
+          path: '/referrals',
+          route: ReferralRoutes,
+     },
+     {
+          path: '/payments',
+          route: PaymentRoutes,
      },
 
 ];

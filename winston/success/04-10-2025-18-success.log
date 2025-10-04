@@ -1,0 +1,150 @@
+Sat Oct 04 2025 18:4:56 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Sat Oct 04 2025 18:4:56 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Sat Oct 04 2025 18:4:56 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Sat Oct 04 2025 18:4:56 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.updated[22m[49m
+Sat Oct 04 2025 18:4:57 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Sat Oct 04 2025 18:4:57 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Sat Oct 04 2025 18:4:57 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Sat Oct 04 2025 18:4:57 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Sat Oct 04 2025 18:5:1 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=types 204 - 0.302 ms
+Sat Oct 04 2025 18:5:1 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=types 200 - 8.528 ms
+Sat Oct 04 2025 18:5:27 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Sat Oct 04 2025 18:6:40 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=types 204 - 0.092 ms
+Sat Oct 04 2025 18:6:40 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=types 304 - 3.764 ms
+Sat Oct 04 2025 18:6:41 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=units 204 - 0.073 ms
+Sat Oct 04 2025 18:6:41 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=units 200 - 3.976 ms
+Sat Oct 04 2025 18:7:19 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=types 204 - 0.064 ms
+Sat Oct 04 2025 18:7:19 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=types 304 - 4.231 ms
+Sat Oct 04 2025 18:7:22 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=types 304 - 3.739 ms
+Sat Oct 04 2025 18:7:50 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=types 204 - 0.164 ms
+Sat Oct 04 2025 18:7:50 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=types 304 - 8.248 ms
+Sat Oct 04 2025 18:7:57 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=types 204 - 0.074 ms
+Sat Oct 04 2025 18:7:57 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=types 304 - 3.482 ms
+Sat Oct 04 2025 18:8:4 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=types 204 - 0.078 ms
+Sat Oct 04 2025 18:8:4 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=types 304 - 4.312 ms
+Sat Oct 04 2025 18:8:25 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.103 ms
+Sat Oct 04 2025 18:8:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 5.248 ms
+Sat Oct 04 2025 18:10:26 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.189 ms
+Sat Oct 04 2025 18:10:26 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.344 ms
+Sat Oct 04 2025 18:10:40 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.069 ms
+Sat Oct 04 2025 18:10:40 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.108 ms
+Sat Oct 04 2025 18:10:41 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=units 204 - 0.058 ms
+Sat Oct 04 2025 18:10:41 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=units 304 - 3.760 ms
+Sat Oct 04 2025 18:10:55 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.061 ms
+Sat Oct 04 2025 18:10:55 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.535 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 218.106 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.511 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.896 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.278 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 1.348 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.773 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 200 - 6.313 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.579 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.454 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.562 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.527 ms
+Sat Oct 04 2025 18:11:8 [SERVER-NAME] info: 10.10.7.14 - GET /image/jaket-1759315074933.jpg 200 - 1.245 ms
+Sat Oct 04 2025 18:11:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:11:33 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:11:33 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:11:33 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:11:49 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.789 ms
+Sat Oct 04 2025 18:11:49 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 17.465 ms
+Sat Oct 04 2025 18:12:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:12:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:12:5 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:12:5 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:13:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:13:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:13:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:13:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:13:58 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.664 ms
+Sat Oct 04 2025 18:13:58 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 16.817 ms
+Sat Oct 04 2025 18:15:45 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.065 ms
+Sat Oct 04 2025 18:15:45 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 4.773 ms
+Sat Oct 04 2025 18:15:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.062 ms
+Sat Oct 04 2025 18:15:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 4.227 ms
+Sat Oct 04 2025 18:16:5 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.051 ms
+Sat Oct 04 2025 18:16:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 5.343 ms
+Sat Oct 04 2025 18:16:40 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.093 ms
+Sat Oct 04 2025 18:16:40 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 4.262 ms
+Sat Oct 04 2025 18:16:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.076 ms
+Sat Oct 04 2025 18:16:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.196 ms
+Sat Oct 04 2025 18:18:2 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=units 204 - 0.062 ms
+Sat Oct 04 2025 18:18:2 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=units 304 - 3.305 ms
+Sat Oct 04 2025 18:18:6 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.058 ms
+Sat Oct 04 2025 18:18:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.175 ms
+Sat Oct 04 2025 18:18:9 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=units 204 - 0.060 ms
+Sat Oct 04 2025 18:18:9 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=units 304 - 3.611 ms
+Sat Oct 04 2025 18:18:28 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.072 ms
+Sat Oct 04 2025 18:18:28 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 4.498 ms
+Sat Oct 04 2025 18:18:30 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.051 ms
+Sat Oct 04 2025 18:18:30 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 200 - 3.526 ms
+Sat Oct 04 2025 18:19:0 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.050 ms
+Sat Oct 04 2025 18:19:0 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.851 ms
+Sat Oct 04 2025 18:19:10 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.048 ms
+Sat Oct 04 2025 18:19:10 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 3.141 ms
+Sat Oct 04 2025 18:19:21 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.047 ms
+Sat Oct 04 2025 18:19:21 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.476 ms
+Sat Oct 04 2025 18:19:22 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.046 ms
+Sat Oct 04 2025 18:19:22 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 4.163 ms
+Sat Oct 04 2025 18:19:24 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.574 ms
+Sat Oct 04 2025 18:19:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 3.054 ms
+Sat Oct 04 2025 18:19:45 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.044 ms
+Sat Oct 04 2025 18:19:45 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 3.106 ms
+Sat Oct 04 2025 18:19:57 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.043 ms
+Sat Oct 04 2025 18:19:57 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 3.478 ms
+Sat Oct 04 2025 18:21:41 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:21:41 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:21:41 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:21:41 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:21:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:21:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:21:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:21:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:21:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:21:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:21:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:21:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:22:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:22:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:22:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:22:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:22:22 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:22:22 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:22:22 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:22:22 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:22:26 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:22:26 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:22:26 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:22:26 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:22:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:22:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:22:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:22:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:25:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:25:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:25:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:25:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:25:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:25:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:25:8 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:25:8 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:25:23 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:25:23 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:25:23 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:25:23 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:25:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:25:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:25:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:25:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:25:47 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.249 ms
+Sat Oct 04 2025 18:25:47 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 15.318 ms
+Sat Oct 04 2025 18:25:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:25:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:25:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:25:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 04 2025 18:26:18 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 04 2025 18:26:18 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 04 2025 18:26:18 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 04 2025 18:26:18 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m

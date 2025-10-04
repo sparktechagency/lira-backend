@@ -105,6 +105,24 @@ const userSchema = new Schema<IUser, UserModel>(
                     default: Date.now,
                },
           },
+          // Referral System
+          referralCode: {
+               type: String,
+               unique: true,
+               sparse: true,
+          },
+          referredBy: {
+               type: String,
+               default: null,
+          },
+          referralCount: {
+               type: Number,
+               default: 0,
+          },
+          points: {
+               type: Number,
+               default: 0,
+          },
      },
      { timestamps: true },
 );

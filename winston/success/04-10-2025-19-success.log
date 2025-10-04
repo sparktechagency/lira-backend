@@ -16,3 +16,10 @@ Sat Oct 04 2025 19:8:32 [SERVER-NAME] info: [46m🚀 Database connected success
 Sat Oct 04 2025 19:8:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Sat Oct 04 2025 19:8:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
 Sat Oct 04 2025 19:8:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 26.073 ms
+Sat Oct 04 2025 19:10:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/analysis 200 - 20.810 ms
+Sat Oct 04 2025 19:10:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.114 ms
+Sat Oct 04 2025 19:10:44 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 12.919 ms
+Sat Oct 04 2025 19:10:44 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders 200 - 106.093 ms
+Sat Oct 04 2025 19:10:44 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/analysis 200 - 4.654 ms
+Sat Oct 04 2025 19:11:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.936 ms
+Sat Oct 04 2025 19:13:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.262 ms

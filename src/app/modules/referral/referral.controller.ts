@@ -4,11 +4,9 @@ import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { ReferralService } from './referral.service';
 
-const getReferralCode = catchAsync(async (req: Request, res: Response) => {
+const getReferralCode = catchAsync(async (req, res) => {
   const { id } = req.user as { id: string };
-  
   const referralCode = await ReferralService.getUserReferralCode(id);
-  
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,
@@ -17,12 +15,10 @@ const getReferralCode = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-const acceptReferral = catchAsync(async (req: Request, res: Response) => {
+const acceptReferral = catchAsync(async (req, res) => {
   const { id } = req.user as { id: string };
   const { referralCode } = req.body;
-  
   await ReferralService.acceptReferral(id, referralCode);
-  
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,
@@ -31,11 +27,9 @@ const acceptReferral = catchAsync(async (req: Request, res: Response) => {
   });
 });
 
-const getReferralStats = catchAsync(async (req: Request, res: Response) => {
+const getReferralStats = catchAsync(async (req, res) => {
  const { id } = req.user as { id: string };
-  
   const stats = await ReferralService.getReferralStats(id);
-  
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,

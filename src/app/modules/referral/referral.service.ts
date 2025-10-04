@@ -1,5 +1,4 @@
 import { StatusCodes } from 'http-status-codes';
-import { Types } from 'mongoose';
 import crypto from 'crypto';
 import AppError from '../../../errors/AppError';
 import { User } from '../user/user.model';
@@ -10,17 +9,20 @@ const REFERRAL_POINTS = 10;
 // Generate a unique referral code
 const generateReferralCode = async (userId: string): Promise<string> => {
   // Create a base code using the first part of userId and random bytes
-  const baseCode = userId.substring(0, 5) + crypto.randomBytes(3).toString('hex');
+  const isExistUser = await User.findById(userId).select('name');
+
+  const referralCode = isExistUser?.name?.replace(/\s+/g, '')?.substring(0, 5) + crypto.randomBytes(3).toString('hex');
+  const upperCaseReferralCode = referralCode.toUpperCase();
 
   // Check if code already exists
-  const existingUser = await User.findOne({ referralCode: baseCode });
+  const existingUser = await User.findOne({ referralCode: upperCaseReferralCode });
 
   // If code exists, generate a new one recursively
   if (existingUser) {
     return generateReferralCode(userId);
   }
 
-  return baseCode;
+  return upperCaseReferralCode;
 };
 
 // Get or create a referral code for a user

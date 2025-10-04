@@ -4,11 +4,12 @@ import { Payment } from "../../../app/modules/payments/payments.model";
 import stripe from "../../../config/stripe";
 import AppError from "../../../errors/AppError";
 import { Contest } from "../../../app/modules/contest/contest.model";
+import Stripe from "stripe";
 
-export const handleCheckoutSessionSuccessful = async (sessionId: string) => {
+export const handleCheckoutSessionSuccessful = async (data: Stripe.Subscription) => {
     try {
-        const session = await stripe.checkout.sessions.retrieve(sessionId);
-        const { orderId, paymentId, contestId } = session.metadata || {};
+        const session = await stripe.checkout.sessions.retrieve(data.id);
+        const { orderId, paymentId } = session.metadata || {};
 
         // Update payment status
         await Payment.findByIdAndUpdate(paymentId, {
@@ -28,7 +29,8 @@ export const handleCheckoutSessionSuccessful = async (sessionId: string) => {
         }
 
         // NOW update contest prediction entries
-        const contest = await Contest.findById(contestId);
+     
+        const contest = await Contest.findById(order.contestId);
         if (!contest) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
         }
@@ -58,7 +60,7 @@ export const handleCheckoutSessionSuccessful = async (sessionId: string) => {
         // Save contest with updated entries
         await contest.save();
 
-        console.log(`✅ Payment successful: ${totalEntriesAdded} entries added to contest ${contestId}`);
+        console.log(`✅ Payment successful: ${totalEntriesAdded} entries added to contest ${order.contestId}`);
 
         return {
             success: true,

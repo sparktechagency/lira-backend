@@ -1,7 +1,0 @@
-Wed Oct 01 2025 9:0:9 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 2.736 ms
-Wed Oct 01 2025 9:0:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.429 ms
-Wed Oct 01 2025 9:0:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.229 ms
-Wed Oct 01 2025 9:0:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.362 ms
-Wed Oct 01 2025 9:0:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.813 ms
-Wed Oct 01 2025 9:0:45 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.239 ms
-Wed Oct 01 2025 9:0:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.228 ms

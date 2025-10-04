@@ -1,3 +1,0 @@
-Wed Oct 01 2025 18:38:1 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/order/create-and-checkout 404 - 15.248 ms
-Wed Oct 01 2025 18:38:52 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/create-and-checkout 404 - 10.646 ms
-Wed Oct 01 2025 18:38:57 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/orders/create-and-checkout 403 - 14.073 ms

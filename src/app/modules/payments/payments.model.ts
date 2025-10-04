@@ -11,15 +11,13 @@ const paymentSchema = new Schema<IPayment>(
           userId: {
                type: Schema.Types.ObjectId,
                ref: 'User',
-               required: true,
-               index: true,
+               required: true
           },
           // Added for contest orders
           contestId: {
                type: Schema.Types.ObjectId,
                ref: 'Contest',
-               required: true,
-               index: true,
+               required: true
           },
           // Added to track prediction IDs in contest orders
           predictionIds: [
@@ -44,11 +42,11 @@ const paymentSchema = new Schema<IPayment>(
           },
           paymentIntentId: {
                type: String,
-               required: true,
+               required: false,
           },
           paymentSessionId: {
                type: String,
-               required: true,
+               required: false,
                unique: true,
                sparse: true, // Allows multiple null values
           },

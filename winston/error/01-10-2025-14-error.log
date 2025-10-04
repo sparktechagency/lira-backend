@@ -1,7 +1,0 @@
-Wed Oct 01 2025 14:36:57 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/:id/tiers 401 - 2.801 ms
-Wed Oct 01 2025 14:37:7 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/:id/tiers 401 - 0.954 ms
-Wed Oct 01 2025 14:37:13 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/:id/tiers 400 - 5.926 ms
-Wed Oct 01 2025 14:37:31 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/contest/68d92547848dcdfe11da8529 404 - 3.796 ms
-Wed Oct 01 2025 14:44:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.020 ms
-Wed Oct 01 2025 14:56:47 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/categories/category/68d2347954018e3fff04f286 404 - 1.939 ms
-Wed Oct 01 2025 14:57:47 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/categories/category/68d2347954018e3fff04f286 404 - 0.776 ms

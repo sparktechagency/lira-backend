@@ -16,7 +16,6 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
      const webhookSecret = config.stripe.stripe_webhook_secret as string;
 
      let event: Stripe.Event | undefined;
-
      // Verify the event signature
      try {
           event = stripe.webhooks.constructEvent(req.body, signature, webhookSecret);
@@ -37,21 +36,21 @@ const handleStripeWebhook = async (req: Request, res: Response) => {
      try {
           switch (eventType) {
                case 'customer.subscription.created':
-                    handleSubscriptionCreated(data as Stripe.Subscription);
+                    await handleSubscriptionCreated(data as Stripe.Subscription);
                     break;
 
                case 'customer.subscription.updated':
-                    handleSubscriptionUpdated(data as Stripe.Subscription);
+                    await handleSubscriptionUpdated(data as Stripe.Subscription);
                     break;
 
                case 'customer.subscription.deleted':
-                    handleSubscriptionDeleted(data as Stripe.Subscription);
+                    await handleSubscriptionDeleted(data as Stripe.Subscription);
                     break;
                case 'checkout.session.completed':
-                    handleCheckoutSessionSuccessful(data.id);
+                    await handleCheckoutSessionSuccessful(data as Stripe.Subscription);
                     break;
                case 'checkout.session.expired':
-                    handleCheckoutSessionExpired(data.id);
+                    await handleCheckoutSessionExpired(data as Stripe.Subscription);
                     break;
                default:
                     logger.warn(colors.bgGreen.bold(`Unhandled event type: ${eventType}`));

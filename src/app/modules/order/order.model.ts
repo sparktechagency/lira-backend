@@ -13,6 +13,16 @@ const orderSchema = new Schema<IProductOrder>(
                ref: 'User',
                required: true,
           },
+          // Added for contest orders
+          contestId: {
+               type: Schema.Types.ObjectId,
+               ref: 'Contest',
+               required: true,
+          },
+          contestName: {
+               type: String,
+               required: true,
+          },
           predictions: [
                {
                     predictionId: {
@@ -34,7 +44,7 @@ const orderSchema = new Schema<IProductOrder>(
                type: Number,
                required: true,
           },
-    
+
           status: {
                type: String,
                enum: ['pending', 'processing', 'shipping', 'delivered', 'cancel'],

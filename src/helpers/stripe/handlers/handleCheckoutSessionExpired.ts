@@ -3,10 +3,11 @@ import { Order } from "../../../app/modules/order/order.model";
 import { Payment } from "../../../app/modules/payments/payments.model";
 import stripe from "../../../config/stripe";
 import AppError from "../../../errors/AppError";
+import Stripe from "stripe";
 
-export const handleCheckoutSessionExpired = async (sessionId: string) => {
+export const handleCheckoutSessionExpired = async (data: Stripe.Subscription) => {
     try {
-        const session = await stripe.checkout.sessions.retrieve(sessionId);
+        const session = await stripe.checkout.sessions.retrieve(data.id);
         const { orderId, paymentId } = session.metadata || {};
 
         // Update payment status

@@ -103,10 +103,10 @@ const createOrderAndCheckout = catchAsync(async (req, res) => {
           statusCode: StatusCodes.OK,
           success: true,
           message: 'Order created and checkout session generated successfully',
-          // data: {
-          //      sessionId: result.sessionId,
-          //      url: result.url,
-          // },
+          data: {
+               sessionId: result.sessionId,
+               url: result.url,
+          },
      });
 });
 // const analysisOrders = catchAsync(async (req, res) => {

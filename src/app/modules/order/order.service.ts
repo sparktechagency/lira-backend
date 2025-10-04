@@ -179,7 +179,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                     orderId: order._id.toString(),
                     userId: userId,
                     paymentId: (payment as any)._id.toString(),
-                    contestId: order.contestId._id.toString(),
+                    contestId: order.contestId.toString(),
                     type: 'contest_order',
                },
           });
@@ -220,7 +220,7 @@ const createOrderAndCheckout = async (
      const order = await createContestOrder(userId, payload);
 
      // Create checkout session
-     // return createCheckoutSession(order._id.toString(), userId);
+     return createCheckoutSession(order._id.toString(), userId);
 };
 // const getAllProductOrders = async (query: Record<string, unknown>) => {
 //      const queryBuilder = new QueryBuilder(ProductOrder.find({ isDeleted: false }), query);

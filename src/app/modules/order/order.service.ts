@@ -427,66 +427,16 @@ const getSinglePredictionOrder = async (id: string): Promise<IProductOrder | nul
      return result;
 };
 
-// const analysisOrders = async () => {
-//      try {
-//           // Method 1: Using aggregation pipeline (more efficient for large datasets)
-//           const orderAnalysis = await ProductOrder.aggregate([
-//                {
-//                     $match: {
-//                          isDeleted: { $ne: true }, // Only count non-deleted orders
-//                     },
-//                },
-//                {
-//                     $group: {
-//                          _id: '$status',
-//                          count: { $sum: 1 },
-//                     },
-//                },
-//                {
-//                     $group: {
-//                          _id: null,
-//                          orders: {
-//                               $push: {
-//                                    status: '$_id',
-//                                    count: '$count',
-//                               },
-//                          },
-//                          totalOrders: { $sum: '$count' },
-//                     },
-//                },
-//           ]);
+const analysisOrders = async () => {
 
-//           // Transform the result into a more readable format
-//           const result = {
-//                pending: 0,
-//                processing: 0,
-//                shipping: 0,
-//                delivered: 0,
-//                cancel: 0,
-//                totalOrders: 0,
-//           };
-
-//           if (orderAnalysis.length > 0) {
-//                result.totalOrders = orderAnalysis[0].totalOrders;
-
-//                orderAnalysis[0].orders.forEach((order: any) => {
-//                     result[order.status as keyof typeof result] = order.count;
-//                });
-//           }
-
-//           return result;
-//      } catch (error) {
-//           console.error('Error analyzing orders:', error);
-//           throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, 'Failed to analyze orders');
-//      }
-// };
+};
 export const OrderService = {
      // createProductOrder,
      getAllPredictionOrders,
      getSinglePredictionOrder,
      // updateProductOrder,
      // cancelProductOrder,
-     // analysisOrders,
+     analysisOrders,
      createCheckoutSession,
      getUserOrders,
      createOrderAndCheckout,

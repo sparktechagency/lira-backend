@@ -2,3 +2,6 @@ Sat Oct 04 2025 12:8:20 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/my-
 Sat Oct 04 2025 12:9:38 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/my-orders 400 - 33.273 ms
 Sat Oct 04 2025 12:45:38 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/my-orders 401 - 16.498 ms
 Sat Oct 04 2025 12:46:31 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/single-order/68e0b6803c959d6b654d077f 403 - 6.064 ms
+Sat Oct 04 2025 12:52:1 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.675 ms
+Sat Oct 04 2025 12:53:59 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.135 ms
+Sat Oct 04 2025 12:56:45 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 4.237 ms

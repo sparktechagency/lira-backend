@@ -114,15 +114,15 @@ const createOrderAndCheckout = catchAsync(async (req, res) => {
           },
      });
 });
-// const analysisOrders = catchAsync(async (req, res) => {
-//      const result = await ProductOrderService.analysisOrders();
-//      sendResponse(res, {
-//           statusCode: StatusCodes.OK,
-//           success: true,
-//           message: 'Order analysis retrieved successfully',
-//           data: result,
-//      });
-// });
+const analysisOrders = catchAsync(async (req, res) => {
+     const result = await OrderService.analysisOrders();
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Order analysis retrieved successfully',
+          data: result,
+     });
+});
 
 export const OrderController = {
      // createProductOrder,
@@ -130,7 +130,7 @@ export const OrderController = {
      getSinglePredictionOrder,
      updateProductOrder,
      // cancelProductOrder,
-     // analysisOrders,
+     analysisOrders,
      createCheckoutSession,
      orderSuccess,
      orderCancel,

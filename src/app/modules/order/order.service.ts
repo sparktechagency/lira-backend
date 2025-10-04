@@ -457,7 +457,7 @@ const analysisOrders = async (userId: string) => {
                          _id: null,
                          totalContests: { $addToSet: '$contestId' },
                          totalEntries: { $sum: { $size: '$predictions' } },
-                         totalIncome: { $sum: '$totalAmount' },
+                         totalSpend: { $sum: '$totalAmount' },
                          totalPrizePool: { $sum: { $ifNull: ['$contest.prize.prizePool', 0] } },
                     },
                },
@@ -465,6 +465,7 @@ const analysisOrders = async (userId: string) => {
                     $project: {
                          _id: 0,
                          totalContests: { $size: '$totalContests' },
+                         totalSpend: 1,
                          totalEntries: 1,
                          totalRevenue: '$totalPrizePool',
                     },

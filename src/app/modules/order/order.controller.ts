@@ -115,7 +115,8 @@ const createOrderAndCheckout = catchAsync(async (req, res) => {
      });
 });
 const analysisOrders = catchAsync(async (req, res) => {
-     const result = await OrderService.analysisOrders();
+     const { id } = req.user as { id: string };
+     const result = await OrderService.analysisOrders(id);
      sendResponse(res, {
           statusCode: StatusCodes.OK,
           success: true,

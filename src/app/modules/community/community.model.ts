@@ -30,7 +30,10 @@ const communitySchema = new Schema<ICommunity>({
         enum: ['pending', 'decline', 'live'],
         default: 'pending',
     },
-});
+},
+    {
+        timestamps: true,
+    });
 const communityUpdateSchema = new Schema<ICommunityVote>({
     userId: {
         type: Schema.Types.ObjectId,
@@ -45,7 +48,10 @@ const communityUpdateSchema = new Schema<ICommunityVote>({
     vote: {
         type: Boolean
     }
-});
+},
+    {
+        timestamps: true,
+    });
 
 
 export const CommunityVoteModel = model<ICommunityVote>('CommunityVote', communityUpdateSchema);

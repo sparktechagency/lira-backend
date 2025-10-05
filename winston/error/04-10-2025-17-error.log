@@ -1,8 +1,0 @@
-Sat Oct 04 2025 17:2:28 [SERVER-NAME] error: 10.10.7.14 - GET /favicon.ico 404 - 0.535 ms
-Sat Oct 04 2025 17:3:51 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.631 ms
-Sat Oct 04 2025 17:3:52 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 1.637 ms
-Sat Oct 04 2025 17:3:53 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 1.205 ms
-Sat Oct 04 2025 17:32:28 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/orders/my-orders 401 - 1.980 ms
-Sat Oct 04 2025 17:35:53 [SERVER-NAME] error: 10.10.7.14 - GET /favicon.ico 404 - 0.574 ms
-Sat Oct 04 2025 17:35:55 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 2.529 ms
-Sat Oct 04 2025 17:36:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.087 ms

@@ -1,0 +1,8 @@
+Sun Oct 05 2025 11:21:57 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 22.393 ms
+Sun Oct 05 2025 11:22:7 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 8.218 ms
+Sun Oct 05 2025 11:22:53 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 8.993 ms
+Sun Oct 05 2025 11:24:12 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 8.491 ms
+Sun Oct 05 2025 11:25:2 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 6.057 ms
+Sun Oct 05 2025 11:25:32 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 6.519 ms
+Sun Oct 05 2025 11:27:4 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/orders/create-and-checkout 400 - 136.017 ms
+Sun Oct 05 2025 11:29:23 [SERVER-NAME] error: 10.10.7.14 - GET /favicon.ico 404 - 0.765 ms

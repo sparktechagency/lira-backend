@@ -11,6 +11,7 @@ import { OrderRoutes } from '../app/modules/order/order.route';
 import { ReferralRoutes } from '../app/modules/referral/referral.routes';
 import { PaymentRoutes } from '../app/modules/payments/payments.route';
 import { HelpRouter } from '../app/modules/help/help.route';
+import { CommunityRoutes } from '../app/modules/community/community.route';
 
 const router = express.Router();
 const routes = [
@@ -61,6 +62,10 @@ const routes = [
      {
           path: '/help',
           route: HelpRouter,
+     },
+     {
+          path: '/community',
+          route: CommunityRoutes,
      },
 
 ];

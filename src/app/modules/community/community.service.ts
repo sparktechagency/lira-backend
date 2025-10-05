@@ -38,7 +38,13 @@ const getCommunityPosts = async (query: Record<string, unknown>) => {
         result,
     };
 }
-
+const getSingleCommunityPost = async (id: string) => {
+    const result = await CommunityModel.findById(id);
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to get community post');
+    }
+    return result;
+}
 const upVoteCommunity = async (postId: string, userId: string) => {
     const existingVote = await CommunityVoteModel.findOne({ userId, postId });
 
@@ -180,4 +186,5 @@ export const CommunityService = {
     getVotedPosts,
     getMyPosts,
     downVoteCommunity,
+    getSingleCommunityPost,
 }

@@ -6,7 +6,7 @@ export interface ICommunity {
     description: string;
     upvote: number;
     downvote: number;
-    status: 'active' | 'approved';
+    status: 'pending' | 'decline' | 'live';
 }
 
 export interface ICommunityVote {

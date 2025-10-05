@@ -90,4 +90,5 @@ export const CommunityController = {
     upVoteCommunity,
     getVotedPosts,
     getMyPosts,
+    downVoteCommunity,
 }

@@ -1,2 +1,6 @@
 Sun Oct 05 2025 9:14:57 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/referrals/code 401 - 130.105 ms
 Sun Oct 05 2025 9:16:26 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/users/register 409 - 27.779 ms
+Sun Oct 05 2025 9:55:38 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 4.751 ms
+Sun Oct 05 2025 9:56:1 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 13.051 ms
+Sun Oct 05 2025 9:56:2 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 1.855 ms
+Sun Oct 05 2025 9:56:2 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 0.919 ms

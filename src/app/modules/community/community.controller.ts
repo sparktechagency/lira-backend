@@ -35,8 +35,34 @@ const getCommunityPosts = catchAsync(async (req, res) => {
     });
 });
 
+const upVoteCommunity = catchAsync(async (req, res) => {
+    const { postId } = req.params;
+    const { id } = req.user as { id: string };
+    const result = await CommunityService.upVoteCommunity(postId, id);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Community post upvoted successfully',
+        data: result,
+    });
+});
+const getVotedPosts = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string };
+    const result = await CommunityService.getVotedPosts(id);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Voted posts retrieved successfully',
+        data: result,
+    });
+});
+
+
+
 export const CommunityController = {
     createCommunity,
     approveCommunity,
     getCommunityPosts,
+    upVoteCommunity,
+    getVotedPosts,
 }

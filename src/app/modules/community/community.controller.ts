@@ -4,13 +4,13 @@ import sendResponse from "../../../shared/sendResponse";
 import { CommunityService } from "./community.service";
 
 
-const createCommunityVote = catchAsync(async (req, res) => {
+const createCommunity = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const result = await CommunityService.createCommunityVote(id, req.body);
+    const result = await CommunityService.createCommunity(id, req.body);
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
-        message: 'Community vote created successfully',
+        message: 'Community post created successfully',
         data: result,
     });
 });
@@ -21,11 +21,22 @@ const approveCommunity = catchAsync(async (req, res) => {
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
-        message: 'Community approved successfully',
+        message: 'Community post approved successfully',
         data: result,
     });
 });
+const getCommunityPosts = catchAsync(async (req, res) => {
+    const result = await CommunityService.getCommunityPosts(req.query);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Community posts retrieved successfully',
+        data: result,
+    });
+});
+
 export const CommunityController = {
-    createCommunityVote,
+    createCommunity,
     approveCommunity,
+    getCommunityPosts,
 }

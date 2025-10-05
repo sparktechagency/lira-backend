@@ -1,4 +1,0 @@
-Sat Oct 04 2025 14:56:47 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.091 ms
-Sat Oct 04 2025 14:56:47 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 2.464 ms
-Sat Oct 04 2025 14:56:47 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.060 ms
-Sat Oct 04 2025 14:56:47 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 4.399 ms

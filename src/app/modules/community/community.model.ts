@@ -27,6 +27,7 @@ const communitySchema = new Schema<ICommunity>({
     },
     status: {
         type: String,
+        enum: ['active', 'pending', 'rejected'],
         default: 'active',
     },
 });

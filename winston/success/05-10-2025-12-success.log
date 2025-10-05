@@ -1,0 +1,12 @@
+Sun Oct 05 2025 12:3:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 05 2025 12:4:9 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 05 2025 12:4:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 05 2025 12:4:9 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sun Oct 05 2025 12:4:9 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sun Oct 05 2025 12:4:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sun Oct 05 2025 12:4:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sun Oct 05 2025 12:4:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sun Oct 05 2025 12:4:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sun Oct 05 2025 12:10:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders 200 - 77.859 ms
+Sun Oct 05 2025 12:11:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.663 ms
+Sun Oct 05 2025 12:11:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/jaket-1759315074933.jpg 200 - 9.569 ms

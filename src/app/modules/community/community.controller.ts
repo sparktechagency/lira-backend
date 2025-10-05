@@ -14,6 +14,18 @@ const createCommunityVote = catchAsync(async (req, res) => {
         data: result,
     });
 });
+const approveCommunity = catchAsync(async (req, res) => {
+    const { communityId } = req.params;
+    const { status } = req.body;
+    const result = await CommunityService.approveCommunity(communityId, status);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Community approved successfully',
+        data: result,
+    });
+});
 export const CommunityController = {
     createCommunityVote,
+    approveCommunity,
 }

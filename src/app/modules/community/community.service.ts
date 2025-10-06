@@ -23,19 +23,45 @@ const approveCommunity = async (id: string, status: string) => {
     }
     return result;
 }
-const getCommunityPosts = async (query: Record<string, unknown>) => {
-    const queryBuilder = new QueryBuilder(CommunityModel.find(), query)
-    const result = await queryBuilder.filter()
+const getVotedPost = async (userId: string, postId: string) => {
+    const result = await CommunityVoteModel.findOne({ userId, postId });
+    return result;
+}
+
+const getCommunityPosts = async (query: Record<string, unknown>, userId?: string) => {
+    const queryBuilder = new QueryBuilder(CommunityModel.find(), query);
+
+    const result = await queryBuilder
+        .filter()
         .sort()
         .paginate()
         .fields()
         .search(['title', 'description'])
         .modelQuery
+        .populate('userId', "name email")
         .exec();
+
+    let postsWithVotes = result;
+
+    if (userId) {
+        postsWithVotes = await Promise.all(
+            result.map(async (post: any) => {
+                const userVote = await getVotedPost(userId, post._id.toString());
+
+                return {
+                    ...post.toObject(),
+                    isLiked: userVote ? userVote.vote === true : false,
+                    isDisliked: userVote ? userVote.vote === false : false
+                };
+            })
+        );
+    }
+
     const meta = await queryBuilder.countTotal();
+
     return {
         meta,
-        result,
+        result: postsWithVotes,
     };
 }
 const getSingleCommunityPost = async (id: string) => {
@@ -178,6 +204,13 @@ const getMyPosts = async (userId: string, query: Record<string, unknown>) => {
         result,
     };
 }
+const deleteCommunityPost = async (postId: string) => {
+    const result = await CommunityModel.findByIdAndDelete(postId);
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to delete community post');
+    }
+    return result;
+}
 export const CommunityService = {
     createCommunity,
     approveCommunity,
@@ -187,4 +220,5 @@ export const CommunityService = {
     getMyPosts,
     downVoteCommunity,
     getSingleCommunityPost,
+    deleteCommunityPost,
 }

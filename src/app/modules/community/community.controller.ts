@@ -26,7 +26,8 @@ const approveCommunity = catchAsync(async (req, res) => {
     });
 });
 const getCommunityPosts = catchAsync(async (req, res) => {
-    const result = await CommunityService.getCommunityPosts(req.query);
+    const { id } = req.user as { id: string };
+    const result = await CommunityService.getCommunityPosts(req.query, id);
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -90,6 +91,17 @@ const downVoteCommunity = catchAsync(async (req, res) => {
     });
 });
 
+const deleteCommunityPost = catchAsync(async (req, res) => {
+    const { postId } = req.params;
+    const result = await CommunityService.deleteCommunityPost(postId);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Community post deleted successfully',
+        data: result,
+    });
+});
+
 
 
 export const CommunityController = {
@@ -101,4 +113,5 @@ export const CommunityController = {
     getMyPosts,
     downVoteCommunity,
     getSingleCommunityPost,
+    deleteCommunityPost,
 }

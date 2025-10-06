@@ -6,21 +6,6 @@
     "auditLog": "R:\\projects\\lira-backend\\winston\\success\\.c6978dcd0db56af07e3f848907efc1f38046d64d-audit.json",
     "files": [
         {
-            "date": 1759579496172,
-            "name": "R:\\projects\\lira-backend\\winston\\success\\04-10-2025-18-success.log",
-            "hash": "74c5abf48153830ddb2a3f924bd494b4d60cae4395ed9304b29c274f489cd056"
-        },
-        {
-            "date": 1759583243330,
-            "name": "R:\\projects\\lira-backend\\winston\\success\\04-10-2025-19-success.log",
-            "hash": "fe91a68a7bce3869c30c3c97009326d18f8898da3aaf7da12cabbccbc8323491"
-        },
-        {
-            "date": 1759634104434,
-            "name": "R:\\projects\\lira-backend\\winston\\success\\05-10-2025-09-success.log",
-            "hash": "4a0a7e0f23556e6b0beded0fc8b5902d0cc67392bd896f75999b318398c1cedc"
-        },
-        {
             "date": 1759637330647,
             "name": "R:\\projects\\lira-backend\\winston\\success\\05-10-2025-10-success.log",
             "hash": "94f5e33fe3a348c991494c160a291d9109272c13abd5c1897eb19b2487c1ec18"
@@ -64,6 +49,21 @@
             "date": 1759665600184,
             "name": "R:\\projects\\lira-backend\\winston\\success\\05-10-2025-18-success.log",
             "hash": "deea3d000be3e5b2c600a55e2fbd05353d25d26d5ccd9c875bf5a13a78af660e"
+        },
+        {
+            "date": 1759672371149,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\05-10-2025-19-success.log",
+            "hash": "562bc9bc811ccd75f86ebea3981baee5a33ab7b3408b44ed396241e17c612338"
+        },
+        {
+            "date": 1759722817922,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\06-10-2025-09-success.log",
+            "hash": "cd0a4cde83cfd5d5ecba9cd19e08a49f6fe7173e96f810b5bffcc595027e8934"
+        },
+        {
+            "date": 1759723215713,
+            "name": "R:\\projects\\lira-backend\\winston\\success\\06-10-2025-10-success.log",
+            "hash": "424b9d9d203e9a9884d1795d3add8df8b28db3ab0765439f5d76359cd606f693"
         }
     ],
     "hashType": "sha256"

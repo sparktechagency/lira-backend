@@ -74,6 +74,10 @@ const userSchema = new Schema<IUser, UserModel>(
                type: Boolean,
                default: false,
           },
+          state: {
+               type: String,
+               required: true,
+          },
           authentication: {
                type: {
                     isResetPassword: {

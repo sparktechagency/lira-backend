@@ -15,6 +15,7 @@ export type IUser = {
      oauthProvider?: 'google' | 'facebook';
      agreeWithTerms?: boolean;
      phone?: string;
+     state: string;
      authentication?: {
           isResetPassword: boolean;
           oneTimeCode: number;

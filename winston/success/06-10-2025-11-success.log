@@ -1,0 +1,197 @@
+Mon Oct 06 2025 11:0:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 16.940 ms
+Mon Oct 06 2025 11:0:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 84.650 ms
+Mon Oct 06 2025 11:0:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 85.772 ms
+Mon Oct 06 2025 11:0:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 110.346 ms
+Mon Oct 06 2025 11:0:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 115.817 ms
+Mon Oct 06 2025 11:0:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 113.268 ms
+Mon Oct 06 2025 11:0:37 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/community/create 200 - 105.146 ms
+Mon Oct 06 2025 11:0:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.877 ms
+Mon Oct 06 2025 11:0:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 30.202 ms
+Mon Oct 06 2025 11:0:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 30.268 ms
+Mon Oct 06 2025 11:0:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 31.244 ms
+Mon Oct 06 2025 11:0:48 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/community/create 200 - 9.734 ms
+Mon Oct 06 2025 11:0:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.017 ms
+Mon Oct 06 2025 11:0:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 25.835 ms
+Mon Oct 06 2025 11:0:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 26.125 ms
+Mon Oct 06 2025 11:0:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 27.566 ms
+Mon Oct 06 2025 11:1:3 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/community/create 200 - 78.257 ms
+Mon Oct 06 2025 11:1:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.057 ms
+Mon Oct 06 2025 11:1:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 41.959 ms
+Mon Oct 06 2025 11:1:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 43.979 ms
+Mon Oct 06 2025 11:1:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 47.221 ms
+Mon Oct 06 2025 11:1:36 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/community/create 200 - 6.466 ms
+Mon Oct 06 2025 11:1:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.996 ms
+Mon Oct 06 2025 11:1:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 9.196 ms
+Mon Oct 06 2025 11:22:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 186.799 ms
+Mon Oct 06 2025 11:22:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 448.670 ms
+Mon Oct 06 2025 11:22:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.098 ms
+Mon Oct 06 2025 11:22:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 34.301 ms
+Mon Oct 06 2025 11:23:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 135.232 ms
+Mon Oct 06 2025 11:24:20 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 13.640 ms
+Mon Oct 06 2025 11:24:20 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 78.380 ms
+Mon Oct 06 2025 11:24:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.597 ms
+Mon Oct 06 2025 11:24:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 22.820 ms
+Mon Oct 06 2025 11:24:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.460 ms
+Mon Oct 06 2025 11:24:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 11.892 ms
+Mon Oct 06 2025 11:24:49 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.394 ms
+Mon Oct 06 2025 11:24:49 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 11.812 ms
+Mon Oct 06 2025 11:25:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 9.533 ms
+Mon Oct 06 2025 11:25:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 20.154 ms
+Mon Oct 06 2025 11:25:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 21.088 ms
+Mon Oct 06 2025 11:25:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 55.293 ms
+Mon Oct 06 2025 11:25:59 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:25:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:25:59 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:25:59 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:26:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:26:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:26:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:26:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:26:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:26:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:26:5 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:26:5 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:26:31 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 282.865 ms
+Mon Oct 06 2025 11:26:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:26:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:26:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:26:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:26:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:26:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:26:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:26:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:26:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:26:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:26:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:26:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:26:49 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 25.319 ms
+Mon Oct 06 2025 11:26:49 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 97.407 ms
+Mon Oct 06 2025 11:26:51 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:26:51 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:26:51 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:26:51 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:26:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:26:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:26:58 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:26:58 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:27:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:27:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:27:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:27:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:27:49 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.upcoming[22m[49m
+Mon Oct 06 2025 11:27:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 32.221 ms
+Mon Oct 06 2025 11:27:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 131.858 ms
+Mon Oct 06 2025 11:29:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 134.522 ms
+Mon Oct 06 2025 11:29:17 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:29:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:29:17 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:29:17 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:29:26 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:29:26 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:29:26 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:29:26 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:29:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:29:28 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:29:28 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:29:28 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:29:31 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:29:31 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:29:31 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:29:31 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:29:37 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:29:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:29:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:29:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:30:10 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:30:10 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:30:10 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:30:10 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:30:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:30:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:30:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:30:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:30:39 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 51.312 ms
+Mon Oct 06 2025 11:30:39 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 58.805 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 105.181 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 107.278 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 107.489 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 107.958 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 109.054 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 117.048 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 8.447 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 22.822 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 38.740 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 39.564 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 42.942 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 44.340 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 45.668 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 5.230 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 4.486 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 8.222 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 5.037 ms
+Mon Oct 06 2025 11:30:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 6.578 ms
+Mon Oct 06 2025 11:30:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.784 ms
+Mon Oct 06 2025 11:30:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 15.536 ms
+Mon Oct 06 2025 11:30:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 7.343 ms
+Mon Oct 06 2025 11:30:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 6.914 ms
+Mon Oct 06 2025 11:31:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:31:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:31:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:31:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:31:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 22.679 ms
+Mon Oct 06 2025 11:31:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 40.321 ms
+Mon Oct 06 2025 11:31:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 8.758 ms
+Mon Oct 06 2025 11:31:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 6.009 ms
+Mon Oct 06 2025 11:31:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:31:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:31:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:31:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:31:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:31:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:31:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:31:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 22.047 ms
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 40.026 ms
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.636 ms
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 19.677 ms
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 22.405 ms
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 8.045 ms
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 8.404 ms
+Mon Oct 06 2025 11:31:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 6.074 ms
+Mon Oct 06 2025 11:31:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:31:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:31:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:31:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 26.925 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 33.168 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 62.764 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 59.255 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.561 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/posts 200 - 28.916 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 28.540 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 29.459 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/voted-posts 200 - 7.755 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 7.041 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 8.145 ms
+Mon Oct 06 2025 11:31:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 7.195 ms
+Mon Oct 06 2025 11:32:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:32:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:32:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:32:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:32:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:32:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:32:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:32:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:32:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:32:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:32:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:32:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:32:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:32:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:32:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:32:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:33:17 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 06 2025 11:33:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 06 2025 11:33:17 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 06 2025 11:33:17 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 06 2025 11:34:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/community/my-posts 200 - 159.068 ms

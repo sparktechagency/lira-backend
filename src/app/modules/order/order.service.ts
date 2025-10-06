@@ -483,6 +483,60 @@ const analysisOrders = async (userId: string) => {
      }
 };
 
+const pastAnalysisOrders = async (userId: string) => {
+     try {
+          const result = await Order.aggregate([
+               {
+                    $match: {
+                         userId: new Types.ObjectId(userId),
+                         isDeleted: false,
+                         status: { $ne: ['pending', 'processing', 'cancelled', 'shipping'] },
+                    },
+               },
+               {
+                    $lookup: {
+                         from: 'contests',
+                         localField: 'contestId',
+                         foreignField: '_id',
+                         as: 'contest',
+                    },
+               },
+               {
+                    $unwind: {
+                         path: '$contest',
+                         preserveNullAndEmptyArrays: true,
+                    },
+               },
+               {
+                    $group: {
+                         _id: null,
+                         totalContests: { $addToSet: '$contestId' },
+                         totalEntries: { $sum: { $size: '$predictions' } },
+                         totalSpend: { $sum: '$totalAmount' },
+                         totalPrizePool: { $sum: { $ifNull: ['$contest.prize.prizePool', 0] } },
+                    },
+               },
+               {
+                    $project: {
+                         _id: 0,
+                         totalContests: { $size: '$totalContests' },
+                         totalSpend: 1,
+                         totalEntries: 1,
+                         totalRevenue: '$totalPrizePool',
+                    },
+               },
+          ]);
+
+          return result[0] || {
+               totalContests: 0,
+               totalEntries: 0,
+               totalRevenue: 0,
+          };
+     } catch (error: any) {
+          console.error('Error analyzing orders:', error);
+          throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to analyze orders: ${error.message}`);
+     }
+};
 
 export default analysisOrders;
 export const OrderService = {
@@ -491,6 +545,7 @@ export const OrderService = {
      getSinglePredictionOrder,
      // updateProductOrder,
      // cancelProductOrder,
+     pastAnalysisOrders,
      analysisOrders,
      createCheckoutSession,
      getUserOrders,

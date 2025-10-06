@@ -23,6 +23,7 @@ router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getUserOrders);
 // Update an order (admin only)
 router.patch('/update/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), validateRequest(ProductOrderValidation.updateProductOrderZodSchema), OrderController.updateProductOrder);
 router.get('/analysis', auth(USER_ROLES.USER), OrderController.analysisOrders);
+router.get('/past-analysis', auth(USER_ROLES.USER), OrderController.pastAnalysisOrders);
 // Delete an order (admin only)
 // router.delete('/cancel/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ProductOrderController.cancelProductOrder);
 // Handle successful payment

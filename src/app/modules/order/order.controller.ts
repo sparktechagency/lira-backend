@@ -125,11 +125,23 @@ const analysisOrders = catchAsync(async (req, res) => {
      });
 });
 
+const pastAnalysisOrders = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await OrderService.pastAnalysisOrders(id);
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Order analysis retrieved successfully',
+          data: result,
+     });
+});
+
 export const OrderController = {
      // createProductOrder,
      getAllPredictionOrders,
      getSinglePredictionOrder,
      updateProductOrder,
+     pastAnalysisOrders,
      // cancelProductOrder,
      analysisOrders,
      createCheckoutSession,

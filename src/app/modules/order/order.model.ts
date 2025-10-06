@@ -60,7 +60,7 @@ const orderSchema = new Schema<IProductOrder>(
 
           status: {
                type: String,
-               enum: ['pending', 'processing', 'shipping', 'delivered', 'cancel'],
+               enum: ['pending', 'processing', 'shipping', 'delivered', 'complete', 'cancelled', 'won', 'lost'],
                default: 'pending',
           },
           paymentId: {

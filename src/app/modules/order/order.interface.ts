@@ -15,7 +15,7 @@ export interface IProductOrder extends Document {
      phone: string;
      email: string;
      totalAmount: number;
-     status: 'pending' | 'processing' | 'completed' | 'cancelled';
+     status: 'pending' | 'processing' | 'shipping' | 'completed' | 'cancelled' | 'won' | 'lost';
      paymentId?: Types.ObjectId;
      isDeleted: boolean;
      createdAt: Date;

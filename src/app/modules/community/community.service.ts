@@ -174,10 +174,12 @@ const getVotedPosts = async (userId: string, query: Record<string, unknown>) => 
         userVotes.map(vote => [vote.postId.toString(), vote.vote])
     );
 
+  
     // Add userVote to each post
     const postsWithVotes = posts.map(post => ({
         ...post,
-        userVote: voteMap.get(post._id.toString())
+        isLiked: voteMap.get(post._id.toString()) === true,
+        isDisliked: voteMap.get(post._id.toString()) === false,
     }));
 
     return {
@@ -197,11 +199,30 @@ const getMyPosts = async (userId: string, query: Record<string, unknown>) => {
         .paginate()
         .fields()
         .search(['title', 'description']);
-    const result = await queryBuilder.modelQuery.exec();
+    const result = await queryBuilder.modelQuery.populate('userId', 'name email').exec();
+
+
+    let postsWithVotes = result;
+
+    if (userId) {
+        postsWithVotes = await Promise.all(
+            result.map(async (post: any) => {
+                const userVote = await getVotedPost(userId, post._id.toString());
+
+                return {
+                    ...post.toObject(),
+                    isLiked: userVote ? userVote.vote === true : false,
+                    isDisliked: userVote ? userVote.vote === false : false
+                };
+            })
+        );
+    }
+
+
     const meta = await queryBuilder.countTotal();
     return {
         meta,
-        result,
+        result: postsWithVotes,
     };
 }
 const deleteCommunityPost = async (postId: string) => {

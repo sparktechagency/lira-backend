@@ -1,4 +1,0 @@
-Sun Oct 05 2025 17:1:58 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 3.516 ms
-Sun Oct 05 2025 17:41:18 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/community/create 401 - 35.511 ms
-Sun Oct 05 2025 17:46:47 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/community/upvote/68e25a530e1dafe46aa84316 404 - 1.730 ms
-Sun Oct 05 2025 17:47:4 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/community/upvote/68e25a530e1dafe46aa84316 404 - 12.733 ms

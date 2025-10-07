@@ -1,0 +1,15 @@
+Tue Oct 07 2025 12:3:0 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 12:5:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 12:5:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 07 2025 12:5:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 07 2025 12:5:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 07 2025 12:5:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68e4a90159705090632b3e26 200 - 48.295 ms
+Tue Oct 07 2025 12:6:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68e4a90159705090632b3e26 200 - 7.594 ms
+Tue Oct 07 2025 12:7:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 12:7:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 07 2025 12:7:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 07 2025 12:7:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 07 2025 12:8:15 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 1.170 ms
+Tue Oct 07 2025 12:8:15 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.069 ms
+Tue Oct 07 2025 12:8:15 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 36.808 ms
+Tue Oct 07 2025 12:8:15 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 76.016 ms

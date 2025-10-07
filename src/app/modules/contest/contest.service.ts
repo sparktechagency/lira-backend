@@ -1,9 +1,11 @@
 import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
-import { IContest } from "./contest.interface";
+import { IContest, US_STATES } from "./contest.interface";
 import { Contest } from "./contest.model";
 import QueryBuilder from "../../builder/QueryBuilder";
 import { Category } from "../category/category.model";
+import { User } from "../user/user.model";
+import { USER_ROLES } from "../../../enums/user";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -141,9 +143,6 @@ const publishContest = async (id: string) => {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
 
-    if (contest.status !== 'Draft') {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'Contest is already published');
-    }
 
     // Generate predictions before publishing
     if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
@@ -157,8 +156,11 @@ const publishContest = async (id: string) => {
             'Cannot publish contest: No predictions could be generated. Check prediction ranges and tiers.'
         );
     }
-
-    contest.status = 'Active';
+    if (contest.status === 'Active') {
+        contest.status = 'Draft';
+    } else {
+        contest.status = 'Active';
+    }
     const result = await contest.save();
 
     return result;
@@ -178,14 +180,27 @@ const generateContestPredictions = async (id: string) => {
     return result;
 };
 const getActiveContests = async (query: Record<string, unknown>) => {
-    const queryBuilder = new QueryBuilder(Contest.find({
-        status: 'Active',
-        // startTime: { $lte: new Date() },
-        // endTime: { $gte: new Date() }
-    }), query);
-    const notAllowedFields = "-predictions.generatedPredictions -pricing.tiers -results -state -predictions.placePercentages -predictions.numberOfEntriesPerPrediction -predictions.unit -predictions.increment -createdBy -createdAt -updatedAt -maxEntries -startTime -status -description -categoryId -serial";
+    const queryBuilder = new QueryBuilder(
+        Contest.find({
+            status: 'Active'
+        }),
+        query
+    );
 
-    const result = await queryBuilder.priceRange().fields().filter().search(["name", "category"]).prizeTypeFilter().sort().modelQuery.select(notAllowedFields).exec();
+    const notAllowedFields = "-predictions.generatedPredictions -pricing.tiers -results -predictions.placePercentages -predictions.numberOfEntriesPerPrediction -predictions.unit -predictions.increment -createdBy -createdAt -updatedAt -maxEntries -startTime -status -description -categoryId -serial";
+
+    const result = await queryBuilder
+        .priceRange()
+        .fields()
+        .filter()
+        .search(["name", "category"])
+        .prizeTypeFilter()
+        .sort()
+        .modelQuery
+        .select(notAllowedFields)
+        .lean()
+        .exec();
+
     const meta = await queryBuilder.countTotal();
 
     return {
@@ -216,11 +231,34 @@ const getPredictionTiers = async (contestId: string, tierId: string) => {
     return tier;
 };
 
-const getContestByIdUser = async (id: string) => {
-    const result = await Contest.findById(id).select("-predictions.generatedPredictions -pricing.tiers -results -state -predictions.placePercentages -predictions.numberOfEntriesPerPrediction -predictions.unit -predictions.increment -createdBy -createdAt -updatedAt -maxEntries -startTime -status -categoryId -serial");
+const getContestByIdUser = async (id: string, userId: string) => {
+    // Run queries in parallel for better performance
+    const [isExistUser, result] = await Promise.all([
+        User.findById(userId).select('state role').lean(),
+        Contest.findById(id).select('title description entryFee endTime state image').lean()
+    ]);
+
+    // Check user exists
+    if (!isExistUser) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
+    }
+
+    // Check contest exists
     if (!result) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
+
+    // Implement state-based access control
+    if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
+        return result;
+    }
+    if (!result.state.includes(isExistUser.state as US_STATES)) {
+        throw new AppError(
+            StatusCodes.FORBIDDEN,
+            'This contest is not available in your state'
+        );
+    }
+
     return result;
 }
 const getContestByCategoryId = async (id: string) => {

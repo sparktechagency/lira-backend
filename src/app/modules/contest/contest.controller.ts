@@ -128,7 +128,8 @@ const getTiersContest = catchAsync(async (req, res) => {
 
 const getContestByIdUser = catchAsync(async (req, res) => {
     const { id } = req.params;
-    const result = await ContestService.getContestByIdUser(id);
+    const { id: userId } = req.user as { id: string };
+    const result = await ContestService.getContestByIdUser(id, userId);
 
     sendResponse(res, {
         success: true,

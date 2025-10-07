@@ -1,0 +1,17 @@
+Tue Oct 07 2025 11:22:20 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 8.944 ms
+Tue Oct 07 2025 11:22:31 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 5.023 ms
+Tue Oct 07 2025 11:22:49 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 5.210 ms
+Tue Oct 07 2025 11:22:55 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 4.495 ms
+Tue Oct 07 2025 11:23:1 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 3.699 ms
+Tue Oct 07 2025 11:23:2 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 6.542 ms
+Tue Oct 07 2025 11:23:47 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 4.351 ms
+Tue Oct 07 2025 11:23:50 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.404 ms
+Tue Oct 07 2025 11:23:53 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 4.316 ms
+Tue Oct 07 2025 11:23:54 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 4.061 ms
+Tue Oct 07 2025 11:23:55 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 4.607 ms
+Tue Oct 07 2025 11:25:4 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 5.735 ms
+Tue Oct 07 2025 11:27:47 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 37.549 ms
+Tue Oct 07 2025 11:27:47 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 5.837 ms
+Tue Oct 07 2025 11:27:48 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 5.058 ms
+Tue Oct 07 2025 11:57:15 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68e4a90159705090632b3e26 400 - 5033.095 ms
+Tue Oct 07 2025 11:59:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68e4a90159705090632b3e26 400 - 5011.640 ms

@@ -1,0 +1,10 @@
+Mon Oct 06 2025 17:0:21 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68db630b8ab8a2d438607d6b 400 - 1.533 ms
+Mon Oct 06 2025 17:0:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 0.877 ms
+Mon Oct 06 2025 17:0:32 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 1.321 ms
+Mon Oct 06 2025 17:0:33 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 0.915 ms
+Mon Oct 06 2025 17:0:49 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 1.061 ms
+Mon Oct 06 2025 17:14:41 [SERVER-NAME] error: 10.10.7.14 - GET /favicon.ico 404 - 0.983 ms
+Mon Oct 06 2025 17:20:28 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 25.038 ms
+Mon Oct 06 2025 17:21:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 4.520 ms
+Mon Oct 06 2025 17:21:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 3.572 ms
+Mon Oct 06 2025 17:21:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 3.530 ms

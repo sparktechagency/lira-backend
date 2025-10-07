@@ -1,4 +1,0 @@
-Mon Oct 06 2025 15:52:47 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/users/register 409 - 6.044 ms
-Mon Oct 06 2025 15:53:18 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/users/register 409 - 4.371 ms
-Mon Oct 06 2025 15:53:20 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/users/register 409 - 3.072 ms
-Mon Oct 06 2025 15:55:39 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 409 - 187.302 ms

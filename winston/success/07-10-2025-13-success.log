@@ -1,0 +1,30 @@
+Tue Oct 07 2025 13:0:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?sort=createdAt 200 - 12.660 ms
+Tue Oct 07 2025 13:0:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders 200 - 8.678 ms
+Tue Oct 07 2025 13:2:24 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 13:2:24 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 07 2025 13:2:24 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 07 2025 13:2:24 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 07 2025 13:2:34 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?searchTerm=sdv 200 - 70.324 ms
+Tue Oct 07 2025 13:2:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?searchTerm=sdvsdfv 200 - 8.938 ms
+Tue Oct 07 2025 13:6:53 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 13:6:53 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 07 2025 13:6:53 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 07 2025 13:6:53 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 07 2025 13:9:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?searchTerm=ORD0f6770d8 200 - 109.391 ms
+Tue Oct 07 2025 13:9:25 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders 200 - 22.077 ms
+Tue Oct 07 2025 13:9:38 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 13:9:39 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 07 2025 13:9:39 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 07 2025 13:9:39 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 07 2025 13:9:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders 200 - 60.381 ms
+Tue Oct 07 2025 13:9:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?searchTerm=ORD0f6770d8 200 - 8.214 ms
+Tue Oct 07 2025 13:9:45 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?searchTerm=ORD0f6770d8 200 - 8.467 ms
+Tue Oct 07 2025 13:9:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 13:9:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 07 2025 13:9:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 07 2025 13:9:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 07 2025 13:9:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 07 2025 13:9:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 07 2025 13:9:58 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 07 2025 13:9:58 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 07 2025 13:10:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?searchTerm=ORD0f6770d8 200 - 32.834 ms

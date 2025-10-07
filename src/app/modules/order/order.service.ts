@@ -410,7 +410,7 @@ const getAllPredictionOrders = async (query: Record<string, unknown>) => {
 // };
 
 const getUserOrders = async (userId: string, query: Record<string, unknown>) => {
-     const queryBuilder = new QueryBuilder(Order.find({ userId }), query).filter().sort().paginate().fields().dateFilter('createdAt');
+     const queryBuilder = new QueryBuilder(Order.find({ userId }), query).filter().sort().paginate().fields().dateFilter('createdAt').search(['contestName', 'orderId']);
      const result = await queryBuilder.modelQuery.populate('contestId', "name image endTime startTime totalEntries endOffsetTime prize").exec();
      const meta = await queryBuilder.countTotal();
      return {

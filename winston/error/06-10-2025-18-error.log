@@ -1,3 +1,0 @@
-Mon Oct 06 2025 18:11:54 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 8.049 ms
-Mon Oct 06 2025 18:11:54 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 4.945 ms
-Mon Oct 06 2025 18:11:54 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 400 - 6.167 ms

@@ -20,7 +20,13 @@ const bookmarkSchema = new Schema<IBookmark>(
      },
      { timestamps: true },
 );
-
+// Virtual field for dynamic population
+bookmarkSchema.virtual('content', {
+     refPath: 'referenceType',
+     localField: 'referenceId',
+     foreignField: '_id',
+     justOne: true
+});
 export const Bookmark = model<IBookmark>('Bookmark', bookmarkSchema);
 
 

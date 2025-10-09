@@ -7,6 +7,8 @@ import { Category } from "../category/category.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
 import { getCryptoPrice, getCryptoPriceHistory, getStockPrice } from "./contest.api";
+import axios from "axios";
+import config from "../../../config";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -260,14 +262,15 @@ const getContestByIdUser = async (id: string, userId: string) => {
     //     );
     // }
     const getCategory = await Category.findById(result.categoryId);
-    const cryptoPrice = await getCryptoPrice('bitcoin');
-    const graph = await getCryptoPriceHistory('bitcoin', 'usd', 7)
-    const stockPrice = await getStockPrice('AAPL');
-    console.log(graph);
-    console.log(cryptoPrice);
-    console.log(stockPrice);
+    // const cryptoPrice = await getCryptoPrice('bitcoin');
+    // const graph = await getCryptoPriceHistory('bitcoin', 'usd', 7)
+    // const stockPrice = await getStockPrice('AAPL');
+    // console.log(graph);
+    // console.log(cryptoPrice);
+    // console.log(stockPrice);
     // return result;
 }
+
 const getContestByCategoryId = async (id: string) => {
     const result = await Contest.find({ categoryId: id }).sort("serial").select("name category createdBy createdAt updatedAt maxEntries endTime status categoryId serial");
     if (!result) {
@@ -275,4 +278,12 @@ const getContestByCategoryId = async (id: string) => {
     }
     return result;
 }
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId }
+
+const getCryptoNews = async () => {
+    const url = `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=AAPL&apikey=${config.api.alphavantage_api_key}`;
+    const response = await axios.get(url);
+    return response.data;
+
+};
+
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews }

@@ -10,6 +10,10 @@ export const getCryptoPrice = async (crypto: string) => {
         throw new Error("Could not fetch crypto price");
     }
 };
+
+
+
+
 export const getCryptoPriceHistory = async (crypto: string, vs_currency: string, days: number) => {
     const url = `https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=${vs_currency}&days=${days}`;
     try {

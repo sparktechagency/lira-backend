@@ -44,6 +44,9 @@ export default {
           authToken: process.env.TWILIO_AUTH_TOKEN || '',
           phoneNumber: process.env.TWILIO_PHONE_NUMBER || '',
      },
+     api: {
+          alphavantage_api_key: process.env.ALPHAVANTAGE_API_KEY,
+     },
      stripe: {
           stripe_secret_key: process.env.STRIPE_SECRET_KYE,
           paymentSuccess_url: process.env.STRIPE_PAYMENT_SUCCESS_URL,

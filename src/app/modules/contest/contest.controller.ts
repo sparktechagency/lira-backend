@@ -151,6 +151,17 @@ const getContestByCategoryId = catchAsync(async (req, res) => {
     });
 });
 
+const getContestNews = catchAsync(async (req, res) => {
+    const result = await ContestService.getCryptoNews();
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest news retrieved successfully',
+        data: result
+    });
+});
+
 export const ContestController = {
     createContest,
     getAllContests,
@@ -163,5 +174,6 @@ export const ContestController = {
     publishContest,
     getTiersContest,
     getContestByIdUser,
-    getContestByCategoryId
+    getContestByCategoryId,
+    getContestNews
 };

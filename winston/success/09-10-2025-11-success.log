@@ -121,3 +121,21 @@ Thu Oct 09 2025 11:45:32 [SERVER-NAME] info: [32mConfig validation successful.
 Thu Oct 09 2025 11:45:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Thu Oct 09 2025 11:45:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Thu Oct 09 2025 11:45:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 11:46:43 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 11:46:43 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 11:46:43 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 11:46:43 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 11:47:35 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 11:47:35 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 11:47:35 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 11:47:35 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 11:48:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 11:48:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 11:48:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 11:48:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 11:48:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/news 200 - 2074.741 ms
+Thu Oct 09 2025 11:48:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 11:48:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 11:48:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 11:48:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 11:48:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/news 200 - 1133.947 ms

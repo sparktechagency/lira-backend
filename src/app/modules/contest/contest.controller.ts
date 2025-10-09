@@ -153,7 +153,6 @@ const getContestByCategoryId = catchAsync(async (req, res) => {
 
 const getContestNews = catchAsync(async (req, res) => {
     const result = await ContestService.getCryptoNews();
-
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,

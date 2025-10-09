@@ -282,7 +282,7 @@ const getContestByCategoryId = async (id: string) => {
 const getCryptoNews = async () => {
     const url = `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=AAPL&apikey=${config.api.alphavantage_api_key}`;
     const response = await axios.get(url);
-    return response.data;
+    return response.data.feed;
 
 };
 

@@ -1,5 +1,23 @@
 import { Types, Document } from "mongoose";
-
+export type CoinLite = { id: string; symbol: string; name: string };
+export const COMMON: Record<string, string> = {
+    btc: 'bitcoin',
+    xbt: 'bitcoin',
+    eth: 'ethereum',
+    sol: 'solana',
+    bnb: 'binancecoin',
+    xrp: 'ripple',
+    ada: 'cardano',
+    doge: 'dogecoin',
+    trx: 'tron',
+    matic: 'polygon',
+    avax: 'avalanche-2',
+    dot: 'polkadot',
+    ltc: 'litecoin',
+    link: 'chainlink',
+    uni: 'uniswap',
+    atom: 'cosmos',
+};
 export type US_STATES =
     | "Alabama" | "Alaska" | "Arizona" | "Arkansas" | "California" | "Colorado" | "Connecticut"
     | "Delaware" | "Florida" | "Georgia" | "Hawaii" | "Idaho" | "Illinois" | "Indiana" | "Iowa"

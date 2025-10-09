@@ -1,0 +1,2 @@
+Thu Oct 09 2025 12:23:26 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/contest/price-history?crypto=etheriam&days=1 400 - 483.331 ms
+Thu Oct 09 2025 12:23:42 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/contest/price-history?crypto=etheriam&days=1 400 - 593.216 ms

@@ -46,6 +46,7 @@ export default {
      },
      api: {
           alphavantage_api_key: process.env.ALPHAVANTAGE_API_KEY,
+          economic_market_events_api_key: process.env.ECONOMIC_MARKET_EVENTS_API_KEY,
      },
      stripe: {
           stripe_secret_key: process.env.STRIPE_SECRET_KYE,

@@ -6,7 +6,7 @@ import QueryBuilder from "../../builder/QueryBuilder";
 import { Category } from "../category/category.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
-import { getCryptoPrice, getStockPrice } from "./contest.api";
+import { resolveCoinId } from "./contest.utils";
 import axios from "axios";
 import config from "../../../config";
 
@@ -286,23 +286,36 @@ const getCryptoNews = async () => {
 
 };
 const getCryptoPriceHistory = async (query: Record<string, unknown>) => {
-    const { crypto = "bitcoin", days = 1 } = query;
-    if (!crypto || !days) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'Crypto or days is missing');
+    const rawCrypto = String(query.crypto || 'bitcoin');
+    const days = Number(query.days || 1);
+
+    const cryptoId = await resolveCoinId(rawCrypto);
+    if (!cryptoId) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Crypto not found');
     }
-    const url = `https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=usd&days=${days}`;
-    const response = await axios.get(url);
-    const prices = response.data.prices; // [timestamp, price]
+    const [priceRes, historyRes] = await Promise.all([
+        axios.get(`https://api.coingecko.com/api/v3/simple/price?ids=${cryptoId}&vs_currencies=usd`),
+        axios.get(`https://api.coingecko.com/api/v3/coins/${cryptoId}/market_chart?vs_currency=usd&days=${days}`),
+    ]);
+
+    const currentPrice = (priceRes.data as Record<string, any>)[cryptoId as string]?.usd;
+    const prices = historyRes.data.prices; // [timestamp, price]
+
+    if (!prices?.length) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'No price history found');
+    }
 
     const firstPrice = prices[0][1];
     const lastPrice = prices[prices.length - 1][1];
-    const changeRate = ((lastPrice - firstPrice) / firstPrice) * 100; // percent change
+    const changeRate = ((lastPrice - firstPrice) / firstPrice) * 100;
 
     return {
-        prices,                     // chart data
-        current: lastPrice,         // latest price
-        start: firstPrice,          // start price
-        changeRate: changeRate,     // % change
+        cryptoId,
+        current: currentPrice,
+        start: firstPrice,
+        end: lastPrice,
+        changeRate: parseFloat(changeRate.toFixed(2)),
+        prices,
     };
 
 }

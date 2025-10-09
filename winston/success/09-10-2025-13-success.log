@@ -1,0 +1,22 @@
+Thu Oct 09 2025 13:16:9 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 13:16:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 13:16:9 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 13:16:9 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 13:16:37 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 13:16:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 13:16:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 13:16:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 13:19:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 13:19:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 13:19:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 13:19:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 13:19:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 13:19:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 13:19:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 13:19:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 13:19:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 09 2025 13:19:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 09 2025 13:19:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 09 2025 13:19:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 09 2025 13:29:43 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m
+Thu Oct 09 2025 13:32:38 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.created[22m[49m

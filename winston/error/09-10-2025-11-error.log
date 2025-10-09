@@ -1,1 +1,3 @@
 Thu Oct 09 2025 11:47:11 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/contest/news 400 - 37.290 ms
+Thu Oct 09 2025 11:53:40 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/contest/68e4a90159705090632b3e26 400 - 394.201 ms
+Thu Oct 09 2025 11:54:19 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/contest/68e4a90159705090632b3e26 400 - 461.746 ms

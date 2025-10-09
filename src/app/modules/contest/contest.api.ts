@@ -1,7 +1,6 @@
 import axios from 'axios';
 export const getCryptoPrice = async (crypto: string) => {
     const url = `https://api.coingecko.com/api/v3/simple/price?ids=${crypto}&vs_currencies=usd`;
-    console.log(url);
     try {
         const response = await axios.get(url);
         return response.data[crypto].usd;
@@ -14,8 +13,8 @@ export const getCryptoPrice = async (crypto: string) => {
 
 
 
-export const getCryptoPriceHistory = async (crypto: string, vs_currency: string, days: number) => {
-    const url = `https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=${vs_currency}&days=${days}`;
+export const getCryptoPriceHistory = async (crypto: string, days: number) => {
+    const url = `https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=usd&days=${days}`;
     try {
         const response = await axios.get(url);
         return response.data.prices;  // This returns a list of timestamps and price values.

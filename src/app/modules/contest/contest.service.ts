@@ -6,7 +6,7 @@ import QueryBuilder from "../../builder/QueryBuilder";
 import { Category } from "../category/category.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
-import { getCryptoPrice, getCryptoPriceHistory, getStockPrice } from "./contest.api";
+import { getCryptoPrice, getStockPrice } from "./contest.api";
 import axios from "axios";
 import config from "../../../config";
 
@@ -263,7 +263,7 @@ const getContestByIdUser = async (id: string, userId: string) => {
     // }
     const getCategory = await Category.findById(result.categoryId);
     // const cryptoPrice = await getCryptoPrice('bitcoin');
-    // const graph = await getCryptoPriceHistory('bitcoin', 'usd', 7)
+    // const graph = await getCryptoPriceHistory('bitcoin', 'usd', 365)
     // const stockPrice = await getStockPrice('AAPL');
     // console.log(graph);
     // console.log(cryptoPrice);
@@ -285,5 +285,26 @@ const getCryptoNews = async () => {
     return response.data.feed;
 
 };
+const getCryptoPriceHistory = async (query: Record<string, unknown>) => {
+    const { crypto = "bitcoin", days = 1 } = query;
+    if (!crypto || !days) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Crypto or days is missing');
+    }
+    const url = `https://api.coingecko.com/api/v3/coins/${crypto}/market_chart?vs_currency=usd&days=${days}`;
+    const response = await axios.get(url);
+    const prices = response.data.prices; // [timestamp, price]
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews }
+    const firstPrice = prices[0][1];
+    const lastPrice = prices[prices.length - 1][1];
+    const changeRate = ((lastPrice - firstPrice) / firstPrice) * 100; // percent change
+
+    return {
+        prices,                     // chart data
+        current: lastPrice,         // latest price
+        start: firstPrice,          // start price
+        changeRate: changeRate,     // % change
+    };
+
+}
+
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory }

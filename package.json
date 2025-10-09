@@ -21,6 +21,7 @@
      "dependencies": {
           "@types/bcrypt": "^5.0.2",
           "@types/express-session": "^1.18.2",
+          "axios": "^1.12.2",
           "bcrypt": "^5.1.1",
           "colors": "^1.4.0",
           "compression": "^1.8.0",

@@ -6,6 +6,7 @@ import QueryBuilder from "../../builder/QueryBuilder";
 import { Category } from "../category/category.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
+import { getCryptoPrice, getCryptoPriceHistory, getStockPrice } from "./contest.api";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -249,17 +250,23 @@ const getContestByIdUser = async (id: string, userId: string) => {
     }
 
     // Implement state-based access control
-    if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
-        return result;
-    }
-    if (!result.state.includes(isExistUser.state as US_STATES)) {
-        throw new AppError(
-            StatusCodes.FORBIDDEN,
-            'This contest is not available in your state'
-        );
-    }
-
-    return result;
+    // if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
+    //     return result;
+    // }
+    // if (!result.state.includes(isExistUser.state as US_STATES)) {
+    //     throw new AppError(
+    //         StatusCodes.FORBIDDEN,
+    //         'This contest is not available in your state'
+    //     );
+    // }
+    const getCategory = await Category.findById(result.categoryId);
+    const cryptoPrice = await getCryptoPrice('bitcoin');
+    const graph = await getCryptoPriceHistory('bitcoin', 'usd', 7)
+    const stockPrice = await getStockPrice('AAPL');
+    console.log(graph);
+    console.log(cryptoPrice);
+    console.log(stockPrice);
+    // return result;
 }
 const getContestByCategoryId = async (id: string) => {
     const result = await Contest.find({ categoryId: id }).sort("serial").select("name category createdBy createdAt updatedAt maxEntries endTime status categoryId serial");

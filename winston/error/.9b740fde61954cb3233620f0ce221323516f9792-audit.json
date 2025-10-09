@@ -6,34 +6,14 @@
     "auditLog": "R:\\projects\\lira-backend\\winston\\error\\.9b740fde61954cb3233620f0ce221323516f9792-audit.json",
     "files": [
         {
-            "date": 1759810193271,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\07-10-2025-10-error.log",
-            "hash": "ab0c1e54e22d04efee2557e65a7fa21b3694ddf360d165778a597b4346f74ef3"
+            "date": 1759981998711,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\09-10-2025-09-error.log",
+            "hash": "bc766c0975f306afaa16c12455ac97276b7e92b245aae26ce263de9910743c13"
         },
         {
-            "date": 1759814358782,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\07-10-2025-11-error.log",
-            "hash": "ede7357b687a37ba383ba0911084090c50b4c2c26df904ae4b227121f3656bea"
-        },
-        {
-            "date": 1759816977873,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\07-10-2025-12-error.log",
-            "hash": "73a436d49015e4918b72f703f7dff701ebd58e0d2eba936fbf19d7d79eba920b"
-        },
-        {
-            "date": 1759820541215,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\07-10-2025-13-error.log",
-            "hash": "174e4bd191a1af69b26f767bc3b590f3291ee58d01e5bbf91d4bebf5fe91b2b4"
-        },
-        {
-            "date": 1759832486157,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\07-10-2025-16-error.log",
-            "hash": "092c47c1a7fa95099a837c46efeafaff3f81d82c581e1a4b8a3e9162a23cba5e"
-        },
-        {
-            "date": 1759894193525,
-            "name": "R:\\projects\\lira-backend\\winston\\error\\08-10-2025-09-error.log",
-            "hash": "304f7f5f5491945828373b6f5933fca817d1cd7434387d0daae2b8af8187faef"
+            "date": 1759982608176,
+            "name": "R:\\projects\\lira-backend\\winston\\error\\09-10-2025-10-error.log",
+            "hash": "e4adaf3640cf3532712cfcf722298b9b63bf9e472b66f69440ec90a47f3c1171"
         }
     ],
     "hashType": "sha256"

@@ -1,6 +1,0 @@
-Tue Oct 07 2025 15:7:41 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest 204 - 4.889 ms
-Tue Oct 07 2025 15:7:41 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.068 ms
-Tue Oct 07 2025 15:7:41 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 54.221 ms
-Tue Oct 07 2025 15:7:41 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest 304 - 123.328 ms
-Tue Oct 07 2025 15:31:24 [SERVER-NAME] warn: [33mMongoDB disconnected. Attempting to reconnect...[39m
-Tue Oct 07 2025 15:50:36 [SERVER-NAME] info: [32mMongoDB reconnected successfully[39m

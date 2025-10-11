@@ -412,43 +412,90 @@ const getEconomicData = async (query: Record<string, unknown>) => {
         'INFLATION': 'FPCPITOTLZGUSA'
     };
     const seriesId = seriesMap[seriesType] || seriesType;
-        const response = await axios.get(
-            `https://api.stlouisfed.org/fred/series/observations`,
-            {
-                params: {
-                    series_id: seriesId,
-                    api_key: config.api.fred_api_key,
-                    file_type: 'json',
-                    sort_order: 'desc',
-                    limit
-                }
+    const response = await axios.get(
+        `https://api.stlouisfed.org/fred/series/observations`,
+        {
+            params: {
+                series_id: seriesId,
+                api_key: config.api.fred_api_key,
+                file_type: 'json',
+                sort_order: 'desc',
+                limit
             }
-        );
-
-        const observations = response.data.observations;
-
-        if (!observations || observations.length === 0) {
-            throw new AppError(StatusCodes.NOT_FOUND, 'Economic data not found');
         }
+    );
 
-        const validObs = observations.filter((obs: any) => obs.value !== '.');
-        const latestValue = parseFloat(validObs[0]?.value || '0');
-        const previousValue = parseFloat(validObs[1]?.value || '0');
-        const changeRate = previousValue !== 0
-            ? ((latestValue - previousValue) / previousValue) * 100
-            : 0;
+    const observations = response.data.observations;
 
-        const rawData = {
-            series: seriesId,
-            latestValue,
-            previousValue,
-            changeRate: parseFloat(changeRate.toFixed(2)),
-            latestDate: validObs[0]?.date,
-            data: validObs.slice(0, limit),
-        };
+    if (!observations || observations.length === 0) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Economic data not found');
+    }
 
-        return normalizeResponse(rawData, 'economic');
+    const validObs = observations.filter((obs: any) => obs.value !== '.');
+    const latestValue = parseFloat(validObs[0]?.value || '0');
+    const previousValue = parseFloat(validObs[1]?.value || '0');
+    const changeRate = previousValue !== 0
+        ? ((latestValue - previousValue) / previousValue) * 100
+        : 0;
+
+    const rawData = {
+        series: seriesId,
+        latestValue,
+        previousValue,
+        changeRate: parseFloat(changeRate.toFixed(2)),
+        latestDate: validObs[0]?.date,
+        data: validObs.slice(0, limit),
+    };
+
+    return normalizeResponse(rawData, 'economic');
+
+};
+const getSportsData = async (query: Record<string, unknown>) => {
+    const league = String(query.league || 'nfl').toLowerCase();
+    const playerId = query.playerId ? String(query.playerId) : null;
+    const gameId = query.gameId ? String(query.gameId) : null;
+    const season = String(query.season || '2024');
+
+    if (!playerId && !gameId) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Either playerId or gameId is required');
+    }
+
+    const leagueEndpoints: Record<string, string> = {
+        'nfl': `https://api.sportsdata.io/v3/nfl/stats/json/PlayerSeasonStats/${season}`,
+        'nba': `https://api.sportsdata.io/v3/nba/stats/json/PlayerSeasonStats/${season}`,
+        'mlb': `https://api.sportsdata.io/v3/mlb/stats/json/PlayerSeasonStats/${season}`
+    };
+
+    const endpoint = leagueEndpoints[league];
+    if (!endpoint) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Invalid league');
+    }
+
+        const response = await axios.get(endpoint, {
+            params: { key: config.api.sportsDataIO }
+        });
+
+        if (playerId) {
+            const playerStats = response.data.find((p: any) =>
+                String(p.PlayerID) === playerId ||
+                p.Name?.toLowerCase().includes(playerId.toLowerCase())
+            );
+
+            if (!playerStats) {
+                throw new AppError(StatusCodes.NOT_FOUND, 'Player not found');
+            }
+
+            const rawData = {
+                league: league.toUpperCase(),
+                season,
+                player: playerStats
+            };
+
+            return normalizeResponse(rawData, 'sports', 'player');
+        } else {
+            // Game logic would go here
+            throw new AppError(StatusCodes.NOT_IMPLEMENTED, 'Game stats not implemented yet');
+        }
    
 };
-
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData }
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData }

@@ -193,6 +193,17 @@ const getEconomicData = catchAsync(async (req, res) => {
 });
 
 
+const getSportsData = catchAsync(async (req, res) => {
+    const result = await ContestService.getSportsData(req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Sports data retrieved successfully',
+        data: result
+    });
+});
+
+
 
 export const ContestController = {
     createContest,
@@ -211,4 +222,5 @@ export const ContestController = {
     getCryptoPriceHistory,
     getStockPriceHistory,
     getEconomicData,
+    getSportsData,
 };

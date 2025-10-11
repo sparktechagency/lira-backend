@@ -48,6 +48,7 @@ export default {
           alphavantage_api_key: process.env.ALPHAVANTAGE_API_KEY,
           economic_market_events_api_key: process.env.ECONOMIC_MARKET_EVENTS_API_KEY,
           fred_api_key: process.env.FRED_API_KEY,
+          sportsDataIO: process.env.SPORTS_DATA_IO_API_KEY,
      },
      stripe: {
           stripe_secret_key: process.env.STRIPE_SECRET_KYE,

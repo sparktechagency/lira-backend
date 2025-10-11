@@ -1,6 +1,0 @@
-Wed Oct 08 2025 18:45:26 [SERVER-NAME] warn: [42m[1mUnhandled event type: plan.created[22m[49m
-Wed Oct 08 2025 18:45:26 [SERVER-NAME] warn: [42m[1mUnhandled event type: product.created[22m[49m
-Wed Oct 08 2025 18:45:27 [SERVER-NAME] warn: [42m[1mUnhandled event type: price.created[22m[49m
-Wed Oct 08 2025 18:45:28 [SERVER-NAME] warn: [42m[1mUnhandled event type: price.created[22m[49m
-Wed Oct 08 2025 18:45:28 [SERVER-NAME] warn: [42m[1mUnhandled event type: product.created[22m[49m
-Wed Oct 08 2025 18:45:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: plan.created[22m[49m

@@ -1,2 +1,0 @@
-Thu Oct 09 2025 9:55:1 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/contest/68e4a90159705090632b3e26 403 - 15.266 ms
-Thu Oct 09 2025 9:59:28 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 3.882 ms

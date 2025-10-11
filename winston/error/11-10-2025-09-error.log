@@ -1,0 +1,8 @@
+Sat Oct 11 2025 9:36:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 2.178 ms
+Sat Oct 11 2025 9:36:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.446 ms
+Sat Oct 11 2025 9:36:44 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 4.942 ms
+Sat Oct 11 2025 9:36:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 4.561 ms
+Sat Oct 11 2025 9:36:46 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.283 ms
+Sat Oct 11 2025 9:57:43 [SERVER-NAME] error: 10.10.7.14 - GET /favicon.ico 404 - 1.487 ms
+Sat Oct 11 2025 9:57:49 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 3.158 ms
+Sat Oct 11 2025 9:57:58 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 0.986 ms

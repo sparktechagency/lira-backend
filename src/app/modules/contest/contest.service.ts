@@ -498,7 +498,49 @@ const getSportsData = async (query: Record<string, unknown>) => {
     }
 
 };
+const getEnergyData = async (query: Record<string, unknown>) => {
+    const days = Number(query.days || 5);
 
+    try {
+        const response = await axios.get(
+            `https://api.eia.gov/v2/petroleum/pri/spt/data/`,
+            {
+                params: {
+                    api_key: config.api.eia,
+                    frequency: 'daily',
+                    'data[0]': 'value',
+                    'facets[product][]': 'EPCWTI',
+                    'sort[0][column]': 'period',
+                    'sort[0][direction]': 'desc',
+                    length: days
+                }
+            }
+        );
+
+        const data = response.data.response.data;
+
+        if (!data || data.length === 0) {
+            throw new AppError(StatusCodes.NOT_FOUND, 'Oil price data not found');
+        }
+
+        const latestPrice = parseFloat(data[0].value);
+        const previousPrice = parseFloat(data[1]?.value || data[0].value);
+        const changeRate = ((latestPrice - previousPrice) / previousPrice) * 100;
+
+        const rawData = {
+            commodity: 'WTI Crude Oil',
+            currentPrice: latestPrice,
+            previousPrice,
+            changeRate: parseFloat(changeRate.toFixed(2)),
+            date: data[0].period,
+            history: data,
+        };
+
+        return normalizeResponse(rawData, 'energy');
+    } catch (error: any) {
+        throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, error.message);
+    }
+};
 const getEntertainmentData = async (query: Record<string, unknown>) => {
     const movieId = query.movieId ? String(query.movieId) : null;
     const videoId = query.videoId ? String(query.videoId) : null;
@@ -507,50 +549,84 @@ const getEntertainmentData = async (query: Record<string, unknown>) => {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Either movieId or videoId is required');
     }
 
-        if (movieId) {
-            const response = await axios.get(
-                `https://api.themoviedb.org/3/movie/${movieId}`,
-                { params: { api_key: config.api.tmdb } }
-            );
+    if (movieId) {
+        const response = await axios.get(
+            `https://api.themoviedb.org/3/movie/${movieId}`,
+            { params: { api_key: config.api.tmdb } }
+        );
 
-            const rawData = {
-                title: response.data.title,
-                releaseDate: response.data.release_date,
-                revenue: response.data.revenue,
-                budget: response.data.budget,
-                popularity: response.data.popularity,
-                voteAverage: response.data.vote_average,
-            };
+        const rawData = {
+            title: response.data.title,
+            releaseDate: response.data.release_date,
+            revenue: response.data.revenue,
+            budget: response.data.budget,
+            popularity: response.data.popularity,
+            voteAverage: response.data.vote_average,
+        };
 
-            return normalizeResponse(rawData, 'entertainment', 'movie');
-        } else {
-            const response = await axios.get(
-                `https://www.googleapis.com/youtube/v3/videos`,
-                {
-                    params: {
-                        part: 'statistics,snippet',
-                        id: videoId,
-                        key: config.api.youtube
-                    }
+        return normalizeResponse(rawData, 'entertainment', 'movie');
+    } else {
+        const response = await axios.get(
+            `https://www.googleapis.com/youtube/v3/videos`,
+            {
+                params: {
+                    part: 'statistics,snippet',
+                    id: videoId,
+                    key: config.api.youtube
                 }
-            );
-
-            const video = response.data.items?.[0];
-
-            if (!video) {
-                throw new AppError(StatusCodes.NOT_FOUND, 'Video not found');
             }
+        );
 
-            const rawData = {
-                title: video.snippet.title,
-                views: parseInt(video.statistics.viewCount),
-                likes: parseInt(video.statistics.likeCount),
-                comments: parseInt(video.statistics.commentCount),
-                publishedAt: video.snippet.publishedAt,
-            };
+        const video = response.data.items?.[0];
 
-            return normalizeResponse(rawData, 'entertainment', 'youtube');
+        if (!video) {
+            throw new AppError(StatusCodes.NOT_FOUND, 'Video not found');
         }
-  
+
+        const rawData = {
+            title: video.snippet.title,
+            views: parseInt(video.statistics.viewCount),
+            likes: parseInt(video.statistics.likeCount),
+            comments: parseInt(video.statistics.commentCount),
+            publishedAt: video.snippet.publishedAt,
+        };
+
+        return normalizeResponse(rawData, 'entertainment', 'youtube');
+    }
+
 };
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData }
+const getUnifiedForecastData = async (query: Record<string, unknown>) => {
+    const category = String(query.category || 'crypto').toLowerCase();
+
+    try {
+        switch (category) {
+            case 'crypto':
+                return await getCryptoPriceHistory(query);
+
+            case 'stock':
+                return await getStockPriceHistory(query);
+
+            case 'economic':
+                return await getEconomicData(query);
+
+            case 'oil':
+            case 'energy':
+                return await getEnergyData(query);
+
+            case 'sports':
+                return await getSportsData(query);
+
+            case 'entertainment':
+                return await getEntertainmentData(query);
+
+            default:
+                throw new AppError(StatusCodes.BAD_REQUEST, 'Invalid category');
+        }
+    } catch (error: any) {
+        throw new AppError(
+            error.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
+            error.message || 'Failed to fetch forecast data'
+        );
+    }
+};
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getUnifiedForecastData }

@@ -51,6 +51,7 @@ export default {
           sportsDataIO: process.env.SPORTS_DATA_IO_API_KEY,
           tmdb: process.env.TMDB_API_KEY,
           youtube: process.env.YOUTUBE_API_KEY,
+          eia: process.env.EIA_API_KEY,
      },
      stripe: {
           stripe_secret_key: process.env.STRIPE_SECRET_KYE,

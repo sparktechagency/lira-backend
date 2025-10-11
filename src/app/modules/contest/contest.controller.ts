@@ -213,6 +213,16 @@ const getEntertainmentData = catchAsync(async (req, res) => {
     });
 });
 
+const getUnifiedForecastData = catchAsync(async (req, res) => {
+    const result = await ContestService.getUnifiedForecastData(req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Unified forecast data retrieved successfully',
+        data: result
+    });
+});
+
 
 
 export const ContestController = {
@@ -234,4 +244,5 @@ export const ContestController = {
     getEconomicData,
     getSportsData,
     getEntertainmentData,
+    getUnifiedForecastData,
 };

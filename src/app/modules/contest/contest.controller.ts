@@ -213,6 +213,19 @@ const getEntertainmentData = catchAsync(async (req, res) => {
     });
 });
 
+// ============= OIL PRICE WITH NORMALIZATION =============
+const getOilPrice = catchAsync(async (req, res) => {
+    const result = await ContestService.getOilPrice(req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Oil price retrieved successfully',
+        data: result
+    });
+});
+
+
+
 const getUnifiedForecastData = catchAsync(async (req, res) => {
     const result = await ContestService.getUnifiedForecastData(req.query);
     sendResponse(res, {
@@ -245,4 +258,5 @@ export const ContestController = {
     getSportsData,
     getEntertainmentData,
     getUnifiedForecastData,
+    getOilPrice,
 };

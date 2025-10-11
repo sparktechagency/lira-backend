@@ -252,9 +252,9 @@ const getContestByIdUser = async (id: string, userId: string) => {
     }
 
     // Implement state-based access control
-    // if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
-    //     return result;
-    // }
+    if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
+        return result;
+    }
     // if (!result.state.includes(isExistUser.state as US_STATES)) {
     //     throw new AppError(
     //         StatusCodes.FORBIDDEN,
@@ -262,12 +262,6 @@ const getContestByIdUser = async (id: string, userId: string) => {
     //     );
     // }
     const getCategory = await Category.findById(result.categoryId);
-    // const cryptoPrice = await getCryptoPrice('bitcoin');
-    // const graph = await getCryptoPriceHistory('bitcoin', 'usd', 365)
-    // const stockPrice = await getStockPrice('AAPL');
-    // console.log(graph);
-    // console.log(cryptoPrice);
-    // console.log(stockPrice);
     const data = {
         ...result,
         group: getCategory?.group
@@ -599,7 +593,43 @@ const getEntertainmentData = async (query: Record<string, unknown>) => {
     }
 
 };
+// ============= OIL PRICE WITH NORMALIZATION =============
+const getOilPrice = async (query: Record<string, unknown>) => {
+    const days = Number(query.days || 5);
 
+    const response = await axios.get(`https://api.eia.gov/v2/petroleum/pri/spt/data/`, {
+        params: {
+            api_key: config.api.eia,
+            frequency: 'daily',
+            'data[0]': 'value',
+            'facets[product][]': 'EPCWTI',
+            'sort[0][column]': 'period',
+            'sort[0][direction]': 'desc',
+            length: days
+        }
+    });
+
+    const data = response.data.response.data;
+    if (!data || data.length === 0) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Oil price data not found');
+    }
+
+    const latestPrice = parseFloat(data[0].value);
+    const previousPrice = parseFloat(data[1]?.value || data[0].value);
+    const changeRate = ((latestPrice - previousPrice) / previousPrice) * 100;
+
+    const rawData = {
+        commodity: 'WTI Crude Oil',
+        currentPrice: latestPrice,
+        previousPrice,
+        changeRate: parseFloat(changeRate.toFixed(2)),
+        date: data[0].period,
+        history: data,
+    };
+
+    // 🔥 NORMALIZE RESPONSE
+    return normalizeResponse(rawData, 'oil');
+};
 const getUnifiedForecastData = async (query: Record<string, unknown>) => {
     const category = String(query.category || 'crypto').toLowerCase();
 
@@ -615,6 +645,8 @@ const getUnifiedForecastData = async (query: Record<string, unknown>) => {
                 return await getEconomicData(query);
 
             case 'oil':
+                return await getOilPrice(query);
+
             case 'energy':
                 return await getEnergyData(query);
 
@@ -634,4 +666,5 @@ const getUnifiedForecastData = async (query: Record<string, unknown>) => {
         );
     }
 };
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getUnifiedForecastData }
+
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getUnifiedForecastData , getOilPrice}

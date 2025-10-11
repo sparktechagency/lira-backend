@@ -64,12 +64,13 @@ router.patch(
 // Public routes (for users)
 router.get('/active/list', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getActiveContests);
 router.get('/contest/news', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getContestNews);
-router.get('/contest/price-history', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getCryptoPriceHistory);
+router.get('/crypto/price-history', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getCryptoPriceHistory);
 router.get('/stock/history', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getStockPriceHistory);
 router.get('/economic/data', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getEconomicData);
 router.get('/sports/data', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getSportsData);
 router.get('/entertainment/data', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getEntertainmentData);
 router.get('/unified/forecast', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getUnifiedForecastData);
+router.get('/oil/price', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getOilPrice);
 
 
 

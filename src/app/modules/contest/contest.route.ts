@@ -67,6 +67,8 @@ router.get('/contest/news', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.S
 router.get('/contest/price-history', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getCryptoPriceHistory);
 router.get('/stock/history', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getStockPriceHistory);
 
+
+
 router.get('/contest/:id', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getContestByIdUser);
 router.get('/:id/tiers', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getTiersContest);
 router.get('/contest/prediction/:contestId/tiers/:tierId', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getPredictionTiers);

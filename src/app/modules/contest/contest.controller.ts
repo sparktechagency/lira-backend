@@ -181,6 +181,8 @@ const getStockPriceHistory = catchAsync(async (req, res) => {
     });
 });
 
+
+
 export const ContestController = {
     createContest,
     getAllContests,
@@ -196,5 +198,5 @@ export const ContestController = {
     getContestByCategoryId,
     getContestNews,
     getCryptoPriceHistory,
-    getStockPriceHistory
+    getStockPriceHistory,
 };

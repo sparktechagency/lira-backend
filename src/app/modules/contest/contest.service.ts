@@ -6,7 +6,7 @@ import QueryBuilder from "../../builder/QueryBuilder";
 import { Category } from "../category/category.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
-import { resolveCoinId, resolveStockSymbol } from "./contest.utils";
+import { normalizeResponse, resolveCoinId, resolveStockSymbol } from "./contest.utils";
 import axios from "axios";
 import config from "../../../config";
 
@@ -309,7 +309,7 @@ const getCryptoPriceHistory = async (query: Record<string, unknown>) => {
     const lastPrice = prices[prices.length - 1][1];
     const changeRate = ((lastPrice - firstPrice) / firstPrice) * 100;
 
-    return {
+    const rawData = {
         cryptoId,
         current: currentPrice,
         start: firstPrice,
@@ -318,8 +318,33 @@ const getCryptoPriceHistory = async (query: Record<string, unknown>) => {
         prices,
         source: 'CoinGecko'
     };
-
+    return normalizeResponse(rawData, 'crypto', 'history');
 }
+const getStockCurrentPrice = async (query: Record<string, unknown>) => {
+    const symbol = String(query.symbol || 'AAPL').toUpperCase();
+
+    const response = await axios.get(
+        `https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbol}&apikey=${config.api.alphavantage_api_key}`
+    );
+
+    const quote = response.data['Global Quote'];
+
+    if (!quote || Object.keys(quote).length === 0) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Stock not found or API limit reached');
+    }
+
+    const rawData = {
+        symbol: quote['01. symbol'],
+        price: parseFloat(quote['05. price']),
+        change: parseFloat(quote['09. change']),
+        changePercent: quote['10. change percent'],
+        volume: parseInt(quote['06. volume']),
+        lastTradingDay: quote['07. latest trading day'],
+    };
+
+    // 🔥 NORMALIZE RESPONSE
+    return normalizeResponse(rawData, 'stock', 'current');
+};
 // ============= STOCK SERVICE =============
 const getStockPriceHistory = async (query: Record<string, unknown>) => {
     const symbol = resolveStockSymbol(String(query.symbol || 'AAPL'));
@@ -362,7 +387,7 @@ const getStockPriceHistory = async (query: Record<string, unknown>) => {
     const lastPrice = prices[0].close;
     const changeRate = ((lastPrice - firstPrice) / firstPrice) * 100;
 
-    return {
+    const rawData = {
         type: 'stock',
         symbol,
         current: lastPrice,
@@ -372,6 +397,63 @@ const getStockPriceHistory = async (query: Record<string, unknown>) => {
         prices,
         source: 'Alpha Vantage'
     };
-
+    return normalizeResponse(rawData, 'stock', 'history');
 };
+
+const getEconomicData = async (query: Record<string, unknown>) => {
+    const seriesType = String(query.series || 'CPI').toUpperCase();
+    const limit = Number(query.limit || 10);
+
+    const seriesMap: Record<string, string> = {
+        'CPI': 'CPIAUCSL',
+        'TREASURY_10Y': 'DGS10',
+        'GDP': 'GDP',
+        'UNEMPLOYMENT': 'UNRATE',
+        'INFLATION': 'FPCPITOTLZGUSA'
+    };
+
+    const seriesId = seriesMap[seriesType] || seriesType;
+
+    try {
+        const response = await axios.get(
+            `https://api.stlouisfed.org/fred/series/observations`,
+            {
+                params: {
+                    series_id: seriesId,
+                    api_key: config.api.fred_api_key,
+                    file_type: 'json',
+                    sort_order: 'desc',
+                    limit
+                }
+            }
+        );
+
+        const observations = response.data.observations;
+
+        if (!observations || observations.length === 0) {
+            throw new AppError(StatusCodes.NOT_FOUND, 'Economic data not found');
+        }
+
+        const validObs = observations.filter((obs: any) => obs.value !== '.');
+        const latestValue = parseFloat(validObs[0]?.value || '0');
+        const previousValue = parseFloat(validObs[1]?.value || '0');
+        const changeRate = previousValue !== 0
+            ? ((latestValue - previousValue) / previousValue) * 100
+            : 0;
+
+        const rawData = {
+            series: seriesId,
+            latestValue,
+            previousValue,
+            changeRate: parseFloat(changeRate.toFixed(2)),
+            latestDate: validObs[0]?.date,
+            data: validObs.slice(0, limit),
+        };
+
+        return normalizeResponse(rawData, 'economic');
+    } catch (error: any) {
+        throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, error.message);
+    }
+};
+
 export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory }

@@ -69,10 +69,11 @@ router.get('/stock/history', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.
 router.get('/economic/data', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getEconomicData);
 router.get('/sports/data', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getSportsData);
 router.get('/entertainment/data', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getEntertainmentData);
+router.get('/energy/data', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getEnergyData);
 router.get('/unified/forecast', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getUnifiedForecastData);
-router.get('/oil/price', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getOilPrice);
 
 
+// Energy data route
 
 router.get('/contest/:id', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getContestByIdUser);
 router.get('/:id/tiers', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getTiersContest);

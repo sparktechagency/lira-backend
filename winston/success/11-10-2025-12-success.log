@@ -191,3 +191,9 @@ Sat Oct 11 2025 12:40:15 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/un
 Sat Oct 11 2025 12:41:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/unified/forecast?category=stock&symbol 200 - 1634.115 ms
 Sat Oct 11 2025 12:42:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/unified/forecast?category=crypto&symbol 200 - 617.121 ms
 Sat Oct 11 2025 12:42:14 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/unified/forecast?category=stock&symbol 200 - 751.163 ms
+Sat Oct 11 2025 12:44:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/unified/forecast?category=crypto&crypto=btc 200 - 293.609 ms
+Sat Oct 11 2025 12:45:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/news 200 - 3041.876 ms
+Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m

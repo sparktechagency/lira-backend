@@ -595,6 +595,7 @@ const getEntertainmentData = async (query: Record<string, unknown>) => {
     }
 
 };
+
 const getUnifiedForecastData = async (query: Record<string, unknown>) => {
     const category = String(query.category || 'crypto').toLowerCase();
 

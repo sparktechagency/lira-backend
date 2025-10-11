@@ -411,10 +411,7 @@ const getEconomicData = async (query: Record<string, unknown>) => {
         'UNEMPLOYMENT': 'UNRATE',
         'INFLATION': 'FPCPITOTLZGUSA'
     };
-
     const seriesId = seriesMap[seriesType] || seriesType;
-
-    try {
         const response = await axios.get(
             `https://api.stlouisfed.org/fred/series/observations`,
             {
@@ -451,9 +448,7 @@ const getEconomicData = async (query: Record<string, unknown>) => {
         };
 
         return normalizeResponse(rawData, 'economic');
-    } catch (error: any) {
-        throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, error.message);
-    }
+   
 };
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory }
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData }

@@ -471,31 +471,86 @@ const getSportsData = async (query: Record<string, unknown>) => {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Invalid league');
     }
 
-        const response = await axios.get(endpoint, {
-            params: { key: config.api.sportsDataIO }
-        });
+    const response = await axios.get(endpoint, {
+        params: { key: config.api.sportsDataIO }
+    });
 
-        if (playerId) {
-            const playerStats = response.data.find((p: any) =>
-                String(p.PlayerID) === playerId ||
-                p.Name?.toLowerCase().includes(playerId.toLowerCase())
+    if (playerId) {
+        const playerStats = response.data.find((p: any) =>
+            String(p.PlayerID) === playerId ||
+            p.Name?.toLowerCase().includes(playerId.toLowerCase())
+        );
+
+        if (!playerStats) {
+            throw new AppError(StatusCodes.NOT_FOUND, 'Player not found');
+        }
+
+        const rawData = {
+            league: league.toUpperCase(),
+            season,
+            player: playerStats
+        };
+
+        return normalizeResponse(rawData, 'sports', 'player');
+    } else {
+        // Game logic would go here
+        throw new AppError(StatusCodes.NOT_IMPLEMENTED, 'Game stats not implemented yet');
+    }
+
+};
+
+const getEntertainmentData = async (query: Record<string, unknown>) => {
+    const movieId = query.movieId ? String(query.movieId) : null;
+    const videoId = query.videoId ? String(query.videoId) : null;
+
+    if (!movieId && !videoId) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Either movieId or videoId is required');
+    }
+
+        if (movieId) {
+            const response = await axios.get(
+                `https://api.themoviedb.org/3/movie/${movieId}`,
+                { params: { api_key: config.api.tmdb } }
             );
 
-            if (!playerStats) {
-                throw new AppError(StatusCodes.NOT_FOUND, 'Player not found');
+            const rawData = {
+                title: response.data.title,
+                releaseDate: response.data.release_date,
+                revenue: response.data.revenue,
+                budget: response.data.budget,
+                popularity: response.data.popularity,
+                voteAverage: response.data.vote_average,
+            };
+
+            return normalizeResponse(rawData, 'entertainment', 'movie');
+        } else {
+            const response = await axios.get(
+                `https://www.googleapis.com/youtube/v3/videos`,
+                {
+                    params: {
+                        part: 'statistics,snippet',
+                        id: videoId,
+                        key: config.api.youtube
+                    }
+                }
+            );
+
+            const video = response.data.items?.[0];
+
+            if (!video) {
+                throw new AppError(StatusCodes.NOT_FOUND, 'Video not found');
             }
 
             const rawData = {
-                league: league.toUpperCase(),
-                season,
-                player: playerStats
+                title: video.snippet.title,
+                views: parseInt(video.statistics.viewCount),
+                likes: parseInt(video.statistics.likeCount),
+                comments: parseInt(video.statistics.commentCount),
+                publishedAt: video.snippet.publishedAt,
             };
 
-            return normalizeResponse(rawData, 'sports', 'player');
-        } else {
-            // Game logic would go here
-            throw new AppError(StatusCodes.NOT_IMPLEMENTED, 'Game stats not implemented yet');
+            return normalizeResponse(rawData, 'entertainment', 'youtube');
         }
-   
+  
 };
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData }
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData }

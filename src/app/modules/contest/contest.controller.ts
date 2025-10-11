@@ -203,6 +203,16 @@ const getSportsData = catchAsync(async (req, res) => {
     });
 });
 
+const getEntertainmentData = catchAsync(async (req, res) => {
+    const result = await ContestService.getEntertainmentData(req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Entertainment data retrieved successfully',
+        data: result
+    });
+});
+
 
 
 export const ContestController = {
@@ -223,4 +233,5 @@ export const ContestController = {
     getStockPriceHistory,
     getEconomicData,
     getSportsData,
+    getEntertainmentData,
 };

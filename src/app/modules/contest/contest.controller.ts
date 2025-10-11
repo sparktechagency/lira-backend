@@ -171,6 +171,16 @@ const getCryptoPriceHistory = catchAsync(async (req, res) => {
     });
 });
 
+const getStockPriceHistory = catchAsync(async (req, res) => {
+    const result = await ContestService.getStockPriceHistory(req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Stock price history retrieved successfully',
+        data: result
+    });
+});
+
 export const ContestController = {
     createContest,
     getAllContests,
@@ -185,5 +195,6 @@ export const ContestController = {
     getContestByIdUser,
     getContestByCategoryId,
     getContestNews,
-    getCryptoPriceHistory
+    getCryptoPriceHistory,
+    getStockPriceHistory
 };

@@ -6,7 +6,7 @@ import QueryBuilder from "../../builder/QueryBuilder";
 import { Category } from "../category/category.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
-import { resolveCoinId } from "./contest.utils";
+import { resolveCoinId, resolveStockSymbol } from "./contest.utils";
 import axios from "axios";
 import config from "../../../config";
 
@@ -316,8 +316,62 @@ const getCryptoPriceHistory = async (query: Record<string, unknown>) => {
         end: lastPrice,
         changeRate: parseFloat(changeRate.toFixed(2)),
         prices,
+        source: 'CoinGecko'
     };
 
 }
+// ============= STOCK SERVICE =============
+const getStockPriceHistory = async (query: Record<string, unknown>) => {
+    const symbol = resolveStockSymbol(String(query.symbol || 'AAPL'));
+    const interval = String(query.interval || '5min'); // 1min, 5min, 15min, 30min, 60min, daily
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory }
+    const response = await axios.get(
+        `https://www.alphavantage.co/query`,
+        {
+            params: {
+                function: interval === 'daily' ? 'TIME_SERIES_DAILY' : 'TIME_SERIES_INTRADAY',
+                symbol,
+                interval: interval === 'daily' ? undefined : interval,
+                apikey: config.api.alphavantage_api_key,
+                outputsize: 'compact'
+            }
+        }
+    );
+
+    const timeSeriesKey = interval === 'daily'
+        ? 'Time Series (Daily)'
+        : `Time Series (${interval})`;
+
+    const timeSeries = response.data[timeSeriesKey];
+
+    if (!timeSeries) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Stock data not found or API limit reached');
+    }
+
+    const entries = Object.entries(timeSeries).slice(0, 100);
+    const prices = entries.map(([timestamp, data]: [string, any]) => ({
+        timestamp,
+        open: parseFloat(data['1. open']),
+        high: parseFloat(data['2. high']),
+        low: parseFloat(data['3. low']),
+        close: parseFloat(data['4. close']),
+        volume: parseInt(data['5. volume'])
+    }));
+
+    const firstPrice = prices[prices.length - 1].close;
+    const lastPrice = prices[0].close;
+    const changeRate = ((lastPrice - firstPrice) / firstPrice) * 100;
+
+    return {
+        type: 'stock',
+        symbol,
+        current: lastPrice,
+        start: firstPrice,
+        end: lastPrice,
+        changeRate: parseFloat(changeRate.toFixed(2)),
+        prices,
+        source: 'Alpha Vantage'
+    };
+
+};
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory }

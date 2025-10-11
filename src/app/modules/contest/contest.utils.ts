@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { COMMON, CoinLite } from './contest.interface';
 import config from '../../../config';
+import AppError from '../../../errors/AppError';
+import { StatusCodes } from 'http-status-codes';
 
 export const getStockPrice = async (symbol: string) => {
     const url = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=${symbol}&apikey=${config.api.alphavantage_api_key}`;
@@ -19,6 +21,12 @@ export const getStockPrice = async (symbol: string) => {
 
 
 
+export const resolveStockSymbol = (symbol: string): string => {
+    const validSymbols = ['AAPL', 'MSFT', 'AMZN', 'NVDA', 'TSLA', 'SPY', 'QQQ', 'DIA'];
+    const upper = symbol.toUpperCase();
+    if (validSymbols.includes(upper)) return upper;
+    throw new AppError(StatusCodes.BAD_REQUEST, 'Invalid stock symbol');
+};
 
 //================================================================
 // Load CoinGecko coin index, cached for 6 hours

@@ -97,3 +97,30 @@ export interface IContest extends Document {
     getAvailablePredictions(): IGeneratedPrediction[];
     getTotalCostForPredictions(predictionValues: number[]): number;
 }
+
+
+export interface UnifiedForecastResponse {
+    success: boolean;
+    statusCode: number;
+    message: string;
+    data: {
+        category: 'crypto' | 'stock' | 'economic' | 'energy' | 'sports' | 'entertainment';
+        asset: string;                    // Asset name (Bitcoin, AAPL, etc)
+        currentValue: number;              // Current price/value
+        previousValue?: number;            // Previous price/value
+        changeAmount?: number;             // Absolute change
+        changePercent: number;             // Percentage change
+        unit: string;                      // USD, points, yards, etc
+        timestamp: string;                 // ISO date string
+        metadata: {
+            source: string;                // API source name
+            period?: string;               // Time period (24h, 7d, etc)
+            additionalInfo?: any;          // Category-specific extra data
+        };
+        history?: Array<{                  // Historical data (if requested)
+            timestamp: string;
+            value: number;
+            [key: string]: any;            // Allow extra fields
+        }>;
+    };
+}

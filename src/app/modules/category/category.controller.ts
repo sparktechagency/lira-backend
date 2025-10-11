@@ -69,6 +69,17 @@ const getCategoryByGroupId = catchAsync(async (req, res) => {
      });
 });
 
+const getCategoryById = catchAsync(async (req, res) => {
+     const id = req.params.id;
+     const result = await CategoryService.getCategoryById(id);
+     sendResponse(res, {
+          success: true,
+          statusCode: StatusCodes.OK,
+          message: 'Category retrieved successfully',
+          data: result,
+     });
+});
+
 export const CategoryController = {
      createCategory,
      getCategories,
@@ -76,4 +87,5 @@ export const CategoryController = {
      deleteCategory,
      shuffleCategorySerial,
      getCategoryByGroupId,
+     getCategoryById,
 };

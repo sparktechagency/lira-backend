@@ -197,3 +197,8 @@ Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [32mConfig validation successful.
 Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Sat Oct 11 2025 12:47:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 11 2025 12:49:55 [SERVER-NAME] info: 10.10.7.14 - GET /image/profilepicturev2-1759815937524.jpg 200 - 5.532 ms
+Sat Oct 11 2025 12:49:55 [SERVER-NAME] info: 10.10.7.14 - GET /image/jaket-1759315074933.jpg 200 - 4.507 ms
+Sat Oct 11 2025 12:49:58 [SERVER-NAME] info: 10.10.7.14 - GET /image/profilepicturev2-1759815937524.jpg 200 - 0.888 ms
+Sat Oct 11 2025 12:49:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68e4a90159705090632b3e26/tiers/68e4a90159705090632b3e27 200 - 33.441 ms
+Sat Oct 11 2025 12:49:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68e4a90159705090632b3e26/tiers/68e4a90159705090632b3e27 200 - 9.920 ms

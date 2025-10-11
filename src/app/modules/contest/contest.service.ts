@@ -238,7 +238,7 @@ const getContestByIdUser = async (id: string, userId: string) => {
     // Run queries in parallel for better performance
     const [isExistUser, result] = await Promise.all([
         User.findById(userId).select('state role').lean(),
-        Contest.findById(id).select('name description entryFee endTime state image prize').lean()
+        Contest.findById(id).select('name description category categoryId entryFee endTime state image prize').lean()
     ]);
 
     // Check user exists
@@ -268,7 +268,11 @@ const getContestByIdUser = async (id: string, userId: string) => {
     // console.log(graph);
     // console.log(cryptoPrice);
     // console.log(stockPrice);
-    return result;
+    const data = {
+        ...result,
+        group: getCategory?.group
+    }
+    return data;
 }
 
 const getContestByCategoryId = async (id: string) => {
@@ -403,7 +407,7 @@ const getStockPriceHistory = async (query: Record<string, unknown>) => {
 const getEconomicData = async (query: Record<string, unknown>) => {
     const seriesType = String(query.series || 'CPI').toUpperCase();
     const limit = Number(query.limit || 10);
-
+    console.log(seriesType, limit);
     const seriesMap: Record<string, string> = {
         'CPI': 'CPIAUCSL',
         'TREASURY_10Y': 'DGS10',

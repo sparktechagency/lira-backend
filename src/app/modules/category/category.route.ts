@@ -12,6 +12,7 @@ router.get('/category-by-group/:id', auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADM
 
 router
      .route('/:id')
+     .get(auth(USER_ROLES.USER), CategoryController.getCategoryById)
      .patch(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.updateCategory)
      .delete(auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), CategoryController.deleteCategory);
 

@@ -11,7 +11,7 @@ const createCategoryToDB = async (payload: ICategory) => {
      if (isExistName) {
           throw new AppError(StatusCodes.NOT_ACCEPTABLE, 'This Category Name Already Exist');
      }
-    
+
      const group = await Group.findById(groupId);
      if (!group) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Group not found');
@@ -99,11 +99,19 @@ const getCategoryByGroupId = async (id: string) => {
      }
      return result;
 }
+const getCategoryById = async (id: string) => {
+     const result = await Category.findById(id).select("-createdBy -updatedAt");
+     if (!result) {
+          throw new AppError(StatusCodes.NOT_FOUND, 'Category not found');
+     }
+     return result;
+}
 export const CategoryService = {
      createCategoryToDB,
      getCategoriesFromDB,
      updateCategoryToDB,
      deleteCategoryToDB,
      shuffleCategorySerial,
-     getCategoryByGroupId
+     getCategoryByGroupId,
+     getCategoryById
 };

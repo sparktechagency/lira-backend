@@ -1,0 +1,29 @@
+Sat Oct 11 2025 13:2:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/unified/forecast?category=stock&symbol=MSFT 200 - 1575.202 ms
+Sat Oct 11 2025 13:3:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/unified/forecast?category=crypto&crypto=bitcoin 200 - 753.244 ms
+Sat Oct 11 2025 13:3:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/unified/forecast?category=crypto&crypto=bitcoin&day=7 200 - 83.046 ms
+Sat Oct 11 2025 13:7:59 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/price-history?crypto=btc&days=1 200 - 432.213 ms
+Sat Oct 11 2025 13:8:12 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/stock/history?symbol 200 - 1440.276 ms
+Sat Oct 11 2025 13:8:25 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/price-history?crypto=btc&days=1 200 - 28.785 ms
+Sat Oct 11 2025 13:8:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/stock/history?symbol 200 - 621.829 ms
+Sat Oct 11 2025 13:14:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 11 2025 13:14:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 11 2025 13:14:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 11 2025 13:14:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 11 2025 13:16:0 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 11 2025 13:16:0 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 11 2025 13:16:0 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 11 2025 13:16:0 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 11 2025 13:16:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 11 2025 13:16:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 11 2025 13:16:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 11 2025 13:16:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 11 2025 13:16:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/economic/data 200 - 840.582 ms
+Sat Oct 11 2025 13:16:39 [SERVER-NAME] info: [34mSIGINT received. Shutting down gracefully...[39m
+Sat Oct 11 2025 13:16:39 [SERVER-NAME] info: [32mHTTP server closed successfully[39m
+Sat Oct 11 2025 13:16:39 [SERVER-NAME] info: [32mSocket.io server closed successfully[39m
+Sat Oct 11 2025 13:16:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 11 2025 13:16:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 11 2025 13:16:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 11 2025 13:16:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 11 2025 13:16:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/economic/data 200 - 634.334 ms
+Sat Oct 11 2025 13:16:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/economic/data 200 - 462.845 ms

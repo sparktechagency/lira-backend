@@ -238,7 +238,7 @@ const getContestByIdUser = async (id: string, userId: string) => {
     // Run queries in parallel for better performance
     const [isExistUser, result] = await Promise.all([
         User.findById(userId).select('state role').lean(),
-        Contest.findById(id).select('name description category categoryId entryFee endTime state image prize').lean()
+        Contest.findById(id).select('name description category categoryId entryFee endTime state image prize totalEntries').lean()
     ]);
 
     // Check user exists

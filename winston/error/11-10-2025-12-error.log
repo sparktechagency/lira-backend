@@ -1,3 +1,0 @@
-Sat Oct 11 2025 12:23:13 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/economic/data 400 - 865.417 ms
-Sat Oct 11 2025 12:30:6 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 19.102 ms
-Sat Oct 11 2025 12:30:14 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.907 ms

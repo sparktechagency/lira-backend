@@ -1,8 +1,0 @@
-Sat Oct 11 2025 16:21:34 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68e4a90159705090632b3e26 404 - 13.806 ms
-Sat Oct 11 2025 16:21:34 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68e4a90159705090632b3e26 404 - 4.630 ms
-Sat Oct 11 2025 16:38:20 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68e4a90159705090632b3e26 404 - 37.096 ms
-Sat Oct 11 2025 16:48:53 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68e4a90159705090632b3e26 404 - 6.396 ms
-Sat Oct 11 2025 16:48:55 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68e4a90159705090632b3e26 404 - 4.027 ms
-Sat Oct 11 2025 16:48:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68e4a90159705090632b3e26 404 - 4.452 ms
-Sat Oct 11 2025 16:51:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68e4a90159705090632b3e26 404 - 4.115 ms
-Sat Oct 11 2025 16:51:55 [SERVER-NAME] error: 10.10.7.14 - GET /favicon.ico 404 - 0.698 ms

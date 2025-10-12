@@ -12,6 +12,11 @@ export interface IProductOrder extends Document {
           tierId: string;
           price: number;
      }>;
+     customPrediction: Array<{
+          predictionValue: number;
+          tierId: string;
+          price: number;
+     }>;
      phone: string;
      email: string;
      totalAmount: number;

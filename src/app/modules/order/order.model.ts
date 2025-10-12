@@ -45,6 +45,23 @@ const orderSchema = new Schema<IProductOrder>(
                     },
                },
           ],
+          customPrediction: [
+               {
+                    predictionValue: {
+                         type: Number,
+                         required: true,
+                    },
+                    tierId: {
+                         type: Schema.Types.ObjectId,
+                         ref: 'Tier',
+                         required: true,
+                    },
+                    price: {
+                         type: Number,
+                         required: true,
+                    },
+               },
+          ],
           phone: {
                type: String,
                default: '',

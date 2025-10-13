@@ -83,6 +83,7 @@ export interface IContest extends Document {
     totalEntries: number;
     maxEntries?: number;
     createdBy?: Types.ObjectId;
+    popularity: number;
     results?: {
         actualValue: number;
         winningPredictions: Types.ObjectId[];

@@ -2,3 +2,50 @@ Mon Oct 13 2025 12:16:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200
 Mon Oct 13 2025 12:16:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 8.777 ms
 Mon Oct 13 2025 12:16:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/profilepicturev2-1759815937524.jpg 200 - 14.583 ms
 Mon Oct 13 2025 12:16:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/jaket-1759315074933.jpg 200 - 13.994 ms
+Mon Oct 13 2025 12:20:26 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 146.063 ms
+Mon Oct 13 2025 12:22:41 [SERVER-NAME] info: 10.10.7.14 - GET /image/profilepicturev2-1759815937524.jpg 200 - 13.550 ms
+Mon Oct 13 2025 12:22:41 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68e4a90159705090632b3e26/tiers/68e4a90159705090632b3e27 200 - 50.833 ms
+Mon Oct 13 2025 12:22:41 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68e4a90159705090632b3e26/tiers/68e4a90159705090632b3e27 200 - 8.404 ms
+Mon Oct 13 2025 12:22:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68e4a90159705090632b3e26/tiers/68e4a90159705090632b3e27 200 - 5.868 ms
+Mon Oct 13 2025 12:22:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68e4a90159705090632b3e26/tiers/68e4a90159705090632b3e27 200 - 7.818 ms
+Mon Oct 13 2025 12:26:35 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:26:35 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:26:35 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:26:35 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:27:35 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:27:35 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:27:35 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:27:35 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:27:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:27:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:27:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:27:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:27:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:27:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:27:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:27:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:27:54 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:27:54 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:27:54 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:27:54 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:27:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:27:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:27:58 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:27:58 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:27:58 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Oct 13 2025 12:27:58 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Oct 13 2025 12:27:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Oct 13 2025 12:27:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.updated[22m[49m
+Mon Oct 13 2025 12:27:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Oct 13 2025 12:27:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Oct 13 2025 12:27:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Oct 13 2025 12:28:1 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Oct 13 2025 12:28:15 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m
+Mon Oct 13 2025 12:28:41 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:28:41 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:28:41 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:28:41 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:29:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:29:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:29:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:29:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m

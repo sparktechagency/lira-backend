@@ -56,6 +56,7 @@ export const handleCheckoutSessionSuccessful = async (data: Stripe.Subscription)
 
         // Update total entries in contest
         contest.totalEntries += totalEntriesAdded;
+        contest.popularity += 1;
 
         // Save contest with updated entries
         await contest.save();

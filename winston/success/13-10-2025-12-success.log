@@ -145,3 +145,8 @@ Mon Oct 13 2025 12:38:15 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/ac
 Mon Oct 13 2025 12:38:27 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?sort=popularity 200 - 8.189 ms
 Mon Oct 13 2025 12:38:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?sort=prize 200 - 7.480 ms
 Mon Oct 13 2025 12:41:19 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 28.694 ms
+Mon Oct 13 2025 12:43:19 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 13 2025 12:43:19 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 13 2025 12:43:19 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 13 2025 12:43:19 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 13 2025 12:43:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?minPrice=10&maxPrice=99&= 200 - 88.278 ms

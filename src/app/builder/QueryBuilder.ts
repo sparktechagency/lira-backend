@@ -35,11 +35,24 @@ class QueryBuilder<T> {
           return this;
      }
 
-     sort() {
-          const sort = (this.query?.sort as string)?.split(',')?.join(' ') || '-createdAt';
-          this.modelQuery = this.modelQuery.sort(sort as string);
-          return this;
-     }
+          sort() {
+               const sort = (this.query?.sort as string)?.split(',')?.join(' ') || '-createdAt';
+               switch (sort) {
+                    case 'popularity':
+                         this.modelQuery = this.modelQuery.sort('-popularity');
+                         break;
+                    case 'totalEntries':
+                         this.modelQuery = this.modelQuery.sort('-totalEntries');
+                         break;
+                    case 'prize':
+                         this.modelQuery = this.modelQuery.sort('-prize.prizePool');
+                         break;
+                    default:
+                         this.modelQuery = this.modelQuery.sort(sort as string);
+                         break;
+               }    
+               return this;
+          }
 
      paginate(defaultLimit = 10) {
           const page = Number(this.query?.page) || 1;

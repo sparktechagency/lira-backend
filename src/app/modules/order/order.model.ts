@@ -49,16 +49,19 @@ const orderSchema = new Schema<IProductOrder>(
                {
                     predictionValue: {
                          type: Number,
-                         required: true,
+                         required: false,
+                         default: 0
                     },
                     tierId: {
                          type: Schema.Types.ObjectId,
                          ref: 'Tier',
-                         required: true,
+                         required: false,
+                         default: null
                     },
                     price: {
                          type: Number,
-                         required: true,
+                         required: false,
+                         default: 0
                     },
                },
           ],

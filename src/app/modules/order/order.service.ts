@@ -12,17 +12,15 @@ import { Payment } from '../payments/payments.model';
 import { Types } from 'mongoose';
 
 
-interface IPredictionIdItem {
-     id: string; // Generated prediction's _id from the array
-}
-
 interface IOrderPayload {
+     id: string;
      contestId: string;
-     generatedPredictionsIds: IPredictionIdItem[];
+     generatedPredictionsIds?: Array<{ id: string }>;
+     customPredictions?: Array<{ value: number }>;
 }
 
 const createContestOrder = async (userId: string, payload: IOrderPayload) => {
-     const { contestId, generatedPredictionsIds } = payload;
+     const { contestId, generatedPredictionsIds = [], customPredictions = [] } = payload;
 
      // Validate user exists
      const user = await User.findById(userId);
@@ -51,12 +49,12 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Contest selection time has ended!');
      }
 
-     // Validate predictions and calculate total
      let totalAmount = 0;
      const orderedPredictions = [];
+     const orderedCustomPredictions = [];
 
+     // Process generated predictions
      for (const item of generatedPredictionsIds) {
-          // Find prediction by _id in generatedPredictions array
           const prediction = contest.predictions.generatedPredictions?.find(
                (p: any) => p._id.toString() === item.id
           );
@@ -68,7 +66,6 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
                );
           }
 
-          // Check if prediction is available
           if (!prediction.isAvailable) {
                throw new AppError(
                     StatusCodes.BAD_REQUEST,
@@ -76,7 +73,6 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
                );
           }
 
-          // Check if max entries reached (each user can take 1 entry per prediction)
           if (prediction.currentEntries >= prediction.maxEntries) {
                throw new AppError(
                     StatusCodes.BAD_REQUEST,
@@ -84,16 +80,93 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
                );
           }
 
-          // Add to total amount
           totalAmount += prediction.price;
 
-          // Store prediction details for order
           orderedPredictions.push({
                predictionId: (prediction as any)._id,
                predictionValue: prediction.value,
                tierId: prediction.tierId,
                price: prediction.price,
           });
+     }
+
+     // Process custom predictions
+     if (customPredictions.length > 0) {
+          // Get tiers from contest
+          const tiers = contest.pricing.tiers;
+          
+          if (!tiers || tiers.length === 0) {
+               throw new AppError(
+                    StatusCodes.BAD_REQUEST,
+                    'No tiers found for this contest!'
+               );
+          }
+
+          // Get increment from contest configuration
+          const increment = contest.predictions.increment || 1;
+
+          // Sort tiers by minValue to properly check ranges
+          const sortedTiers = [...tiers].sort((a: any, b: any) => a.minValue - b.minValue);
+          const lastTier = sortedTiers[sortedTiers.length - 1];
+
+          for (const customPred of customPredictions) {
+               const { value } = customPred;
+
+               // Validate increment
+               if (value % increment !== 0) {
+                    throw new AppError(
+                         StatusCodes.BAD_REQUEST,
+                         `Custom prediction value ${value} is not valid! Must be a multiple of ${increment}.`
+                    );
+               }
+
+               // Determine price based on value and tier ranges
+               let price = 0;
+               let matchedTier = null;
+               
+               const firstTier = sortedTiers[0];
+               
+               if (value < firstTier.min) {
+                    // If value is less than first tier's min, use first tier's price
+                    price = firstTier.pricePerPrediction;
+                    matchedTier = firstTier;
+               } else if (value > lastTier.max) {
+                    // If value exceeds last tier's max, use last tier's price
+                    price = lastTier.pricePerPrediction;
+                    matchedTier = lastTier;
+               } else {
+                    // Find which tier range the value falls into
+                    matchedTier = sortedTiers.find((t: any) => 
+                         value >= t.min && value <= t.max
+                    );
+
+                    // If no matching tier found in between, use the closest tier
+                    if (!matchedTier) {
+                         // Find the closest tier by checking which range it's nearest to
+                         for (let i = 0; i < sortedTiers.length - 1; i++) {
+                              if (value > sortedTiers[i].max && value < sortedTiers[i + 1].min) {
+                                   // Value is in gap between tiers, use the lower tier's price
+                                   matchedTier = sortedTiers[i];
+                                   break;
+                              }
+                         }
+                         // If still not found, use last tier as fallback
+                         if (!matchedTier) {
+                              matchedTier = lastTier;
+                         }
+                    }
+
+                    price = matchedTier.pricePerPrediction;
+               }
+
+               totalAmount += price;
+
+               orderedCustomPredictions.push({
+                    predictionValue: value,
+                    tierId: (matchedTier as any)._id,
+                    price: price,
+               });
+          }
      }
 
      // Generate unique order ID
@@ -108,11 +181,11 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
           phone: user.phone || '',
           email: user.email || '',
           predictions: orderedPredictions,
+          customPrediction: orderedCustomPredictions,
           totalAmount,
           status: 'pending',
      });
 
-     // DO NOT update contest entries yet - will update after successful payment
      return order;
 };
 
@@ -135,23 +208,36 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
      }
 
      try {
+          // Collect all prediction IDs (both generated and custom)
+          const allPredictionIds = [
+               ...order.predictions.map((p) => p.predictionId),
+               // Custom predictions don't have predictionId, so we handle separately
+          ];
+
           // Create payment record
           const payment = await Payment.create({
                orderId: order.orderId,
                userId: order.userId._id,
                contestId: order.contestId._id,
-               predictionIds: order.predictions.map((p) => p.predictionId),
+               predictionIds: allPredictionIds,
                amount: order.totalAmount,
                currency: 'usd',
                paymentMethod: 'stripe',
                status: 'pending',
                metadata: {
-                    paymentType: 'contest_order', // Changed from 'type'
+                    paymentType: 'contest_order',
                     orderId: order.orderId,
                     contestName: order.contestName,
+                    hasCustomPredictions: order.customPrediction && order.customPrediction.length > 0,
+                    customPredictionsCount: order.customPrediction?.length || 0,
                },
                isDeleted: false,
           });
+
+          // Create description
+          const totalPredictions = order.predictions.length + (order.customPrediction?.length || 0);
+          const description = `${order.predictions.length} Generated + ${order.customPrediction?.length || 0} Custom Prediction(s) | Order: ${order.orderId}`;
+
           // Create Stripe line items
           const lineItems = [
                {
@@ -159,7 +245,7 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                          currency: 'usd',
                          product_data: {
                               name: `Contest Entry - ${order.contestName}`,
-                              description: `${order.predictions.length} Prediction(s) | Order: ${order.orderId}`,
+                              description: description,
                          },
                          unit_amount: Math.round(order.totalAmount * 100),
                     },
@@ -200,7 +286,9 @@ const createCheckoutSession = async (orderId: string, userId: string) => {
                orderDetails: {
                     orderId: order.orderId,
                     totalAmount: order.totalAmount,
-                    predictionsCount: order.predictions.length,
+                    generatedPredictionsCount: order.predictions.length,
+                    customPredictionsCount: order.customPrediction?.length || 0,
+                    totalPredictions: totalPredictions,
                },
           };
      } catch (error: any) {

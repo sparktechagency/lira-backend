@@ -190,7 +190,7 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         query
     );
 
-    const notAllowedFields = "-predictions.generatedPredictions -pricing.tiers -results -predictions.placePercentages -predictions.numberOfEntriesPerPrediction -predictions.unit -predictions.increment -createdBy -createdAt -updatedAt -maxEntries -startTime -status -description -categoryId -serial";
+    const notAllowedFields = "-predictions.generatedPredictions -results -predictions.placePercentages -predictions.numberOfEntriesPerPrediction -predictions.unit -predictions.increment -createdBy -createdAt -updatedAt -maxEntries -startTime -status -description -categoryId -serial";
 
     const result = await queryBuilder
         .priceRange()
@@ -199,6 +199,7 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         .search(["name", "category"])
         .prizeTypeFilter()
         .sort()
+        .entryPriceRange()
         .modelQuery
         .select(notAllowedFields)
         .lean()

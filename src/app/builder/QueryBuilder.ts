@@ -27,7 +27,7 @@ class QueryBuilder<T> {
      }
 
      filter() {
-          const excludeFields = ['searchTerm', 'sort', 'limit', 'page', 'fields', 'maxPrice', 'minPrice', 'dateRange', 'year', 'month', 'day', 'dateFilter', 'prizeType'];
+          const excludeFields = ['searchTerm', 'sort', 'limit', 'page', 'fields', 'minEntryPrice', 'maxEntryPrice', 'maxPrice', 'minPrice', 'dateRange', 'year', 'month', 'day', 'dateFilter', 'prizeType', 'entryPriceRange'];
           const queryObj = { ...this.query };
           excludeFields.forEach((el) => delete queryObj[el]);
 
@@ -35,24 +35,24 @@ class QueryBuilder<T> {
           return this;
      }
 
-          sort() {
-               const sort = (this.query?.sort as string)?.split(',')?.join(' ') || '-createdAt';
-               switch (sort) {
-                    case 'popularity':
-                         this.modelQuery = this.modelQuery.sort('-popularity');
-                         break;
-                    case 'totalEntries':
-                         this.modelQuery = this.modelQuery.sort('-totalEntries');
-                         break;
-                    case 'prize':
-                         this.modelQuery = this.modelQuery.sort('-prize.prizePool');
-                         break;
-                    default:
-                         this.modelQuery = this.modelQuery.sort(sort as string);
-                         break;
-               }    
-               return this;
+     sort() {
+          const sort = (this.query?.sort as string)?.split(',')?.join(' ') || '-createdAt';
+          switch (sort) {
+               case 'popularity':
+                    this.modelQuery = this.modelQuery.sort('-popularity');
+                    break;
+               case 'totalEntries':
+                    this.modelQuery = this.modelQuery.sort('-totalEntries');
+                    break;
+               case 'prize':
+                    this.modelQuery = this.modelQuery.sort('-prize.prizePool');
+                    break;
+               default:
+                    this.modelQuery = this.modelQuery.sort(sort as string);
+                    break;
           }
+          return this;
+     }
 
      paginate(defaultLimit = 10) {
           const page = Number(this.query?.page) || 1;
@@ -80,9 +80,48 @@ class QueryBuilder<T> {
                     'prize.prizePool': priceFilter,
                } as FilterQuery<T>);
           }
-
           return this;
      }
+entryPriceRange() {
+     // Parse min/max from query
+     const min = Number(this.query?.minEntryPrice);
+     const max = Number(this.query?.maxEntryPrice);
+
+     // Check if valid numbers
+     const hasMin = Number.isFinite(min);
+     const hasMax = Number.isFinite(max);
+
+     if (!hasMin && !hasMax) return this;
+
+     // Build range object
+     const range: Record<string, number> = {};
+     if (hasMin) range.$gte = min;
+     if (hasMax) range.$lte = max;
+
+     // Match tiers by pricePerPrediction (only active tiers)
+     const tierClause = {
+          'pricing.tiers': {
+               $elemMatch: { 
+                    pricePerPrediction: range,
+                    isActive: true
+               }
+          }
+     };
+
+     // Match flat price (for priceOnly type)
+     const flatClause = {
+          'pricing.predictionType': 'priceOnly',
+          'pricing.flatPrice': range
+     };
+
+     // Apply OR filter
+     this.modelQuery = this.modelQuery.find({
+          $or: [tierClause, flatClause]
+     } as FilterQuery<T>);
+
+     return this;
+}
+
      prizeTypeFilter() {
           const prizeType = this.query?.prizeType as string;
 

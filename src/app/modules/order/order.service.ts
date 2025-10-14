@@ -183,6 +183,7 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
           predictions: orderedPredictions,
           customPrediction: orderedCustomPredictions,
           totalAmount,
+          state: user.state || 'N/A',
           status: 'pending',
      });
 
@@ -306,7 +307,6 @@ const createOrderAndCheckout = async (
 ) => {
      // Create order
      const order = await createContestOrder(userId, payload);
-
      // Create checkout session
      return createCheckoutSession(order._id.toString(), userId);
 };

@@ -6,6 +6,7 @@ import AppError from "../../../errors/AppError";
 import { Contest } from "../../../app/modules/contest/contest.model";
 import Stripe from "stripe";
 
+
 export const handleCheckoutSessionSuccessful = async (data: Stripe.Subscription) => {
     try {
         const session = await stripe.checkout.sessions.retrieve(data.id);
@@ -34,6 +35,7 @@ export const handleCheckoutSessionSuccessful = async (data: Stripe.Subscription)
         if (!contest) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
         }
+    
 
         // Update each prediction's entries
         let totalEntriesAdded = 0;
@@ -57,7 +59,6 @@ export const handleCheckoutSessionSuccessful = async (data: Stripe.Subscription)
         // Update total entries in contest
         contest.totalEntries += totalEntriesAdded;
         contest.popularity += 1;
-
         // Save contest with updated entries
         await contest.save();
 

@@ -1,6 +1,5 @@
 import { Types } from "mongoose";
-
-// order.interface.ts
+import { US_STATES } from "../contest/contest.interface";
 export interface IProductOrder extends Document {
      orderId: string;
      userId: Types.ObjectId;
@@ -20,7 +19,7 @@ export interface IProductOrder extends Document {
      phone: string;
      email: string;
      totalAmount: number;
-     state: string;
+     state: US_STATES;
      status: 'pending' | 'processing' | 'shipping' | 'completed' | 'cancelled' | 'won' | 'lost';
      paymentId?: Types.ObjectId;
      isDeleted: boolean;

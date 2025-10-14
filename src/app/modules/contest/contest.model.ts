@@ -1,7 +1,7 @@
 import mongoose, { Schema } from "mongoose";
 import { IContest, IGeneratedPrediction, IPredictionTier } from "./contest.interface";
 
-const US_STATES_ARRAY = [
+export const US_STATES_ARRAY = [
     "Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut",
     "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa",
     "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan",

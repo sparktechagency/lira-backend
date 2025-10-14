@@ -77,6 +77,10 @@ const orderSchema = new Schema<IProductOrder>(
                type: Number,
                required: true,
           },
+          state: {
+               type: String,
+               default: 'pending',
+          },
 
           status: {
                type: String,

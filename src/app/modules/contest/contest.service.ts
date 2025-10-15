@@ -455,9 +455,9 @@ const getSportsData = async (query: Record<string, unknown>) => {
     const gameId = query.gameId ? String(query.gameId) : null;
     const season = String(query.season || '2024');
 
-    if (!playerId && !gameId) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'Either playerId or gameId is required');
-    }
+    // if (!playerId && !gameId) {
+    //     throw new AppError(StatusCodes.BAD_REQUEST, 'Either playerId or gameId is required');
+    // }
 
     const leagueEndpoints: Record<string, string> = {
         'nfl': `https://api.sportsdata.io/v3/nfl/stats/json/PlayerSeasonStats/${season}`,
@@ -473,7 +473,7 @@ const getSportsData = async (query: Record<string, unknown>) => {
     const response = await axios.get(endpoint, {
         params: { key: config.api.sportsDataIO }
     });
-
+console.log(response.data[0]);
     if (playerId) {
         const playerStats = response.data.find((p: any) =>
             String(p.PlayerID) === playerId ||

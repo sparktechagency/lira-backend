@@ -1,0 +1,17 @@
+Tue Oct 14 2025 12:0:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 14 2025 12:0:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 14 2025 12:0:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 14 2025 12:0:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 14 2025 12:0:37 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 14 2025 12:0:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 14 2025 12:0:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 14 2025 12:0:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 14 2025 12:2:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 14 2025 12:2:44 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 14 2025 12:2:44 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 14 2025 12:2:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 14 2025 12:4:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 14 2025 12:4:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 14 2025 12:4:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 14 2025 12:4:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 14 2025 12:5:44 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/sports/data?playerId=549 200 - 6762.043 ms

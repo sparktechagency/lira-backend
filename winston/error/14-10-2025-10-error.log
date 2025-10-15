@@ -1,0 +1,2 @@
+Tue Oct 14 2025 10:22:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 45.671 ms
+Tue Oct 14 2025 10:22:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 401 - 9.971 ms

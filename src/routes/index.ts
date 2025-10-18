@@ -12,6 +12,7 @@ import { ReferralRoutes } from '../app/modules/referral/referral.routes';
 import { PaymentRoutes } from '../app/modules/payments/payments.route';
 import { HelpRouter } from '../app/modules/help/help.route';
 import { CommunityRoutes } from '../app/modules/community/community.route';
+import { ManuallyWinnerContestRoutes } from '../app/modules/manuallyWinnerContest/manuallyWinnerContest.route';
 
 const router = express.Router();
 const routes = [
@@ -66,6 +67,10 @@ const routes = [
      {
           path: '/community',
           route: CommunityRoutes,
+     },
+     {
+          path: '/manually-winner-contest',
+          route: ManuallyWinnerContestRoutes,
      },
 
 ];

@@ -13,8 +13,5 @@ const determineContestWinners = catchAsync(async (req, res) => {
         message: 'Contest winners determined successfully',
         data: result
     });
-
-
-
 })
-export const ManuallyWinnerContestController = {}
+export const ManuallyWinnerContestController = { determineContestWinners }

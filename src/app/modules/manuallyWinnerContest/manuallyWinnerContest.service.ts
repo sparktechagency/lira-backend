@@ -84,5 +84,27 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
         );
     });
 
+    const data = {
+        contestId: contest._id,
+        contestName: contest.name,
+        actualValue: finalActualValue,
+        totalEntries: contestOrders.length,
+        totalWinners: winnersData.winners.length,
+        prizePool: contest.prize.prizePool,
+        winners: winnersData.winners.map(w => ({
+            place: w.place,
+            userId: w.userId._id,
+            userName: w.userId.name,
+            userEmail: w.userId.email,
+            predictionValue: w.predictionValue,
+            actualValue: w.actualValue,
+            difference: w.difference,
+            prizeAmount: w.prizeAmount,
+            prizePercentage: w.percentage
+        }))
+    }
+
+    return data;
+
 }
 export const ManuallyWinnerService = { determineContestWinners }

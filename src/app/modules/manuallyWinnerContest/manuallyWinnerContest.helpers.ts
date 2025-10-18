@@ -64,3 +64,20 @@ export const calculateWinners = (orders: any[], actualValue: number, contest: an
 
     return { winners, winningOrderIds };
 }
+export const updateOrderStatuses = async (orders: any[], winningOrderIds: any[]) => {
+    const winningIds = new Set(winningOrderIds.map(id => id.toString()));
+
+    const updatePromises = orders.map(order => {
+        const isWinner = winningIds.has(order._id.toString());
+        order.status = isWinner ? 'won' : 'lost';
+        return order.save();
+    });
+
+    await Promise.all(updatePromises);
+}
+
+export const calculatePrizeForPlace = (contest: any, place: number): number => {
+    const placePercentages = contest.predictions.placePercentages || new Map();
+    const percentage = placePercentages.get(place.toString()) || 0;
+    return (contest.prize.prizePool * percentage) / 100;
+}

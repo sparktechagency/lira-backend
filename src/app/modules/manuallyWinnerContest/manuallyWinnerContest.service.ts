@@ -3,6 +3,7 @@ import AppError from "../../../errors/AppError";
 import { Contest } from "../contest/contest.model";
 import { contestResultService } from "../result/result.service";
 import { Order } from "../order/order.model";
+import { calculateWinners, updateOrderStatuses } from "./manuallyWinnerContest.helpers";
 
 const determineContestWinners = async (contestId: string, actualValue: number) => {
     const contest = await Contest.findById(contestId);

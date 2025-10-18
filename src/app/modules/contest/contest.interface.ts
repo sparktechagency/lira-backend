@@ -60,7 +60,25 @@ export interface IPredictionTier {
     pricePerPrediction: number;
     isActive: boolean;
 }
-
+export interface IContestMetadata {
+    cryptoId?: string; // e.g., 'bitcoin', 'ethereum'
+    // For stock contests
+    stockSymbol?: string; // e.g., 'AAPL', 'GOOGL'
+    // For sports contests
+    playerId?: string;
+    gameId?: string;
+    league?: string; // 'nfl', 'nba', 'mlb'
+    statType?: string; // 'points', 'yards', 'touchdowns', etc.
+    // For economic contests
+    economicSeries?: string; // e.g., 'CPIAUCSL', 'GDP'
+    // For entertainment contests
+    movieId?: string;
+    videoId?: string;
+    metricType?: string; // 'revenue', 'views', 'rating'
+    // Generic
+    dataSource?: string; // For documentation purposes
+    resultUnit?: string; // e.g., 'USD', 'percentage', 'count'
+}
 export interface IContest extends Document {
     name: string;
     serial: number;

@@ -40,13 +40,8 @@ class ContestResultService {
         }
     }
 
-    /**
-     * Extract metadata from contest document
-     * You should add a metadata field to your contest schema
-     */
+    
     private extractMetadata(contest: any): ContestMetadata {
-        // Assuming you have a metadata field in contest
-        // If not, you'll need to parse from description or add this field
         return {
             category: contest.category.toLowerCase(),
             cryptoId: contest.metadata?.cryptoId,

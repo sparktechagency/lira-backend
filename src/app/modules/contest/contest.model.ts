@@ -276,22 +276,13 @@ ContestSchema.index({ endTime: 1 });
 //     return this.save();
 // };
 ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
-    console.log('=== Generate Predictions Debug ===');
-    console.log('Prediction Type:', this.pricing.predictionType);
-
     const generatedPredictions: IGeneratedPrediction[] = [];
     const start = this.predictions.minPrediction;
     const end = this.predictions.maxPrediction;
     const increment = this.predictions.increment;
-
-    console.log(`Prediction Range: ${start} to ${end} with increment ${increment}`);
-
     // Generate all possible predictions based on predictionType
     for (let value = start; value <= end; value += increment) {
-        console.log(`\nChecking prediction: ${value}`);
-
         let prediction: IGeneratedPrediction | null = null;
-
         switch (this.pricing.predictionType) {
             case 'priceOnly':
                 // For priceOnly type, use flatPrice for all predictions
@@ -305,7 +296,6 @@ ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
                     isAvailable: true
                 };
                 break;
-
             case 'percentage':
                 // For percentage type, find the appropriate tier based on percentage ranges
                 const percentageTier = this.pricing.tiers.find((t: IPredictionTier) => {
@@ -315,7 +305,6 @@ ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
                 });
 
                 if (percentageTier) {
-                    console.log(`  ✓ Added to percentage tier: ${percentageTier.name}`);
                     prediction = {
                         value,
                         tierId: percentageTier.id || `percentage_tier_${percentageTier.name.replace(/\s/g, '_')}`,
@@ -338,7 +327,6 @@ ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
                 });
 
                 if (tier) {
-                    console.log(`  ✓ Added to tier: ${tier.name}`);
                     prediction = {
                         value,
                         tierId: tier.id || `tier_${tier.name.replace(/\s/g, '_')}`,
@@ -362,8 +350,6 @@ ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
             console.log(`  ✓ Added prediction: ${value} with price ${prediction.price}`);
         }
     }
-
-    console.log(`\nTotal generated predictions: ${generatedPredictions.length}`);
     this.predictions.generatedPredictions = generatedPredictions;
     return this.save();
 };

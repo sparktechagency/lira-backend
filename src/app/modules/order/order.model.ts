@@ -100,6 +100,32 @@ const orderSchema = new Schema<IProductOrder>(
                type: Boolean,
                default: false,
           },
+          result: {
+               place: {
+                    type: Number,
+                    default: null
+               },
+               predictionValue: {
+                    type: Number,
+                    default: 0
+               },
+               actualValue: {
+                    type: Number,
+                    default: 0
+               },
+               difference: {
+                    type: Number,
+                    default: 0
+               },
+               prizeAmount: {
+                    type: Number,
+                    default: 0
+               },
+               percentage: {
+                    type: Number,
+                    default: 0
+               },
+          },
      },
      {
           timestamps: true,

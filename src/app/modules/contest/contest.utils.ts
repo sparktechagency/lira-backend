@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { COMMON, CoinLite, UnifiedForecastResponse } from './contest.interface';
+import { COMMON, CoinLite, IContest, IPredictionTier, UnifiedForecastResponse } from './contest.interface';
 import config from '../../../config';
 import AppError from '../../../errors/AppError';
 import { StatusCodes } from 'http-status-codes';
@@ -391,3 +391,42 @@ export const resolveCoinId = async (input: string): Promise<string> => {
 
     throw new Error('Unknown crypto identifier');
 }
+export const validateTierCoverage = (contest: IContest): string[] => {
+    const warnings: string[] = [];
+    const start = contest.predictions.minPrediction;
+    const end = contest.predictions.maxPrediction;
+
+    if (contest.pricing.predictionType === 'tier' || contest.pricing.predictionType === 'percentage') {
+        const activeTiers = contest.pricing.tiers.filter((t: IPredictionTier) => t.isActive);
+        
+        if (activeTiers.length === 0) {
+            warnings.push('No active tiers found');
+            return warnings;
+        }
+
+        // Check if tiers cover the full range
+        const minTierValue = Math.min(...activeTiers.map(t => t.min));
+        const maxTierValue = Math.max(...activeTiers.map(t => t.max));
+
+        if (minTierValue > start) {
+            warnings.push(`Gap at start: Predictions from ${start} to ${minTierValue - 1} are not covered by any tier`);
+        }
+        
+        if (maxTierValue < end) {
+            warnings.push(`Gap at end: Predictions from ${maxTierValue + 1} to ${end} are not covered by any tier`);
+        }
+
+        // Check for gaps between tiers
+        const sortedTiers = activeTiers.sort((a, b) => a.min - b.min);
+        for (let i = 0; i < sortedTiers.length - 1; i++) {
+            const currentTierMax = sortedTiers[i].max;
+            const nextTierMin = sortedTiers[i + 1].min;
+            
+            if (nextTierMin > currentTierMax + 1) {
+                warnings.push(`Gap between tiers: ${currentTierMax + 1} to ${nextTierMin - 1} not covered`);
+            }
+        }
+    }
+
+    return warnings;
+};

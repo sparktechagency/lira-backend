@@ -1,12 +1,12 @@
 import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
-import { IContest, US_STATES } from "./contest.interface";
+import { IContest, IGeneratedPrediction, IPredictionTier, US_STATES } from "./contest.interface";
 import { Contest } from "./contest.model";
 import QueryBuilder from "../../builder/QueryBuilder";
 import { Category } from "../category/category.model";
 import { User } from "../user/user.model";
 import { USER_ROLES } from "../../../enums/user";
-import { normalizeResponse, resolveCoinId, resolveStockSymbol } from "./contest.utils";
+import { normalizeResponse, resolveCoinId, resolveStockSymbol, validateTierCoverage } from "./contest.utils";
 import axios from "axios";
 import config from "../../../config";
 
@@ -32,6 +32,11 @@ const createContest = async (payload: Partial<IContest>) => {
         await category.save();
         payload.categoryId = category._id;
         payload.category = category.name;
+        payload.metadata = {
+            cryptoId: await resolveCoinId(category.name),
+            dataSource: "CoinGecko",
+            resultUnit: "USD"
+        }
     }
     if (payload.pricing?.tiers) {
         payload.pricing.minTierPrice = Math.min(...payload.pricing.tiers.map(t => t.min))
@@ -140,31 +145,178 @@ const deleteContest = async (id: string) => {
     return result;
 };
 const publishContest = async (id: string) => {
-
     const contest = await Contest.findById(id);
     if (!contest) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
 
+    // Calculate how many predictions will be generated
+    const start = contest.predictions.minPrediction;
+    const end = contest.predictions.maxPrediction;
+    const increment = contest.predictions.increment;
+    const totalPredictions = Math.floor((end - start) / increment) + 1;
 
-    // Generate predictions before publishing
-    if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
-        console.log('No generated predictions found - auto-generating before publish');
-        await contest.generatePredictions();
+    console.log(`📊 Prediction calculation:
+    - Range: ${start} to ${end}
+    - Increment: ${increment}
+    - Total predictions to generate: ${totalPredictions}`);
+
+    // Set a reasonable limit (adjust as needed)
+    const MAX_PREDICTIONS = 50000;
+    if (totalPredictions > MAX_PREDICTIONS) {
+        throw new AppError(
+            StatusCodes.BAD_REQUEST,
+            `Too many predictions to generate (${totalPredictions}). Maximum allowed is ${MAX_PREDICTIONS}. Please increase increment or reduce range.`
+        );
     }
-    // Validate that predictions were generated successfully
+    const coverageWarnings = validateTierCoverage(contest);
+    if (coverageWarnings.length > 0) {
+        console.warn('⚠️ Tier coverage warnings:');
+        coverageWarnings.forEach(w => console.warn(`   - ${w}`));
+    }
+    // Generate predictions if not already generated
+    if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
+        console.log('🔄 No generated predictions found - generating now...');
+
+        try {
+            const generatedPredictions: IGeneratedPrediction[] = [];
+
+            // Generate predictions in batches for better performance
+            const BATCH_SIZE = 1000;
+            let currentBatch = 0;
+            let generatedCount = 0;
+
+            for (let value = start; value <= end; value += increment) {
+                let prediction: IGeneratedPrediction | null = null;
+
+                switch (contest.pricing.predictionType) {
+                    case 'priceOnly':
+                        prediction = {
+                            value,
+                            tierId: 'flat_price',
+                            price: contest.pricing.flatPrice,
+                            currentEntries: 0,
+                            maxEntries: contest.predictions.numberOfEntriesPerPrediction,
+                            isAvailable: true
+                        };
+                        break;
+
+                    case 'percentage':
+                        const percentageTier = contest.pricing.tiers.find((t: IPredictionTier) =>
+                            t.isActive && value >= t.min && value <= t.max
+                        );
+
+                        if (percentageTier) {
+                            prediction = {
+                                value,
+                                tierId: percentageTier.id || `percentage_tier_${percentageTier.name.replace(/\s/g, '_')}`,
+                                price: percentageTier.pricePerPrediction,
+                                currentEntries: 0,
+                                maxEntries: contest.predictions.numberOfEntriesPerPrediction,
+                                isAvailable: true
+                            };
+                        } else {
+                            console.warn(`⚠️ No percentage tier found for value: ${value}%`);
+                        }
+                        break;
+
+                    case 'tier':
+                        const tier = contest.pricing.tiers.find((t: IPredictionTier) =>
+                            t.isActive && value >= t.min && value <= t.max
+                        );
+
+                        if (tier) {
+                            prediction = {
+                                value,
+                                tierId: tier.id || `tier_${tier.name.replace(/\s/g, '_')}`,
+                                price: tier.pricePerPrediction,
+                                currentEntries: 0,
+                                maxEntries: contest.predictions.numberOfEntriesPerPrediction,
+                                isAvailable: true
+                            };
+                        } else {
+                            console.warn(`⚠️ No tier found for value: ${value}`);
+                        }
+                        break;
+
+                    default:
+                        throw new AppError(
+                            StatusCodes.BAD_REQUEST,
+                            `Invalid prediction type: ${contest.pricing.predictionType}`
+                        );
+                }
+
+                if (prediction) {
+                    generatedPredictions.push(prediction);
+                    generatedCount++;
+
+                    // Log progress for large batches
+                    if (generatedCount % BATCH_SIZE === 0) {
+                        currentBatch++;
+                        console.log(`   ✓ Generated ${generatedCount}/${totalPredictions} predictions (Batch ${currentBatch})`);
+                    }
+                }
+            }
+
+            console.log(`✅ Successfully generated ${generatedPredictions.length} predictions`);
+
+            // Validate that at least some predictions were generated
+            if (generatedPredictions.length === 0) {
+                throw new AppError(
+                    StatusCodes.BAD_REQUEST,
+                    'Cannot publish contest: No predictions could be generated. Possible reasons:\n' +
+                    '- No active tiers match the prediction range\n' +
+                    '- Tier min/max values do not cover the prediction range\n' +
+                    `- Prediction range: ${start} to ${end}\n` +
+                    `- Check your tier configurations`
+                );
+            }
+
+            // Check coverage - warn if some predictions couldn't be generated
+            const expectedPredictions = totalPredictions;
+            const actualPredictions = generatedPredictions.length;
+
+            if (actualPredictions < expectedPredictions) {
+                const coverage = ((actualPredictions / expectedPredictions) * 100).toFixed(2);
+                console.warn(`⚠️ Warning: Only ${actualPredictions}/${expectedPredictions} predictions generated (${coverage}% coverage)`);
+                console.warn(`   This might indicate incomplete tier coverage.`);
+            }
+
+            // Assign generated predictions
+            contest.predictions.generatedPredictions = generatedPredictions;
+
+        } catch (error) {
+            console.error('❌ Error generating predictions:', error);
+            throw new AppError(
+                StatusCodes.INTERNAL_SERVER_ERROR,
+                `Failed to generate predictions: ${error instanceof Error ? error.message : 'Unknown error'}`
+            );
+        }
+    } else {
+        console.log(`✓ Using existing ${contest.predictions.generatedPredictions.length} predictions`);
+    }
+
+    // Final validation before publishing
     if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
         throw new AppError(
             StatusCodes.BAD_REQUEST,
-            'Cannot publish contest: No predictions could be generated. Check prediction ranges and tiers.'
+            'Cannot publish contest: No predictions available after generation attempt.'
         );
     }
+
+    // Toggle contest status
     if (contest.status === 'Active') {
         contest.status = 'Draft';
+        console.log('📝 Contest set to Draft');
     } else {
         contest.status = 'Active';
+        console.log('🚀 Contest published and set to Active');
     }
+
+    // Save with all generated predictions
     const result = await contest.save();
+
+    console.log(`✅ Contest ${contest.status === 'Active' ? 'published' : 'unpublished'} successfully with ${result.predictions.generatedPredictions.length} predictions`);
 
     return result;
 };
@@ -473,7 +625,7 @@ const getSportsData = async (query: Record<string, unknown>) => {
     const response = await axios.get(endpoint, {
         params: { key: config.api.sportsDataIO }
     });
-console.log(response.data[0]);
+    console.log(response.data[0]);
     if (playerId) {
         const playerStats = response.data.find((p: any) =>
             String(p.PlayerID) === playerId ||

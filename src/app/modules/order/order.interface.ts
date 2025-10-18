@@ -24,6 +24,14 @@ export interface IProductOrder extends Document {
      status: 'pending' | 'processing' | 'shipping' | 'completed' | 'cancelled' | 'won' | 'lost';
      paymentId?: Types.ObjectId;
      isDeleted: boolean;
+     result: {
+          place: number | null;
+          predictionValue: number;
+          actualValue: number;
+          difference: number;
+          prizeAmount: number;
+          percentage: number;
+     };
      createdAt: Date;
      updatedAt: Date;
 }

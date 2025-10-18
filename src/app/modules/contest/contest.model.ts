@@ -293,84 +293,84 @@ ContestSchema.index({ endTime: 1 });
 //     this.predictions.generatedPredictions = generatedPredictions;
 //     return this.save();
 // };
-ContestSchema.methods.generatePredictions = function (): Promise<IContest> {
-    const generatedPredictions: IGeneratedPrediction[] = [];
-    const start = this.predictions.minPrediction;
-    const end = this.predictions.maxPrediction;
-    const increment = this.predictions.increment;
-    // Generate all possible predictions based on predictionType
-    for (let value = start; value <= end; value += increment) {
-        let prediction: IGeneratedPrediction | null = null;
-        switch (this.pricing.predictionType) {
-            case 'priceOnly':
-                // For priceOnly type, use flatPrice for all predictions
-                console.log(`  PriceOnly mode: Using flatPrice ${this.pricing.flatPrice}`);
-                prediction = {
-                    value,
-                    tierId: 'flat_price', // Simple tierId for priceOnly
-                    price: this.pricing.flatPrice,
-                    currentEntries: 0,
-                    maxEntries: this.predictions.numberOfEntriesPerPrediction,
-                    isAvailable: true
-                };
-                break;
-            case 'percentage':
-                // For percentage type, find the appropriate tier based on percentage ranges
-                const percentageTier = this.pricing.tiers.find((t: IPredictionTier) => {
-                    const inRange = t.isActive && value >= t.min && value <= t.max;
-                    console.log(`  Percentage Tier ${t.name} (${t.min}%-${t.max}%): ${inRange ? 'MATCH' : 'NO MATCH'}`);
-                    return inRange;
-                });
+// ContestSchema.methods.generatePredictions = async function (): Promise<IContest> {
+//     const generatedPredictions: IGeneratedPrediction[] = [];
+//     const start = this.predictions.minPrediction;
+//     const end = this.predictions.maxPrediction;
+//     const increment = this.predictions.increment;
+//     // Generate all possible predictions based on predictionType
+//     for (let value = start; value <= end; value += increment) {
+//         let prediction: IGeneratedPrediction | null = null;
+//         switch (this.pricing.predictionType) {
+//             case 'priceOnly':
+//                 // For priceOnly type, use flatPrice for all predictions
+//                 console.log(`  PriceOnly mode: Using flatPrice ${this.pricing.flatPrice}`);
+//                 prediction = {
+//                     value,
+//                     tierId: 'flat_price', // Simple tierId for priceOnly
+//                     price: this.pricing.flatPrice,
+//                     currentEntries: 0,
+//                     maxEntries: this.predictions.numberOfEntriesPerPrediction,
+//                     isAvailable: true
+//                 };
+//                 break;
+//             case 'percentage':
+//                 // For percentage type, find the appropriate tier based on percentage ranges
+//                 const percentageTier = this.pricing.tiers.find((t: IPredictionTier) => {
+//                     const inRange = t.isActive && value >= t.min && value <= t.max;
+//                     console.log(`  Percentage Tier ${t.name} (${t.min}%-${t.max}%): ${inRange ? 'MATCH' : 'NO MATCH'}`);
+//                     return inRange;
+//                 });
 
-                if (percentageTier) {
-                    prediction = {
-                        value,
-                        tierId: percentageTier.id || `percentage_tier_${percentageTier.name.replace(/\s/g, '_')}`,
-                        price: percentageTier.pricePerPrediction,
-                        currentEntries: 0,
-                        maxEntries: this.predictions.numberOfEntriesPerPrediction,
-                        isAvailable: true
-                    };
-                } else {
-                    console.log(`  ✗ No percentage tier found for value: ${value}%`);
-                }
-                break;
+//                 if (percentageTier) {
+//                     prediction = {
+//                         value,
+//                         tierId: percentageTier.id || `percentage_tier_${percentageTier.name.replace(/\s/g, '_')}`,
+//                         price: percentageTier.pricePerPrediction,
+//                         currentEntries: 0,
+//                         maxEntries: this.predictions.numberOfEntriesPerPrediction,
+//                         isAvailable: true
+//                     };
+//                 } else {
+//                     console.log(`  ✗ No percentage tier found for value: ${value}%`);
+//                 }
+//                 break;
 
-            case 'tier':
-                // For tier type, find the appropriate tier (existing logic)
-                const tier = this.pricing.tiers.find((t: IPredictionTier) => {
-                    const inRange = t.isActive && value >= t.min && value <= t.max;
-                    console.log(`  Tier ${t.name} (${t.min}-${t.max}): ${inRange ? 'MATCH' : 'NO MATCH'}`);
-                    return inRange;
-                });
+//             case 'tier':
+//                 // For tier type, find the appropriate tier (existing logic)
+//                 const tier = this.pricing.tiers.find((t: IPredictionTier) => {
+//                     const inRange = t.isActive && value >= t.min && value <= t.max;
+//                     console.log(`  Tier ${t.name} (${t.min}-${t.max}): ${inRange ? 'MATCH' : 'NO MATCH'}`);
+//                     return inRange;
+//                 });
 
-                if (tier) {
-                    prediction = {
-                        value,
-                        tierId: tier.id || `tier_${tier.name.replace(/\s/g, '_')}`,
-                        price: tier.pricePerPrediction,
-                        currentEntries: 0,
-                        maxEntries: this.predictions.numberOfEntriesPerPrediction,
-                        isAvailable: true
-                    };
-                } else {
-                    console.log(`  ✗ No tier found for value: ${value}`);
-                }
-                break;
+//                 if (tier) {
+//                     prediction = {
+//                         value,
+//                         tierId: tier.id || `tier_${tier.name.replace(/\s/g, '_')}`,
+//                         price: tier.pricePerPrediction,
+//                         currentEntries: 0,
+//                         maxEntries: this.predictions.numberOfEntriesPerPrediction,
+//                         isAvailable: true
+//                     };
+//                 } else {
+//                     console.log(`  ✗ No tier found for value: ${value}`);
+//                 }
+//                 break;
 
-            default:
-                console.log(`  ✗ Invalid prediction type: ${this.pricing.predictionType}`);
-        }
+//             default:
+//                 console.log(`  ✗ Invalid prediction type: ${this.pricing.predictionType}`);
+//         }
 
-        // Add prediction if it was created
-        if (prediction) {
-            generatedPredictions.push(prediction);
-            console.log(`  ✓ Added prediction: ${value} with price ${prediction.price}`);
-        }
-    }
-    this.predictions.generatedPredictions = generatedPredictions;
-    return this.save();
-};
+//         // Add prediction if it was created
+//         if (prediction) {
+//             generatedPredictions.push(prediction);
+//             console.log(`  ✓ Added prediction: ${value} with price ${prediction.price}`);
+//         }
+//     }
+//     this.predictions.generatedPredictions = generatedPredictions;
+//     return this.save();
+// };
 ContestSchema.methods.updatePredictionEntries = function (predictionValue: number): Promise<IContest> {
     const prediction = this.predictions.generatedPredictions?.find(
         (p: IGeneratedPrediction) => p.value === predictionValue

@@ -24,4 +24,13 @@ const getContestResults = catchAsync(async (req, res) => {
         data: result
     });
 })
-export const ManuallyWinnerContestController = { determineContestWinners, getContestResults }
+const getPendingContests = catchAsync(async (req, res) => {
+    const result = await ManuallyWinnerService.getPendingContests(req.query);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Pending contests retrieved successfully',
+        data: result
+    });
+})
+export const ManuallyWinnerContestController = { determineContestWinners, getContestResults, getPendingContests }

@@ -4,6 +4,7 @@ import { Contest } from "../contest/contest.model";
 import { contestResultService } from "../result/result.service";
 import { Order } from "../order/order.model";
 import { calculatePrizeForPlace, calculateWinners, updateOrderStatuses } from "./manuallyWinnerContest.helpers";
+import QueryBuilder from "../../builder/QueryBuilder";
 
 const determineContestWinners = async (contestId: string, actualValue: number) => {
     const contest = await Contest.findById(contestId);
@@ -174,4 +175,41 @@ const getContestResults = async (contestId: string) => {
     return data;
 
 }
-export const ManuallyWinnerService = { determineContestWinners, getContestResults }
+
+const getPendingContests = async (query: Record<string, unknown>) => {
+    const now = new Date();
+    const queryBuilder = new QueryBuilder(Contest.find({
+        status: 'Active',
+        endTime: { $lte: now },
+        'results.prizeDistributed': false
+    }).populate('categoryId'), query)
+    const pendingContests = await queryBuilder.modelQuery.exec();
+
+
+
+    const contestsWithStats = await Promise.all(
+        pendingContests.map(async (contest) => {
+            const entryCount = await Order.countDocuments({
+                contestId: contest._id,
+                isDeleted: false,
+                status: { $nin: ['cancelled'] }
+            });
+            return {
+                id: contest._id,
+                name: contest.name,
+                category: contest.category,
+                endTime: contest.endTime,
+                prizePool: contest.prize.prizePool,
+                totalEntries: entryCount,
+                hasMetadata: !!contest.metadata
+            };
+        })
+    );
+    const meta = await queryBuilder.countTotal()
+    return {
+        meta,
+        result: contestsWithStats
+    };
+}
+
+export const ManuallyWinnerService = { determineContestWinners, getContestResults, getPendingContests }

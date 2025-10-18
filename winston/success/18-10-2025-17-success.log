@@ -202,3 +202,7 @@ Sat Oct 18 2025 17:53:0 [SERVER-NAME] info: [33m♻️  Socket is listening on 
 Sat Oct 18 2025 17:53:0 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
 Sat Oct 18 2025 17:53:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/manually-winner-contest/68f36abc41106424d9215dff/results 200 - 146.656 ms
 Sat Oct 18 2025 17:53:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/manually-winner-contest/pending 200 - 278.752 ms
+Sat Oct 18 2025 17:59:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 18 2025 17:59:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 18 2025 17:59:8 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 18 2025 17:59:8 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m

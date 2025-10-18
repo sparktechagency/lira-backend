@@ -94,7 +94,7 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
      if (customPredictions.length > 0) {
           // Get tiers from contest
           const tiers = contest.pricing.tiers;
-          
+
           if (!tiers || tiers.length === 0) {
                throw new AppError(
                     StatusCodes.BAD_REQUEST,
@@ -123,9 +123,9 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
                // Determine price based on value and tier ranges
                let price = 0;
                let matchedTier = null;
-               
+
                const firstTier = sortedTiers[0];
-               
+
                if (value < firstTier.min) {
                     // If value is less than first tier's min, use first tier's price
                     price = firstTier.pricePerPrediction;
@@ -136,7 +136,7 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
                     matchedTier = lastTier;
                } else {
                     // Find which tier range the value falls into
-                    matchedTier = sortedTiers.find((t: any) => 
+                    matchedTier = sortedTiers.find((t: any) =>
                          value >= t.min && value <= t.max
                     );
 
@@ -626,14 +626,52 @@ const pastAnalysisOrders = async (userId: string) => {
           throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, `Failed to analyze orders: ${error.message}`);
      }
 };
+const getWinnerOrders = async (userId: string, query: Record<string, unknown>) => {
+     const queryBuilder = new QueryBuilder(Order.find({
+          userId: new Types.ObjectId(userId as string),
+          isDeleted: false,
+          status: { $nin: ['pending', 'processing', 'cancelled', 'shipping', 'delivered'] },
+     }).select('userId contestId result contestName endTime status'), query)
 
-export default analysisOrders;
+     const result = await queryBuilder.fields().filter().sort().modelQuery.exec();
+     const meta = await queryBuilder.countTotal();
+
+     return {
+          meta,
+          result,
+     }
+}
+const getPastOrderAnalysis = async (userId: string) => {
+     const aggregationResult = await Order.aggregate([
+          {
+               $match: {
+                    userId: new Types.ObjectId(userId),
+                    isDeleted: false,
+                    status: { $nin: ['pending', 'processing', 'cancelled', 'shipping'] },
+               },
+          },
+          {
+               $group: {
+                    _id: null, 
+                    totalEntries: { $sum: { $size: { $ifNull: ['$predictions', []] } } }, 
+                    totalWin: { $sum: { $cond: [{ $eq: ['$status', 'won'] }, { $ifNull: ['$result.prizeAmount', 0] }, 0] } }, 
+               },
+          },
+     ]);
+
+     const { totalEntries, totalWin } = aggregationResult[0] || { totalEntries: 0, totalWin: 0 };
+
+     return { totalEntries, totalWin };
+};
+
 export const OrderService = {
      // createProductOrder,
      getAllPredictionOrders,
      getSinglePredictionOrder,
      // updateProductOrder,
      // cancelProductOrder,
+     getPastOrderAnalysis,
+     getWinnerOrders,
      pastAnalysisOrders,
      analysisOrders,
      createCheckoutSession,

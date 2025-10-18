@@ -136,13 +136,38 @@ const pastAnalysisOrders = catchAsync(async (req, res) => {
      });
 });
 
+const getWinnerOrders = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await OrderService.getWinnerOrders(id, req.query);
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Winner orders retrieved successfully',
+          data: result.result,
+          meta: result.meta,
+     });
+});
+
+const getPastOrderAnalysis = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await OrderService.getPastOrderAnalysis(id);
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'Past order analysis retrieved successfully',
+          data: result,
+     });
+});
+
 export const OrderController = {
      // createProductOrder,
      getAllPredictionOrders,
      getSinglePredictionOrder,
      updateProductOrder,
      pastAnalysisOrders,
+     getWinnerOrders,
      // cancelProductOrder,
+     getPastOrderAnalysis,
      analysisOrders,
      createCheckoutSession,
      orderSuccess,

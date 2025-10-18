@@ -95,8 +95,6 @@ const updateContest = async (id: string, payload: Partial<IContest>) => {
         payload.pricing?.tiers !== undefined;
 
     if (criticalFieldsUpdated) {
-        console.log('Critical prediction fields being updated - will trigger regeneration');
-
         // Don't allow updating critical fields if contest is active and has entries
         if (existingContest.status === 'Active' && existingContest.totalEntries > 0) {
             throw new AppError(
@@ -156,11 +154,6 @@ const publishContest = async (id: string) => {
     const increment = contest.predictions.increment;
     const totalPredictions = Math.floor((end - start) / increment) + 1;
 
-    console.log(`📊 Prediction calculation:
-    - Range: ${start} to ${end}
-    - Increment: ${increment}
-    - Total predictions to generate: ${totalPredictions}`);
-
     // Set a reasonable limit (adjust as needed)
     const MAX_PREDICTIONS = 50000;
     if (totalPredictions > MAX_PREDICTIONS) {
@@ -171,13 +164,10 @@ const publishContest = async (id: string) => {
     }
     const coverageWarnings = validateTierCoverage(contest);
     if (coverageWarnings.length > 0) {
-        console.warn('⚠️ Tier coverage warnings:');
         coverageWarnings.forEach(w => console.warn(`   - ${w}`));
     }
     // Generate predictions if not already generated
     if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
-        console.log('🔄 No generated predictions found - generating now...');
-
         try {
             const generatedPredictions: IGeneratedPrediction[] = [];
 
@@ -215,8 +205,6 @@ const publishContest = async (id: string) => {
                                 maxEntries: contest.predictions.numberOfEntriesPerPrediction,
                                 isAvailable: true
                             };
-                        } else {
-                            console.warn(`⚠️ No percentage tier found for value: ${value}%`);
                         }
                         break;
 
@@ -234,8 +222,6 @@ const publishContest = async (id: string) => {
                                 maxEntries: contest.predictions.numberOfEntriesPerPrediction,
                                 isAvailable: true
                             };
-                        } else {
-                            console.warn(`⚠️ No tier found for value: ${value}`);
                         }
                         break;
 
@@ -253,12 +239,9 @@ const publishContest = async (id: string) => {
                     // Log progress for large batches
                     if (generatedCount % BATCH_SIZE === 0) {
                         currentBatch++;
-                        console.log(`   ✓ Generated ${generatedCount}/${totalPredictions} predictions (Batch ${currentBatch})`);
                     }
                 }
             }
-
-            console.log(`✅ Successfully generated ${generatedPredictions.length} predictions`);
 
             // Validate that at least some predictions were generated
             if (generatedPredictions.length === 0) {
@@ -278,24 +261,18 @@ const publishContest = async (id: string) => {
 
             if (actualPredictions < expectedPredictions) {
                 const coverage = ((actualPredictions / expectedPredictions) * 100).toFixed(2);
-                console.warn(`⚠️ Warning: Only ${actualPredictions}/${expectedPredictions} predictions generated (${coverage}% coverage)`);
-                console.warn(`   This might indicate incomplete tier coverage.`);
             }
 
             // Assign generated predictions
             contest.predictions.generatedPredictions = generatedPredictions;
 
-        } catch (error) {
-            console.error('❌ Error generating predictions:', error);
+        } catch (error:any) {
             throw new AppError(
                 StatusCodes.INTERNAL_SERVER_ERROR,
                 `Failed to generate predictions: ${error instanceof Error ? error.message : 'Unknown error'}`
             );
         }
-    } else {
-        console.log(`✓ Using existing ${contest.predictions.generatedPredictions.length} predictions`);
     }
-
     // Final validation before publishing
     if (!contest.predictions.generatedPredictions || contest.predictions.generatedPredictions.length === 0) {
         throw new AppError(
@@ -303,21 +280,14 @@ const publishContest = async (id: string) => {
             'Cannot publish contest: No predictions available after generation attempt.'
         );
     }
-
     // Toggle contest status
     if (contest.status === 'Active') {
         contest.status = 'Draft';
-        console.log('📝 Contest set to Draft');
     } else {
         contest.status = 'Active';
-        console.log('🚀 Contest published and set to Active');
     }
-
     // Save with all generated predictions
     const result = await contest.save();
-
-    console.log(`✅ Contest ${contest.status === 'Active' ? 'published' : 'unpublished'} successfully with ${result.predictions.generatedPredictions.length} predictions`);
-
     return result;
 };
 const generateContestPredictions = async (id: string) => {

@@ -22,7 +22,7 @@ router.get('/my-orders', auth(USER_ROLES.USER), OrderController.getUserOrders);
 router.patch('/update/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), validateRequest(ProductOrderValidation.updateProductOrderZodSchema), OrderController.updateProductOrder);
 router.get('/analysis', auth(USER_ROLES.USER), OrderController.analysisOrders);
 router.get('/past-analysis', auth(USER_ROLES.USER), OrderController.pastAnalysisOrders);
-router.get('/winner-orders', auth(USER_ROLES.USER), OrderController.getWinnerOrders);
+router.get('/past-orders', auth(USER_ROLES.USER), OrderController.getWinnerOrders);
 router.get('/past-order-analysis', auth(USER_ROLES.USER), OrderController.getPastOrderAnalysis);
 // Delete an order (admin only)
 // router.delete('/cancel/:id', auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ProductOrderController.cancelProductOrder);

@@ -506,3 +506,8 @@ Sat Oct 18 2025 18:39:2 [SERVER-NAME] info: [33m♻️  Socket is listening on 
 Sat Oct 18 2025 18:39:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
 Sat Oct 18 2025 18:39:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 107.984 ms
 Sat Oct 18 2025 18:40:19 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/winner-orders 200 - 339.490 ms
+Sat Oct 18 2025 18:44:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Sat Oct 18 2025 18:44:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Sat Oct 18 2025 18:44:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Sat Oct 18 2025 18:44:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sat Oct 18 2025 18:44:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?status=won 200 - 145.825 ms

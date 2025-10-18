@@ -4,6 +4,11 @@ import { USER_ROLES } from '../../../enums/user';
 import { ManuallyWinnerContestController } from './manuallyWinnerContest.controller';
 const router = express.Router();
 
+router.get(
+    '/pending',
+    auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), // Adjust based on your auth middleware
+    ManuallyWinnerContestController.getPendingContests
+);
 router.post(
     '/:contestId/determine-winners',
     auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN),

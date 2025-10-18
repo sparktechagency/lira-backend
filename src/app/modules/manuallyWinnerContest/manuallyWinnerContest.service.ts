@@ -211,5 +211,37 @@ const getPendingContests = async (query: Record<string, unknown>) => {
         result: contestsWithStats
     };
 }
+const resetContestResults = async (contestId: string, confirmReset: boolean) => {
+    if (!confirmReset) {
+        throw new AppError(
+            StatusCodes.BAD_REQUEST,
+            'Please confirm reset by sending confirmReset: true'
+        );
+    }
 
-export const ManuallyWinnerService = { determineContestWinners, getContestResults, getPendingContests }
+    const contest = await Contest.findById(contestId);
+
+    if (!contest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    // Reset contest results
+    contest.results.actualValue = undefined;
+    contest.results.winningPredictions = [];
+    contest.results.prizeDistributed = false;
+    contest.results.endedAt = null;
+    contest.status = 'Active';
+    await contest.save();
+
+    // Reset all order statuses back to 'complete'
+    await Order.updateMany(
+        {
+            contestId: contest._id,
+            status: { $in: ['won', 'lost'] }
+        },
+        {
+            $set: { status: 'complete' }
+        }
+    );
+}
+export const ManuallyWinnerService = { determineContestWinners, getContestResults, getPendingContests, resetContestResults }

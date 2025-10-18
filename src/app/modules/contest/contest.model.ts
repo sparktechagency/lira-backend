@@ -239,7 +239,7 @@ const ContestSchema = new Schema<IContest>({
         required: false
     },
     results: {
-        actualValue: { type: Number },
+        actualValue: { type: Number, default: undefined },
         winningPredictions: [{
             type: Schema.Types.ObjectId,
             ref: 'ContestEntry'

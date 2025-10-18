@@ -104,10 +104,10 @@ export interface IContest extends Document {
     popularity: number;
     metadata?: IContestMetadata;
     results: {
-        actualValue: number;
+        actualValue: number | undefined;
         winningPredictions: Types.ObjectId[];
         prizeDistributed: boolean;
-        endedAt: Date;
+        endedAt: Date | null;
     };
 
     // Instance methods

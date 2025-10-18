@@ -35,7 +35,7 @@ const getPendingContests = catchAsync(async (req, res) => {
 })
 const resetContestResults = catchAsync(async (req, res) => {
     const { contestId } = req.params;
-    const { confirmReset } = req.body;
+    const confirmReset = true;
     const result = await ManuallyWinnerService.resetContestResults(contestId, confirmReset);
     sendResponse(res, {
         success: true,

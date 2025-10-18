@@ -19,4 +19,10 @@ router.get(
     auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN), // Adjust based on your auth middleware
     ManuallyWinnerContestController.getContestResults
 );
+router.delete(
+    '/:contestId/reset-results',
+    auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN),
+    ManuallyWinnerContestController.resetContestResults
+);
+
 export const ManuallyWinnerContestRoutes = router;

@@ -242,7 +242,7 @@ const ContestSchema = new Schema<IContest>({
         actualValue: { type: Number, default: undefined },
         winningPredictions: [{
             type: Schema.Types.ObjectId,
-            ref: 'ContestEntry'
+            ref: 'Order'
         }],
         prizeDistributed: {
             type: Boolean,

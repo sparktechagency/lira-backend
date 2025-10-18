@@ -84,20 +84,16 @@ const processContestWinners = async (contest: any) => {
      contest.results.winningPredictions = winnersData.winningOrderIds;
      contest.results.prizeDistributed = true;
      contest.results.endedAt = new Date();
-     contest.status = 'Done';
+     contest.status = 'Completed';
      await contest.save();
 
      // 5. Update all orders with win/loss status
-     await updateOrderStatuses(contestOrders, winnersData.winningOrderIds);
+     await updateOrderStatuses(contestOrders, winnersData.winningOrderIds, winnersData.winners);
 
      // 6. Distribute prizes (if implemented)
      if (winnersData.winners.length > 0) {
           await distributePrizes(contest, winnersData.winners);
      }
-
-     console.log(`✅ Contest ${contest._id} processed successfully`);
-     console.log(`🏆 Winners: ${winnersData.winners.length}`);
-     console.log(`📉 Losers: ${contestOrders.length - winnersData.winners.length}`);
 };
 
 /**
@@ -178,18 +174,20 @@ const calculateWinners = (orders: any[], actualValue: number, contest: any) => {
 /**
  * Update order statuses based on win/loss
  */
-const updateOrderStatuses = async (orders: any[], winningOrderIds: any[]) => {
-     const winningIds = winningOrderIds.map(id => id.toString());
+const updateOrderStatuses = async (orders: any[], winningOrderIds: any[], winners: any[]) => {
+     // const winningIds = winningOrderIds.map(id => id.toString());
      for (const order of orders) {
-          const isWinner = winningIds.includes(order._id.toString());
+          // const user = await User.findById(order.userId);
+          // const isWinner = winningIds.includes(order._id.toString());
+            const isWinner = winningOrderIds.some(id => id.equals(order._id));
           order.status = isWinner ? 'won' : 'lost';
           order.result = {
-               place: isWinner ? winner.place : null,
-               predictionValue: winner.predictionValue,
-               actualValue: actualValue,
-               difference: winner.difference,
-               prizeAmount: winner.prizeAmount,
-               percentage: winner.percentage
+               place: isWinner ? winners.find(w => w.orderId === order._id).place : null,
+               predictionValue: isWinner ? winners.find(w => w.orderId === order._id).predictionValue : 0,
+               actualValue: isWinner ? winners.find(w => w.orderId === order._id).actualValue : 0,
+               difference: isWinner ? winners.find(w => w.orderId === order._id).difference : 0,
+               prizeAmount: isWinner ? winners.find(w => w.orderId === order._id).prizeAmount : 0,
+               percentage: isWinner ? winners.find(w => w.orderId === order._id).percentage : 0
           }
           await order.save();
      }

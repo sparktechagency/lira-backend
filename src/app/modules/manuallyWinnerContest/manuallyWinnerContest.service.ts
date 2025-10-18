@@ -3,7 +3,7 @@ import AppError from "../../../errors/AppError";
 import { Contest } from "../contest/contest.model";
 import { contestResultService } from "../result/result.service";
 import { Order } from "../order/order.model";
-import { calculateWinners, updateOrderStatuses } from "./manuallyWinnerContest.helpers";
+import { calculatePrizeForPlace, calculateWinners, updateOrderStatuses } from "./manuallyWinnerContest.helpers";
 
 const determineContestWinners = async (contestId: string, actualValue: number) => {
     const contest = await Contest.findById(contestId);
@@ -107,4 +107,71 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
     return data;
 
 }
-export const ManuallyWinnerService = { determineContestWinners }
+const getContestResults = async (contestId: string) => {
+    const contest = await Contest.findById(contestId)
+        .populate('results.winningPredictions');
+
+    if (!contest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    if (!contest.results.prizeDistributed) {
+        throw new AppError(
+            StatusCodes.BAD_REQUEST,
+            'Winners have not been determined yet for this contest'
+        );
+    }
+
+    // Get winning orders with user details
+    const winningOrders = await Order.find({
+        _id: { $in: contest.results.winningPredictions }
+    }).populate('userId', 'name email');
+
+    // Get all entries for statistics
+    const allOrders = await Order.find({
+        contestId: contest._id,
+        isDeleted: false
+    });
+
+    const totalEntries = allOrders.length;
+    const wonEntries = allOrders.filter(o => o.status === 'won').length;
+    const lostEntries = allOrders.filter(o => o.status === 'lost').length;
+    const data = {
+        contest: {
+            id: contest._id,
+            name: contest.name,
+            category: contest.category,
+            actualValue: contest.results.actualValue,
+            endedAt: contest.results.endedAt,
+            prizePool: contest.prize.prizePool
+        },
+        statistics: {
+            totalEntries,
+            wonEntries,
+            lostEntries,
+            totalWinners: winningOrders.length
+        },
+        winners: winningOrders.map((order, index) => {
+            const prediction = [...(order.predictions || []), ...(order.customPrediction || [])]
+                .find(p => Math.abs(p.predictionValue - contest.results.actualValue!) ===
+                    Math.min(...[...(order.predictions || []), ...(order.customPrediction || [])]
+                        .map(p => Math.abs(p.predictionValue - contest.results.actualValue!))));
+
+            return {
+                place: index + 1,
+                orderId: order._id,
+                userId: order.userId._id,
+                userName: (order.userId as any).name,
+                userEmail: (order.userId as any).email,
+                predictionValue: prediction?.predictionValue,
+                actualValue: contest.results.actualValue,
+                difference: Math.abs((prediction?.predictionValue ?? 0) - contest.results.actualValue!),
+                prizeAmount: calculatePrizeForPlace(contest, index + 1)
+            };
+        })
+    }
+
+    return data;
+
+}
+export const ManuallyWinnerService = { determineContestWinners, getContestResults }

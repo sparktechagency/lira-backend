@@ -14,4 +14,14 @@ const determineContestWinners = catchAsync(async (req, res) => {
         data: result
     });
 })
-export const ManuallyWinnerContestController = { determineContestWinners }
+const getContestResults = catchAsync(async (req, res) => {
+    const { contestId } = req.params;
+    const result = await ManuallyWinnerService.getContestResults(contestId);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest results retrieved successfully',
+        data: result
+    });
+})
+export const ManuallyWinnerContestController = { determineContestWinners, getContestResults }

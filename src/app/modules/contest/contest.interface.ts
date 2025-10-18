@@ -97,13 +97,13 @@ export interface IContest extends Document {
     endTime: Date;
     image?: string;
     endOffsetTime: Date;
-    status: 'Draft' | 'Published' | 'Active' | 'Deleted';
+    status: 'Draft' | 'Published' | 'Active' | 'Deleted' | 'Completed';
     totalEntries: number;
     maxEntries?: number;
     createdBy?: Types.ObjectId;
     popularity: number;
     metadata?: IContestMetadata;
-    results?: {
+    results: {
         actualValue: number;
         winningPredictions: Types.ObjectId[];
         prizeDistributed: boolean;

@@ -221,7 +221,7 @@ const finalizeContestWithNoEntries = async (contest: any, actualValue: number) =
     contest.results.winningPredictions = [];
     contest.results.prizeDistributed = true;
     contest.results.endedAt = new Date();
-    contest.status = 'Done';
+    contest.status = 'Completed';
     await contest.save();
     
     console.log(`✅ Contest ${contest._id} finalized with no entries`);

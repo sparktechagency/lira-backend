@@ -2,6 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
 import { Contest } from "../contest/contest.model";
 import { contestResultService } from "../result/result.service";
+import { Order } from "../order/order.model";
 
 const determineContestWinners = async (contestId: string, actualValue: number) => {
     const contest = await Contest.findById(contestId);
@@ -33,6 +34,29 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
         }
 
         finalActualValue = fetchedValue;
+    }
+    // Get all valid orders for this contest
+    const contestOrders = await Order.find({
+        contestId: contest._id,
+        status: { $nin: ['cancelled'] },
+        isDeleted: false
+    }).populate('userId', 'name email');
+
+    if (contestOrders.length === 0) {
+        // No entries - just finalize the contest
+        contest.results.actualValue = actualValue;
+        contest.results.winningPredictions = [];
+        contest.results.prizeDistributed = true;
+        contest.results.endedAt = new Date();
+        contest.status = 'Completed';
+        await contest.save();
+
+        return {
+            contestId: contest._id,
+            actualValue: finalActualValue,
+            totalEntries: 0,
+            winners: []
+        }
     }
 
 }

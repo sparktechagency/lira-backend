@@ -1,3 +1,0 @@
-Tue Oct 14 2025 18:23:56 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/categories/68dd0308cf3c6e7dd5f695b2 400 - 7.595 ms
-Tue Oct 14 2025 18:24:28 [SERVER-NAME] error: 10.10.7.14 - PATCH /api/v1/categories/68dd0308cf3c6e7dd5f695b2 400 - 5.119 ms
-Tue Oct 14 2025 18:26:59 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/categories/create 400 - 59.903 ms

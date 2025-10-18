@@ -20,6 +20,7 @@ export interface IProductOrder extends Document {
      email: string;
      totalAmount: number;
      state: US_STATES;
+     endTime: Date;
      status: 'pending' | 'processing' | 'shipping' | 'completed' | 'cancelled' | 'won' | 'lost';
      paymentId?: Types.ObjectId;
      isDeleted: boolean;

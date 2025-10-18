@@ -183,6 +183,7 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
           predictions: orderedPredictions,
           customPrediction: orderedCustomPredictions,
           totalAmount,
+          endTime: contest.endTime,
           state: user.state || 'N/A',
           status: 'pending',
      });

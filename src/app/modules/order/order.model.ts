@@ -83,7 +83,10 @@ const orderSchema = new Schema<IProductOrder>(
                type: String,
                enum: US_STATES_ARRAY as unknown as string[],
           },
-
+          endTime: {
+               type: Date,
+               default: Date.now,
+          },
           status: {
                type: String,
                enum: ['pending', 'processing', 'shipping', 'delivered', 'complete', 'cancelled', 'won', 'lost'],

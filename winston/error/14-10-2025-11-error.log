@@ -1,9 +1,0 @@
-Tue Oct 14 2025 11:6:0 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=Latest&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 229.778 ms
-Tue Oct 14 2025 11:6:6 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=Latest&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 4.181 ms
-Tue Oct 14 2025 11:6:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=Latest&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 3.489 ms
-Tue Oct 14 2025 11:6:13 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=Latest&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 3.873 ms
-Tue Oct 14 2025 11:6:14 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=Latest&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 3.442 ms
-Tue Oct 14 2025 11:7:20 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 3.671 ms
-Tue Oct 14 2025 11:7:27 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=null&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 4.235 ms
-Tue Oct 14 2025 11:7:32 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=&sort=null&prizeType=All&minPrice=null&maxPrice=null&minEntryPrice=null&maxEntryPrice=null 400 - 2.771 ms
-Tue Oct 14 2025 11:58:37 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/sports/data 400 - 196.178 ms

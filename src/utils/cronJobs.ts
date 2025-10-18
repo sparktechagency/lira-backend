@@ -12,7 +12,6 @@ import { contestResultService } from '../app/modules/result/result.service';
 const determineContestWinners = async () => {
     try {
         console.log('🏆 Checking for contests that need winner determination...');
-        
         // Find all contests that:
         // 1. Have status 'Active'
         // 2. Have ended (endTime <= now)

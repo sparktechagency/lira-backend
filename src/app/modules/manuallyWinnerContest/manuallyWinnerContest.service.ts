@@ -59,5 +59,29 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
         }
     }
 
+    // Calculate winners
+    const winnersData = calculateWinners(contestOrders, finalActualValue, contest);
+
+    // Update contest with results
+    contest.results.actualValue = finalActualValue;
+    contest.results.winningPredictions = winnersData.winningOrderIds;
+    contest.results.prizeDistributed = true;
+    contest.results.endedAt = new Date();
+    contest.status = 'Completed';
+    await contest.save();
+
+    // Update order statuses
+    await updateOrderStatuses(contestOrders, winnersData.winningOrderIds);
+
+    // Log winner information
+    console.log(`✅ Winners determined for contest: ${contest.name}`);
+    winnersData.winners.forEach(winner => {
+        console.log(
+            `   🏆 Place ${winner.place}: ${winner.userId.name} - ` +
+            `Predicted: ${winner.predictionValue}, Actual: ${winner.actualValue}, ` +
+            `Difference: ${winner.difference}, Prize: ${winner.prizeAmount}`
+        );
+    });
+
 }
 export const ManuallyWinnerService = { determineContestWinners }

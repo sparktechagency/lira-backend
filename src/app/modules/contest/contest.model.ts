@@ -64,6 +64,20 @@ const tierSchema = new Schema<IPredictionTier>(
         }
     }
 )
+const ContestMetadataSchema = new Schema({
+    cryptoId: { type: String },
+    stockSymbol: { type: String },
+    playerId: { type: String },
+    gameId: { type: String },
+    league: { type: String },
+    statType: { type: String },
+    economicSeries: { type: String },
+    movieId: { type: String },
+    videoId: { type: String },
+    metricType: { type: String },
+    dataSource: { type: String },
+    resultUnit: { type: String }
+}, { _id: false });
 const ContestSchema = new Schema<IContest>({
     name: {
         type: String,
@@ -219,6 +233,10 @@ const ContestSchema = new Schema<IContest>({
         type: Number,
         default: 0,
         min: [0, 'Popularity cannot be negative']
+    },
+    metadata: {
+        type: ContestMetadataSchema,
+        required: false
     },
     results: {
         actualValue: { type: Number },

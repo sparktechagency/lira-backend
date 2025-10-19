@@ -1,6 +1,0 @@
-Sat Oct 18 2025 15:9:31 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/manually-winner-contest/pending 400 - 212.408 ms
-Sat Oct 18 2025 15:9:51 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/manually-winner-contest/pending 403 - 173.317 ms
-Sat Oct 18 2025 15:10:0 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/manually-winner-contest/pending 403 - 3.564 ms
-Sat Oct 18 2025 15:43:27 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/68f361173ffb9bc4f6df8e64/publish 400 - 194.351 ms
-Sat Oct 18 2025 15:47:51 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/68f361173ffb9bc4f6df8e64/publish 400 - 647.267 ms
-Sat Oct 18 2025 15:48:12 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/68f361173ffb9bc4f6df8e64/publish 400 - 321.101 ms

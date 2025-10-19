@@ -1,0 +1,2 @@
+Sun Oct 19 2025 11:20:19 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/help/ 403 - 9.700 ms
+Sun Oct 19 2025 11:20:54 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/help/resolved/68f4750a4b9a6ce7162b1ce5 403 - 6.780 ms

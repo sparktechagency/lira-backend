@@ -44,6 +44,7 @@ const updateHelpResolvedStatus = async (id: string, payload: { status: string, r
     if (!message) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Help not found');
     }
+    message.reply = payload.reply || '';
     await message.save();
     // Prepare the email template
     const data = {

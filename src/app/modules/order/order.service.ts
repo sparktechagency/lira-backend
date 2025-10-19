@@ -631,7 +631,7 @@ const getWinnerOrders = async (userId: string, query: Record<string, unknown>) =
           userId: new Types.ObjectId(userId as string),
           isDeleted: false,
           status: { $nin: ['pending', 'processing', 'cancelled', 'shipping', 'delivered'] },
-     }).select('userId contestId result contestName endTime status'), query)
+     }).select('userId contestId result contestName endTime status predictions'), query)
 
      const result = await queryBuilder.fields().filter().sort().modelQuery.exec();
      const meta = await queryBuilder.countTotal();
@@ -652,16 +652,27 @@ const getPastOrderAnalysis = async (userId: string) => {
           },
           {
                $group: {
-                    _id: null, 
-                    totalEntries: { $sum: { $size: { $ifNull: ['$predictions', []] } } }, 
-                    totalWin: { $sum: { $cond: [{ $eq: ['$status', 'won'] }, { $ifNull: ['$result.prizeAmount', 0] }, 0] } }, 
+                    _id: null,
+                    totalEntries: { $sum: { $size: { $ifNull: ['$predictions', []] } } },
+                    totalWin: { $sum: { $cond: [{ $eq: ['$status', 'won'] }, { $ifNull: ['$result.prizeAmount', 0] }, 0] } },
                },
           },
      ]);
+     const totalWon = await Order.countDocuments({
+          userId: new Types.ObjectId(userId),
+          isDeleted: false,
+          status: 'won',
+     });
+     const totalCon = await Order.distinct('contestId', {
+          userId: new Types.ObjectId(userId),
+          isDeleted: false
+     })
+
+     const totalContest = totalCon.length
 
      const { totalEntries, totalWin } = aggregationResult[0] || { totalEntries: 0, totalWin: 0 };
 
-     return { totalEntries, totalWin };
+     return { totalEntries, totalWin, totalWon, totalContest };
 };
 
 export const OrderService = {

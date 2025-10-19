@@ -631,6 +631,9 @@ const getWinnerOrders = async (userId: string, query: Record<string, unknown>) =
           userId: new Types.ObjectId(userId as string),
           isDeleted: false,
           status: { $nin: ['pending', 'processing', 'cancelled', 'shipping', 'delivered'] },
+     }).populate({
+          path: 'contestId',
+          select: 'contestName prize.prizePool',
      }).select('userId contestId result contestName endTime status predictions'), query)
 
      const result = await queryBuilder.fields().filter().sort().modelQuery.exec();

@@ -1,0 +1,5 @@
+Sun Oct 19 2025 13:0:8 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 10.360 ms
+Sun Oct 19 2025 13:0:11 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 4.565 ms
+Sun Oct 19 2025 13:2:45 [SERVER-NAME] error: 10.10.7.47 - PATCH /api/v1/contest/68f48810ceb3bc3617514bc3/publish 500 - 8.550 ms
+Sun Oct 19 2025 13:2:50 [SERVER-NAME] error: 10.10.7.47 - PATCH /api/v1/contest/68f48810ceb3bc3617514bc3/publish 500 - 8.356 ms
+Sun Oct 19 2025 13:7:11 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 76.000 ms

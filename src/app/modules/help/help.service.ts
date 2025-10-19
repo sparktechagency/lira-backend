@@ -3,6 +3,7 @@ import { Help } from './help.interface';
 import QueryBuilder from '../../builder/QueryBuilder';
 import AppError from '../../../errors/AppError';
 import { StatusCodes } from 'http-status-codes';
+import { emailHelper } from '../../../helpers/emailHelper';
 
 const createHelp = async (payload: Help) => {
     const result = await HelpModel.create(payload);
@@ -32,7 +33,35 @@ const getSingleHelpFromDb = async (id: string) => {
     }
     return result;
 };
-const updateHelpResolvedStatus = async (id: string, payload: { status: string }) => {
+const updateHelpResolvedStatus = async (id: string, payload: { status: string, reply?: string }) => {
+
+    const message = await HelpModel.findById(id)
+        .populate({
+            path: 'userId',
+            select: 'name contact'
+        });
+    if (!message) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Help not found');
+    }
+    await message.save();
+    // Prepare the email template
+    // const emailData = replyMessageTemplate({
+    //     email: message.email,
+    //     name: (message.userId as any).name,
+    //     subject: 'Reply to your message',
+    //     message: payload.reply || '',
+    // });
+
+    // Send email
+    // try {
+    //     await emailHelper.sendEmail(emailData);
+    //     console.log(`Reply email sent to ${message.email}`);
+    // } catch (err) {
+    //     console.error('Failed to send reply email:', err);
+    //     // Optional: Decide if you want to fail the API or just log
+    //     throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, 'Failed to send reply email');
+    // }
+
     const result = await HelpModel.findByIdAndUpdate(id, payload, { new: true });
     if (!result) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Help not found');

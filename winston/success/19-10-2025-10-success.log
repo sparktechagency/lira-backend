@@ -275,3 +275,9 @@ Sun Oct 19 2025 10:34:11 [SERVER-NAME] info: [32mConfig validation successful.
 Sun Oct 19 2025 10:34:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Sun Oct 19 2025 10:34:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Sun Oct 19 2025 10:34:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Sun Oct 19 2025 10:53:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-order-analysis 200 - 303.206 ms
+Sun Oct 19 2025 10:55:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 230.779 ms
+Sun Oct 19 2025 10:55:41 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 145.191 ms
+Sun Oct 19 2025 10:55:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-orders?limit=3&page=async%20()=%3E{%20%20%20%20const%20pastContestsRes%20=%20await%20(0,_helpers_apiRequest__WEBPACK_IMPORTED_MODULE_2__.apiRequest)(`/orders/past-orders?limit=3&page=${page}`,%20{%20%20%20%20%20%20%20%20method:%20%22GET%22,%20%20%20%20%20%20%20%20cache:%20%22no-store%22%20%20%20%20});%20%20%20%20const%20{%20data:%20pastAnalytics%20}%20=%20await%20(0,_helpers_apiRequest__WEBPACK_IMPORTED_MODULE_2__.apiRequest)(`/orders/past-order-analysis`,%20{%20%20%20%20%20%20%20%20method:%20%22GET%22%20%20%20%20});%20%20%20%20console.log(pastAnalytics,%20pastContestsRes);%20%20%20%20return%20/* 200 - 10.412 ms
+Sun Oct 19 2025 10:57:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 30.208 ms
+Sun Oct 19 2025 10:57:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 29.155 ms

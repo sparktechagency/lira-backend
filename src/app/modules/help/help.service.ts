@@ -57,7 +57,7 @@ const updateHelpResolvedStatus = async (id: string, payload: { status: string, r
     try {
         await emailHelper.sendEmail(emailData);
         console.log(`Reply email sent to ${message.email}`);
-    } catch (err) {
+    } catch (err: any) {
         console.error('Failed to send reply email:', err);
         // Optional: Decide if you want to fail the API or just log
         throw new AppError(StatusCodes.INTERNAL_SERVER_ERROR, 'Failed to send reply email');

@@ -19,6 +19,11 @@ export interface IHelpContact {
      read: boolean;
      message: string;
 }
+export interface IHelpReplay {
+     name: string;
+     email: string;
+     message: string;
+}
 export type IContact = {
      name: string;
      email: string;

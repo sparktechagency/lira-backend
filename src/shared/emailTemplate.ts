@@ -1,4 +1,4 @@
-import { IContact, ICreateAccount, IHelpContact, IResetPassword, IResetPasswordByEmail } from '../types/emailTemplate';
+import { IContact, ICreateAccount, IHelpContact, IHelpReplay, IResetPassword, IResetPasswordByEmail } from '../types/emailTemplate';
 
 const createAccount = (values: ICreateAccount) => {
     const data = {
@@ -115,7 +115,7 @@ const contactFormTemplate = (values: IHelpContact) => {
     };
     return data;
 };
-const helpReplyTemplate = (values: IHelpContact, adminMessage: string) => {
+const helpReplyTemplate = (values: IHelpReplay, adminMessage: string) => {
   const data = {
     to: values.email,
     subject: 'Response to Your Help Request',

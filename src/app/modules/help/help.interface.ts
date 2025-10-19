@@ -4,6 +4,6 @@ export interface Help {
     userId: Types.ObjectId;
     email: string;
     reply: string;
-    description: string;
+    message: string;
     status: 'pending' | 'resolved';
 }

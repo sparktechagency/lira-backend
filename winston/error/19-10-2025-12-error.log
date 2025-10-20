@@ -1,8 +1,0 @@
-Sun Oct 19 2025 12:4:1 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-order 404 - 10.370 ms
-Sun Oct 19 2025 12:11:30 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.986 ms
-Sun Oct 19 2025 12:17:0 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-order 404 - 19.886 ms
-Sun Oct 19 2025 12:17:1 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-order 404 - 3.625 ms
-Sun Oct 19 2025 12:21:32 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-order 404 - 6.512 ms
-Sun Oct 19 2025 12:47:23 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 13.751 ms
-Sun Oct 19 2025 12:51:17 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 6.297 ms
-Sun Oct 19 2025 12:51:20 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.438 ms

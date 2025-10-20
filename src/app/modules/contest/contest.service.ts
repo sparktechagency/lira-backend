@@ -327,6 +327,8 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         .lean()
         .exec();
 
+        
+
     const meta = await queryBuilder.countTotal();
 
     return {

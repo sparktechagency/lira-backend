@@ -17,7 +17,10 @@ const getAllHelpsDataFromDb = async (query: Record<string, unknown>) => {
         .sort()
         .paginate()
         .fields()
-        .modelQuery
+        .modelQuery.populate({
+            path: 'userId',
+            select: 'name email'
+        })
         .exec();
 
     const meta = await queryBuilder.countTotal();

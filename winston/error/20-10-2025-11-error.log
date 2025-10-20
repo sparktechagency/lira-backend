@@ -1,0 +1,12 @@
+Mon Oct 20 2025 11:2:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 1.917 ms
+Mon Oct 20 2025 11:2:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 2.900 ms
+Mon Oct 20 2025 11:2:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 3.255 ms
+Mon Oct 20 2025 11:2:17 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 0.408 ms
+Mon Oct 20 2025 11:2:20 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 0.422 ms
+Mon Oct 20 2025 11:2:25 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 0.427 ms
+Mon Oct 20 2025 11:12:46 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 0.438 ms
+Mon Oct 20 2025 11:12:47 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/market/live-price/Bitcoin 404 - 0.438 ms
+Mon Oct 20 2025 11:45:39 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=7 400 - 591.788 ms
+Mon Oct 20 2025 11:45:46 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=7 400 - 273.580 ms
+Mon Oct 20 2025 11:45:46 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=7 400 - 265.087 ms
+Mon Oct 20 2025 11:48:30 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=7 400 - 572.871 ms

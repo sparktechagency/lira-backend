@@ -1,0 +1,13 @@
+Mon Oct 20 2025 14:39:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 13.519 ms
+Mon Oct 20 2025 14:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=30 200 - 5972.448 ms
+Mon Oct 20 2025 14:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1760943054838.jpg 200 - 1.383 ms
+Mon Oct 20 2025 14:39:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f5dbcf3e9929e57d163b04/tiers/68f5dbcf3e9929e57d163b05 200 - 6.744 ms
+Mon Oct 20 2025 14:39:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f5dbcf3e9929e57d163b04/tiers/68f5dbcf3e9929e57d163b05 200 - 4.317 ms
+Mon Oct 20 2025 14:45:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.071 ms
+Mon Oct 20 2025 14:45:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=30 200 - 1572.353 ms
+Mon Oct 20 2025 14:45:37 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1760943054838.jpg 200 - 0.814 ms
+Mon Oct 20 2025 14:50:34 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 9.296 ms
+Mon Oct 20 2025 14:50:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=30 200 - 466.422 ms
+Mon Oct 20 2025 14:50:35 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1760943054838.jpg 200 - 1.361 ms
+Mon Oct 20 2025 14:50:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f5dbcf3e9929e57d163b04/tiers/68f5dbcf3e9929e57d163b05 200 - 6.557 ms
+Mon Oct 20 2025 14:50:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f5dbcf3e9929e57d163b04/tiers/68f5dbcf3e9929e57d163b05 200 - 4.405 ms

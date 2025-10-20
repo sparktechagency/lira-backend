@@ -1,0 +1,13 @@
+Mon Oct 20 2025 13:13:44 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=30 400 - 36.104 ms
+Mon Oct 20 2025 13:13:49 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=30 400 - 10.231 ms
+Mon Oct 20 2025 13:13:58 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=30 400 - 12.982 ms
+Mon Oct 20 2025 13:14:38 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=30 400 - 16.167 ms
+Mon Oct 20 2025 13:18:14 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.200 ms
+Mon Oct 20 2025 13:29:35 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 7.806 ms
+Mon Oct 20 2025 13:29:52 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 14.180 ms
+Mon Oct 20 2025 13:29:55 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 10.638 ms
+Mon Oct 20 2025 13:29:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 12.285 ms
+Mon Oct 20 2025 13:29:57 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 7.316 ms
+Mon Oct 20 2025 13:29:58 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 7.794 ms
+Mon Oct 20 2025 13:29:59 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 11.648 ms
+Mon Oct 20 2025 13:30:0 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 9.908 ms

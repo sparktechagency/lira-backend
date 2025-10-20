@@ -1,4 +1,4 @@
-import path from 'path';
+
 import { ISettings } from './settings.interface';
 import Settings from './settings.model';
 import { StatusCodes } from 'http-status-codes';
@@ -19,63 +19,29 @@ const upsertSettings = async (data: Partial<ISettings>): Promise<ISettings> => {
           return newSettings;
      }
 };
-const getSettings = async (title: string) => {
-     const settings: any = await Settings.findOne().select(title);
-     if (title && settings[title]) {
-          return settings[title];
-     }
-     return settings;
-};
-
-const getTermsOfService = async () => {
+const getSettings = async (key: string) => {
      const settings: any = await Settings.findOne();
-     if (!settings) {
+     if (key) {
+          if (settings[key] !== undefined) {
+               return settings[key];
+          }
           return '';
      }
-     return settings.termsOfService;
-};
-const getSupport = async () => {
-     const settings: any = await Settings.findOne();
-
-     if (!settings) {
-          return '';
-     }
-     return settings.support;
-};
-const getPrivacyPolicy = async () => {
-     const settings: any = await Settings.findOne();
-
-     if (!settings) {
-          return '';
-     }
-     return settings.privacyPolicy;
-};
-const getAboutUs = async () => {
-     const settings: any = await Settings.findOne();
-
-     if (!settings) {
-          return '';
-     }
-     return settings.aboutUs;
+     return settings || {};
 };
 
 // const getPrivacyPolicy = async () => {
 //   return path.join(__dirname, '..', 'htmlResponse', 'privacyPolicy.html');
 // };
 
-const getAccountDelete = async () => {
-     return path.join(__dirname, '..', 'htmlResponse', 'accountDelete.html');
-};
+// const getAccountDelete = async () => {
+//      return path.join(__dirname, '..', 'htmlResponse', 'accountDelete.html');
+// };
 
 // const getSupport = async () => {
 //   return path.join(__dirname, '..', 'htmlResponse', 'support.html');
 // };
 export const settingsService = {
      upsertSettings,
-     getSettings,
-     getPrivacyPolicy,
-     getAccountDelete,
-     getSupport,
-     getTermsOfService,
-     getAboutUs,
+     getSettings
 };

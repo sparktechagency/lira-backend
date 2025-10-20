@@ -22,9 +22,11 @@ const deleteFaqToDB = async (id: string): Promise<IFaq | undefined> => {
      if (!mongoose.Types.ObjectId.isValid(id)) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Invalid ID');
      }
-
-     await Faq.findByIdAndDelete(id);
-     return;
+     const faq = await Faq.findByIdAndDelete(id);
+     if (!faq) {
+          throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to deleted Faq');
+     }
+     return faq;
 };
 
 const updateFaqToDB = async (id: string, payload: IFaq): Promise<IFaq> => {

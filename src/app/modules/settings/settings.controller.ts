@@ -14,7 +14,7 @@ const addSetting = catchAsync(async (req, res) => {
 });
 
 const getSettings = catchAsync(async (req, res): Promise<void> => {
-     const result = await settingsService.getSettings(req.query.title as string);
+     const result = await settingsService.getSettings(req.query.key as string);
      sendResponse(res, {
           statusCode: StatusCodes.OK,
           success: true,
@@ -22,58 +22,7 @@ const getSettings = catchAsync(async (req, res): Promise<void> => {
           data: result,
      });
 });
-
-const getPrivacyPolicy = catchAsync(async (req, res): Promise<void> => {
-     const result = await settingsService.getPrivacyPolicy();
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'Privacy retrieved successfully',
-          data: result,
-     });
-});
-const getTermsOfService = catchAsync(async (req, res): Promise<void> => {
-     const result = await settingsService.getTermsOfService();
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'TermsOfService retrieved successfully',
-          data: result,
-     });
-});
-const getSupport = catchAsync(async (req, res): Promise<void> => {
-     const result = await settingsService.getSupport();
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'Support retrieved successfully',
-          data: result,
-     });
-});
-const getAboutUs = catchAsync(async (req, res): Promise<void> => {
-     const result = await settingsService.getAboutUs();
-     sendResponse(res, {
-          statusCode: StatusCodes.OK,
-          success: true,
-          message: 'AboutUs retrieved successfully',
-          data: result,
-     });
-});
-
-// const getAccountDelete = catchAsync(async (req, res): Promise<void> => {
-//   const htmlContent = await settingsService.getAccountDelete();
-//   res.sendFile(htmlContent);
-// });
-
-// const getSupport = catchAsync(async (req, res): Promise<void> => {
-//   const htmlContent = await settingsService.getSupport();
-//   res.sendFile(htmlContent);
-// });
 export const settingsController = {
-     getSettings,
-     getPrivacyPolicy,
-     getAboutUs,
-     getSupport,
      addSetting,
-     getTermsOfService,
+     getSettings
 };

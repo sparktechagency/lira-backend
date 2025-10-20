@@ -1,8 +1,0 @@
-Sun Oct 19 2025 15:42:32 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 15.399 ms
-Sun Oct 19 2025 15:42:32 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 99.993 ms
-Sun Oct 19 2025 15:42:32 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.109 ms
-Sun Oct 19 2025 15:42:32 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 83.497 ms
-Sun Oct 19 2025 15:42:56 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/user-managements/?page=1 204 - 0.165 ms
-Sun Oct 19 2025 15:42:56 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/user-managements/?page=1 304 - 67.432 ms
-Sun Oct 19 2025 15:59:7 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/user-managements/?page=2 204 - 4.057 ms
-Sun Oct 19 2025 15:59:7 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/user-managements/?page=2 200 - 166.629 ms

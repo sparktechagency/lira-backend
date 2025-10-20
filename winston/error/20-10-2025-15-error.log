@@ -1,0 +1,4 @@
+Mon Oct 20 2025 15:45:5 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/api/v1/contest/stock/history?symbol 404 - 11.565 ms
+Mon Oct 20 2025 15:45:33 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/api/v1/contest/stock/history?symbol=AAPL 404 - 1.043 ms
+Mon Oct 20 2025 15:49:20 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/api/v1/contest/active/list 404 - 1.331 ms
+Mon Oct 20 2025 15:49:25 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/api/v1/contest/active/list?categoryId=68d261404434ddde1b823024 404 - 0.497 ms

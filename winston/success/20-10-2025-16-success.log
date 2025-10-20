@@ -214,3 +214,15 @@ Mon Oct 20 2025 16:55:29 [SERVER-NAME] info: [32mConfig validation successful.
 Mon Oct 20 2025 16:55:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Mon Oct 20 2025 16:55:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Mon Oct 20 2025 16:55:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 20 2025 16:57:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 20 2025 16:57:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 20 2025 16:57:30 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 20 2025 16:57:30 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 20 2025 16:57:48 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 14.569 ms
+Mon Oct 20 2025 16:57:49 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.802 ms
+Mon Oct 20 2025 16:58:0 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/settings 204 - 0.141 ms
+Mon Oct 20 2025 16:58:0 [SERVER-NAME] info: 10.10.7.47 - PUT /api/v1/settings 200 - 30.565 ms
+Mon Oct 20 2025 16:58:0 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.094 ms
+Mon Oct 20 2025 16:58:0 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=termsOfService 200 - 3.700 ms
+Mon Oct 20 2025 16:58:25 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.054 ms
+Mon Oct 20 2025 16:58:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=termsOfService 304 - 2.065 ms

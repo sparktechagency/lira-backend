@@ -677,7 +677,6 @@ const getEntertainmentData = async (query: Record<string, unknown>) => {
             `https://api.themoviedb.org/3/movie/${movieId}`,
             { params: { api_key: config.api.tmdb } }
         );
-
         const rawData = {
             title: response.data.title,
             releaseDate: response.data.release_date,

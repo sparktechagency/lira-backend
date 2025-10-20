@@ -1,0 +1,4 @@
+Mon Oct 20 2025 18:5:15 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.569 ms
+Mon Oct 20 2025 18:5:15 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.071 ms
+Mon Oct 20 2025 18:5:15 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 7.715 ms
+Mon Oct 20 2025 18:5:15 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest?page=1&limit=10 304 - 106.696 ms

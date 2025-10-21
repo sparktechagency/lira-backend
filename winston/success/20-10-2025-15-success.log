@@ -1,2 +1,0 @@
-Mon Oct 20 2025 15:59:7 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/help/?page=1&limit=10 204 - 1.226 ms
-Mon Oct 20 2025 15:59:7 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/help/?page=1&limit=10 304 - 35.534 ms

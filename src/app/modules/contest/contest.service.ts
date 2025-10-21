@@ -9,7 +9,7 @@ import { USER_ROLES } from "../../../enums/user";
 import { normalizeResponse, resolveCoinId, resolveStockSymbol, validateTierCoverage } from "./contest.utils";
 import axios from "axios";
 import config from "../../../config";
-import { generateMetadataFromCategory } from "./contest.utilis";
+import { generateMetadataFromCategory } from "./contest.helpers";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -102,6 +102,7 @@ const updateContest = async (id: string, payload: Partial<IContest>) => {
             );
         }
     }
+    
 
     const result = await Contest.findByIdAndUpdate(id, payload, {
         new: true,

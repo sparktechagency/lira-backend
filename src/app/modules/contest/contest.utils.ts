@@ -430,3 +430,4 @@ export const validateTierCoverage = (contest: IContest): string[] => {
 
     return warnings;
 };
+

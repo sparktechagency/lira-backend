@@ -6,4 +6,9 @@ export interface ISettings extends Document {
      aboutUs: string;
      support: string;
      termsOfService: string;
+     contactEmail: string;
+     phone: string;
+     address: string;
+     instagram: string;
+     linkedin: string;
 }

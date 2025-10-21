@@ -7,7 +7,7 @@ import { AnalyticsFilters } from './dashboard.interface';
 const getAnalytics = async (filters: AnalyticsFilters) => {
     // Build date filter
     const dateFilter = buildDateFilter(filters);
-    
+
     // Build match query for orders
     const orderMatchQuery: any = {
         isDeleted: false,
@@ -70,12 +70,16 @@ const getAnalytics = async (filters: AnalyticsFilters) => {
         topProductsByRevenue,
         entryPriceSensitivity,
         userEngagementAndGrowth: userEngagement,
-        newUsersThisWeek,
-        highActivityUsers,
-        loyaltyAndStreakBehavior: loyaltyMetrics,
-        topUsersBySpend,
-        goldStreakLeaders,
-        coldStreakUsers,
+        userActivity: {
+            newUsersThisWeek,
+            highActivityUsers,
+        },
+        loyaltyMetrics: {
+            loyaltyAndStreakBehavior: loyaltyMetrics,
+            topUsersBySpend,
+            goldStreakLeaders,
+            coldStreakUsers,
+        },
         geographicDistribution,
     };
 };

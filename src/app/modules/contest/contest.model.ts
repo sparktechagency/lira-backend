@@ -90,6 +90,11 @@ const ContestSchema = new Schema<IContest>({
         required: [false, 'Serial number is required'],
         default: 1,
     },
+    group: {
+        type: String,
+        required: [true, 'Group is required'],
+        trim: true
+    },
     category: {
         type: String,
         required: [true, 'Category is required'],

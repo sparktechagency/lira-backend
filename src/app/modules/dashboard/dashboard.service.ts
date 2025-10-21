@@ -1,1 +1,6 @@
-export const DashboardService = {}
+const getAnalytics = async () => {
+
+}
+export const DashboardService = {
+    getAnalytics
+}

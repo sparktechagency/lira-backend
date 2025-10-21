@@ -1,9 +1,0 @@
-Mon Oct 20 2025 9:33:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 2.221 ms
-Mon Oct 20 2025 9:33:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 401 - 2.256 ms
-Mon Oct 20 2025 9:35:23 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 4.512 ms
-Mon Oct 20 2025 9:48:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 5.415 ms
-Mon Oct 20 2025 9:48:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.288 ms
-Mon Oct 20 2025 9:48:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.031 ms
-Mon Oct 20 2025 9:48:46 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 2.941 ms
-Mon Oct 20 2025 9:48:46 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.443 ms
-Mon Oct 20 2025 9:48:47 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.133 ms

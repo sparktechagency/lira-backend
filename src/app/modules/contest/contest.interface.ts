@@ -82,6 +82,7 @@ export interface IContestMetadata {
 export interface IContest extends Document {
     name: string;
     serial: number;
+    group: string;
     category: string;
     categoryId: Types.ObjectId;
     description: string;

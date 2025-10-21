@@ -32,6 +32,7 @@ const createContest = async (payload: Partial<IContest>) => {
         await category.save();
         payload.categoryId = category._id;
         payload.category = category.name;
+        payload.group = category.group;
         payload.metadata = {
             cryptoId: await resolveCoinId(category.name),
             dataSource: "CoinGecko",

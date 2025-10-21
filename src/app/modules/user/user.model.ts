@@ -27,6 +27,10 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                default: '',
           },
+          address: {
+               type: String,
+               default: '',
+          },
           password: {
                type: String,
                required: function () {

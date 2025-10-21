@@ -9,6 +9,7 @@ import { USER_ROLES } from "../../../enums/user";
 import { normalizeResponse, resolveCoinId, resolveStockSymbol, validateTierCoverage } from "./contest.utils";
 import axios from "axios";
 import config from "../../../config";
+import { generateMetadataFromCategory } from "./contest.utilis";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -33,10 +34,9 @@ const createContest = async (payload: Partial<IContest>) => {
         payload.categoryId = category._id;
         payload.category = category.name;
         payload.group = category.group;
-        payload.metadata = {
-            cryptoId: await resolveCoinId(category.name),
-            dataSource: "CoinGecko",
-            resultUnit: "USD"
+        const generatedMetadata = await generateMetadataFromCategory(category, payload.name);
+        if (generatedMetadata) {
+            payload.metadata = generatedMetadata;
         }
     }
     if (payload.pricing?.tiers) {
@@ -50,8 +50,6 @@ const createContest = async (payload: Partial<IContest>) => {
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Contest creation failed');
     }
-
-
     return result;
 };
 const getAllContests = async (query: Record<string, unknown>) => {
@@ -267,7 +265,7 @@ const publishContest = async (id: string) => {
             // Assign generated predictions
             contest.predictions.generatedPredictions = generatedPredictions;
 
-        } catch (error:any) {
+        } catch (error: any) {
             throw new AppError(
                 StatusCodes.INTERNAL_SERVER_ERROR,
                 `Failed to generate predictions: ${error instanceof Error ? error.message : 'Unknown error'}`
@@ -328,7 +326,7 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         .lean()
         .exec();
 
-        
+
 
     const meta = await queryBuilder.countTotal();
 

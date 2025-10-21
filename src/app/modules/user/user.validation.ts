@@ -24,7 +24,7 @@ const createBusinessUserZodSchema = z.object({
 const updateUserZodSchema = z.object({
      body: z.object({
           name: z.string().optional(),
-          contact: z.string().optional(),
+          phone: z.string().optional(),
           address: z.string().optional(),
           email: z.string().email('Invalid email address').optional(),
           password: z.string().optional(),

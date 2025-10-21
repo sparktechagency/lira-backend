@@ -16,6 +16,7 @@ export type IUser = {
      agreeWithTerms?: boolean;
      phone?: string;
      state: string;
+     address?: string;
      authentication?: {
           isResetPassword: boolean;
           oneTimeCode: number;

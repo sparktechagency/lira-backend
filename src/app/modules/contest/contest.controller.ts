@@ -85,7 +85,7 @@ const getActiveContests = catchAsync(async (req, res) => {
         success: true,
         statusCode: StatusCodes.OK,
         message: 'Active contests retrieved successfully',
-        data: result.result,
+        data: result.data,
         meta: result.meta
     });
 });

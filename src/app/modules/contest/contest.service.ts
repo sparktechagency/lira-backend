@@ -102,7 +102,7 @@ const updateContest = async (id: string, payload: Partial<IContest>) => {
             );
         }
     }
-    
+
 
     const result = await Contest.findByIdAndUpdate(id, payload, {
         new: true,
@@ -330,10 +330,35 @@ const getActiveContests = async (query: Record<string, unknown>) => {
 
 
     const meta = await queryBuilder.countTotal();
+    // Get min and max prediction values from all active contests
+    const predictionRange = await Contest.aggregate([
+        { $match: { status: 'Active' } },
+        {
+            $group: {
+                _id: null,
+                minPrize: { $min: "$prize.prizePool" },
+                maxPrize: { $max: "$prize.prizePool" }
+            }
+        }
+    ]);
 
-    return {
-        meta,
+    // Extract the range values (will be empty object if no contests found)
+    const range = predictionRange.length > 0
+        ? {
+            minPrize: predictionRange[0].minPrize,
+            maxPrize: predictionRange[0].maxPrize
+        }
+        : {
+            minPrize: null,
+            maxPrize: null
+        };
+    const data = {
+        range,
         result
+    }
+    return {
+        data,
+        meta
     };
 };
 

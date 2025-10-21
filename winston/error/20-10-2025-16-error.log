@@ -1,2 +1,0 @@
-Mon Oct 20 2025 16:5:36 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 8.825 ms
-Mon Oct 20 2025 16:57:52 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.207 ms

@@ -19,25 +19,27 @@ const settingsSchema = new Schema<ISettings>(
                type: String,
                default: '',
           },
-          contactEmail: {
-               type: String,
-               default: '',
-          },
-          phone: {
-               type: String,
-               default: '',
-          },
-          address: {
-               type: String,
-               default: '',
-          },
-          instagram: {
-               type: String,
-               default: '',
-          },
-          linkedin: {
-               type: String,
-               default: '',
+          social: {
+               contactEmail: {
+                    type: String,
+                    default: '',
+               },
+               phone: {
+                    type: String,
+                    default: '',
+               },
+               address: {
+                    type: String,
+                    default: '',
+               },
+               instagram: {
+                    type: String,
+                    default: '',
+               },
+               linkedin: {
+                    type: String,
+                    default: '',
+               },
           },
      },
      { timestamps: true },

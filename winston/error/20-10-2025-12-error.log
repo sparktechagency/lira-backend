@@ -1,5 +1,0 @@
-Mon Oct 20 2025 12:52:50 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 49.241 ms
-Mon Oct 20 2025 12:52:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=ethereum&days=30 400 - 15.853 ms
-Mon Oct 20 2025 12:58:39 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/help-center/?page=undefined 404 - 0.597 ms
-Mon Oct 20 2025 12:59:19 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/help-center/?page=undefined 404 - 2.799 ms
-Mon Oct 20 2025 12:59:20 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/help-center/?page=undefined 404 - 0.995 ms

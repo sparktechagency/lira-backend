@@ -333,11 +333,14 @@ const getActiveContests = async (query: Record<string, unknown>) => {
     // Get min and max prediction values from all active contests
     const predictionRange = await Contest.aggregate([
         { $match: { status: 'Active' } },
+        { $unwind: { path: "$pricing.tiers", preserveNullAndEmptyArrays: true } },
         {
             $group: {
                 _id: null,
                 minPrize: { $min: "$prize.prizePool" },
-                maxPrize: { $max: "$prize.prizePool" }
+                maxPrize: { $max: "$prize.prizePool" },
+                minPrediction: { $min: "$pricing.tiers.pricePerPrediction" },
+                maxPrediction: { $max: "$pricing.tiers.pricePerPrediction" }
             }
         }
     ]);
@@ -346,11 +349,15 @@ const getActiveContests = async (query: Record<string, unknown>) => {
     const range = predictionRange.length > 0
         ? {
             minPrize: predictionRange[0].minPrize,
-            maxPrize: predictionRange[0].maxPrize
+            maxPrize: predictionRange[0].maxPrize,
+            minPrediction: predictionRange[0].minPrediction,
+            maxPrediction: predictionRange[0].maxPrediction
         }
         : {
             minPrize: null,
-            maxPrize: null
+            maxPrize: null,
+            minPrediction: null,
+            maxPrediction: null
         };
     const data = {
         range,

@@ -82,6 +82,54 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                required: true,
           },
+          // 💳 NEW: Saved Cards for Withdrawal
+          savedCards: [
+               {
+                    cardId: {
+                         type: String,
+                         required: true,
+                    },
+                    last4: {
+                         type: String,
+                         required: true,
+                    },
+                    brand: {
+                         type: String,
+                         required: true,
+                    },
+                    expiryMonth: Number,
+                    expiryYear: Number,
+                    country: String,
+                    funding: String, // debit, credit, prepaid
+                    isDefault: {
+                         type: Boolean,
+                         default: false,
+                    },
+                    addedAt: {
+                         type: Date,
+                         default: Date.now,
+                    },
+               },
+          ],
+          // 💰 Wallet & Transaction History
+          wallet: {
+               balance: {
+                    type: Number,
+                    default: 0,
+               },
+               currency: {
+                    type: String,
+                    default: 'USD',
+               },
+               totalEarned: {
+                    type: Number,
+                    default: 0,
+               },
+               totalWithdrawn: {
+                    type: Number,
+                    default: 0,
+               },
+          },
           authentication: {
                type: {
                     isResetPassword: {

@@ -1,0 +1,53 @@
+Wed Oct 22 2025 16:6:44 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.238 ms
+Wed Oct 22 2025 16:6:44 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 13.804 ms
+Wed Oct 22 2025 16:6:45 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.035 ms
+Wed Oct 22 2025 16:6:45 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 6.327 ms
+Wed Oct 22 2025 16:9:23 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/manually-winner-contest/pending?page=1&limit=10 204 - 0.066 ms
+Wed Oct 22 2025 16:9:23 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/manually-winner-contest/pending?page=1&limit=10 200 - 25.569 ms
+Wed Oct 22 2025 16:9:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/manually-winner-contest/pending?page=1&limit=10 304 - 5.925 ms
+Wed Oct 22 2025 16:10:31 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.046 ms
+Wed Oct 22 2025 16:10:31 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 8.453 ms
+Wed Oct 22 2025 16:10:31 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.032 ms
+Wed Oct 22 2025 16:10:31 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 3.935 ms
+Wed Oct 22 2025 16:10:36 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/user-managements/?page=1 204 - 0.035 ms
+Wed Oct 22 2025 16:10:37 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/user-managements/?page=1 304 - 16.452 ms
+Wed Oct 22 2025 16:11:42 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/manually-winner-contest/pending?page=1&limit=10 204 - 0.052 ms
+Wed Oct 22 2025 16:11:42 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/manually-winner-contest/pending?page=1&limit=10 304 - 6.657 ms
+Wed Oct 22 2025 16:19:13 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.271 ms
+Wed Oct 22 2025 16:19:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 6.170 ms
+Wed Oct 22 2025 16:19:14 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.037 ms
+Wed Oct 22 2025 16:19:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 6.188 ms
+Wed Oct 22 2025 16:19:16 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest/category/68f70a3fa2b62f7d25c0c1fc 204 - 0.035 ms
+Wed Oct 22 2025 16:19:16 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/category/68f70a3fa2b62f7d25c0c1fc 200 - 18.528 ms
+Wed Oct 22 2025 16:29:39 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 16:29:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 16:29:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 16:29:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 16:34:42 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 16:34:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 16:34:42 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 16:34:42 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 16:41:17 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f8bdd68b7214c680dd7 204 - 2.252 ms
+Wed Oct 22 2025 16:41:17 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f8bdd68b7214c680dd7 200 - 42.447 ms
+Wed Oct 22 2025 16:41:38 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.070 ms
+Wed Oct 22 2025 16:41:38 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 8.179 ms
+Wed Oct 22 2025 16:41:38 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.071 ms
+Wed Oct 22 2025 16:41:38 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 4.776 ms
+Wed Oct 22 2025 16:46:58 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/shuffle-serial 204 - 0.846 ms
+Wed Oct 22 2025 16:46:58 [SERVER-NAME] info: 10.10.7.47 - POST /api/v1/categories/shuffle-serial 200 - 77.271 ms
+Wed Oct 22 2025 16:46:58 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.061 ms
+Wed Oct 22 2025 16:46:58 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 4.050 ms
+Wed Oct 22 2025 16:47:27 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/shuffle-serial 204 - 0.076 ms
+Wed Oct 22 2025 16:47:27 [SERVER-NAME] info: 10.10.7.47 - POST /api/v1/categories/shuffle-serial 200 - 12.295 ms
+Wed Oct 22 2025 16:47:28 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.065 ms
+Wed Oct 22 2025 16:47:28 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 6.491 ms
+Wed Oct 22 2025 16:47:42 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/shuffle-serial 204 - 0.067 ms
+Wed Oct 22 2025 16:47:42 [SERVER-NAME] info: 10.10.7.47 - POST /api/v1/categories/shuffle-serial 200 - 13.421 ms
+Wed Oct 22 2025 16:47:42 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.169 ms
+Wed Oct 22 2025 16:47:42 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 5.865 ms
+Wed Oct 22 2025 16:48:21 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.082 ms
+Wed Oct 22 2025 16:48:21 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 304 - 8.713 ms
+Wed Oct 22 2025 16:48:21 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.053 ms
+Wed Oct 22 2025 16:48:21 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 4.840 ms
+Wed Oct 22 2025 16:49:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/ 200 - 3.921 ms
+Wed Oct 22 2025 16:49:59 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 5.363 ms

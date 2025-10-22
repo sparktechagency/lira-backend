@@ -17,6 +17,25 @@ export type IUser = {
      phone?: string;
      state: string;
      address?: string;
+     // 💳 NEW: Saved Cards for Withdrawal
+     savedCards?: {
+          cardId: string;
+          last4: string;
+          brand: string;
+          expiryMonth: number;
+          expiryYear: number;
+          country: string;
+          funding: string; // debit, credit, prepaid
+          isDefault: boolean;
+          addedAt: Date;
+     }[];
+     // 💰 Wallet & Transaction History
+     wallet?: {
+          balance: number;
+          currency: string;
+          totalEarned: number;
+          totalWithdrawn: number;
+     };
      authentication?: {
           isResetPassword: boolean;
           oneTimeCode: number;
@@ -41,9 +60,9 @@ export type UserModel = {
      isExistUserByPhone(contact: string): any;
      isMatchPassword(password: string, hashPassword: string): boolean;
      // ✅ Online Status Methods
-      setUserOnline(userId: string): Promise<void>;
-      setUserOffline(userId: string): Promise<void>;
-      updateHeartbeat(userId: string): Promise<void>;
-      getOnlineUsers(): Promise<IUser[]>;
-      bulkUserStatus(userIds: string[]): Promise<IUser[]>;
+     setUserOnline(userId: string): Promise<void>;
+     setUserOffline(userId: string): Promise<void>;
+     updateHeartbeat(userId: string): Promise<void>;
+     getOnlineUsers(): Promise<IUser[]>;
+     bulkUserStatus(userIds: string[]): Promise<IUser[]>;
 } & Model<IUser>;

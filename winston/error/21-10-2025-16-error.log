@@ -1,5 +1,0 @@
-Tue Oct 21 2025 16:50:24 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 1013.588 ms
-Tue Oct 21 2025 16:50:24 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 1159.445 ms
-Tue Oct 21 2025 16:55:34 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 2210.994 ms
-Tue Oct 21 2025 16:55:48 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 315.563 ms
-Tue Oct 21 2025 16:56:4 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=MSFT&days=30 404 - 510.168 ms

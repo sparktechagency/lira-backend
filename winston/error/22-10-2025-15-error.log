@@ -1,0 +1,6 @@
+Wed Oct 22 2025 15:3:2 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.402 ms
+Wed Oct 22 2025 15:3:2 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68d2347954018e3fff04f286 401 - 0.647 ms
+Wed Oct 22 2025 15:3:4 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 0.897 ms
+Wed Oct 22 2025 15:3:5 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68d2347954018e3fff04f286 401 - 0.606 ms
+Wed Oct 22 2025 15:22:34 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/manually-winner-contest/68f5dbcf3e9929e57d163b04/determine-winners 400 - 42.006 ms
+Wed Oct 22 2025 15:23:17 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/manually-winner-contest/68f5dbcf3e9929e57d163b04/determine-winners 400 - 28.566 ms

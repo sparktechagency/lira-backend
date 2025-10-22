@@ -93,7 +93,7 @@ const shuffleCategorySerial = async (categoryOrder: Array<{ _id: string; serial:
 };
 
 const getCategoryByGroupId = async (id: string) => {
-     const result = await Category.find({ groupId: id }).select("-createdBy -updatedAt");
+     const result = await Category.find({ groupId: id }).sort({ serial: 1 }).select("-createdBy -updatedAt");
      if (!result) {
           throw new AppError(StatusCodes.NOT_FOUND, 'Category not found');
      }

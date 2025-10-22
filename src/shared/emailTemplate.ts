@@ -1,4 +1,4 @@
-import { IContact, ICreateAccount, IHelpContact, IHelpReplay, IResetPassword, IResetPasswordByEmail } from '../types/emailTemplate';
+import { IBlockAccount, IContact, ICreateAccount, IHelpContact, IHelpReplay, IResetPassword, IResetPasswordByEmail } from '../types/emailTemplate';
 
 const createAccount = (values: ICreateAccount) => {
     const data = {
@@ -150,6 +150,31 @@ const helpReplyTemplate = (values: IHelpReplay, adminMessage: string) => {
   };
   return data;
 };
+const blockAccountTemplate = (values: IBlockAccount) => {
+  const data = {
+    to: values.email,
+    subject: 'Account Blocked Notification',
+    html: `<body style="font-family: 'Roboto', sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; color: #333;">
+  <div style="max-width: 650px; margin: 40px auto; background-color: #fff; border-radius: 10px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); padding: 30px; color: #333;">
+    <img src="https://i.postimg.cc/6pgNvKhD/logo.png" alt="Logo" style="display: block; margin: 0 auto 25px; width: 160px;" />
+    
+    <div style="text-align: left; padding: 0 20px;">
+      <p style="font-size: 20px; color: #444; line-height: 1.6; margin-bottom: 15px;">Hello ${values.name},</p>
+      <p style="font-size: 16px; color: #555; line-height: 1.8; margin-bottom: 25px;">We regret to inform you that your account has been blocked due to a violation of our Terms of Service. Please find the details below:</p>
+      
+      <p style="font-size: 16px; color: #555; line-height: 1.7; margin-bottom: 25px;">If you believe this action was taken in error or wish to appeal the decision, please feel free to reach out to us. We're happy to assist you further.</p>
+      
+      <div style="border-top: 2px solid #f1f1f1; padding-top: 30px; text-align: center;">
+        <p style="font-size: 14px; color: #888; margin: 0;">Best regards,</p>
+        <p style="font-size: 16px; font-weight: bold; color: #333;">Support Team</p>
+        <p style="font-size: 14px; color: #888; margin-top: 5px;">Lira | <a href="https://www.companywebsite.com" style="color: #2196F3; text-decoration: none;">www.companywebsite.com</a></p>
+      </div>
+    </div>
+  </div>
+</body>`,
+  };
+  return data;
+};
 
 export const emailTemplate = {
     createAccount,
@@ -157,5 +182,6 @@ export const emailTemplate = {
     resetPasswordByUrl,
     contactFormTemplate,
     contact,
-    helpReplyTemplate
+    helpReplyTemplate,
+    blockAccountTemplate,
 };

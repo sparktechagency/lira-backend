@@ -3,6 +3,10 @@ export type ICreateAccount = {
      email: string;
      otp: number;
 };
+export type IBlockAccount = {
+     name: string;
+     email: string;
+};
 
 export type IResetPassword = {
      email: string;

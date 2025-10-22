@@ -151,6 +151,19 @@ const getContestByCategoryId = catchAsync(async (req, res) => {
     });
 });
 
+const shuffleContestSerial = catchAsync(async (req, res) => {
+    const { contestOrder } = req.body;
+    const result = await ContestService.shuffleContestSerial(contestOrder);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest serial shuffled successfully',
+        data: result
+    });
+});
+
+
+
 const getContestNews = catchAsync(async (req, res) => {
     const result = await ContestService.getCryptoNews();
     sendResponse(res, {
@@ -259,4 +272,5 @@ export const ContestController = {
     getEntertainmentData,
     getUnifiedForecastData,
     getEnergyData,
+    shuffleContestSerial
 };

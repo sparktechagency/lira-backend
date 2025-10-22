@@ -1,7 +1,0 @@
-Tue Oct 21 2025 17:0:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 1071.486 ms
-Tue Oct 21 2025 17:1:31 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 7.612 ms
-Tue Oct 21 2025 17:3:32 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/stock/history?symbol 404 - 1273.336 ms
-Tue Oct 21 2025 17:3:38 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/stock/history?symbol=AAPL 404 - 287.322 ms
-Tue Oct 21 2025 17:24:2 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.708 ms
-Tue Oct 21 2025 17:24:2 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68dd0308cf3c6e7dd5f695b2 401 - 1.244 ms
-Tue Oct 21 2025 17:24:38 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 27.491 ms

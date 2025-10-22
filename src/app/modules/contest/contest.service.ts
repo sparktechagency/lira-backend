@@ -369,7 +369,15 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         meta
     };
 };
+const shuffleContestSerial = async (contestOrder: Array<{ _id: string; serial: number }>) => {
+    if (!contestOrder || !Array.isArray(contestOrder) || contestOrder.length === 0) {
+        return;
+    }
+    const updatePromises = contestOrder.map((item) => Contest.findByIdAndUpdate(item._id, { serial: item.serial }, { new: true }));
 
+    const result = await Promise.all(updatePromises);
+    return result;
+};
 
 const getTiersContest = async (id: string) => {
     const contest = await Contest.findById(id);
@@ -786,4 +794,4 @@ const getUnifiedForecastData = async (query: Record<string, unknown>) => {
     }
 };
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getEnergyData, getUnifiedForecastData }
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getEnergyData, getUnifiedForecastData, shuffleContestSerial }

@@ -16,7 +16,11 @@ router.post(
     parseFileData(FOLDER_NAMES.IMAGE),
     ContestController.createContest
 );
-
+router.post(
+    '/shuffle-serial',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.shuffleContestSerial
+);
 router.get(
     '/',
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
@@ -60,6 +64,8 @@ router.patch(
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     ContestController.publishContest
 );
+
+
 
 // Public routes (for users)
 router.get('/active/list', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getActiveContests);

@@ -12,13 +12,13 @@ import { ContestMetadata } from './result.interface';
 
 
 class ContestResultService {
-    
+
     /**
      * Main method to fetch result based on contest metadata
      */
     async fetchContestResult(contest: any): Promise<number | null> {
         const metadata = this.extractMetadata(contest);
-        
+
         switch (metadata.category) {
             case 'crypto':
                 return await this.fetchCryptoResult(metadata);
@@ -34,16 +34,17 @@ class ContestResultService {
                 return await this.fetchEntertainmentResult(metadata);
             default:
                 throw new AppError(
-                    StatusCodes.BAD_REQUEST, 
+                    StatusCodes.BAD_REQUEST,
                     `Unknown contest category: ${metadata.category}`
                 );
         }
     }
 
-    
+
     private extractMetadata(contest: any): ContestMetadata {
+        console.log(contest.group, "contest group");
         return {
-            category: contest.category.toLowerCase(),
+            category: contest.group.split(' ')[0].toLowerCase().trim(),
             cryptoId: contest.metadata?.cryptoId,
             stockSymbol: contest.metadata?.stockSymbol,
             playerId: contest.metadata?.playerId,
@@ -74,7 +75,7 @@ class ContestResultService {
         );
 
         const price = response.data[metadata.cryptoId]?.usd;
-        
+
         if (!price) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Crypto price not found');
         }
@@ -102,7 +103,7 @@ class ContestResultService {
         );
 
         const quote = response.data['Global Quote'];
-        
+
         if (!quote || Object.keys(quote).length === 0) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Stock data not found');
         }
@@ -116,7 +117,7 @@ class ContestResultService {
     private async fetchSportsResult(metadata: ContestMetadata): Promise<number> {
         if (!metadata.playerId || !metadata.league) {
             throw new AppError(
-                StatusCodes.BAD_REQUEST, 
+                StatusCodes.BAD_REQUEST,
                 'Player ID and league are required'
             );
         }
@@ -173,13 +174,13 @@ class ContestResultService {
         );
 
         const observations = response.data.observations;
-        
+
         if (!observations || observations.length === 0) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Economic data not found');
         }
 
         const latestValue = observations[0].value;
-        
+
         if (latestValue === '.') {
             throw new AppError(StatusCodes.NOT_FOUND, 'No valid economic data available');
         }
@@ -207,7 +208,7 @@ class ContestResultService {
         );
 
         const data = response.data.response.data;
-        
+
         if (!data || data.length === 0) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Oil price data not found');
         }
@@ -225,7 +226,7 @@ class ContestResultService {
             return await this.fetchVideoViews(metadata.videoId);
         } else {
             throw new AppError(
-                StatusCodes.BAD_REQUEST, 
+                StatusCodes.BAD_REQUEST,
                 'Movie ID or Video ID required'
             );
         }
@@ -253,7 +254,7 @@ class ContestResultService {
         );
 
         const video = response.data.items?.[0];
-        
+
         if (!video) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Video not found');
         }

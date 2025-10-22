@@ -1,0 +1,12 @@
+Wed Oct 22 2025 11:6:7 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 40.213 ms
+Wed Oct 22 2025 11:6:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 7.270 ms
+Wed Oct 22 2025 11:6:15 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 400 - 6.580 ms
+Wed Oct 22 2025 11:8:44 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 6.313 ms
+Wed Oct 22 2025 11:8:45 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 2.987 ms
+Wed Oct 22 2025 11:25:39 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.817 ms
+Wed Oct 22 2025 11:25:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 4.464 ms
+Wed Oct 22 2025 11:26:37 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.506 ms
+Wed Oct 22 2025 11:39:3 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 3.053 ms
+Wed Oct 22 2025 11:39:6 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 0.987 ms
+Wed Oct 22 2025 11:49:54 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 4.547 ms
+Wed Oct 22 2025 11:49:55 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 4.121 ms

@@ -1,8 +1,0 @@
-Tue Oct 21 2025 11:11:28 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 5.679 ms
-Tue Oct 21 2025 11:11:29 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.431 ms
-Tue Oct 21 2025 11:15:19 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 3.893 ms
-Tue Oct 21 2025 11:15:19 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 7.520 ms
-Tue Oct 21 2025 11:47:33 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/faqs/ 401 - 17.577 ms
-Tue Oct 21 2025 11:49:22 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/faqs/ 404 - 1.058 ms
-Tue Oct 21 2025 11:49:35 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/faqs/ 401 - 2.017 ms
-Tue Oct 21 2025 11:51:4 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/faqs/ 401 - 1.524 ms

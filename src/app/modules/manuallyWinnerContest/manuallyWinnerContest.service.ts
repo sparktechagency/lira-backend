@@ -183,7 +183,7 @@ const getPendingContests = async (query: Record<string, unknown>) => {
         endTime: { $lte: now },
         'results.prizeDistributed': false
     }).populate('categoryId'), query)
-    const pendingContests = await queryBuilder.modelQuery.exec();
+    const pendingContests = await queryBuilder.paginate().sort().fields().filter().modelQuery.exec();
 
 
 

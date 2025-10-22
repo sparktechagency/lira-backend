@@ -1,0 +1,323 @@
+Wed Oct 22 2025 10:5:12 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 23.382 ms
+Wed Oct 22 2025 10:5:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?searchTerm=Tuhin 200 - 9.813 ms
+Wed Oct 22 2025 10:6:49 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=tu&prizeType=null&sort=null 200 - 9.561 ms
+Wed Oct 22 2025 10:7:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?name=&searchTerm=Tuhin 200 - 7.122 ms
+Wed Oct 22 2025 10:8:16 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.778 ms
+Wed Oct 22 2025 10:8:16 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 31.369 ms
+Wed Oct 22 2025 10:8:36 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.063 ms
+Wed Oct 22 2025 10:8:36 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 8.967 ms
+Wed Oct 22 2025 10:9:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=tuh 200 - 6.217 ms
+Wed Oct 22 2025 10:9:18 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1761023678146.jpg 200 - 1.814 ms
+Wed Oct 22 2025 10:9:31 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 6.794 ms
+Wed Oct 22 2025 10:9:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 9.537 ms
+Wed Oct 22 2025 10:9:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 6.606 ms
+Wed Oct 22 2025 10:9:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 7.709 ms
+Wed Oct 22 2025 10:9:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 14.197 ms
+Wed Oct 22 2025 10:9:34 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1761039541974.jpg 200 - 1.462 ms
+Wed Oct 22 2025 10:9:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=t 200 - 5.691 ms
+Wed Oct 22 2025 10:9:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1760943054838.jpg 200 - 1.596 ms
+Wed Oct 22 2025 10:9:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/whatsapp-image-2025-10-17-at-15.20.55_839b385c-1760854724802.jpg 200 - 1.441 ms
+Wed Oct 22 2025 10:9:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/profilepicturev2-1759815937524.jpg 200 - 2.051 ms
+Wed Oct 22 2025 10:9:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/imgi_93_product+showcase-1-1760783035302.jpg 200 - 2.274 ms
+Wed Oct 22 2025 10:9:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1760851353146.jpg 200 - 1.461 ms
+Wed Oct 22 2025 10:9:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/image_2025_04_01t06_35_20_241z-1760851694268.png 200 - 2.363 ms
+Wed Oct 22 2025 10:9:40 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 8.014 ms
+Wed Oct 22 2025 10:10:0 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.077 ms
+Wed Oct 22 2025 10:10:0 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 12.679 ms
+Wed Oct 22 2025 10:10:2 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 10.288 ms
+Wed Oct 22 2025 10:10:10 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.076 ms
+Wed Oct 22 2025 10:10:10 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 23.267 ms
+Wed Oct 22 2025 10:10:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 5.347 ms
+Wed Oct 22 2025 10:10:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 5.942 ms
+Wed Oct 22 2025 10:10:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.263 ms
+Wed Oct 22 2025 10:10:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 11.863 ms
+Wed Oct 22 2025 10:10:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?searchTerm=t 200 - 5.707 ms
+Wed Oct 22 2025 10:10:28 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 5.609 ms
+Wed Oct 22 2025 10:10:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=All&minPrice=45&maxPrice=2889&minEntryPrice=2&maxEntryPrice=21 200 - 8.341 ms
+Wed Oct 22 2025 10:10:53 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 7.762 ms
+Wed Oct 22 2025 10:11:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=All&minPrice=2864&maxPrice=5000&minEntryPrice=15&maxEntryPrice=30 200 - 6.963 ms
+Wed Oct 22 2025 10:12:50 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.127 ms
+Wed Oct 22 2025 10:12:50 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 17.230 ms
+Wed Oct 22 2025 10:13:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?prizeType=All&sort=Latest&minPrice=2864&maxPrice=5000&minEntryPrice=15&maxEntryPrice=30 200 - 5.995 ms
+Wed Oct 22 2025 10:13:42 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 10.178 ms
+Wed Oct 22 2025 10:14:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:14:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:14:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:14:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:14:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:14:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:14:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:14:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:14:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:14:56 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:14:56 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:14:56 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:14:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:14:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:14:59 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:14:59 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 26.706 ms
+Wed Oct 22 2025 10:15:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:37 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:37 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:37 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:37 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:41 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:41 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:41 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:41 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:42 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:43 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:43 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:43 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:48 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:48 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:48 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:48 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:15:51 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:15:51 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:15:51 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:15:51 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:16:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:16:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:16:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:16:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:16:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 27.026 ms
+Wed Oct 22 2025 10:16:24 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.284 ms
+Wed Oct 22 2025 10:16:24 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 12.358 ms
+Wed Oct 22 2025 10:17:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?prizeType=All&sort=Latest&minPrice=2864&maxPrice=5000&minEntryPrice=15&maxEntryPrice=30 200 - 19.684 ms
+Wed Oct 22 2025 10:18:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 11.047 ms
+Wed Oct 22 2025 10:18:36 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.066 ms
+Wed Oct 22 2025 10:18:36 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.052 ms
+Wed Oct 22 2025 10:18:36 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 3.377 ms
+Wed Oct 22 2025 10:18:36 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest?page=1&limit=10 304 - 84.351 ms
+Wed Oct 22 2025 10:18:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?prizeType=All&minPrice=2864&maxPrice=5000&minEntryPrice=15&maxEntryPrice=30 200 - 7.366 ms
+Wed Oct 22 2025 10:18:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?prizeType=All&sort=Latest&minPrice=2864&maxPrice=5000&minEntryPrice=15&maxEntryPrice=30 200 - 6.147 ms
+Wed Oct 22 2025 10:18:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.111 ms
+Wed Oct 22 2025 10:18:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 200 - 4.977 ms
+Wed Oct 22 2025 10:18:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.077 ms
+Wed Oct 22 2025 10:18:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 304 - 5.823 ms
+Wed Oct 22 2025 10:19:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&minPrice=2864&maxPrice=5000&minEntryPrice=15&maxEntryPrice=30 200 - 7.493 ms
+Wed Oct 22 2025 10:20:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=Cash&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 7.675 ms
+Wed Oct 22 2025 10:20:7 [SERVER-NAME] info: 10.10.7.14 - GET /image/imgi_93_product+showcase-1-1760783035302.jpg 200 - 2.721 ms
+Wed Oct 22 2025 10:20:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Numbers+of+entries&prizeType=Cash&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 8.332 ms
+Wed Oct 22 2025 10:20:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Prize+value&prizeType=Cash&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 6.630 ms
+Wed Oct 22 2025 10:20:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Popularity&prizeType=Cash&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 6.581 ms
+Wed Oct 22 2025 10:20:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 6.459 ms
+Wed Oct 22 2025 10:20:25 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1761023678146.jpg 200 - 1.574 ms
+Wed Oct 22 2025 10:21:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=Cash&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 8.124 ms
+Wed Oct 22 2025 10:22:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=All&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 6.262 ms
+Wed Oct 22 2025 10:22:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=All&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 5.749 ms
+Wed Oct 22 2025 10:22:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.089 ms
+Wed Oct 22 2025 10:22:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.129 ms
+Wed Oct 22 2025 10:22:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.667 ms
+Wed Oct 22 2025 10:22:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=All&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 5.971 ms
+Wed Oct 22 2025 10:22:6 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1761039541974.jpg 200 - 1.510 ms
+Wed Oct 22 2025 10:22:10 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 6.528 ms
+Wed Oct 22 2025 10:22:10 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1761023678146.jpg 200 - 1.232 ms
+Wed Oct 22 2025 10:22:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&prizeType=All&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 6.754 ms
+Wed Oct 22 2025 10:22:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 6.213 ms
+Wed Oct 22 2025 10:22:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/profilepicturev2-1759815937524.jpg 200 - 1.244 ms
+Wed Oct 22 2025 10:22:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/imgi_93_product+showcase-1-1760783035302.jpg 200 - 0.549 ms
+Wed Oct 22 2025 10:22:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1760851353146.jpg 200 - 1.548 ms
+Wed Oct 22 2025 10:22:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/image_2025_04_01t06_35_20_241z-1760851694268.png 200 - 0.971 ms
+Wed Oct 22 2025 10:22:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/whatsapp-image-2025-10-17-at-15.20.55_839b385c-1760854724802.jpg 200 - 1.728 ms
+Wed Oct 22 2025 10:22:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1760943054838.jpg 200 - 1.360 ms
+Wed Oct 22 2025 10:22:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?sort=Latest&minPrice=45&maxPrice=5000&minEntryPrice=2&maxEntryPrice=30 200 - 6.541 ms
+Wed Oct 22 2025 10:22:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 5.780 ms
+Wed Oct 22 2025 10:22:45 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68ee41af04777740f9207df3 200 - 5.789 ms
+Wed Oct 22 2025 10:22:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 7.160 ms
+Wed Oct 22 2025 10:22:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 1.925 ms
+Wed Oct 22 2025 10:22:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.619 ms
+Wed Oct 22 2025 10:22:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 5.460 ms
+Wed Oct 22 2025 10:22:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.625 ms
+Wed Oct 22 2025 10:22:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 40.360 ms
+Wed Oct 22 2025 10:22:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/analysis 200 - 7.766 ms
+Wed Oct 22 2025 10:22:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/referrals/code 200 - 9.484 ms
+Wed Oct 22 2025 10:22:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 16.311 ms
+Wed Oct 22 2025 10:22:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-order-analysis 200 - 9.191 ms
+Wed Oct 22 2025 10:22:51 [SERVER-NAME] info: 10.10.7.14 - GET /image/whatsapp-image-2025-10-17-at-15.20.55_839b385c-1760846763673.jpg 200 - 2.460 ms
+Wed Oct 22 2025 10:25:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 3.430 ms
+Wed Oct 22 2025 10:25:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.083 ms
+Wed Oct 22 2025 10:25:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 6.676 ms
+Wed Oct 22 2025 10:25:7 [SERVER-NAME] info: 10.10.7.47 - GET /image/image-(2)-1761023678146.jpg 200 - 6.404 ms
+Wed Oct 22 2025 10:25:15 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?searchTerm=&sort=Latest&prizeType=All&minPrice=45&maxPrice=1406&minEntryPrice=2&maxEntryPrice=30 200 - 7.586 ms
+Wed Oct 22 2025 10:25:18 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?searchTerm=&sort=Latest&prizeType=All&minPrice=45&maxPrice=2660&minEntryPrice=2&maxEntryPrice=30 200 - 8.297 ms
+Wed Oct 22 2025 10:25:29 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 3.664 ms
+Wed Oct 22 2025 10:25:35 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 3.560 ms
+Wed Oct 22 2025 10:25:37 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.134 ms
+Wed Oct 22 2025 10:25:37 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.070 ms
+Wed Oct 22 2025 10:25:37 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 4.972 ms
+Wed Oct 22 2025 10:25:38 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest?page=1&limit=10 304 - 90.729 ms
+Wed Oct 22 2025 10:25:40 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 8.011 ms
+Wed Oct 22 2025 10:25:40 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.175 ms
+Wed Oct 22 2025 10:25:40 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 4.090 ms
+Wed Oct 22 2025 10:27:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 3.486 ms
+Wed Oct 22 2025 10:27:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.526 ms
+Wed Oct 22 2025 10:27:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 7.539 ms
+Wed Oct 22 2025 10:27:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70b8e443d91ba3a751dc7 200 - 5.561 ms
+Wed Oct 22 2025 10:27:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.935 ms
+Wed Oct 22 2025 10:27:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 11.246 ms
+Wed Oct 22 2025 10:27:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 9.665 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 239.334 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.188 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.298 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.465 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.048 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.985 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 5.690 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.414 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 7.055 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.777 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.767 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.327 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 7.261 ms
+Wed Oct 22 2025 10:27:33 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1761023678146.jpg 200 - 0.796 ms
+Wed Oct 22 2025 10:28:4 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.079 ms
+Wed Oct 22 2025 10:28:4 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/ 204 - 0.047 ms
+Wed Oct 22 2025 10:28:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/ 200 - 3.650 ms
+Wed Oct 22 2025 10:28:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest?page=1&limit=10 200 - 61.988 ms
+Wed Oct 22 2025 10:28:7 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/groups/ 204 - 0.070 ms
+Wed Oct 22 2025 10:28:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups/ 200 - 2.225 ms
+Wed Oct 22 2025 10:28:7 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.053 ms
+Wed Oct 22 2025 10:28:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 3.778 ms
+Wed Oct 22 2025 10:28:12 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/unit-type?key=type 204 - 0.053 ms
+Wed Oct 22 2025 10:28:12 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/unit-type?key=type 200 - 19.660 ms
+Wed Oct 22 2025 10:28:17 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.059 ms
+Wed Oct 22 2025 10:28:17 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 16.836 ms
+Wed Oct 22 2025 10:29:5 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.056 ms
+Wed Oct 22 2025 10:29:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/unit-type?key=unit 200 - 3.567 ms
+Wed Oct 22 2025 10:30:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/contest/create 204 - 0.057 ms
+Wed Oct 22 2025 10:30:22 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/contest/create 201 - 85.185 ms
+Wed Oct 22 2025 10:30:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.052 ms
+Wed Oct 22 2025 10:30:22 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/ 204 - 0.043 ms
+Wed Oct 22 2025 10:30:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest?page=1&limit=10 200 - 67.441 ms
+Wed Oct 22 2025 10:30:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/ 200 - 24.891 ms
+Wed Oct 22 2025 10:30:27 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/contest/68f85ddecb64b839b363e031/publish 204 - 0.047 ms
+Wed Oct 22 2025 10:30:27 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/contest/68f85ddecb64b839b363e031/publish 200 - 17.380 ms
+Wed Oct 22 2025 10:30:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest?page=1&limit=10 200 - 57.211 ms
+Wed Oct 22 2025 10:30:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.367 ms
+Wed Oct 22 2025 10:30:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.088 ms
+Wed Oct 22 2025 10:30:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.031 ms
+Wed Oct 22 2025 10:30:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 6.723 ms
+Wed Oct 22 2025 10:30:30 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1761023678146.jpg 200 - 0.775 ms
+Wed Oct 22 2025 10:30:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68f70b6c443d91ba3a751db4 200 - 2.066 ms
+Wed Oct 22 2025 10:30:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70b8e443d91ba3a751dc7 200 - 5.192 ms
+Wed Oct 22 2025 10:30:33 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70b92443d91ba3a751dcf 200 - 6.339 ms
+Wed Oct 22 2025 10:30:33 [SERVER-NAME] info: 10.10.7.14 - GET /image/six-1761107422711.jpg 200 - 0.675 ms
+Wed Oct 22 2025 10:30:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68f85ddecb64b839b363e031 200 - 6.187 ms
+Wed Oct 22 2025 10:30:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/68f85ddecb64b839b363e031/tiers 200 - 6.526 ms
+Wed Oct 22 2025 10:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /image/six-1761107422711.jpg 200 - 1.289 ms
+Wed Oct 22 2025 10:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 4.194 ms
+Wed Oct 22 2025 10:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 5.052 ms
+Wed Oct 22 2025 10:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 5.355 ms
+Wed Oct 22 2025 10:30:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 6.672 ms
+Wed Oct 22 2025 10:30:47 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.054 ms
+Wed Oct 22 2025 10:30:47 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 9.910 ms
+Wed Oct 22 2025 10:31:11 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.062 ms
+Wed Oct 22 2025 10:31:11 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 13.520 ms
+Wed Oct 22 2025 10:38:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/economic/data?series=cpi 200 - 3650.639 ms
+Wed Oct 22 2025 10:38:32 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/economic/data?series=gdp 200 - 371.350 ms
+Wed Oct 22 2025 10:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.210 ms
+Wed Oct 22 2025 10:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68f70b6c443d91ba3a751db4 200 - 5.163 ms
+Wed Oct 22 2025 10:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.596 ms
+Wed Oct 22 2025 10:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70b92443d91ba3a751dcf 200 - 9.491 ms
+Wed Oct 22 2025 10:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /image/six-1761107422711.jpg 200 - 1.256 ms
+Wed Oct 22 2025 10:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /image/six-1761107422711.jpg 200 - 1.213 ms
+Wed Oct 22 2025 10:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 5.305 ms
+Wed Oct 22 2025 10:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 4.670 ms
+Wed Oct 22 2025 10:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 4.005 ms
+Wed Oct 22 2025 10:39:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 4.205 ms
+Wed Oct 22 2025 10:39:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.368 ms
+Wed Oct 22 2025 10:39:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68f85ddecb64b839b363e031 200 - 6.805 ms
+Wed Oct 22 2025 10:39:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/68f85ddecb64b839b363e031/tiers 200 - 6.121 ms
+Wed Oct 22 2025 10:39:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 3.850 ms
+Wed Oct 22 2025 10:39:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 3.875 ms
+Wed Oct 22 2025 10:41:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.133 ms
+Wed Oct 22 2025 10:41:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.541 ms
+Wed Oct 22 2025 10:41:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 8.926 ms
+Wed Oct 22 2025 10:41:36 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1761023678146.jpg 200 - 4.476 ms
+Wed Oct 22 2025 10:41:38 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.049 ms
+Wed Oct 22 2025 10:41:38 [SERVER-NAME] info: 10.10.7.14 - OPTIONS /api/v1/categories/ 204 - 0.033 ms
+Wed Oct 22 2025 10:41:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/ 304 - 2.884 ms
+Wed Oct 22 2025 10:41:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest?page=1&limit=10 304 - 64.778 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - POST /api/v1/auth/login 200 - 216.155 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 1.957 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.546 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.285 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 1.908 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.740 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 5.621 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.815 ms
+Wed Oct 22 2025 10:41:57 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 5.444 ms
+Wed Oct 22 2025 10:41:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.179 ms
+Wed Oct 22 2025 10:41:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.087 ms
+Wed Oct 22 2025 10:41:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.443 ms
+Wed Oct 22 2025 10:41:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a3fa2b62f7d25c0c1fc 200 - 5.655 ms
+Wed Oct 22 2025 10:41:58 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1761039541974.jpg 200 - 1.430 ms
+Wed Oct 22 2025 10:42:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68f70b6c443d91ba3a751db4 200 - 1.889 ms
+Wed Oct 22 2025 10:42:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70b8e443d91ba3a751dc7 200 - 5.335 ms
+Wed Oct 22 2025 10:42:3 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70b92443d91ba3a751dcf 200 - 5.410 ms
+Wed Oct 22 2025 10:42:3 [SERVER-NAME] info: 10.10.7.14 - GET /image/six-1761107422711.jpg 200 - 1.171 ms
+Wed Oct 22 2025 10:42:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/68f85ddecb64b839b363e031 200 - 5.187 ms
+Wed Oct 22 2025 10:42:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/68f85ddecb64b839b363e031/tiers 200 - 3.084 ms
+Wed Oct 22 2025 10:42:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/economic/data?series=GDP&days=365 200 - 1705.724 ms
+Wed Oct 22 2025 10:42:6 [SERVER-NAME] info: 10.10.7.14 - GET /image/six-1761107422711.jpg 200 - 0.645 ms
+Wed Oct 22 2025 10:42:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 6.012 ms
+Wed Oct 22 2025 10:42:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 3.689 ms
+Wed Oct 22 2025 10:42:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 3.970 ms
+Wed Oct 22 2025 10:42:6 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68f85ddecb64b839b363e031/tiers/68f85ddecb64b839b363e032 200 - 4.358 ms
+Wed Oct 22 2025 10:51:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:51:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:51:5 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:51:5 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:51:7 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:51:7 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:51:7 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:51:7 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:52:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 28.835 ms
+Wed Oct 22 2025 10:52:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:52:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:52:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:52:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:52:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 39.058 ms
+Wed Oct 22 2025 10:53:18 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:53:18 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:53:18 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:53:18 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:53:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 27.737 ms
+Wed Oct 22 2025 10:54:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:54:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:54:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:54:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:54:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:54:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:54:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:54:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:54:7 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:54:7 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:54:7 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:54:7 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:54:9 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:54:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:54:9 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:54:9 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Wed Oct 22 2025 10:54:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Wed Oct 22 2025 10:54:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Wed Oct 22 2025 10:54:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Wed Oct 22 2025 10:54:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m

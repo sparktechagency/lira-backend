@@ -273,3 +273,13 @@ Tue Oct 21 2025 17:40:39 [SERVER-NAME] info: [46m🚀 Database connected succes
 Tue Oct 21 2025 17:40:39 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Tue Oct 21 2025 17:40:39 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
 Tue Oct 21 2025 17:40:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 24.244 ms
+Tue Oct 21 2025 17:44:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 19.809 ms
+Tue Oct 21 2025 17:55:45 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics 200 - 12.687 ms
+Tue Oct 21 2025 17:55:45 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.152 ms
+Tue Oct 21 2025 17:55:45 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 12.015 ms
+Tue Oct 21 2025 17:56:20 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/dashboard/analytics 204 - 0.095 ms
+Tue Oct 21 2025 17:56:20 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/dashboard/analytics 200 - 9.514 ms
+Tue Oct 21 2025 17:59:9 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.059 ms
+Tue Oct 21 2025 17:59:10 [SERVER-NAME] info: 10.10.7.14 - GET /image/image-(2)-1761023678146.jpg 200 - 1.844 ms
+Tue Oct 21 2025 17:59:10 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1761039541974.jpg 200 - 0.634 ms
+Tue Oct 21 2025 17:59:20 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list 200 - 6.728 ms

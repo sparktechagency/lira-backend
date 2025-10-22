@@ -35,6 +35,7 @@ const createContest = async (payload: Partial<IContest>) => {
         payload.category = category.name;
         payload.group = category.group;
         const generatedMetadata = await generateMetadataFromCategory(category, payload.name);
+        console.log(generatedMetadata, "this is generatedMetadata meta data");
         if (generatedMetadata) {
             payload.metadata = generatedMetadata;
         }
@@ -318,7 +319,7 @@ const getActiveContests = async (query: Record<string, unknown>) => {
         .priceRange()
         .fields()
         .filter()
-        .search(["name", "category"])
+        .search(["name", "category", "group"])
         .prizeTypeFilter()
         .sort()
         .entryPriceRange()

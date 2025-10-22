@@ -217,13 +217,14 @@ const getEntryPriceSensitivity = async (matchQuery: any) => {
         },
         {
             $project: {
+                _id: 0,
                 priceRange: {
                     $switch: {
                         branches: [
-                            { case: { $eq: ['$_id', 0] }, then: '$1-2' },
-                            { case: { $eq: ['$_id', 2] }, then: '$3-5' },
-                            { case: { $eq: ['$_id', 5] }, then: '$6-10' },
-                            { case: { $eq: ['$_id', 10] }, then: '$11+' },
+                            { case: { $eq: ['$_id', 0] }, then: '0-2' },
+                            { case: { $eq: ['$_id', 2] }, then: '2-5' },
+                            { case: { $eq: ['$_id', 5] }, then: '5-10' },
+                            { case: { $eq: ['$_id', 10] }, then: '10+' },
                         ],
                         default: 'Other',
                     },
@@ -249,7 +250,6 @@ const getEntryPriceSensitivity = async (matchQuery: any) => {
                         },
                     },
                 },
-                _id: 0,
             },
         },
     ]);
@@ -275,35 +275,35 @@ const getUserEngagement = async (
 
     return {
         activeUsers: {
-            value: currentMetrics.activeUsers,
+            value: Number(currentMetrics.activeUsers.toFixed(2)),
             change: calculatePercentageChange(
                 previousMetrics.activeUsers,
                 currentMetrics.activeUsers
             ),
         },
         repeatUsers: {
-            value: currentMetrics.repeatUsersPercentage,
+            value: Number(currentMetrics.repeatUsersPercentage.toFixed(2)),
             change: calculatePercentageChange(
                 previousMetrics.repeatUsersPercentage,
                 currentMetrics.repeatUsersPercentage
             ),
         },
         conversionRate: {
-            value: currentMetrics.conversionRate,
+            value: Number(currentMetrics.conversionRate.toFixed(2)),
             change: calculatePercentageChange(
                 previousMetrics.conversionRate,
                 currentMetrics.conversionRate
             ),
         },
         abandonmentRate: {
-            value: currentMetrics.abandonmentRate,
+            value: Number(currentMetrics.abandonmentRate.toFixed(2)),
             change: calculatePercentageChange(
                 previousMetrics.abandonmentRate,
                 currentMetrics.abandonmentRate
             ),
         },
         avgTimeToFirst: {
-            value: currentMetrics.avgTimeToFirst,
+            value: Number(currentMetrics.avgTimeToFirst.toFixed(2)),
             change: calculateDaysChange(
                 previousMetrics.avgTimeToFirst,
                 currentMetrics.avgTimeToFirst
@@ -480,7 +480,10 @@ const getHighActivityUsers = async (matchQuery: any) => {
         { $limit: 5 },
     ]);
 
-    return highActivityUsers;
+    return highActivityUsers.map((user) => ({
+        ...user,
+        winRate: Number(user.winRate.toFixed(2)),
+    }));
 };
 
 // Loyalty Metrics

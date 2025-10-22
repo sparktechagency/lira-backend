@@ -1,0 +1,9 @@
+Wed Oct 22 2025 12:39:0 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.766 ms
+Wed Oct 22 2025 12:42:7 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 299.717 ms
+Wed Oct 22 2025 12:42:9 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 287.801 ms
+Wed Oct 22 2025 12:43:37 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 1175.274 ms
+Wed Oct 22 2025 12:43:47 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 549.280 ms
+Wed Oct 22 2025 12:44:0 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 341.911 ms
+Wed Oct 22 2025 12:44:2 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 285.025 ms
+Wed Oct 22 2025 12:44:14 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 25.389 ms
+Wed Oct 22 2025 12:44:25 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/orders/create-and-checkout 400 - 6.755 ms

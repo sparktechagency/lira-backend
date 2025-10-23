@@ -1,0 +1,9 @@
+Thu Oct 23 2025 15:0:42 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 917.074 ms
+Thu Oct 23 2025 15:1:11 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 510.930 ms
+Thu Oct 23 2025 15:3:52 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 2467.601 ms
+Thu Oct 23 2025 15:17:36 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/withdrawals/cards 401 - 4.020 ms
+Thu Oct 23 2025 15:18:52 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1undefined 404 - 4.305 ms
+Thu Oct 23 2025 15:18:52 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1undefined 404 - 0.458 ms
+Thu Oct 23 2025 15:18:53 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1undefined 404 - 0.920 ms
+Thu Oct 23 2025 15:18:53 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1undefined 404 - 0.479 ms
+Thu Oct 23 2025 15:18:53 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1undefined 404 - 0.958 ms

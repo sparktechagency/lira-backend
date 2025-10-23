@@ -1,7 +1,6 @@
 import { model, Schema } from 'mongoose';
 import { IWithdrawal } from './withdrawal.interface';
 
-
 const withdrawalSchema = new Schema<IWithdrawal>(
      {
           user: {

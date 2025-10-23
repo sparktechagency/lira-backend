@@ -124,6 +124,27 @@ const approveWithdrawal = catchAsync(async (req, res) => {
         data: result,
     })
 })
+const rejectWithdrawal = catchAsync(async (req, res) => {
+    const { withdrawalId } = req.params;
+    const { adminNote } = req.body;
+    const { id: adminId } = req.user as { id: string };
+    const result = await WithdrawalService.rejectWithdrawal(withdrawalId, adminId, adminNote);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Withdrawal rejected successfully',
+        data: result,
+    })
+})
+const getWithdrawalStats = catchAsync(async (req, res) => {
+    const result = await WithdrawalService.getWithdrawalStats(req.query);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Withdrawal stats retrieved successfully',
+        data: result,
+    })
+})
 export const WithdrawalController = {
     addCardForWithdrawal,
     getUserCards,

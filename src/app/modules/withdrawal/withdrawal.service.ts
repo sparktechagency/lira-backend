@@ -373,7 +373,142 @@ const approveWithdrawal = async (withdrawalId: string, adminId: string, payoutMe
         );
     }
 }
+const rejectWithdrawal = async (withdrawalId: string, adminId: string, adminNote: string) => {
+    if (!adminNote) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Rejection reason is required');
+    }
 
+    const withdrawal = await Withdrawal.findById(withdrawalId).populate('user');
+
+    if (!withdrawal) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Withdrawal not found');
+    }
+
+    if (withdrawal.status !== 'pending') {
+        throw new AppError(StatusCodes.BAD_REQUEST, `Cannot reject. Current status: ${withdrawal.status}`);
+    }
+
+    const user = withdrawal.user as any;
+
+    // Refund points to user
+    await User.findByIdAndUpdate(user._id, {
+        $inc: { points: withdrawal.pointsDeducted },
+    });
+
+    // Update withdrawal
+    withdrawal.status = 'rejected';
+    withdrawal.rejectionReason = adminNote;
+    withdrawal.processedBy = new Types.ObjectId(adminId);
+    withdrawal.processedAt = new Date();
+    await withdrawal.save();
+
+    // Send notification to user
+    // await sendNotification(user._id, 'Withdrawal rejected', adminNote);
+
+    return withdrawal;
+}
+const getWithdrawalStats = async (query: Record<string, unknown>) => {
+    const dateFilter: Record<string, unknown> = {};
+    if (query.startDate) dateFilter.$gte = new Date(query.startDate as string);
+    if (query.endDate) dateFilter.$lte = new Date(query.endDate as string);
+
+    const queryFilter = Object.keys(dateFilter).length > 0 ? { createdAt: dateFilter } : {};
+
+    // Overall stats
+    const totalStats = await Withdrawal.aggregate([
+        { $match: queryFilter },
+        {
+            $group: {
+                _id: null,
+                totalRequests: { $sum: 1 },
+                totalAmount: { $sum: '$amount' },
+                totalPointsDeducted: { $sum: '$pointsDeducted' },
+            },
+        },
+    ]);
+
+    // Status-wise breakdown
+    const statusBreakdown = await Withdrawal.aggregate([
+        { $match: query },
+        {
+            $group: {
+                _id: '$status',
+                count: { $sum: 1 },
+                totalAmount: { $sum: '$amount' },
+            },
+        },
+    ]);
+
+    // Method-wise breakdown
+    const methodBreakdown = await Withdrawal.aggregate([
+        { $match: query },
+        {
+            $group: {
+                _id: '$withdrawalMethod',
+                count: { $sum: 1 },
+                totalAmount: { $sum: '$amount' },
+            },
+        },
+    ]);
+
+    // Daily trend (last 30 days)
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+
+    const dailyTrend = await Withdrawal.aggregate([
+        { $match: { createdAt: { $gte: thirtyDaysAgo } } },
+        {
+            $group: {
+                _id: {
+                    $dateToString: { format: '%Y-%m-%d', date: '$createdAt' },
+                },
+                count: { $sum: 1 },
+                amount: { $sum: '$amount' },
+            },
+        },
+        { $sort: { _id: 1 } },
+    ]);
+
+    // Top users by withdrawal amount
+    const topUsers = await Withdrawal.aggregate([
+        { $match: { status: 'completed', ...query } },
+        {
+            $group: {
+                _id: '$user',
+                totalWithdrawn: { $sum: '$amount' },
+                withdrawalCount: { $sum: 1 },
+            },
+        },
+        { $sort: { totalWithdrawn: -1 } },
+        { $limit: 10 },
+        {
+            $lookup: {
+                from: 'users',
+                localField: '_id',
+                foreignField: '_id',
+                as: 'user',
+            },
+        },
+        { $unwind: '$user' },
+        {
+            $project: {
+                _id: 1,
+                totalWithdrawn: 1,
+                withdrawalCount: 1,
+                'user.name': 1,
+                'user.email': 1,
+                'user.image': 1,
+            },
+        },
+    ]);
+    return {
+        totalStats: totalStats[0] || { totalRequests: 0, totalAmount: 0, totalPointsDeducted: 0 },
+        statusBreakdown,
+        methodBreakdown,
+        dailyTrend,
+        topUsers,
+    };
+}
 export const WithdrawalService = {
     addCardForWithdrawal,
     getUserCards,
@@ -386,4 +521,6 @@ export const WithdrawalService = {
     getAllWithdrawals,
     getWithdrawalById,
     approveWithdrawal,
+    rejectWithdrawal,
+    getWithdrawalStats,
 }

@@ -1,6 +1,0 @@
-Tue Oct 21 2025 19:1:28 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 68.968 ms
-Tue Oct 21 2025 19:3:27 [SERVER-NAME] info: [32mConfig validation successful.[39m
-Tue Oct 21 2025 19:3:27 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
-Tue Oct 21 2025 19:3:27 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
-Tue Oct 21 2025 19:3:27 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
-Tue Oct 21 2025 19:3:28 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/dashboard/analytics?category&region&product&dateRange=Last%20Week 200 - 30.678 ms

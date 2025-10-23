@@ -61,10 +61,54 @@ const getUserWithdrawals = catchAsync(async (req, res) => {
         data: result,
     })
 })  
+const getWithdrawalDetails = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const { id: userId } = req.user as { id: string };
+    const result = await WithdrawalService.getWithdrawalDetails(id, userId);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Withdrawal details retrieved successfully',
+        data: result,
+    })
+})
+const cancelWithdrawal  = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const { id: userId } = req.user as { id: string };
+    const result = await WithdrawalService.cancelWithdrawal(id, userId);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Withdrawal cancelled successfully',
+        data: result,
+    })
+})
+const getUserWallet = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string };
+    const result = await WithdrawalService.getUserWallet(id);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'User wallet retrieved successfully',
+        data: result,
+    })
+})
+const getAllWithdrawals = catchAsync(async (req, res) => {
+    const result = await WithdrawalService.getAllWithdrawals(req.query);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'All withdrawals retrieved successfully',
+        data: result,
+    })
+})
 export const WithdrawalController = {
     addCardForWithdrawal,
     getUserCards,
     removeCard,
     requestWithdrawal,
-    getUserWithdrawals
+    getUserWithdrawals,
+    getWithdrawalDetails,
+    cancelWithdrawal,
+    getUserWallet,
 }

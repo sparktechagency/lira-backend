@@ -158,10 +158,115 @@ const getUserWithdrawals = async (id: string, query: Record<string, unknown>) =>
     }
 
 }
+const getWithdrawalDetails = async (id: string, userId: string) => {
+    const withdrawal = await Withdrawal.findOne({
+        _id: id,
+        user: userId,
+    });
+
+    if (!withdrawal) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Withdrawal not found');
+    }
+    return withdrawal;
+}
+const cancelWithdrawal = async (id: string, userId: string) => {
+    const withdrawal = await Withdrawal.findOne({
+        _id: id,
+        user: userId,
+    });
+
+    if (!withdrawal) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Withdrawal not found');
+    }
+
+    if (withdrawal.status !== 'pending') {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Cannot cancel this withdrawal. It is already being processed.');
+    }
+
+    // Return points to user
+    await User.findByIdAndUpdate(userId, {
+        $inc: { points: withdrawal.pointsDeducted },
+    });
+
+    // Update withdrawal status
+    withdrawal.status = 'rejected';
+    withdrawal.rejectionReason = 'Cancelled by user';
+    await withdrawal.save();
+    return withdrawal;
+}
+const getUserWallet = async (id: string) => {
+    const user = await User.findById(id).select('points wallet');
+    if (!user) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
+    }
+
+    const pendingWithdrawals = await Withdrawal.find({
+        user: id,
+        status: { $in: ['pending', 'processing'] },
+    });
+
+    const pendingAmount = pendingWithdrawals.reduce((sum, w) => sum + w.amount, 0);
+    return {
+        points: user.points || 0,
+        pendingWithdrawalAmount: pendingAmount,
+        wallet: user.wallet || 0,
+    }
+}
+const getAllWithdrawals = async (queryParam: Record<string, unknown>) => {
+    const { status, page = 1, limit = 10, search, sortBy = 'createdAt', sortOrder = 'desc' } = queryParam;
+    const query: any = {};
+
+    // Filter by status
+    if (status && status !== 'all') {
+        query.status = status;
+    }
+
+    // Search by user name/email
+    if (search) {
+        const users = await User.find({
+            $or: [
+                { name: { $regex: search, $options: 'i' } },
+                { email: { $regex: search, $options: 'i' } },
+            ],
+        }).select('_id');
+
+        const userIds = users.map((u) => u._id);
+        query.user = { $in: userIds };
+    }
+
+    const sort: any = {};
+    sort[sortBy as string] = sortOrder === 'asc' ? 1 : -1;
+
+    const withdrawals = await Withdrawal.find(query)
+        .populate('user', 'name email image points')
+        .populate('processedBy', 'name email')
+        .sort(sort)
+        .limit(Number(limit))
+        .skip((Number(page) - 1) * Number(limit));
+
+    const total = await Withdrawal.countDocuments(query);
+
+    // Calculate statistics
+    const stats = await Withdrawal.aggregate([
+        {
+            $group: {
+                _id: '$status',
+                count: { $sum: 1 },
+                totalAmount: { $sum: '$amount' },
+            },
+        },
+    ]);
+}
+
+
 export const WithdrawalService = {
     addCardForWithdrawal,
     getUserCards,
     removeCard,
     requestWithdrawal,
-    getUserWithdrawals
+    getUserWithdrawals,
+    getWithdrawalDetails,
+    cancelWithdrawal,
+    getUserWallet,
+    getAllWithdrawals,
 }

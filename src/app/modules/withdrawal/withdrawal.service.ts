@@ -509,18 +509,62 @@ const getWithdrawalStats = async (query: Record<string, unknown>) => {
         topUsers,
     };
 }
+const retryFailedWithdrawal = async (withdrawalId: string, payoutMethod: 'instant' | 'standard') => {
+    const withdrawal = await Withdrawal.findById(withdrawalId).populate('user');
+
+    if (!withdrawal) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Withdrawal not found');
+    }
+
+    if (withdrawal.status !== 'failed') {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Can only retry failed withdrawals');
+    }
+
+    const user = withdrawal.user as any;
+
+    // Reset status to processing
+    withdrawal.status = 'processing';
+    withdrawal.rejectionReason = undefined;
+    await withdrawal.save();
+
+        const fee = StripeService.calculatePayoutFee(withdrawal.amount, payoutMethod as 'instant' | 'standard');
+        const netAmount = withdrawal.amount - fee;
+
+        let payout;
+        if (payoutMethod === 'instant') {
+            payout = await StripeService.createCardPayout(netAmount, withdrawal.currency, withdrawal.cardDetails!.cardId, {
+                withdrawalId: withdrawalId,
+                userId: user._id.toString(),
+                retry: 'true',
+            });
+        } else {
+            payout = await StripeService.createStandardPayout(netAmount, withdrawal.currency, withdrawal.cardDetails!.cardId, {
+                withdrawalId: withdrawalId,
+                userId: user._id.toString(),
+                retry: 'true',
+            });
+        }
+
+        withdrawal.status = 'completed';
+        withdrawal.stripePayoutId = payout.id;
+        withdrawal.completedAt = new Date();
+        await withdrawal.save();
+        return withdrawal;
+    }
+
 export const WithdrawalService = {
-    addCardForWithdrawal,
-    getUserCards,
-    removeCard,
-    requestWithdrawal,
-    getUserWithdrawals,
-    getWithdrawalDetails,
-    cancelWithdrawal,
-    getUserWallet,
-    getAllWithdrawals,
-    getWithdrawalById,
-    approveWithdrawal,
-    rejectWithdrawal,
-    getWithdrawalStats,
-}
+        addCardForWithdrawal,
+        getUserCards,
+        removeCard,
+        requestWithdrawal,
+        getUserWithdrawals,
+        getWithdrawalDetails,
+        cancelWithdrawal,
+        getUserWallet,
+        getAllWithdrawals,
+        getWithdrawalById,
+        approveWithdrawal,
+        rejectWithdrawal,
+        getWithdrawalStats,
+        retryFailedWithdrawal,
+    }

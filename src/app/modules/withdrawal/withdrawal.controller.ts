@@ -145,6 +145,27 @@ const getWithdrawalStats = catchAsync(async (req, res) => {
         data: result,
     })
 })
+const retryFailedWithdrawal = catchAsync(async (req, res) => {
+      const { withdrawalId } = req.params;
+     const { payoutMethod = 'instant' } = req.body;
+    const result = await WithdrawalService.retryFailedWithdrawal(withdrawalId, payoutMethod);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Failed withdrawal retried successfully',
+        data: result,
+    })
+})
+const checkPayoutStatus = catchAsync(async (req, res) => {
+    const { withdrawalId } = req.params;
+    const result = await WithdrawalService.checkPayoutStatus(withdrawalId);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Payout status checked successfully',
+        data: result,
+    })
+})
 export const WithdrawalController = {
     addCardForWithdrawal,
     getUserCards,

@@ -28,8 +28,8 @@ const getUserCards = catchAsync(async (req, res) => {
 })
 const removeCard = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const { paymentMethodId } = req.body;
-    const result = await WithdrawalService.removeCard(id, paymentMethodId);
+    const { cardId } = req.body;
+    const result = await WithdrawalService.removeCard(id, cardId);
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
@@ -38,5 +38,22 @@ const removeCard = catchAsync(async (req, res) => {
     })
 })
 
-
-export const WithdrawalController = {}
+const requestWithdrawal = catchAsync(async (req, res) => {
+    const { ip } = req as { ip: string };
+    const userAgent = req.headers['user-agent'] as string;
+    const { id } = req.user as { id: string };
+    const { amount, cardId, withdrawalMethod = 'card' } = req.body;
+    const result = await WithdrawalService.requestWithdrawal(id, amount, cardId, withdrawalMethod, ip, userAgent);
+    sendResponse(res, {
+        statusCode: StatusCodes.CREATED,
+        success: true,
+        message: 'Withdrawal request submitted successfully. Admin will review it soon.',
+        data: result,
+    });
+})
+export const WithdrawalController = {
+    addCardForWithdrawal,
+    getUserCards,
+    removeCard,
+    requestWithdrawal
+}

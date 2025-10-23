@@ -244,4 +244,123 @@ const resetContestResults = async (contestId: string, confirmReset: boolean) => 
         }
     );
 }
-export const ManuallyWinnerService = { determineContestWinners, getContestResults, getPendingContests, resetContestResults }
+
+const getContestOrdersDetails = async (contestId: string) => {
+    // Check if contest exists
+    const contest = await Contest.findById(contestId);
+
+    if (!contest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    // Get all orders for this contest with user details populated
+    const orders = await Order.find({
+        contestId: contestId,
+        isDeleted: false
+    })
+    .populate('userId', 'name email phone')
+    .sort({ createdAt: -1 }); // Latest orders first
+
+    // Calculate statistics
+    const totalOrders = orders.length;
+    const totalRevenue = orders.reduce((sum, order) => sum + order.totalAmount, 0);
+    const statusBreakdown = orders.reduce((acc, order) => {
+        acc[order.status] = (acc[order.status] || 0) + 1;
+        return acc;
+    }, {} as Record<string, number>);
+
+    // Get unique users count
+    const uniqueUsers = new Set(orders.map(order => order.userId._id.toString())).size;
+
+    // Calculate predictions statistics
+    const allPredictions = orders.flatMap(order => 
+        [...(order.predictions || []), ...(order.customPrediction || [])]
+            .map(p => p.predictionValue)
+    );
+    
+    const avgPrediction = allPredictions.length > 0 
+        ? allPredictions.reduce((sum, val) => sum + val, 0) / allPredictions.length 
+        : 0;
+    
+    const minPrediction = allPredictions.length > 0 ? Math.min(...allPredictions) : 0;
+    const maxPrediction = allPredictions.length > 0 ? Math.max(...allPredictions) : 0;
+
+    // Prepare detailed orders list
+    const detailedOrders = orders.map(order => {
+        // Combine predictions and custom predictions
+        const allOrderPredictions = [
+            ...(order.predictions || []).map(p => ({
+                type: 'standard',
+                predictionValue: p.predictionValue,
+                tierId: typeof p.tierId === 'object' && p.tierId !== null ? (p.tierId as any)._id : p.tierId,
+                tierName: typeof p.tierId === 'object' && p.tierId !== null ? (p.tierId as any).name : 'N/A',
+                price: p.price
+            })),
+            ...(order.customPrediction || []).map(p => ({
+                type: 'custom',
+                predictionValue: p.predictionValue,
+                tierId: typeof p.tierId === 'object' && p.tierId !== null ? (p.tierId as any)._id : p.tierId,
+                tierName: (p.tierId as any)?.name || 'N/A',
+                price: p.price
+            }))
+        ];
+
+        return {
+            orderId: order.orderId,
+            _id: order._id,
+            user: {
+                userId: order.userId._id,
+                name: (order.userId as any).name,
+                email: (order.userId as any).email,
+                phone: order.phone || (order.userId as any).phone
+            },
+            predictions: allOrderPredictions,
+            totalPredictions: allOrderPredictions.length,
+            totalAmount: order.totalAmount,
+            state: order.state,
+            status: order.status,
+            paymentId: order.paymentId,
+            result: order.result,
+            createdAt: order.createdAt,
+            updatedAt: order.updatedAt
+        };
+    });
+
+    // State-wise distribution
+    const stateDistribution = orders.reduce((acc, order) => {
+        if (order.state) {
+            acc[order.state] = (acc[order.state] || 0) + 1;
+        }
+        return acc;
+    }, {} as Record<string, number>);
+
+    const data = {
+        contest: {
+            id: contest._id,
+            name: contest.name,
+            category: contest.category,
+            description: contest.description,
+            startTime: contest.startTime,
+            endTime: contest.endTime,
+            status: contest.status,
+            prizePool: contest.prize?.prizePool || 0,
+            actualValue: contest.results?.actualValue || null,
+            prizeDistributed: contest.results?.prizeDistributed || false
+        },
+        statistics: {
+            totalOrders,
+            uniqueUsers,
+            totalRevenue,
+            averagePrediction: Math.round(avgPrediction * 100) / 100,
+            minPrediction,
+            maxPrediction,
+            statusBreakdown,
+            stateDistribution
+        },
+        orders: detailedOrders
+    };
+
+    return data;
+};
+
+export const ManuallyWinnerService = { determineContestWinners, getContestResults, getPendingContests, resetContestResults, getContestOrdersDetails }

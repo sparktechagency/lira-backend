@@ -44,4 +44,15 @@ const resetContestResults = catchAsync(async (req, res) => {
         data: result
     });
 })
-export const ManuallyWinnerContestController = { determineContestWinners, getContestResults, getPendingContests, resetContestResults }
+const getContestOrdersDetails = catchAsync(async (req, res) => {
+    const { contestId } = req.params;
+    const result = await ManuallyWinnerService.getContestOrdersDetails(contestId);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest orders details retrieved successfully',
+        data: result
+    });
+})
+
+export const ManuallyWinnerContestController = { determineContestWinners, getContestResults, getPendingContests, resetContestResults, getContestOrdersDetails }

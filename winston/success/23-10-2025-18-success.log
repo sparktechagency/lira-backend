@@ -1,0 +1,10 @@
+Thu Oct 23 2025 18:1:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/economic/data 200 - 935.639 ms
+Thu Oct 23 2025 18:5:30 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/manually-winner-contest/68f85ddecb64b839b363e031/orders 200 - 34.183 ms
+Thu Oct 23 2025 18:6:41 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Oct 23 2025 18:6:41 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Oct 23 2025 18:6:41 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Oct 23 2025 18:6:41 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Oct 23 2025 18:6:48 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.795 ms
+Thu Oct 23 2025 18:6:48 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.075 ms
+Thu Oct 23 2025 18:6:48 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 26.247 ms
+Thu Oct 23 2025 18:6:48 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest?page=1&limit=10 304 - 143.325 ms

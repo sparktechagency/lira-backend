@@ -1,2 +1,0 @@
-Wed Oct 22 2025 17:13:27 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/community/voted-posts 403 - 5.207 ms
-Wed Oct 22 2025 17:13:27 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/community/my-posts 403 - 2.705 ms

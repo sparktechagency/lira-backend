@@ -287,8 +287,15 @@ const publishContest = async (id: string) => {
     } else {
         contest.status = 'Active';
     }
+
     // Save with all generated predictions
     const result = await contest.save();
+    const users = await User.find({});
+
+    const data = {}
+
+
+
     return result;
 };
 const generateContestPredictions = async (id: string) => {
@@ -567,7 +574,6 @@ const getStockPriceHistory = async (query: Record<string, unknown>) => {
 const getEconomicData = async (query: Record<string, unknown>) => {
     const seriesType = String(query.series || 'CPI').toUpperCase();
     const limit = Number(query.limit || 10);
-    console.log(seriesType, limit);
     const seriesMap: Record<string, string> = {
         'CPI': 'CPIAUCSL',
         'TREASURY_10Y': 'DGS10',

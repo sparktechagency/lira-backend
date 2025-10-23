@@ -24,5 +24,10 @@ router.delete(
     auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN),
     ManuallyWinnerContestController.resetContestResults
 );
+router.get(
+    '/:contestId/orders',
+    auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN),
+    ManuallyWinnerContestController.getContestOrdersDetails
+);
 
 export const ManuallyWinnerContestRoutes = router;

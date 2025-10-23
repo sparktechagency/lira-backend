@@ -16,3 +16,4 @@ Thu Oct 23 2025 19:5:25 [SERVER-NAME] info: 10.10.7.14 - GET /image/ferrarylogo-
 Thu Oct 23 2025 19:5:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68fa1e577816de2b1569e108/tiers/68fa1e577816de2b1569e109 200 - 6.458 ms
 Thu Oct 23 2025 19:5:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/68fa1e577816de2b1569e108/tiers/68fa1e577816de2b1569e109 200 - 5.870 ms
 Thu Oct 23 2025 19:5:30 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/energy/data?days=365 200 - 16381.298 ms
+Thu Oct 23 2025 19:7:33 [SERVER-NAME] info: [34mSIGINT received. Shutting down gracefully...[39m

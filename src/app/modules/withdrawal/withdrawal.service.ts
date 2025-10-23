@@ -3,6 +3,7 @@ import AppError from "../../../errors/AppError";
 import { User } from "../user/user.model";
 import StripeService from "../../builder/StripeService";
 import { Withdrawal } from "./withdrawal.model";
+import QueryBuilder from "../../builder/QueryBuilder";
 
 const addCardForWithdrawal = async (id: string, paymentMethodId: string) => {
     const user = await User.findById(id);
@@ -140,9 +141,27 @@ const requestWithdrawal = async (id: string, amount: number, cardId: string, wit
     await user.save();
     return withdrawal;
 }
+const getUserWithdrawals = async (id: string, query: Record<string, unknown>) => {
+    const queryBuilder = new QueryBuilder(Withdrawal.find({ user: id }), query)
+
+    const result = await queryBuilder
+        .filter()
+        .sort()
+        .paginate()
+        .fields()
+        .modelQuery.exec();
+
+    const meta = await queryBuilder.countTotal();
+    return {
+        meta,
+        result,
+    }
+
+}
 export const WithdrawalService = {
     addCardForWithdrawal,
     getUserCards,
     removeCard,
-    requestWithdrawal
+    requestWithdrawal,
+    getUserWithdrawals
 }

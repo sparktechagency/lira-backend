@@ -51,9 +51,20 @@ const requestWithdrawal = catchAsync(async (req, res) => {
         data: result,
     });
 })
+const getUserWithdrawals = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string };
+    const result = await WithdrawalService.getUserWithdrawals(id, req.query);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'User withdrawals retrieved successfully',
+        data: result,
+    })
+})  
 export const WithdrawalController = {
     addCardForWithdrawal,
     getUserCards,
     removeCard,
-    requestWithdrawal
+    requestWithdrawal,
+    getUserWithdrawals
 }

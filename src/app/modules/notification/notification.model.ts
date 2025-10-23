@@ -74,15 +74,15 @@ const userPreferenceSchema = new Schema<INotificationPreference>({
      },
      constants: {
           type: Boolean,
-          default: true,
+          default: false,
      },
      reminder: {
           type: Boolean,
-          default: true,
+          default: false,
      },
      summary: {
           type: Boolean,
-          default: true,
+          default: false,
      },
 }, {
      timestamps: true,

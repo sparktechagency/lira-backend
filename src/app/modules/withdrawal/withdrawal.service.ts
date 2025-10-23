@@ -257,6 +257,17 @@ const getAllWithdrawals = async (queryParam: Record<string, unknown>) => {
         },
     ]);
 }
+const getWithdrawalById = async (withdrawalId: string) => {
+    const withdrawal = await Withdrawal.findById(withdrawalId)
+        .populate('user', 'name email image points stripeCustomerId savedCards')
+        .populate('processedBy', 'name email');
+
+    if (!withdrawal) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Withdrawal not found');
+    }
+    return withdrawal;
+}
+
 
 
 export const WithdrawalService = {
@@ -269,4 +280,5 @@ export const WithdrawalService = {
     cancelWithdrawal,
     getUserWallet,
     getAllWithdrawals,
+    getWithdrawalById,
 }

@@ -60,7 +60,7 @@ const getUserWithdrawals = catchAsync(async (req, res) => {
         message: 'User withdrawals retrieved successfully',
         data: result,
     })
-})  
+})
 const getWithdrawalDetails = catchAsync(async (req, res) => {
     const { id } = req.params;
     const { id: userId } = req.user as { id: string };
@@ -72,7 +72,7 @@ const getWithdrawalDetails = catchAsync(async (req, res) => {
         data: result,
     })
 })
-const cancelWithdrawal  = catchAsync(async (req, res) => {
+const cancelWithdrawal = catchAsync(async (req, res) => {
     const { id } = req.params;
     const { id: userId } = req.user as { id: string };
     const result = await WithdrawalService.cancelWithdrawal(id, userId);
@@ -99,6 +99,28 @@ const getAllWithdrawals = catchAsync(async (req, res) => {
         statusCode: StatusCodes.OK,
         success: true,
         message: 'All withdrawals retrieved successfully',
+        data: result,
+    })
+})
+const getWithdrawalById = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const result = await WithdrawalService.getWithdrawalById(id);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Withdrawal details retrieved successfully',
+        data: result,
+    })
+})
+const approveWithdrawal = catchAsync(async (req, res) => {
+    const { withdrawalId } = req.params;
+    const { payoutMethod = 'instant', adminNote } = req.body; // instant or standard
+    const { id: adminId } = req.user as { id: string };
+    const result = await WithdrawalService.approveWithdrawal(withdrawalId, adminId, payoutMethod, adminNote);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'Withdrawal approved successfully',
         data: result,
     })
 })

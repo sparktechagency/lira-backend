@@ -4,6 +4,7 @@ import { User } from "../user/user.model";
 import StripeService from "../../builder/StripeService";
 import { Withdrawal } from "./withdrawal.model";
 import QueryBuilder from "../../builder/QueryBuilder";
+import { Types } from "mongoose";
 
 const addCardForWithdrawal = async (id: string, paymentMethodId: string) => {
     const user = await User.findById(id);
@@ -268,7 +269,110 @@ const getWithdrawalById = async (withdrawalId: string) => {
     return withdrawal;
 }
 
+const approveWithdrawal = async (withdrawalId: string, adminId: string, payoutMethod: string, adminNote: string) => {
+    // Get withdrawal with user details
+    const withdrawal = await Withdrawal.findById(withdrawalId).populate('user');
 
+    if (!withdrawal) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Withdrawal not found');
+    }
+
+    if (withdrawal.status !== 'pending') {
+        throw new AppError(StatusCodes.BAD_REQUEST, `Cannot approve. Current status: ${withdrawal.status}`);
+    }
+
+    const user = withdrawal.user as any;
+
+    // Update status to processing
+    withdrawal.status = 'processing';
+    withdrawal.processedBy = new Types.ObjectId(adminId);
+    withdrawal.processedAt = new Date();
+    if (adminNote) {
+        withdrawal.adminNote = adminNote;
+    }
+    await withdrawal.save();
+
+    try {
+        // Calculate payout fee
+        const fee = StripeService.calculatePayoutFee(withdrawal.amount, payoutMethod as 'instant' | 'standard');
+        const netAmount = withdrawal.amount - fee;
+
+        let payout;
+
+        if (withdrawal.withdrawalMethod === 'card') {
+            // Send money to card via Stripe
+            if (payoutMethod === 'instant') {
+                payout = await StripeService.createCardPayout(
+                    netAmount,
+                    withdrawal.currency,
+                    withdrawal.cardDetails!.cardId,
+                    {
+                        withdrawalId: withdrawalId,
+                        userId: user._id.toString(),
+                        userEmail: user.email,
+                        method: 'instant',
+                    },
+                );
+            } else {
+                payout = await StripeService.createStandardPayout(
+                    netAmount,
+                    withdrawal.currency,
+                    withdrawal.cardDetails!.cardId,
+                    {
+                        withdrawalId: withdrawalId,
+                        userId: user._id.toString(),
+                        userEmail: user.email,
+                        method: 'standard',
+                    },
+                );
+            }
+
+            withdrawal.stripePayoutId = payout.id;
+        }
+
+        // Update withdrawal to completed
+        withdrawal.status = 'completed';
+        withdrawal.completedAt = new Date();
+        await withdrawal.save();
+
+        // Update user wallet stats
+        await User.findByIdAndUpdate(user._id, {
+            $inc: {
+                'wallet.totalWithdrawn': withdrawal.amount,
+            },
+        });
+
+        // Send notification to user (implement your notification service)
+        // await sendNotification(user._id, 'Withdrawal approved', `Your withdrawal of $${withdrawal.amount} has been processed.`);
+
+
+        return {
+            withdrawal,
+            payout: {
+                id: payout?.id,
+                status: payout?.status,
+                amount: netAmount,
+                fee,
+                method: payoutMethod,
+            },
+        }
+
+    } catch (error: any) {
+        // If Stripe payout fails, refund points and mark as failed
+        await User.findByIdAndUpdate(user._id, {
+            $inc: { points: withdrawal.pointsDeducted },
+        });
+
+        withdrawal.status = 'failed';
+        withdrawal.rejectionReason = `Payout failed: ${error.message}`;
+        await withdrawal.save();
+
+        throw new AppError(
+            StatusCodes.INTERNAL_SERVER_ERROR,
+            `Payout processing failed: ${error.message}. Points have been refunded to user.`,
+        );
+    }
+}
 
 export const WithdrawalService = {
     addCardForWithdrawal,
@@ -281,4 +385,5 @@ export const WithdrawalService = {
     getUserWallet,
     getAllWithdrawals,
     getWithdrawalById,
+    approveWithdrawal,
 }

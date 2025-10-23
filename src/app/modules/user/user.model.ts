@@ -80,7 +80,7 @@ const userSchema = new Schema<IUser, UserModel>(
           },
           state: {
                type: String,
-               required: true,
+               required: false,
           },
           // 💳 NEW: Saved Cards for Withdrawal
           savedCards: [

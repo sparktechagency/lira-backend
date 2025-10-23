@@ -16,6 +16,7 @@ import { ManuallyWinnerContestRoutes } from '../app/modules/manuallyWinnerContes
 import { DashboardRouter } from '../app/modules/dashboard/dashboard.route';
 import { FaqRoutes } from '../app/modules/faq/faq.route';
 import { WithdrawalRoutes } from '../app/modules/withdrawal/withdrawal.route';
+import { NotificationRoutes } from '../app/modules/notification/notification.routes';
 
 const router = express.Router();
 const routes = [
@@ -86,6 +87,10 @@ const routes = [
      {
           path: '/withdrawals',
           route: WithdrawalRoutes,
+     },
+     {
+          path: '/notifications',
+          route: NotificationRoutes,
      },
 
 ];

@@ -60,10 +60,23 @@ const sendAdminPushNotification = catchAsync(async (req, res) => {
      });
 });
 
+const getUserPreference = catchAsync(async (req: Request, res: Response) => {
+     const { id } = req.user as { id: string };
+     const result = await NotificationService.getUserPreference(id);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'User Preferences Retrieved Successfully',
+          data: result,
+     });
+});
+
 export const NotificationController = {
      adminNotificationFromDB,
      getNotificationFromDB,
      readNotification,
      adminReadNotification,
      sendAdminPushNotification,
+     getUserPreference,
 };

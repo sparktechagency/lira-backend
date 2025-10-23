@@ -59,10 +59,21 @@ const adminSendNotificationFromDB = async (payload: any) => {
 
      const result = await sendNotifications(notificationData);
 };
+
+// get user preferences
+const getUserPreference = async (userId: string): Promise<any> => {
+     const result = await Notification.findOne({ userId });
+     if (!result) {
+          return {}
+     }
+     return result;
+};
+
 export const NotificationService = {
      adminNotificationFromDB,
      getNotificationFromDB,
      readNotificationToDB,
      adminReadNotificationToDB,
      adminSendNotificationFromDB,
+     getUserPreference,
 };

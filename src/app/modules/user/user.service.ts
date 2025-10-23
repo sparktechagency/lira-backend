@@ -8,6 +8,7 @@ import { IUser } from './user.interface';
 import { User } from './user.model';
 import AppError from '../../../errors/AppError';
 import generateOTP from '../../../utils/generateOTP';
+import { UserPreference } from '../notification/notification.model';
 // create user
 const createUserToDB = async (payload: IUser): Promise<IUser> => {
      //set role
@@ -16,11 +17,11 @@ const createUserToDB = async (payload: IUser): Promise<IUser> => {
           throw new AppError(StatusCodes.CONFLICT, 'Email already exists');
      }
      payload.role = USER_ROLES.USER;
-     
+
      // Handle referral code if provided
      const referralCode = payload.referralCode;
      delete payload.referralCode; // Remove from payload as it's not in the user model directly
-     
+
      const createUser = await User.create(payload);
      if (!createUser) {
           throw new AppError(StatusCodes.BAD_REQUEST, 'Failed to create user');
@@ -32,14 +33,14 @@ const createUserToDB = async (payload: IUser): Promise<IUser> => {
                const referrer = await User.findOne({ referralCode });
                if (referrer) {
                     // Set referredBy for the new user
-                    await User.findByIdAndUpdate(createUser._id, { 
+                    await User.findByIdAndUpdate(createUser._id, {
                          referredBy: referrer._id,
                          points: 10 // Award points to the new user
                     });
-                    
+
                     // Update referrer stats
                     await User.findByIdAndUpdate(referrer._id, {
-                         $inc: { 
+                         $inc: {
                               referralCount: 1,
                               points: 10 // Award points to the referrer
                          }
@@ -67,7 +68,9 @@ const createUserToDB = async (payload: IUser): Promise<IUser> => {
           expireAt: new Date(Date.now() + 3 * 60000),
      };
      await User.findOneAndUpdate({ _id: createUser._id }, { $set: { authentication } });
-
+     await UserPreference.create({
+          userId: createUser._id,
+     });
      return createUser;
 };
 
@@ -187,9 +190,9 @@ const findAllUsers = async (page: number = 1, limit: number = 10) => {
           .skip(skip)
           .limit(limit)
           .select('-password');
-     
+
      const total = await User.countDocuments({ isDeleted: { $ne: true } });
-     
+
      return {
           users,
           total,
@@ -206,9 +209,9 @@ const findUsersByRole = async (role: USER_ROLES, page: number = 1, limit: number
           .skip(skip)
           .limit(limit)
           .select('-password');
-     
+
      const total = await User.countDocuments({ role, isDeleted: { $ne: true } });
-     
+
      return {
           users,
           total,
@@ -220,21 +223,21 @@ const findUsersByRole = async (role: USER_ROLES, page: number = 1, limit: number
 
 // Find OAuth users
 const findOAuthUsers = async (provider?: 'google' | 'facebook') => {
-     const query = { 
+     const query = {
           oauthProvider: { $exists: true, $ne: null },
           isDeleted: { $ne: true }
      };
-     
+
      if (provider) {
           (query as any).oauthProvider = provider;
      }
-     
+
      return await User.find(query).select('-password');
 };
 
 // Find local users (non-OAuth)
 const findLocalUsers = async () => {
-     return await User.find({ 
+     return await User.find({
           oauthProvider: { $exists: false },
           isDeleted: { $ne: true }
      }).select('-password');
@@ -244,7 +247,7 @@ const findLocalUsers = async () => {
 const searchUsers = async (searchTerm: string, page: number = 1, limit: number = 10) => {
      const skip = (page - 1) * limit;
      const regex = new RegExp(searchTerm, 'i');
-     
+
      const users = await User.find({
           $or: [
                { name: regex },
@@ -252,10 +255,10 @@ const searchUsers = async (searchTerm: string, page: number = 1, limit: number =
           ],
           isDeleted: { $ne: true }
      })
-     .skip(skip)
-     .limit(limit)
-     .select('-password');
-     
+          .skip(skip)
+          .limit(limit)
+          .select('-password');
+
      const total = await User.countDocuments({
           $or: [
                { name: regex },
@@ -263,7 +266,7 @@ const searchUsers = async (searchTerm: string, page: number = 1, limit: number =
           ],
           isDeleted: { $ne: true }
      });
-     
+
      return {
           users,
           total,
@@ -278,13 +281,13 @@ const getUserStats = async () => {
      const totalUsers = await User.countDocuments({ isDeleted: { $ne: true } });
      const googleUsers = await User.countDocuments({ googleId: { $exists: true, $ne: null } });
      const facebookUsers = await User.countDocuments({ facebookId: { $exists: true, $ne: null } });
-     const localUsers = await User.countDocuments({ 
+     const localUsers = await User.countDocuments({
           oauthProvider: { $exists: false },
           isDeleted: { $ne: true }
      });
      const verifiedUsers = await User.countDocuments({ verified: true, isDeleted: { $ne: true } });
      const blockedUsers = await User.countDocuments({ status: 'blocked', isDeleted: { $ne: true } });
-     
+
      return {
           totalUsers,
           googleUsers,
@@ -301,18 +304,18 @@ const linkOAuthAccount = async (userId: string, provider: 'google' | 'facebook',
      if (!user) {
           throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
      }
-     
+
      const updateData: any = {
           oauthProvider: provider,
           verified: true
      };
-     
+
      if (provider === 'google') {
           updateData.googleId = providerId;
      } else if (provider === 'facebook') {
           updateData.facebookId = providerId;
      }
-     
+
      return await User.findByIdAndUpdate(userId, updateData, { new: true });
 };
 
@@ -322,9 +325,9 @@ const unlinkOAuthAccount = async (userId: string, provider: 'google' | 'facebook
      if (!user) {
           throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
      }
-     
+
      const updateData: any = {};
-     
+
      if (provider === 'google') {
           updateData.googleId = null;
           updateData.oauthProvider = user.facebookId ? 'facebook' : null;
@@ -332,7 +335,7 @@ const unlinkOAuthAccount = async (userId: string, provider: 'google' | 'facebook
           updateData.facebookId = null;
           updateData.oauthProvider = user.googleId ? 'google' : null;
      }
-     
+
      return await User.findByIdAndUpdate(userId, updateData, { new: true });
 };
 

@@ -1,1 +1,15 @@
 Thu Oct 23 2025 18:3:21 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/oil/price 404 - 11.659 ms
+Thu Oct 23 2025 18:20:20 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.306 ms
+Thu Oct 23 2025 18:20:22 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.322 ms
+Thu Oct 23 2025 18:43:50 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 969.382 ms
+Thu Oct 23 2025 18:45:6 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 1361.415 ms
+Thu Oct 23 2025 18:45:6 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/energy/data&days=365 404 - 1.482 ms
+Thu Oct 23 2025 18:45:6 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 924.193 ms
+Thu Oct 23 2025 18:45:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 390.046 ms
+Thu Oct 23 2025 18:45:32 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 923.352 ms
+Thu Oct 23 2025 18:45:33 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 418.824 ms
+Thu Oct 23 2025 18:45:35 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 388.843 ms
+Thu Oct 23 2025 18:45:37 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 390.290 ms
+Thu Oct 23 2025 18:47:0 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 644.110 ms
+Thu Oct 23 2025 18:49:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 1087.837 ms
+Thu Oct 23 2025 18:49:56 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/economic/data?series=Oil&days=365 400 - 1126.710 ms

@@ -1,5 +1,5 @@
 import { model, Schema } from 'mongoose';
-import { INotification } from './notification.interface';
+import { INotification, INotificationPreference } from './notification.interface';
 
 enum NotificationType {
      ADMIN = 'ADMIN',
@@ -66,6 +66,28 @@ const notificationSchema = new Schema<INotification>(
      },
 );
 
-notificationSchema.index({ receiver: 1, read: 1 });
+const userPreferenceSchema = new Schema<INotificationPreference>({
+     userId: {
+          type: Schema.Types.ObjectId,
+          ref: 'User',
+          required: true
+     },
+     constants: {
+          type: Boolean,
+          default: true,
+     },
+     reminder: {
+          type: Boolean,
+          default: true,
+     },
+     summary: {
+          type: Boolean,
+          default: true,
+     },
+}, {
+     timestamps: true,
+});
 
+notificationSchema.index({ receiver: 1, read: 1 });
+export const UserPreference = model<INotificationPreference>('UserPreference', userPreferenceSchema);
 export const Notification = model<INotification>('Notification', notificationSchema);

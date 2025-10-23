@@ -10,3 +10,9 @@ export interface INotification {
      read: boolean;
      type?: 'ADMIN' | 'SYSTEM' | 'PAYMENT' | 'MESSAGE' | 'ALERT';
 }
+export interface INotificationPreference {
+     userId: Types.ObjectId;
+     constants: boolean;
+     reminder: boolean;
+     summary: boolean;
+}

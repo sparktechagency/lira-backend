@@ -28,7 +28,7 @@ const getUserCards = catchAsync(async (req, res) => {
 })
 const removeCard = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string };
-    const { cardId } = req.body;
+    const { cardId } = req.params;
     const result = await WithdrawalService.removeCard(id, cardId);
     sendResponse(res, {
         statusCode: StatusCodes.OK,

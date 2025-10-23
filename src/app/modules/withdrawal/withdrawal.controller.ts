@@ -175,4 +175,11 @@ export const WithdrawalController = {
     getWithdrawalDetails,
     cancelWithdrawal,
     getUserWallet,
+    getAllWithdrawals,
+    getWithdrawalById,
+    approveWithdrawal,
+    rejectWithdrawal,
+    getWithdrawalStats,
+    retryFailedWithdrawal,
+    checkPayoutStatus,
 }

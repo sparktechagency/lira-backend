@@ -527,44 +527,80 @@ const retryFailedWithdrawal = async (withdrawalId: string, payoutMethod: 'instan
     withdrawal.rejectionReason = undefined;
     await withdrawal.save();
 
-        const fee = StripeService.calculatePayoutFee(withdrawal.amount, payoutMethod as 'instant' | 'standard');
-        const netAmount = withdrawal.amount - fee;
+    const fee = StripeService.calculatePayoutFee(withdrawal.amount, payoutMethod as 'instant' | 'standard');
+    const netAmount = withdrawal.amount - fee;
 
-        let payout;
-        if (payoutMethod === 'instant') {
-            payout = await StripeService.createCardPayout(netAmount, withdrawal.currency, withdrawal.cardDetails!.cardId, {
-                withdrawalId: withdrawalId,
-                userId: user._id.toString(),
-                retry: 'true',
-            });
-        } else {
-            payout = await StripeService.createStandardPayout(netAmount, withdrawal.currency, withdrawal.cardDetails!.cardId, {
-                withdrawalId: withdrawalId,
-                userId: user._id.toString(),
-                retry: 'true',
-            });
-        }
+    let payout;
+    if (payoutMethod === 'instant') {
+        payout = await StripeService.createCardPayout(netAmount, withdrawal.currency, withdrawal.cardDetails!.cardId, {
+            withdrawalId: withdrawalId,
+            userId: user._id.toString(),
+            retry: 'true',
+        });
+    } else {
+        payout = await StripeService.createStandardPayout(netAmount, withdrawal.currency, withdrawal.cardDetails!.cardId, {
+            withdrawalId: withdrawalId,
+            userId: user._id.toString(),
+            retry: 'true',
+        });
+    }
 
+    withdrawal.status = 'completed';
+    withdrawal.stripePayoutId = payout.id;
+    withdrawal.completedAt = new Date();
+    await withdrawal.save();
+    return withdrawal;
+}
+
+
+const checkPayoutStatus = async (withdrawalId: string) => {
+    const withdrawal = await Withdrawal.findById(withdrawalId);
+
+    if (!withdrawal) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Withdrawal not found');
+    }
+
+    if (!withdrawal.stripePayoutId) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'No Stripe payout ID found');
+    }
+
+    // Fetch real-time status from Stripe
+    const payoutStatus = await StripeService.getPayoutStatus(withdrawal.stripePayoutId);
+
+    // Update local status if changed
+    if (payoutStatus.status === 'paid' && withdrawal.status !== 'completed') {
         withdrawal.status = 'completed';
-        withdrawal.stripePayoutId = payout.id;
         withdrawal.completedAt = new Date();
         await withdrawal.save();
-        return withdrawal;
-    }
+    } else if (payoutStatus.status === 'failed' && withdrawal.status !== 'failed') {
+        withdrawal.status = 'failed';
+        withdrawal.rejectionReason = payoutStatus.failure_message || 'Payout failed';
+        await withdrawal.save();
 
-export const WithdrawalService = {
-        addCardForWithdrawal,
-        getUserCards,
-        removeCard,
-        requestWithdrawal,
-        getUserWithdrawals,
-        getWithdrawalDetails,
-        cancelWithdrawal,
-        getUserWallet,
-        getAllWithdrawals,
-        getWithdrawalById,
-        approveWithdrawal,
-        rejectWithdrawal,
-        getWithdrawalStats,
-        retryFailedWithdrawal,
+        // Refund points
+        await User.findByIdAndUpdate(withdrawal.user, {
+            $inc: { points: withdrawal.pointsDeducted },
+        });
     }
+    return {
+        withdrawal,
+        payoutStatus,
+    };
+}
+export const WithdrawalService = {
+    addCardForWithdrawal,
+    getUserCards,
+    removeCard,
+    requestWithdrawal,
+    getUserWithdrawals,
+    getWithdrawalDetails,
+    cancelWithdrawal,
+    getUserWallet,
+    getAllWithdrawals,
+    getWithdrawalById,
+    approveWithdrawal,
+    rejectWithdrawal,
+    getWithdrawalStats,
+    retryFailedWithdrawal,
+    checkPayoutStatus,
+}

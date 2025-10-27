@@ -179,6 +179,7 @@ const createContestOrder = async (userId: string, payload: IOrderPayload) => {
           contestId: contest._id,
           contestName: contest.name,
           category: contest.category,
+          categoryId: contest.categoryId,
           phone: user.phone || '',
           email: user.email || '',
           region: user.state || 'N/A',

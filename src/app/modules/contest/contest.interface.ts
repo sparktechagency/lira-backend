@@ -86,7 +86,7 @@ export interface IContest extends Document {
     category: string;
     categoryId: Types.ObjectId;
     description: string;
-    state: US_STATES[];
+    state: string;
     prize: {
         title: string;
         type: string;

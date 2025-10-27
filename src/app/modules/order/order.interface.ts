@@ -16,6 +16,8 @@ export interface IProductOrder extends Document {
           tierId: string;
           price: number;
      }>;
+     categoryId: Types.ObjectId;
+     category: string;
      phone: string;
      email: string;
      totalAmount: number;

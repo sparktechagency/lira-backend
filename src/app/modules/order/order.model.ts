@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 import { IProductOrder } from './order.interface';
-import { US_STATES_ARRAY } from '../contest/contest.model';
+
 
 
 const orderSchema = new Schema<IProductOrder>(
@@ -19,6 +19,15 @@ const orderSchema = new Schema<IProductOrder>(
           contestId: {
                type: Schema.Types.ObjectId,
                ref: 'Contest',
+               required: true,
+          },
+          category: {
+               type: String,
+               required: true,
+          },
+          categoryId: {
+               type: Schema.Types.ObjectId,
+               ref: 'Category',
                required: true,
           },
           contestName: {
@@ -81,7 +90,6 @@ const orderSchema = new Schema<IProductOrder>(
           },
           state: {
                type: String,
-               enum: US_STATES_ARRAY as unknown as string[],
           },
           endTime: {
                type: Date,

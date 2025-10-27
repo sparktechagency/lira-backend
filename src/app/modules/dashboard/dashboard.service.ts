@@ -25,7 +25,7 @@ const getAnalytics = async (filters: AnalyticsFilters) => {
 
     // Add category filter
     if (filters.category && filters.category !== 'All Categories') {
-        orderMatchQuery.category = filters.category;
+        orderMatchQuery.categoryId = filters.category;
     }
 
     // Add gameType filter

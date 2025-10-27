@@ -1,0 +1,13 @@
+Mon Oct 27 2025 10:37:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Oct 27 2025 10:37:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Oct 27 2025 10:37:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Mon Oct 27 2025 10:37:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Mon Oct 27 2025 10:40:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Mon Oct 27 2025 10:40:3 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Mon Oct 27 2025 10:40:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Mon Oct 27 2025 10:40:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.updated[22m[49m
+Mon Oct 27 2025 10:40:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.updated[22m[49m
+Mon Oct 27 2025 10:40:4 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.finalized[22m[49m
+Mon Oct 27 2025 10:40:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.paid[22m[49m
+Mon Oct 27 2025 10:40:5 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.payment_succeeded[22m[49m
+Mon Oct 27 2025 10:40:21 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice_payment.paid[22m[49m

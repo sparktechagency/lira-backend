@@ -1,6 +1,0 @@
-Thu Oct 23 2025 16:2:39 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/withdrawals/cards 401 - 2.021 ms
-Thu Oct 23 2025 16:52:58 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/withdrawals/request 400 - 46.147 ms
-Thu Oct 23 2025 16:53:35 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/withdrawals/request 401 - 3.037 ms
-Thu Oct 23 2025 16:53:43 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/withdrawals/request 400 - 8.399 ms
-Thu Oct 23 2025 16:55:42 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/withdrawals/request 400 - 4.703 ms
-Thu Oct 23 2025 16:57:26 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/stock/history?symbol=AAPL&days=365 404 - 1469.804 ms

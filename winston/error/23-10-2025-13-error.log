@@ -1,2 +1,0 @@
-Thu Oct 23 2025 13:6:23 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/withdrawals/card 404 - 19.006 ms
-Thu Oct 23 2025 13:6:40 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/withdrawals/cards 403 - 20.518 ms

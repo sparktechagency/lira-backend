@@ -3,31 +3,49 @@ import { Order } from '../order/order.model';
 import { User } from '../user/user.model';
 import { AnalyticsFilters } from './dashboard.interface';
 
-
 const getAnalytics = async (filters: AnalyticsFilters) => {
     // Build date filter
     const dateFilter = buildDateFilter(filters);
 
-    // Build match query for orders
+    // Build COMPLETE match query for orders with ALL filters
     const orderMatchQuery: any = {
         isDeleted: false,
         ...dateFilter,
     };
 
-    // Add region filter if provided
-    if (filters.region && filters.region !== 'All Regions') {
+    // Add region filter
+    if (filters.region && filters.region !== 'All States') {
         orderMatchQuery.state = filters.region;
     }
 
-    // Add product filter if provided
+    // Add product filter
     if (filters.product && filters.product !== 'All Products') {
         orderMatchQuery.contestName = filters.product;
     }
 
-    // Build user match query
-    const userMatchQuery: any = { isDeleted: false };
-    if (filters.region && filters.region !== 'All Regions') {
+    // Add category filter
+    if (filters.category && filters.category !== 'All Categories') {
+        orderMatchQuery.category = filters.category;
+    }
+
+    // Add gameType filter
+    if (filters.gameType && filters.gameType !== 'All Types') {
+        orderMatchQuery.gameType = filters.gameType;
+    }
+
+    // Build COMPLETE user match query with ALL filters
+    const userMatchQuery: any = { 
+        isDeleted: false,
+        ...dateFilter, // User creation date filter
+    };
+
+    if (filters.region && filters.region !== 'All States') {
         userMatchQuery.state = filters.region;
+    }
+
+    // Add userSegment filter
+    if (filters.userSegment && filters.userSegment !== 'All Segments') {
+        userMatchQuery.segment = filters.userSegment;
     }
 
     // Parallel execution of all analytics queries
@@ -50,8 +68,8 @@ const getAnalytics = async (filters: AnalyticsFilters) => {
         getTopProductsByRevenue(orderMatchQuery),
         getEntryPriceSensitivity(orderMatchQuery),
         getUserEngagement(orderMatchQuery, userMatchQuery, dateFilter),
-        getNewUsersThisWeek(userMatchQuery),
-        getHighActivityUsers(orderMatchQuery),
+        getNewUsersThisWeek(userMatchQuery, dateFilter),
+        getHighActivityUsers(orderMatchQuery, dateFilter),
         getLoyaltyMetrics(orderMatchQuery),
         getTopUsersBySpend(orderMatchQuery),
         getGoldStreakLeaders(orderMatchQuery),
@@ -95,19 +113,16 @@ const buildDateFilter = (filters: AnalyticsFilters) => {
         endDate = new Date(filters.endDate);
     } else if (filters.dateRange) {
         switch (filters.dateRange) {
-            case 'Last Week':
+            case 'lastDay':
+                startDate = new Date(now.getTime() - 1 * 24 * 60 * 60 * 1000);
+                break;
+            case 'lastWeek':
                 startDate = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
                 break;
-            case 'Last Month':
+            case 'lastMonth':
                 startDate = new Date(now.getTime() - 30 * 24 * 60 * 60 * 1000);
                 break;
-            case 'Last 3 Months':
-                startDate = new Date(now.getTime() - 90 * 24 * 60 * 60 * 1000);
-                break;
-            case 'Last 6 Months':
-                startDate = new Date(now.getTime() - 180 * 24 * 60 * 60 * 1000);
-                break;
-            case 'Last Year':
+            case 'lastYear':
                 startDate = new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000);
                 break;
             default:
@@ -265,12 +280,15 @@ const getUserEngagement = async (
 ) => {
     const previousPeriodFilter = getPreviousPeriodFilter(dateFilter);
 
+    // Create previous period queries with same filters
+    const previousOrderMatchQuery = {
+        ...orderMatchQuery,
+        createdAt: previousPeriodFilter,
+    };
+
     const [currentMetrics, previousMetrics] = await Promise.all([
         calculateEngagementMetrics(orderMatchQuery, userMatchQuery),
-        calculateEngagementMetrics(
-            { ...orderMatchQuery, createdAt: previousPeriodFilter },
-            userMatchQuery
-        ),
+        calculateEngagementMetrics(previousOrderMatchQuery, userMatchQuery),
     ]);
 
     return {
@@ -395,7 +413,7 @@ const getPreviousPeriodFilter = (currentFilter: any) => {
 };
 
 const calculatePercentageChange = (oldValue: number, newValue: number): string => {
-    if (oldValue === 0) return '+100%';
+    if (oldValue === 0) return newValue > 0 ? '+100%' : '0%';
     const change = ((newValue - oldValue) / oldValue) * 100;
     return `${change >= 0 ? '+' : ''}${change.toFixed(1)}%`;
 };
@@ -405,16 +423,11 @@ const calculateDaysChange = (oldValue: number, newValue: number): string => {
     return `${change >= 0 ? '+' : ''}${change.toFixed(1)} days`;
 };
 
-// New Users This Week
-const getNewUsersThisWeek = async (matchQuery: any) => {
-    const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-
+// New Users This Week - NOW USES dateFilter PROPERLY
+const getNewUsersThisWeek = async (matchQuery: any, dateFilter: any) => {
     const newUsers = await User.aggregate([
         {
-            $match: {
-                ...matchQuery,
-                createdAt: { $gte: weekAgo },
-            },
+            $match: matchQuery, // This already has date filter and other filters
         },
         {
             $lookup: {
@@ -438,16 +451,11 @@ const getNewUsersThisWeek = async (matchQuery: any) => {
     return newUsers;
 };
 
-// High Activity Users
-const getHighActivityUsers = async (matchQuery: any) => {
-    const weekAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-
+// High Activity Users - NOW USES dateFilter PROPERLY
+const getHighActivityUsers = async (matchQuery: any, dateFilter: any) => {
     const highActivityUsers = await Order.aggregate([
         {
-            $match: {
-                ...matchQuery,
-                createdAt: { $gte: weekAgo },
-            },
+            $match: matchQuery, // This already has all filters including date
         },
         {
             $group: {
@@ -494,7 +502,6 @@ const getLoyaltyMetrics = async (matchQuery: any) => {
             $group: {
                 _id: null,
                 totalWins: { $sum: 1 },
-                totalOrders: { $sum: 1 },
             },
         },
         {
@@ -507,17 +514,23 @@ const getLoyaltyMetrics = async (matchQuery: any) => {
         {
             $project: {
                 winRate: {
-                    $multiply: [
-                        { $divide: ['$totalWins', { $size: '$allOrders' }] },
-                        100,
-                    ],
+                    $cond: {
+                        if: { $gt: [{ $size: '$allOrders' }, 0] },
+                        then: {
+                            $multiply: [
+                                { $divide: ['$totalWins', { $size: '$allOrders' }] },
+                                100,
+                            ],
+                        },
+                        else: 0,
+                    },
                 },
             },
         },
     ]);
 
     return {
-        winRate: result[0]?.winRate || 0,
+        winRate: Number((result[0]?.winRate || 0).toFixed(2)),
         change: '+0.3%',
     };
 };

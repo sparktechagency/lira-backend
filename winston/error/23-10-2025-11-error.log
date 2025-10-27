@@ -1,5 +1,0 @@
-Thu Oct 23 2025 11:3:11 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 14.016 ms
-Thu Oct 23 2025 11:3:12 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 1.371 ms
-Thu Oct 23 2025 11:3:13 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=undefined 400 - 2.235 ms
-Thu Oct 23 2025 11:10:20 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 16.108 ms
-Thu Oct 23 2025 11:10:22 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 7.281 ms

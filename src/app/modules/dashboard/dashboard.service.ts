@@ -34,7 +34,7 @@ const getAnalytics = async (filters: AnalyticsFilters) => {
     }
 
     // Build COMPLETE user match query with ALL filters
-    const userMatchQuery: any = { 
+    const userMatchQuery: any = {
         isDeleted: false,
         ...dateFilter, // User creation date filter
     };

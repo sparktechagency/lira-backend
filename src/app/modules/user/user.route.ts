@@ -15,7 +15,10 @@ router
      .patch(
           auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER),
           fileUploadHandler(),
-          parseFileData(FOLDER_NAMES.IMAGE),
+          parseFileData(
+               { fieldName: FOLDER_NAMES.IMAGE, forceSingle: true },
+               { fieldName: FOLDER_NAMES.IMAGES, forceMultiple: true },
+          ),
           validateRequest(UserValidation.updateUserZodSchema),
           UserController.updateProfile,
      );

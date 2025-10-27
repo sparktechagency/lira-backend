@@ -44,6 +44,14 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                default: '',
           },
+          images: {
+               type: [String],
+               default: [],
+          },
+          isVerifiedByAdmin: {
+               type: Boolean,
+               default: false,
+          },
           status: {
                type: String,
                enum: ['active', 'blocked'],
@@ -61,6 +69,7 @@ const userSchema = new Schema<IUser, UserModel>(
                type: String,
                default: '',
           },
+
           // OAuth fields
           googleId: {
                type: String,

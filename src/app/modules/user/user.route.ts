@@ -15,14 +15,16 @@ router
      .patch(
           auth(USER_ROLES.SUPER_ADMIN, USER_ROLES.ADMIN, USER_ROLES.USER),
           fileUploadHandler(),
-          parseFileData(
-               { fieldName: FOLDER_NAMES.IMAGE, forceSingle: true },
-               { fieldName: FOLDER_NAMES.IMAGES, forceMultiple: true },
-          ),
+          parseFileData(FOLDER_NAMES.IMAGE),
           validateRequest(UserValidation.updateUserZodSchema),
           UserController.updateProfile,
      );
-
+router.patch('/upload-identity',
+     auth(USER_ROLES.USER),
+     fileUploadHandler(),
+     parseFileData(FOLDER_NAMES.IMAGES),
+     UserController.uploadIdentity,
+)
 router.route('/register').post(validateRequest(UserValidation.createUserZodSchema), UserController.createUser);
 
 // Admin routes for user management

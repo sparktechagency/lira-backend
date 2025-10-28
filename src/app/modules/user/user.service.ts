@@ -139,6 +139,24 @@ const updateProfileToDB = async (user: JwtPayload, payload: Partial<IUser>): Pro
      return updateDoc;
 };
 
+const uploadIdentityToDB = async (userId: string, payload: Partial<IUser>): Promise<Partial<IUser | null>> => {
+     const isExistUser = await User.isExistUserById(userId);
+     if (!isExistUser) {
+          throw new AppError(StatusCodes.BAD_REQUEST, "User doesn't exist!");
+     }
+
+     //unlink file here
+     if (payload.images && isExistUser.images) {
+          unlinkFile(isExistUser.images);
+     }
+
+     const updateDoc = await User.findOneAndUpdate({ _id: userId }, { $set: { images: payload.images } }, {
+          new: true,
+     });
+
+     return updateDoc;
+};
+
 const verifyUserPassword = async (userId: string, password: string) => {
      const user = await User.findById(userId).select('+password');
      if (!user) {
@@ -359,4 +377,5 @@ export const UserService = {
      getUserStats,
      linkOAuthAccount,
      unlinkOAuthAccount,
+     uploadIdentityToDB,
 };

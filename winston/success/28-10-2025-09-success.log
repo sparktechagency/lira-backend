@@ -1,0 +1,10 @@
+Tue Oct 28 2025 9:31:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 9:31:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 9:31:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 28 2025 9:31:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 28 2025 9:33:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 33.437 ms
+Tue Oct 28 2025 9:33:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 26.611 ms
+Tue Oct 28 2025 9:33:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 9.145 ms
+Tue Oct 28 2025 9:33:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 10.794 ms
+Tue Oct 28 2025 9:33:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 23.766 ms
+Tue Oct 28 2025 9:33:42 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 55.020 ms

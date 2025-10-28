@@ -1,0 +1,10 @@
+Tue Oct 28 2025 10:0:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Oct 28 2025 10:0:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Oct 28 2025 10:0:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Tue Oct 28 2025 10:0:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Oct 28 2025 10:1:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68f70b6c443d91ba3a751db4 200 - 9.022 ms
+Tue Oct 28 2025 10:1:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68fa1db17816de2b1569d5bb 200 - 39.129 ms
+Tue Oct 28 2025 10:1:12 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.843 ms
+Tue Oct 28 2025 10:1:12 [SERVER-NAME] info: 10.10.7.14 - GET /image/ferrarylogo-1761222231829.png 200 - 3.005 ms
+Tue Oct 28 2025 10:1:12 [SERVER-NAME] info: 10.10.7.14 - GET /image/aziz-1761563867807.jpg 200 - 3.205 ms
+Tue Oct 28 2025 10:10:48 [SERVER-NAME] info: Mail send successfully

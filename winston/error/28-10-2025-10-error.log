@@ -1,0 +1,4 @@
+Tue Oct 28 2025 10:9:46 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 2.540 ms
+Tue Oct 28 2025 10:10:37 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 3.531 ms
+Tue Oct 28 2025 10:10:44 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 409 - 51.637 ms
+Tue Oct 28 2025 10:11:17 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 3.105 ms

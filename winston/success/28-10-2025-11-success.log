@@ -1,0 +1,78 @@
+Tue Oct 28 2025 11:20:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.203 ms
+Tue Oct 28 2025 11:20:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 6.551 ms
+Tue Oct 28 2025 11:20:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 4.504 ms
+Tue Oct 28 2025 11:20:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 1.762 ms
+Tue Oct 28 2025 11:20:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 5.157 ms
+Tue Oct 28 2025 11:20:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.636 ms
+Tue Oct 28 2025 11:20:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 23.493 ms
+Tue Oct 28 2025 11:20:49 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 3.452 ms
+Tue Oct 28 2025 11:20:51 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 0.767 ms
+Tue Oct 28 2025 11:23:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.554 ms
+Tue Oct 28 2025 11:23:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.101 ms
+Tue Oct 28 2025 11:23:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 1.873 ms
+Tue Oct 28 2025 11:23:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.245 ms
+Tue Oct 28 2025 11:23:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 9.757 ms
+Tue Oct 28 2025 11:23:24 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 3.008 ms
+Tue Oct 28 2025 11:23:24 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68f70b6c443d91ba3a751db4 200 - 3.396 ms
+Tue Oct 28 2025 11:23:24 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68fa1db17816de2b1569d5bb 200 - 5.480 ms
+Tue Oct 28 2025 11:23:24 [SERVER-NAME] info: 10.10.7.14 - GET /image/aziz-1761563867807.jpg 200 - 1.801 ms
+Tue Oct 28 2025 11:23:24 [SERVER-NAME] info: 10.10.7.14 - GET /image/ferrarylogo-1761222231829.png 200 - 1.493 ms
+Tue Oct 28 2025 11:23:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68f70b6c443d91ba3a751db4 200 - 1.940 ms
+Tue Oct 28 2025 11:23:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70b8e443d91ba3a751dc7 200 - 3.816 ms
+Tue Oct 28 2025 11:23:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68f70b6c443d91ba3a751db4 200 - 1.784 ms
+Tue Oct 28 2025 11:23:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68fa1db17816de2b1569d5bb 200 - 4.477 ms
+Tue Oct 28 2025 11:24:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.898 ms
+Tue Oct 28 2025 11:24:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 9.029 ms
+Tue Oct 28 2025 11:24:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/analysis 200 - 7.416 ms
+Tue Oct 28 2025 11:24:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/referrals/code 200 - 4.761 ms
+Tue Oct 28 2025 11:24:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 6.122 ms
+Tue Oct 28 2025 11:24:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-order-analysis 200 - 9.023 ms
+Tue Oct 28 2025 11:24:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.634 ms
+Tue Oct 28 2025 11:24:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 2.667 ms
+Tue Oct 28 2025 11:24:15 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 0.778 ms
+Tue Oct 28 2025 11:28:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 8.518 ms
+Tue Oct 28 2025 11:28:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 10.785 ms
+Tue Oct 28 2025 11:28:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 4.559 ms
+Tue Oct 28 2025 11:28:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 1.495 ms
+Tue Oct 28 2025 11:28:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.886 ms
+Tue Oct 28 2025 11:28:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 16.063 ms
+Tue Oct 28 2025 11:28:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 9.864 ms
+Tue Oct 28 2025 11:28:5 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 27.487 ms
+Tue Oct 28 2025 11:28:8 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 1.103 ms
+Tue Oct 28 2025 11:28:10 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.577 ms
+Tue Oct 28 2025 11:28:10 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 1.575 ms
+Tue Oct 28 2025 11:28:10 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 3.193 ms
+Tue Oct 28 2025 11:29:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 2.919 ms
+Tue Oct 28 2025 11:29:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 4.275 ms
+Tue Oct 28 2025 11:29:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 3.572 ms
+Tue Oct 28 2025 11:32:10 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/upload-identity 200 - 16.551 ms
+Tue Oct 28 2025 11:51:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 3.864 ms
+Tue Oct 28 2025 11:51:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.416 ms
+Tue Oct 28 2025 11:51:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 3.109 ms
+Tue Oct 28 2025 11:51:14 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 0.955 ms
+Tue Oct 28 2025 11:51:15 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 0.865 ms
+Tue Oct 28 2025 11:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 4.362 ms
+Tue Oct 28 2025 11:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.585 ms
+Tue Oct 28 2025 11:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 3.225 ms
+Tue Oct 28 2025 11:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 1.462 ms
+Tue Oct 28 2025 11:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.217 ms
+Tue Oct 28 2025 11:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.345 ms
+Tue Oct 28 2025 11:53:11 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 8.677 ms
+Tue Oct 28 2025 11:53:12 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 0.964 ms
+Tue Oct 28 2025 11:53:16 [SERVER-NAME] info: 10.10.7.14 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 0.742 ms
+Tue Oct 28 2025 11:53:46 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/upload-identity 200 - 17.022 ms
+Tue Oct 28 2025 11:53:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.858 ms
+Tue Oct 28 2025 11:53:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 2.073 ms
+Tue Oct 28 2025 11:53:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 3.062 ms
+Tue Oct 28 2025 11:55:17 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/users/upload-identity 200 - 14.238 ms
+Tue Oct 28 2025 11:55:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.095 ms
+Tue Oct 28 2025 11:55:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 6.500 ms
+Tue Oct 28 2025 11:55:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 4.228 ms
+Tue Oct 28 2025 11:56:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Tue Oct 28 2025 11:56:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Tue Oct 28 2025 11:56:18 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Tue Oct 28 2025 11:56:20 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Tue Oct 28 2025 11:58:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Tue Oct 28 2025 11:58:59 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Tue Oct 28 2025 11:59:0 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Tue Oct 28 2025 11:59:2 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m

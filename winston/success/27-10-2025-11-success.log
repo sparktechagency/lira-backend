@@ -1,2 +1,0 @@
-Mon Oct 27 2025 11:20:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: customer.created[22m[49m
-Mon Oct 27 2025 11:20:29 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_method.attached[22m[49m

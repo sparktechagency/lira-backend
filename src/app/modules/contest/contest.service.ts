@@ -451,10 +451,15 @@ const getContestByCategoryId = async (id: string) => {
 }
 
 const getCryptoNews = async () => {
-    const url = `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&topics=crypto&apikey=${config.api.alphavantage_api_key}`;
-        const response = await axios.get(url);
-    return response.data.feed;
+    const url = `https://www.alphavantage.co/query?function=NEWS_SENTIMENT&tickers=BTCUSD,SOLUSD,ETHUSD&apikey=${config.api.alphavantage_api_key}`;
+    const response = await axios.get(url);
 
+    if (response.data && response.data.feed && response.data.feed.length > 0) {
+        return response.data.feed;
+    } else {
+        console.log("No news found");
+        return [];
+    }
 };
 const getCryptoPriceHistory = async (query: Record<string, unknown>) => {
     const rawCrypto = String(query.crypto || 'bitcoin');

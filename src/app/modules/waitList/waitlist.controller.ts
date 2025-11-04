@@ -13,6 +13,17 @@ const createWaitList = catchAsync(async (req, res) => {
     });
 })
 
+const getAllWaitList = catchAsync(async (req, res) => {
+    const result = await WaitListService.getAllWaitList();
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'WaitList fetched successfully',
+        data: result,
+    });
+})
+
 export const WaitListController = {
     createWaitList,
+    getAllWaitList,
 }

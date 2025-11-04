@@ -112,3 +112,12 @@ Tue Nov 04 2025 12:28:13 [SERVER-NAME] info: [32mConfig validation successful.
 Tue Nov 04 2025 12:28:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
 Tue Nov 04 2025 12:28:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
 Tue Nov 04 2025 12:28:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Tue Nov 04 2025 12:31:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 20.981 ms
+Tue Nov 04 2025 12:31:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 5.771 ms
+Tue Nov 04 2025 12:31:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.457 ms
+Tue Nov 04 2025 12:31:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 6.364 ms
+Tue Nov 04 2025 12:31:52 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 40.605 ms
+Tue Nov 04 2025 12:38:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Tue Nov 04 2025 12:38:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Tue Nov 04 2025 12:38:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Tue Nov 04 2025 12:38:11 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m

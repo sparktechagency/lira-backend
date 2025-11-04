@@ -10,6 +10,16 @@ const createWaitList = async (payload: IWaitList) => {
     }
     return result;
 }
+
+const getAllWaitList = async () => {
+    const result = await WaitListModel.find().populate('userId', 'name image email');
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'WaitList fetch failed');
+    }
+    return result;
+}
+
 export const WaitListService = {
     createWaitList,
+    getAllWaitList,
 }

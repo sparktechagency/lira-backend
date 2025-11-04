@@ -1,0 +1,14 @@
+Tue Nov 04 2025 12:1:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?groupId=68d21f8bdd68b7214c680dd7 200 - 59.468 ms
+Tue Nov 04 2025 12:1:21 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?groupId=68d21f8bdd68b7214c680dd7 200 - 7.619 ms
+Tue Nov 04 2025 12:2:59 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?groupId=68d21f8bdd68b7214c680dd7 200 - 15.448 ms
+Tue Nov 04 2025 12:3:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?groupId=68d21f8bdd68b7214c680dd7 200 - 7.406 ms
+Tue Nov 04 2025 12:5:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 17.967 ms
+Tue Nov 04 2025 12:5:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68fa312b9f37d17e31d45791 200 - 18.478 ms
+Tue Nov 04 2025 12:5:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 38.160 ms
+Tue Nov 04 2025 12:5:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 3.735 ms
+Tue Nov 04 2025 12:5:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.744 ms
+Tue Nov 04 2025 12:5:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 8.494 ms
+Tue Nov 04 2025 12:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 5.069 ms
+Tue Nov 04 2025 12:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f8bdd68b7214c680dd7 200 - 5.648 ms
+Tue Nov 04 2025 12:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 7.260 ms
+Tue Nov 04 2025 12:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1760943054838.jpg 200 - 4.651 ms

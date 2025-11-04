@@ -87,6 +87,11 @@ const ContestSchema = new Schema<IContest>({
         required: [true, 'Group is required'],
         trim: true
     },
+    groupId: {
+        type: Schema.Types.ObjectId,
+        ref: 'Group',
+        required: [true, 'Group ID is required']
+    },
     category: {
         type: String,
         required: [true, 'Category is required'],

@@ -10,6 +10,7 @@ import { normalizeResponse, resolveCoinId, resolveStockSymbol, validateTierCover
 import axios from "axios";
 import config from "../../../config";
 import { generateMetadataFromCategory } from "./contest.helpers";
+import { Types } from "mongoose";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -34,6 +35,7 @@ const createContest = async (payload: Partial<IContest>) => {
         payload.categoryId = category._id;
         payload.category = category.name;
         payload.group = category.group;
+        payload.groupId = category.groupId ? new Types.ObjectId(String(category.groupId)) : undefined;
         const generatedMetadata = await generateMetadataFromCategory(category, payload.name);
         console.log(generatedMetadata, "this is generatedMetadata meta data");
         if (generatedMetadata) {

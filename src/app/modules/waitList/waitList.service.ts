@@ -19,7 +19,24 @@ const getAllWaitList = async () => {
     return result;
 }
 
+const getSingleWaitList = async (id: string) => {
+    const result = await WaitListModel.findById(id).populate('userId', 'name image email');
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'WaitList fetch failed');
+    }
+    return result;
+}
+        
+const deleteWaitList = async (id: string) => {
+    const result = await WaitListModel.findByIdAndDelete(id);
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'WaitList delete failed');
+    }
+    return result;
+}
 export const WaitListService = {
     createWaitList,
     getAllWaitList,
+    getSingleWaitList,
+    deleteWaitList,
 }

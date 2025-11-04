@@ -23,7 +23,29 @@ const getAllWaitList = catchAsync(async (req, res) => {
     });
 })
 
+const getSingleWaitList = catchAsync(async (req, res) => {
+    const result = await WaitListService.getSingleWaitList(req.params.id);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'WaitList fetched successfully',
+        data: result,
+    });
+})
+
+const deleteWaitList = catchAsync(async (req, res) => {
+    const result = await WaitListService.deleteWaitList(req.params.id);
+    sendResponse(res, {
+        statusCode: StatusCodes.OK,
+        success: true,
+        message: 'WaitList deleted successfully',
+        data: result,
+    });
+})
+
 export const WaitListController = {
     createWaitList,
     getAllWaitList,
+    getSingleWaitList,
+    deleteWaitList,
 }

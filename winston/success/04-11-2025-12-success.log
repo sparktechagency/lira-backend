@@ -121,3 +121,4 @@ Tue Nov 04 2025 12:38:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: charg
 Tue Nov 04 2025 12:38:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
 Tue Nov 04 2025 12:38:9 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
 Tue Nov 04 2025 12:38:11 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Tue Nov 04 2025 12:48:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 99.440 ms

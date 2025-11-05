@@ -470,14 +470,9 @@ ContestSchema.pre('save', function (next) {
         this.isModified('pricing.tiers')) {
 
         console.log('Key prediction fields modified - clearing generated predictions');
-
-        // Clear generated predictions to force regeneration
         this.predictions.generatedPredictions = [];
-
-        // Reset total entries since predictions are being regenerated
         this.totalEntries = 0;
 
-        // Mark as draft if it was published (since structure changed)
         if (this.status === 'Active') {
             console.log('Contest structure changed - reverting to Draft status');
             this.status = 'Draft';
@@ -495,7 +490,7 @@ ContestSchema.pre('save', function (next) {
         .sort((a, b) => a.min - b.min);
 
     for (let i = 0; i < sortedTiers.length - 1; i++) {
-        if (sortedTiers[i].max >= sortedTiers[i + 1].min) {
+        if (sortedTiers[i].max > sortedTiers[i + 1].min) {
             return next(new Error(`Pricing tiers overlap: ${sortedTiers[i].name} and ${sortedTiers[i + 1].name}`));
         }
     }

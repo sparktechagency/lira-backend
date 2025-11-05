@@ -4,6 +4,8 @@ import sendResponse from "../../../shared/sendResponse";
 import { WaitListService } from "./waitList.service";
 
 const createWaitList = catchAsync(async (req, res) => {
+    const { id } = req.user as { id: string }
+    req.body.userId = id;
     const result = await WaitListService.createWaitList(req.body);
     sendResponse(res, {
         statusCode: StatusCodes.CREATED,

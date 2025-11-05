@@ -1,0 +1,4 @@
+Wed Nov 05 2025 10:18:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 4.499 ms
+Wed Nov 05 2025 10:18:43 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.361 ms
+Wed Nov 05 2025 10:18:50 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 1.823 ms
+Wed Nov 05 2025 10:49:8 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 2.391 ms

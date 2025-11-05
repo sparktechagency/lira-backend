@@ -1,0 +1,16 @@
+Wed Nov 05 2025 17:1:1 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 4.344 ms
+Wed Nov 05 2025 17:3:34 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 25.870 ms
+Wed Nov 05 2025 17:4:29 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 1.166 ms
+Wed Nov 05 2025 17:18:11 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b1f60a05487e84981ae86/publish 500 - 6.579 ms
+Wed Nov 05 2025 17:18:15 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b1f60a05487e84981ae86/publish 500 - 4.713 ms
+Wed Nov 05 2025 17:19:51 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b1f60a05487e84981ae86/publish 500 - 3.908 ms
+Wed Nov 05 2025 17:20:14 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b1f60a05487e84981ae86/publish 500 - 5.997 ms
+Wed Nov 05 2025 17:20:15 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b1f60a05487e84981ae86/publish 500 - 4.824 ms
+Wed Nov 05 2025 17:20:15 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b1f60a05487e84981ae86/publish 500 - 4.960 ms
+Wed Nov 05 2025 17:20:21 [SERVER-NAME] error: 10.10.7.47 - PATCH /api/v1/contest/690b1f60a05487e84981ae86/publish 500 - 5.222 ms
+Wed Nov 05 2025 17:22:55 [SERVER-NAME] error: 10.10.7.47 - POST /api/v1/contest/create 400 - 31.277 ms
+Wed Nov 05 2025 17:28:29 [SERVER-NAME] error: 10.10.7.47 - PATCH /api/v1/contest/690b348563d26c6b2d43cb12/publish 500 - 6.661 ms
+Wed Nov 05 2025 17:30:36 [SERVER-NAME] error: 10.10.7.47 - PATCH /api/v1/contest/690b355863d26c6b2d43cba1/publish 500 - 6.325 ms
+Wed Nov 05 2025 17:32:57 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b355863d26c6b2d43cba1/publish 500 - 6.501 ms
+Wed Nov 05 2025 17:34:49 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b355863d26c6b2d43cba1/publish 400 - 32.711 ms
+Wed Nov 05 2025 17:42:38 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b382ca60f7e247d3afd30/publish 400 - 7.345 ms

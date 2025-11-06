@@ -1,6 +1,7 @@
 import { createServer, Server as HttpServer } from 'http';
 import { Server as SocketServer } from 'socket.io';
 import colors from 'colors';
+import cluster from 'cluster';
 import { validateConfig } from './DB/configValidation';
 import { connectToDatabase } from './DB/db';
 import app from './app';
@@ -11,17 +12,17 @@ import { setupProcessHandlers } from './DB/processHandlers';
 import { setupSecurity } from './DB/security';
 import { setupCluster } from './DB/cluster';
 
-// Define the types for the servers
-let httpServer: HttpServer;
-let socketServer: SocketServer;
+export let httpServer: HttpServer;
+export let socketServer: SocketServer;
 
-// Function to start the server
-export async function startServer() {
+export async function startServer(): Promise<void> {
      try {
-          // Validate config
+          // Validate config first
           validateConfig();
-          // Connect to the database
+          
+          // Connect to database (includes Agenda startup)
           await connectToDatabase();
+          
           // Create HTTP server
           httpServer = createServer(app);
           const httpPort = Number(config.port);
@@ -33,33 +34,58 @@ export async function startServer() {
           httpServer.headersTimeout = 60000;
 
           // Start HTTP server
-          httpServer.listen(httpPort, ipAddress, () => {
-               logger.info(colors.bgCyan(`♻️  Application listening on http://${ipAddress}:${httpPort}`));
+          await new Promise<void>((resolve, reject) => {
+               httpServer.listen(httpPort, ipAddress, () => {
+                    logger.info(colors.bgCyan(`♻️  Worker ${process.pid} listening on http://${ipAddress}:${httpPort}`));
+                    resolve();
+               });
+               httpServer.on('error', reject);
           });
 
-          // Set up Socket.io server on same port as HTTP server
+          // Set up Socket.io server
           socketServer = new SocketServer(httpServer, {
                cors: {
                     origin: config.allowed_origins || '*',
+                    credentials: true,
                },
+               pingTimeout: 60000,
+               pingInterval: 25000,
           });
+          
           socketHelper.socket(socketServer);
           //@ts-ignore
           global.io = socketServer;
-          logger.info(colors.yellow(`♻️  Socket is listening on same port ${httpPort}`));
+          
+          logger.info(colors.yellow(`♻️  Socket.IO ready on worker ${process.pid}`));
+          
+          // Notify master that worker is ready
+          if (cluster.isWorker && process.send) {
+               process.send('ready');
+          }
+          
      } catch (error) {
-          logger.error(colors.red('Failed to start server'), error);
+          logger.error(colors.red(`Worker ${process.pid} failed to start:`), error);
+          throw error;
+     }
+}
+
+// ==========================================
+// ENTRY POINT - Runs once at startup
+// ==========================================
+async function bootstrap() {
+     try {
+          setupSecurity();
+          
+          if (config.node_env === 'production') {
+               setupCluster();
+          } else {
+               setupProcessHandlers();
+               await startServer();
+          }
+     } catch (error) {
+          logger.error(colors.red('Bootstrap failed:'), error);
           process.exit(1);
      }
 }
-// Set up error handlers
-setupProcessHandlers();
-// Set up security middleware
-setupSecurity();
-if (config.node_env === 'production') {
-     setupCluster();
-} else {
-     startServer();
-}
-// Export server instances
-export { httpServer, socketServer };
+
+bootstrap();

@@ -1,9 +1,0 @@
-Wed Nov 05 2025 12:37:22 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 2.306 ms
-Wed Nov 05 2025 12:38:0 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 1.010 ms
-Wed Nov 05 2025 12:38:17 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 1.018 ms
-Wed Nov 05 2025 12:39:6 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 0.794 ms
-Wed Nov 05 2025 12:44:49 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 0.993 ms
-Wed Nov 05 2025 12:45:9 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 0.918 ms
-Wed Nov 05 2025 12:45:14 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 0.926 ms
-Wed Nov 05 2025 12:45:14 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/active/list?groupId=All 400 - 0.955 ms
-Wed Nov 05 2025 12:58:13 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 207.966 ms

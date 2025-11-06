@@ -1,0 +1,395 @@
+Thu Nov 06 2025 11:1:4 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list 200 - 141.321 ms
+Thu Nov 06 2025 11:1:38 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=3 200 - 10.935 ms
+Thu Nov 06 2025 11:1:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=1 200 - 12.361 ms
+Thu Nov 06 2025 11:4:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 14.146 ms
+Thu Nov 06 2025 11:4:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 20.548 ms
+Thu Nov 06 2025 11:4:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 25.255 ms
+Thu Nov 06 2025 11:4:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 12.597 ms
+Thu Nov 06 2025 11:4:50 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 3.558 ms
+Thu Nov 06 2025 11:4:50 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 1.139 ms
+Thu Nov 06 2025 11:4:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 1033.896 ms
+Thu Nov 06 2025 11:5:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 27.078 ms
+Thu Nov 06 2025 11:5:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 31.966 ms
+Thu Nov 06 2025 11:5:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 33.523 ms
+Thu Nov 06 2025 11:5:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 24.336 ms
+Thu Nov 06 2025 11:5:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 369.186 ms
+Thu Nov 06 2025 11:5:28 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 2.351 ms
+Thu Nov 06 2025 11:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 5.417 ms
+Thu Nov 06 2025 11:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.948 ms
+Thu Nov 06 2025 11:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 4.260 ms
+Thu Nov 06 2025 11:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 6.574 ms
+Thu Nov 06 2025 11:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 8.013 ms
+Thu Nov 06 2025 11:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.609 ms
+Thu Nov 06 2025 11:5:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.802 ms
+Thu Nov 06 2025 11:6:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 6.011 ms
+Thu Nov 06 2025 11:6:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 12.177 ms
+Thu Nov 06 2025 11:6:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 15.137 ms
+Thu Nov 06 2025 11:6:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.473 ms
+Thu Nov 06 2025 11:6:6 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 0.946 ms
+Thu Nov 06 2025 11:6:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 14.710 ms
+Thu Nov 06 2025 11:6:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 7.930 ms
+Thu Nov 06 2025 11:6:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 10.761 ms
+Thu Nov 06 2025 11:6:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 8.399 ms
+Thu Nov 06 2025 11:6:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 30.129 ms
+Thu Nov 06 2025 11:6:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 27.045 ms
+Thu Nov 06 2025 11:6:7 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 9.701 ms
+Thu Nov 06 2025 11:6:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 9.551 ms
+Thu Nov 06 2025 11:6:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 7.045 ms
+Thu Nov 06 2025 11:6:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.154 ms
+Thu Nov 06 2025 11:6:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.301 ms
+Thu Nov 06 2025 11:6:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 44.030 ms
+Thu Nov 06 2025 11:6:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.128 ms
+Thu Nov 06 2025 11:6:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories 200 - 3.724 ms
+Thu Nov 06 2025 11:6:16 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 4.955 ms
+Thu Nov 06 2025 11:6:16 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 1.601 ms
+Thu Nov 06 2025 11:6:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories 200 - 2.486 ms
+Thu Nov 06 2025 11:6:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list 200 - 5.885 ms
+Thu Nov 06 2025 11:6:17 [SERVER-NAME] info: 10.10.7.14 - GET /image/lamborghinilogo-1762341809890.png 200 - 1.021 ms
+Thu Nov 06 2025 11:6:17 [SERVER-NAME] info: 10.10.7.14 - GET /image/images09-1762342711968.png 200 - 1.979 ms
+Thu Nov 06 2025 11:6:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 6.887 ms
+Thu Nov 06 2025 11:6:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 4.795 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.980 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 8.073 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.489 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.900 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.154 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.505 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 2.094 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 5.560 ms
+Thu Nov 06 2025 11:6:18 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 4.815 ms
+Thu Nov 06 2025 11:8:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.740 ms
+Thu Nov 06 2025 11:8:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.407 ms
+Thu Nov 06 2025 11:8:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.832 ms
+Thu Nov 06 2025 11:8:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.933 ms
+Thu Nov 06 2025 11:8:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 6.329 ms
+Thu Nov 06 2025 11:8:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.388 ms
+Thu Nov 06 2025 11:8:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories 200 - 3.348 ms
+Thu Nov 06 2025 11:8:48 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 7.618 ms
+Thu Nov 06 2025 11:8:48 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 1.064 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 8.763 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 6.969 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 385.286 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.803 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 10.896 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 49.789 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 4.921 ms
+Thu Nov 06 2025 11:8:50 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 6.300 ms
+Thu Nov 06 2025 11:8:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.559 ms
+Thu Nov 06 2025 11:8:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 11.448 ms
+Thu Nov 06 2025 11:8:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 8.201 ms
+Thu Nov 06 2025 11:8:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 14.272 ms
+Thu Nov 06 2025 11:8:51 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 6.018 ms
+Thu Nov 06 2025 11:12:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:12:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:12:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:12:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:13:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 16.003 ms
+Thu Nov 06 2025 11:13:19 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 4.808 ms
+Thu Nov 06 2025 11:13:22 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=1&limit=10 204 - 0.147 ms
+Thu Nov 06 2025 11:13:22 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=10 200 - 21.458 ms
+Thu Nov 06 2025 11:14:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:14:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:14:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:14:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:15:33 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:15:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:15:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:15:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:15:41 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:15:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:15:42 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:15:42 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:15:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:15:44 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:15:44 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:15:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:15:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:15:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:15:49 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:15:49 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:16:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:16:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:16:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:16:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:16:8 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:16:8 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:16:8 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:16:8 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:16:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:16:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:16:15 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:16:15 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:16:23 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:16:23 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:16:23 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:16:23 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:16:58 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 30.901 ms
+Thu Nov 06 2025 11:17:0 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=1&limit=10 204 - 0.337 ms
+Thu Nov 06 2025 11:17:0 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=10 304 - 62.343 ms
+Thu Nov 06 2025 11:17:18 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=1&limit=3 204 - 0.057 ms
+Thu Nov 06 2025 11:17:18 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=3 200 - 9.654 ms
+Thu Nov 06 2025 11:17:21 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=2&limit=3 204 - 0.076 ms
+Thu Nov 06 2025 11:17:21 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=2&limit=3 200 - 14.271 ms
+Thu Nov 06 2025 11:17:26 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:17:26 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:17:26 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:17:26 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:17:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:17:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:17:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:17:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:17:57 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:17:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:17:57 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:17:57 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:18:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 9.139 ms
+Thu Nov 06 2025 11:18:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.695 ms
+Thu Nov 06 2025 11:18:9 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=social 200 - 8.862 ms
+Thu Nov 06 2025 11:18:9 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 9.828 ms
+Thu Nov 06 2025 11:18:9 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 11.780 ms
+Thu Nov 06 2025 11:18:9 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 32.472 ms
+Thu Nov 06 2025 11:18:56 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=2&limit=3 204 - 0.166 ms
+Thu Nov 06 2025 11:18:56 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=2&limit=3 304 - 21.948 ms
+Thu Nov 06 2025 11:19:2 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=1&limit=10 204 - 0.066 ms
+Thu Nov 06 2025 11:19:2 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=10 304 - 10.441 ms
+Thu Nov 06 2025 11:20:54 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:20:54 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:20:54 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:20:54 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:23:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:23:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:23:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:23:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:24:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:24:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:24:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:24:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:24:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:24:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:24:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:24:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:24:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:24:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:24:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:24:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:24:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:24:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:24:16 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:24:16 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:25:6 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:25:6 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:25:6 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:25:6 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:25:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:25:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:25:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:25:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:25:21 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=1&limit=3 204 - 0.764 ms
+Thu Nov 06 2025 11:25:21 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=3 304 - 57.554 ms
+Thu Nov 06 2025 11:25:22 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/community/posts 204 - 0.100 ms
+Thu Nov 06 2025 11:25:23 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/community/posts 304 - 25.838 ms
+Thu Nov 06 2025 11:25:52 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/user-managements/?page=1 204 - 0.070 ms
+Thu Nov 06 2025 11:25:52 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/user-managements/?page=1 304 - 19.666 ms
+Thu Nov 06 2025 11:25:52 [SERVER-NAME] info: 10.10.7.47 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 3.046 ms
+Thu Nov 06 2025 11:25:52 [SERVER-NAME] info: 10.10.7.47 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 1.558 ms
+Thu Nov 06 2025 11:25:52 [SERVER-NAME] info: 10.10.7.47 - GET /image/image-of-1762323466471.jpg 200 - 2.202 ms
+Thu Nov 06 2025 11:27:13 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 4.499 ms
+Thu Nov 06 2025 11:27:15 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/user-managements/?page=1 204 - 0.081 ms
+Thu Nov 06 2025 11:27:15 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/user-managements/?page=1 304 - 7.113 ms
+Thu Nov 06 2025 11:27:15 [SERVER-NAME] info: 10.10.7.47 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 1.334 ms
+Thu Nov 06 2025 11:27:15 [SERVER-NAME] info: 10.10.7.47 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 1.152 ms
+Thu Nov 06 2025 11:27:15 [SERVER-NAME] info: 10.10.7.47 - GET /image/image-of-1762323466471.jpg 200 - 1.451 ms
+Thu Nov 06 2025 11:27:41 [SERVER-NAME] warn: [42m[1mUnhandled event type: invoice.upcoming[22m[49m
+Thu Nov 06 2025 11:27:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:27:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:27:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:27:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:28:8 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=1&limit=3 204 - 1.107 ms
+Thu Nov 06 2025 11:28:8 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=3 304 - 49.767 ms
+Thu Nov 06 2025 11:28:43 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:28:43 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:28:43 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:28:43 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:29:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Thu Nov 06 2025 11:29:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Thu Nov 06 2025 11:29:52 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Thu Nov 06 2025 11:29:54 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Thu Nov 06 2025 11:30:18 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:30:18 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:30:18 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:30:18 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:30:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:30:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:30:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:30:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:32:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 14.802 ms
+Thu Nov 06 2025 11:32:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 23.502 ms
+Thu Nov 06 2025 11:32:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 27.036 ms
+Thu Nov 06 2025 11:32:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 9.495 ms
+Thu Nov 06 2025 11:32:35 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 2.218 ms
+Thu Nov 06 2025 11:32:35 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 712.689 ms
+Thu Nov 06 2025 11:32:36 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 1.685 ms
+Thu Nov 06 2025 11:32:36 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.373 ms
+Thu Nov 06 2025 11:32:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 10.880 ms
+Thu Nov 06 2025 11:32:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.518 ms
+Thu Nov 06 2025 11:32:37 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.795 ms
+Thu Nov 06 2025 11:37:6 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.succeeded[22m[49m
+Thu Nov 06 2025 11:37:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.succeeded[22m[49m
+Thu Nov 06 2025 11:37:7 [SERVER-NAME] warn: [42m[1mUnhandled event type: payment_intent.created[22m[49m
+Thu Nov 06 2025 11:37:8 [SERVER-NAME] warn: [42m[1mUnhandled event type: charge.updated[22m[49m
+Thu Nov 06 2025 11:39:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 8.534 ms
+Thu Nov 06 2025 11:39:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 8.947 ms
+Thu Nov 06 2025 11:39:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 4.873 ms
+Thu Nov 06 2025 11:39:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.563 ms
+Thu Nov 06 2025 11:39:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 891.384 ms
+Thu Nov 06 2025 11:39:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 952.370 ms
+Thu Nov 06 2025 11:39:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.637 ms
+Thu Nov 06 2025 11:39:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 4.237 ms
+Thu Nov 06 2025 11:39:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.767 ms
+Thu Nov 06 2025 11:39:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.741 ms
+Thu Nov 06 2025 11:39:3 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 1.513 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 1.508 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.165 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 7.430 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.068 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 3.714 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.168 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 10.708 ms
+Thu Nov 06 2025 11:39:4 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 6.563 ms
+Thu Nov 06 2025 11:39:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 5.352 ms
+Thu Nov 06 2025 11:39:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.637 ms
+Thu Nov 06 2025 11:39:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 10.822 ms
+Thu Nov 06 2025 11:39:13 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 10.694 ms
+Thu Nov 06 2025 11:39:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.271 ms
+Thu Nov 06 2025 11:39:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.066 ms
+Thu Nov 06 2025 11:39:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.418 ms
+Thu Nov 06 2025 11:39:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 5.340 ms
+Thu Nov 06 2025 11:39:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.898 ms
+Thu Nov 06 2025 11:39:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.694 ms
+Thu Nov 06 2025 11:39:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 1.940 ms
+Thu Nov 06 2025 11:39:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.875 ms
+Thu Nov 06 2025 11:39:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 32.511 ms
+Thu Nov 06 2025 11:39:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.445 ms
+Thu Nov 06 2025 11:39:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories 200 - 3.223 ms
+Thu Nov 06 2025 11:39:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 6.963 ms
+Thu Nov 06 2025 11:39:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 0.981 ms
+Thu Nov 06 2025 11:39:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories 200 - 2.513 ms
+Thu Nov 06 2025 11:39:27 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list 200 - 5.340 ms
+Thu Nov 06 2025 11:39:27 [SERVER-NAME] info: 10.10.7.14 - GET /image/lamborghinilogo-1762341809890.png 200 - 2.626 ms
+Thu Nov 06 2025 11:39:27 [SERVER-NAME] info: 10.10.7.14 - GET /image/images09-1762342711968.png 200 - 1.614 ms
+Thu Nov 06 2025 11:39:28 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 5.742 ms
+Thu Nov 06 2025 11:39:28 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 7.101 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.304 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 5.264 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.861 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.506 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 4.776 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.237 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.253 ms
+Thu Nov 06 2025 11:39:29 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.113 ms
+Thu Nov 06 2025 11:39:45 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.409 ms
+Thu Nov 06 2025 11:39:45 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 4.626 ms
+Thu Nov 06 2025 11:39:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 5.519 ms
+Thu Nov 06 2025 11:39:46 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.468 ms
+Thu Nov 06 2025 11:40:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 4.767 ms
+Thu Nov 06 2025 11:40:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.791 ms
+Thu Nov 06 2025 11:40:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 8.746 ms
+Thu Nov 06 2025 11:40:21 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 6.793 ms
+Thu Nov 06 2025 11:40:21 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 2.857 ms
+Thu Nov 06 2025 11:40:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 348.507 ms
+Thu Nov 06 2025 11:40:22 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 0.836 ms
+Thu Nov 06 2025 11:40:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 8.246 ms
+Thu Nov 06 2025 11:40:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 7.051 ms
+Thu Nov 06 2025 11:40:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 5.390 ms
+Thu Nov 06 2025 11:40:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 3.110 ms
+Thu Nov 06 2025 11:40:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 5.966 ms
+Thu Nov 06 2025 11:40:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 9.847 ms
+Thu Nov 06 2025 11:40:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.345 ms
+Thu Nov 06 2025 11:40:59 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 4.851 ms
+Thu Nov 06 2025 11:40:59 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.289 ms
+Thu Nov 06 2025 11:40:59 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 10.113 ms
+Thu Nov 06 2025 11:40:59 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.182 ms
+Thu Nov 06 2025 11:41:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 3.351 ms
+Thu Nov 06 2025 11:41:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 3.432 ms
+Thu Nov 06 2025 11:41:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 5.516 ms
+Thu Nov 06 2025 11:41:0 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.533 ms
+Thu Nov 06 2025 11:41:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 5.964 ms
+Thu Nov 06 2025 11:41:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 5.316 ms
+Thu Nov 06 2025 11:41:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.509 ms
+Thu Nov 06 2025 11:41:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.226 ms
+Thu Nov 06 2025 11:41:19 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/groups/ 204 - 0.155 ms
+Thu Nov 06 2025 11:41:19 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups/ 200 - 2.285 ms
+Thu Nov 06 2025 11:41:19 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 204 - 0.104 ms
+Thu Nov 06 2025 11:41:19 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/category-by-group/68d21f76dd68b7214c680dd0 200 - 7.558 ms
+Thu Nov 06 2025 11:41:22 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/manually-winner-contest/pending?page=1&limit=10 204 - 0.066 ms
+Thu Nov 06 2025 11:41:22 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/manually-winner-contest/pending?page=1&limit=10 304 - 11.928 ms
+Thu Nov 06 2025 11:41:37 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.082 ms
+Thu Nov 06 2025 11:41:37 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 5.676 ms
+Thu Nov 06 2025 11:42:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 4.891 ms
+Thu Nov 06 2025 11:42:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 8.278 ms
+Thu Nov 06 2025 11:42:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 9.313 ms
+Thu Nov 06 2025 11:42:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.723 ms
+Thu Nov 06 2025 11:42:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 1.120 ms
+Thu Nov 06 2025 11:42:26 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 0.582 ms
+Thu Nov 06 2025 11:42:26 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 354.298 ms
+Thu Nov 06 2025 11:42:28 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=unit 204 - 0.054 ms
+Thu Nov 06 2025 11:42:28 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=unit 304 - 3.915 ms
+Thu Nov 06 2025 11:42:31 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 0.678 ms
+Thu Nov 06 2025 11:42:31 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.455 ms
+Thu Nov 06 2025 11:42:31 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.138 ms
+Thu Nov 06 2025 11:42:31 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 4.893 ms
+Thu Nov 06 2025 11:42:31 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.213 ms
+Thu Nov 06 2025 11:43:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 11:43:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 11:43:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 11:43:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 11:43:54 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/user-managements/?page=1 204 - 0.931 ms
+Thu Nov 06 2025 11:43:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/user-managements/?page=1 304 - 25.261 ms
+Thu Nov 06 2025 11:43:55 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 8.385 ms
+Thu Nov 06 2025 11:43:55 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 14.444 ms
+Thu Nov 06 2025 11:43:55 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 16.188 ms
+Thu Nov 06 2025 11:43:56 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 13.014 ms
+Thu Nov 06 2025 11:43:56 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 2.151 ms
+Thu Nov 06 2025 11:43:56 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 402.506 ms
+Thu Nov 06 2025 11:43:57 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 1.646 ms
+Thu Nov 06 2025 11:43:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.098 ms
+Thu Nov 06 2025 11:43:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.443 ms
+Thu Nov 06 2025 11:43:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.751 ms
+Thu Nov 06 2025 11:43:58 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 10.731 ms
+Thu Nov 06 2025 11:44:9 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/manually-winner-contest/pending?page=1&limit=10 204 - 0.058 ms
+Thu Nov 06 2025 11:44:9 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/manually-winner-contest/pending?page=1&limit=10 304 - 14.077 ms
+Thu Nov 06 2025 11:44:13 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/community/posts 204 - 0.065 ms
+Thu Nov 06 2025 11:44:13 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/community/posts 304 - 25.432 ms
+Thu Nov 06 2025 11:45:24 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/unit-type?key=type 204 - 0.106 ms
+Thu Nov 06 2025 11:45:24 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/unit-type?key=type 304 - 7.959 ms
+Thu Nov 06 2025 11:45:56 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/wait-list?page=1&limit=3 204 - 0.067 ms
+Thu Nov 06 2025 11:45:56 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/wait-list?page=1&limit=3 304 - 16.786 ms
+Thu Nov 06 2025 11:46:1 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/settings?key=social 204 - 0.088 ms
+Thu Nov 06 2025 11:46:1 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=social 304 - 1.920 ms
+Thu Nov 06 2025 11:48:38 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/settings?key=termsOfService 204 - 0.071 ms
+Thu Nov 06 2025 11:48:38 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=termsOfService 200 - 2.892 ms
+Thu Nov 06 2025 11:48:47 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/settings?key=privacyPolicy 204 - 0.065 ms
+Thu Nov 06 2025 11:48:47 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=privacyPolicy 200 - 2.942 ms
+Thu Nov 06 2025 11:48:50 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/help/?page=1&limit=10 204 - 0.066 ms
+Thu Nov 06 2025 11:48:50 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/help/?page=1&limit=10 200 - 11.452 ms
+Thu Nov 06 2025 11:54:30 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/faqs 204 - 0.181 ms
+Thu Nov 06 2025 11:54:30 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/faqs 200 - 27.713 ms
+Thu Nov 06 2025 11:54:37 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.097 ms
+Thu Nov 06 2025 11:54:37 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.068 ms
+Thu Nov 06 2025 11:54:37 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 304 - 8.643 ms
+Thu Nov 06 2025 11:54:37 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest?page=1&limit=10 304 - 66.377 ms
+Thu Nov 06 2025 11:54:45 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/community/posts 204 - 0.070 ms
+Thu Nov 06 2025 11:54:45 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/community/posts 304 - 22.526 ms
+Thu Nov 06 2025 11:58:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 10.201 ms
+Thu Nov 06 2025 11:58:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 14.939 ms
+Thu Nov 06 2025 11:58:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 16.889 ms
+Thu Nov 06 2025 11:58:1 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 7.664 ms
+Thu Nov 06 2025 11:58:2 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 2.870 ms
+Thu Nov 06 2025 11:58:2 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 1.109 ms
+Thu Nov 06 2025 11:58:2 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 798.701 ms
+Thu Nov 06 2025 11:58:4 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 1.652 ms
+Thu Nov 06 2025 11:58:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 7.221 ms
+Thu Nov 06 2025 11:58:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 12.237 ms
+Thu Nov 06 2025 11:58:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 14.904 ms
+Thu Nov 06 2025 11:58:9 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 9.307 ms
+Thu Nov 06 2025 11:58:9 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 450.271 ms

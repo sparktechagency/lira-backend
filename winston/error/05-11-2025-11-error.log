@@ -1,6 +1,0 @@
-Wed Nov 05 2025 11:53:24 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 212.847 ms
-Wed Nov 05 2025 11:53:31 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 3.040 ms
-Wed Nov 05 2025 11:53:42 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 409 - 7.041 ms
-Wed Nov 05 2025 11:54:57 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 211.565 ms
-Wed Nov 05 2025 11:55:4 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/auth/login 400 - 209.698 ms
-Wed Nov 05 2025 11:57:25 [SERVER-NAME] error: 10.10.7.14 - POST /api/v1/withdrawals/request 400 - 6.858 ms

@@ -7,11 +7,20 @@ export type IBlockAccount = {
      name: string;
      email: string;
 };
-
+export type ICreateContest = {
+     email: string;
+     userName: string;
+     category: string;
+     startDate: string;
+     endDate: string;
+     contestName: string;
+};
 export type IResetPassword = {
      email: string;
      otp: number;
 };
+
+
 export interface IResetPasswordByEmail {
      email: string;
      resetUrl: string;

@@ -14,3 +14,5 @@ Thu Nov 06 2025 10:39:18 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/c
 Thu Nov 06 2025 10:39:26 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/notifications/user-preferences 401 - 15.289 ms
 Thu Nov 06 2025 10:40:21 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/contest/68e4a90159705090632b3e26?id=690b3cfea60f7e247d3b0f5b 404 - 5.584 ms
 Thu Nov 06 2025 10:46:12 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/notifications/user-preferences 400 - 32.250 ms
+Thu Nov 06 2025 10:55:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 400 - 89.080 ms
+Thu Nov 06 2025 10:55:15 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 400 - 86.552 ms

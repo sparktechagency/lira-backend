@@ -53,6 +53,7 @@ const createContest = async (payload: Partial<IContest>) => {
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Contest creation failed');
     }
+    
     return result;
 };
 const getAllContests = async (query: Record<string, unknown>) => {

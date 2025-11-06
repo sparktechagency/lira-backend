@@ -1,6 +1,6 @@
 import { JwtPayload } from 'jsonwebtoken';
 import { INotification } from './notification.interface';
-import { Notification } from './notification.model';
+import { Notification, UserPreference } from './notification.model';
 import AppError from '../../../errors/AppError';
 import { StatusCodes } from 'http-status-codes';
 import { sendNotifications } from '../../../helpers/notificationsHelper';
@@ -62,10 +62,16 @@ const adminSendNotificationFromDB = async (payload: any) => {
 
 // get user preferences
 const getUserPreference = async (userId: string): Promise<any> => {
-     const result = await Notification.findOne({ userId });
+     const result = await UserPreference.findOne({ userId });
      if (!result) {
           return {}
      }
+     return result;
+};
+
+// update user preferences
+const updateUserPreference = async (userId: string, preferences: any): Promise<any> => {
+     const result = await UserPreference.findOneAndUpdate({ userId }, preferences, { new: true, upsert: true });
      return result;
 };
 
@@ -76,4 +82,5 @@ export const NotificationService = {
      adminReadNotificationToDB,
      adminSendNotificationFromDB,
      getUserPreference,
+     updateUserPreference,
 };

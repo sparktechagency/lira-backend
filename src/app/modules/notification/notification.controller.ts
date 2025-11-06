@@ -1,10 +1,9 @@
-import { Request, Response } from 'express';
 import catchAsync from '../../../shared/catchAsync';
 import sendResponse from '../../../shared/sendResponse';
 import { StatusCodes } from 'http-status-codes';
 import { NotificationService } from './notification.service';
 
-const getNotificationFromDB = catchAsync(async (req: Request, res: Response) => {
+const getNotificationFromDB = catchAsync(async (req, res) => {
      const user: any = req.user;
      const result = await NotificationService.getNotificationFromDB(user);
 
@@ -16,7 +15,7 @@ const getNotificationFromDB = catchAsync(async (req: Request, res: Response) => 
      });
 });
 
-const adminNotificationFromDB = catchAsync(async (req: Request, res: Response) => {
+const adminNotificationFromDB = catchAsync(async (req, res) => {
      const result = await NotificationService.adminNotificationFromDB();
 
      sendResponse(res, {
@@ -27,7 +26,7 @@ const adminNotificationFromDB = catchAsync(async (req: Request, res: Response) =
      });
 });
 
-const readNotification = catchAsync(async (req: Request, res: Response) => {
+const readNotification = catchAsync(async (req, res) => {
      const user: any = req.user;
      const result = await NotificationService.readNotificationToDB(user);
 
@@ -39,7 +38,7 @@ const readNotification = catchAsync(async (req: Request, res: Response) => {
      });
 });
 
-const adminReadNotification = catchAsync(async (req: Request, res: Response) => {
+const adminReadNotification = catchAsync(async (req, res) => {
      const result = await NotificationService.adminReadNotificationToDB();
 
      sendResponse(res, {
@@ -60,7 +59,7 @@ const sendAdminPushNotification = catchAsync(async (req, res) => {
      });
 });
 
-const getUserPreference = catchAsync(async (req: Request, res: Response) => {
+const getUserPreference = catchAsync(async (req, res) => {
      const { id } = req.user as { id: string };
      const result = await NotificationService.getUserPreference(id);
 
@@ -72,6 +71,18 @@ const getUserPreference = catchAsync(async (req: Request, res: Response) => {
      });
 });
 
+const updateUserPreference = catchAsync(async (req, res) => {
+     const { id } = req.user as { id: string };
+     const result = await NotificationService.updateUserPreference(id, req.body);
+
+     sendResponse(res, {
+          statusCode: StatusCodes.OK,
+          success: true,
+          message: 'User Preferences Updated Successfully',
+          data: result,
+     });
+});
+
 export const NotificationController = {
      adminNotificationFromDB,
      getNotificationFromDB,
@@ -79,4 +90,5 @@ export const NotificationController = {
      adminReadNotification,
      sendAdminPushNotification,
      getUserPreference,
+     updateUserPreference,
 };

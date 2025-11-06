@@ -59,7 +59,7 @@ export async function connectToDatabase(): Promise<void> {
      try {
           // First connect to MongoDB
           await mongoose.connect(config.database_url as string, {
-               serverSelectionTimeoutMS: 5000,
+               serverSelectionTimeoutMS: 50000,
                heartbeatFrequencyMS: 10000,
                maxPoolSize: config.node_env === 'production' ? 100 : 10,
                minPoolSize: config.node_env === 'production' ? 5 : 2,

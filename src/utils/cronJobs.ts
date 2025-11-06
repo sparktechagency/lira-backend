@@ -233,45 +233,45 @@ const finalizeContestWithNoEntries = async (contest: any, actualValue: number) =
      console.log(`✅ Contest ${contest._id} finalized with no entries`);
 };
 
-// ==================== API FETCH FUNCTIONS ====================
-// These are placeholders - implement based on your API services
+// // ==================== API FETCH FUNCTIONS ====================
+// // These are placeholders - implement based on your API services
 
-const fetchCryptoPrice = async (contest: any): Promise<number | null> => {
-     // TODO: Extract crypto symbol from contest metadata
-     // Call your getCryptoPriceHistory or similar service
-     return null;
-};
+// const fetchCryptoPrice = async (contest: any): Promise<number | null> => {
+//      // TODO: Extract crypto symbol from contest metadata
+//      // Call your getCryptoPriceHistory or similar service
+//      return null;
+// };
 
-const fetchStockPrice = async (contest: any): Promise<number | null> => {
-     // TODO: Extract stock symbol from contest metadata
-     // Call your getStockCurrentPrice or similar service
-     return null;
-};
+// const fetchStockPrice = async (contest: any): Promise<number | null> => {
+//      // TODO: Extract stock symbol from contest metadata
+//      // Call your getStockCurrentPrice or similar service
+//      return null;
+// };
 
-const fetchSportsData = async (contest: any): Promise<number | null> => {
-     // TODO: Extract sports data identifiers from contest metadata
-     // Call your getSportsData service
-     return null;
-};
+// const fetchSportsData = async (contest: any): Promise<number | null> => {
+//      // TODO: Extract sports data identifiers from contest metadata
+//      // Call your getSportsData service
+//      return null;
+// };
 
-const fetchEconomicData = async (contest: any): Promise<number | null> => {
-     // TODO: Extract economic indicator from contest metadata
-     // Call your getEconomicData service
-     return null;
-};
+// const fetchEconomicData = async (contest: any): Promise<number | null> => {
+//      // TODO: Extract economic indicator from contest metadata
+//      // Call your getEconomicData service
+//      return null;
+// };
 
-const fetchEnergyPrice = async (contest: any): Promise<number | null> => {
-     // TODO: Call your getEnergyData service
-     return null;
-};
+// const fetchEnergyPrice = async (contest: any): Promise<number | null> => {
+//      // TODO: Call your getEnergyData service
+//      return null;
+// };
 
-const fetchEntertainmentData = async (contest: any): Promise<number | null> => {
-     // TODO: Extract movie/video ID from contest metadata
-     // Call your getEntertainmentData service
-     return null;
-};
+// const fetchEntertainmentData = async (contest: any): Promise<number | null> => {
+//      // TODO: Extract movie/video ID from contest metadata
+//      // Call your getEntertainmentData service
+//      return null;
+// };
 
-// ====== CRON JOB SCHEDULERS ======
+// // ====== CRON JOB SCHEDULERS ======
 
 const winnerCheck = () => {
      // Run every minute to check for ended contests

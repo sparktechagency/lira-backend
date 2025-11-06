@@ -19,6 +19,7 @@ import { WithdrawalRoutes } from '../app/modules/withdrawal/withdrawal.route';
 import { NotificationRoutes } from '../app/modules/notification/notification.routes';
 import { WaitListRoutes } from '../app/modules/waitList/waitList.route';
 
+
 const router = express.Router();
 const routes = [
      {

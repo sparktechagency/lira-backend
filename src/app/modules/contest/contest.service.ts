@@ -11,6 +11,7 @@ import axios from "axios";
 import config from "../../../config";
 import { generateMetadataFromCategory } from "./contest.helpers";
 import { Types } from "mongoose";
+import { queueEmailNotifications } from "../../../helpers/asyncEmailSend";
 
 const createContest = async (payload: Partial<IContest>) => {
     // Validate required fields
@@ -53,7 +54,8 @@ const createContest = async (payload: Partial<IContest>) => {
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'Contest creation failed');
     }
-    
+    await queueEmailNotifications(result);
+
     return result;
 };
 const getAllContests = async (query: Record<string, unknown>) => {

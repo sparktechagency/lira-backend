@@ -1,1 +1,2 @@
 Thu Nov 06 2025 15:22:15 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 3.341 ms
+Thu Nov 06 2025 15:55:6 [SERVER-NAME] error: [31mDatabase connection error:[39m scheduleWeeklySummaryEmails is not defined

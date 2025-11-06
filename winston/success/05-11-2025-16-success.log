@@ -1,4 +1,0 @@
-Wed Nov 05 2025 16:1:4 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/community/posts 200 - 21.776 ms
-Wed Nov 05 2025 16:5:1 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/community/posts/68e261602c94518be3763023 200 - 15.019 ms
-Wed Nov 05 2025 16:37:46 [SERVER-NAME] warn: [42m[1mUnhandled event type: account.updated[22m[49m
-Wed Nov 05 2025 16:37:47 [SERVER-NAME] warn: [42m[1mUnhandled event type: capability.updated[22m[49m

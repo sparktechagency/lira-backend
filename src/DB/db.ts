@@ -3,6 +3,7 @@ import colors from 'colors';
 import { errorLogger, logger } from '../shared/logger';
 import config from '../config';
 import { startAgenda, stopAgenda, isAgendaRunning } from '../helpers/jobQueueSystem/agenda';
+import { scheduleWeeklySummaryEmails } from '../helpers/asyncEmailSend';
 
 // Set up MongoDB connection listeners
 export function setupMongooseListeners(): void {
@@ -21,10 +22,10 @@ export function setupMongooseListeners(): void {
 
      mongoose.connection.on('disconnected', () => {
           logger.warn(colors.yellow('MongoDB disconnected. Attempting to reconnect...'));
-          
+
           // Stop agenda when MongoDB disconnects
           if (isAgendaRunning()) {
-               stopAgenda().catch(err => 
+               stopAgenda().catch(err =>
                     errorLogger.error('Failed to stop Agenda on disconnect:', err)
                );
           }
@@ -32,7 +33,7 @@ export function setupMongooseListeners(): void {
 
      mongoose.connection.on('reconnected', async () => {
           logger.info(colors.green('MongoDB reconnected successfully'));
-          
+
           // Restart agenda when MongoDB reconnects
           try {
                if (!isAgendaRunning()) {
@@ -68,13 +69,14 @@ export async function connectToDatabase(): Promise<void> {
                retryWrites: true,
                retryReads: true,
           });
-          
+
           logger.info(colors.bgCyan('🚀 Database connected successfully'));
           // Setup listeners after connection
           setupMongooseListeners();
           
           // Then start Agenda
           await startAgenda();
+          await scheduleWeeklySummaryEmails();
      } catch (error) {
           errorLogger.error(colors.red('Database connection error:'), error);
           // Cleanup before exit
@@ -83,7 +85,7 @@ export async function connectToDatabase(): Promise<void> {
           } catch (stopError) {
                errorLogger.error('Failed to stop Agenda during cleanup:', stopError);
           }
-          
+
           process.exit(1);
      }
 }

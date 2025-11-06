@@ -1,88 +1,73 @@
-// Install: npm install agenda
+import { UserPreference } from "../app/modules/notification/notification.model";
+import { User } from "../app/modules/user/user.model";
+import { emailTemplate } from "../shared/emailTemplate";
+import { emailHelper } from "./emailHelper";
+import { getAgenda } from "./jobQueueSystem/agenda";
 
-import Agenda from 'agenda';
-import config from '../config';
 
-const agenda = new Agenda({
-    db: { address: config.database_url!, collection: 'emailJobs' }
-});
-
-// Define the reminder job
-agenda.define('send-contest-reminder', async (job) => {
-    const { contestId } = job.attrs.data;
-
+export const scheduleWeeklySummaryEmails = async (): Promise<void> => {
     try {
-        const contest = await Contest.findById(contestId);
-        const reminderPreferences = await UserPreference.find({ reminder: true }).populate('userId');
+        // Cancel any existing weekly summary jobs
+        await getAgenda().cancel({ name: 'send-weekly-summary' });
+        await getAgenda().every('0 9 * * 1', 'send-weekly-summary');
 
-        const emailPromises = reminderPreferences.map(async (preference: any) => {
-            try {
-                const user = preference.userId;
-                if (!user?.email) return;
-
-                const sendEmailData = emailTemplate.contestReminder({
-                    email: user.email,
-                    userName: user.name || '',
-                    contestName: contest.name || '',
-                    endDate: contest.endDate || '',
-                });
-
-                await emailHelper.sendEmail(sendEmailData);
-            } catch (error) {
-                console.error(`Failed to send reminder email:`, error);
-            }
-        });
-
-        await Promise.all(emailPromises);
+        console.log('✅ Weekly summary emails scheduled (Every Monday 9 AM)');
     } catch (error) {
-        console.error('Reminder job failed:', error);
+        console.error('❌ Failed to schedule weekly summary emails:', error);
     }
-});
+};
 
-// Start agenda
-await agenda.start();
-
-// Updated function
-const queueEmailNotifications = async (contest: any) => {
+// Background job for email notifications
+export const queueEmailNotifications = async (contest: any) => {
     try {
-        // Send immediate emails
+        // Query users with active preferences - fix: get users, not just preferences
         const contestPreferences = await UserPreference.find({ constants: true }).populate('userId');
 
+
+        // Send contest creation emails
         const emailPromises = contestPreferences.map(async (preference: any) => {
             try {
-                const user = preference.userId;
+                const user = preference.userId || await User.findById(preference.user);
+
                 if (!user?.email) return;
-
-                const sendEmailData = emailTemplate.createNewContest({
-                    email: user.email,
-                    userName: user.name || '',
-                    category: contest.category || '',
-                    startDate: contest.startDate || '',
-                    endDate: contest.endDate || '',
-                    contestName: contest.name || '',
-                });
-
-                await emailHelper.sendEmail(sendEmailData);
+                await getAgenda().now('send-contest-notification', { contestId: contest._id, userId: user._id });
             } catch (error) {
-                console.error(`Failed to send email:`, error);
+                console.error(`Failed to send email to user:`, error);
             }
         });
 
         await Promise.all(emailPromises);
 
-        // Schedule reminder (1 day before end)
-        const contestEndDate = new Date(contest.endDate);
-        const reminderDate = new Date(contestEndDate);
-        reminderDate.setDate(reminderDate.getDate() - 1);
-
-        if (reminderDate > new Date()) {
-            await agenda.schedule(reminderDate, 'send-contest-reminder', {
-                contestId: contest._id
-            });
-        }
+        // Schedule reminder emails (1 day before end date)
+        await scheduleReminderEmails(contest);
 
     } catch (error) {
         console.error('Error queuing email notifications:', error);
         throw error;
     }
 };
+
+// Schedule reminder emails to be sent 1 day before contest ends
+const scheduleReminderEmails = async (contest: any): Promise<void> => {
+    try {
+        const contestEndDate = new Date(contest.endTime);
+        const reminderDate = new Date(contestEndDate);
+        reminderDate.setDate(reminderDate.getDate() - 1); // 1 day before contest end
+
+        // Only schedule if reminder date is in the future
+        if (reminderDate > new Date()) {
+            const delay = reminderDate.getTime() - Date.now();
+
+            // Schedule the reminder email job using Agenda
+            if (delay > 0) {
+                await getAgenda().schedule(`in ${delay} milliseconds`, 'send-contest-reminder', {
+                    contestId: contest._id,
+                });
+                console.log(`✅ Reminder scheduled for contest ${contest.name} on ${reminderDate.toLocaleString()}`);
+            }
+        }
+    } catch (error) {
+        console.error('Error scheduling reminder emails:', error);
+        throw error;
+    };
+}

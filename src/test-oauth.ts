@@ -30,7 +30,7 @@ console.log('');
 
 // Check Session Configuration
 console.log('Session Configuration:');
-console.log('Session Secret:', config.express_sessoin ? '✅ Set' : '❌ Missing');
+console.log('Session Secret:', config.express_session ? '✅ Set' : '❌ Missing');
 console.log('');
 
 // Check Database Configuration
@@ -42,7 +42,7 @@ console.log('=== Configuration Summary ===');
 const hasGoogle = config.social.google_client_id && config.social.google_client_secret;
 const hasFacebook = config.social.facebook_client_id && config.social.facebook_client_secret;
 const hasJWT = config.jwt.jwt_secret && config.jwt.jwt_refresh_secret;
-const hasSession = config.express_sessoin;
+const hasSession = config.express_session;
 const hasDB = config.database_url;
 
 if (hasGoogle && hasFacebook && hasJWT && hasSession && hasDB) {
@@ -62,4 +62,4 @@ if (hasGoogle && hasFacebook && hasJWT && hasSession && hasDB) {
 console.log('');
 console.log('OAuth Test URLs:');
 console.log(`Google: http://localhost:${config.port || 5000}/api/v1/auth/google`);
-console.log(`Facebook: http://localhost:${config.port || 5000}/api/v1/auth/facebook`); 
+console.log(`Facebook: http://localhost:${config.port || 5000}/api/v1/auth/facebook`);

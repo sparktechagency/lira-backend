@@ -17,7 +17,7 @@ import { DashboardRouter } from '../app/modules/dashboard/dashboard.route';
 import { FaqRoutes } from '../app/modules/faq/faq.route';
 import { WithdrawalRoutes } from '../app/modules/withdrawal/withdrawal.route';
 import { NotificationRoutes } from '../app/modules/notification/notification.routes';
-import { WaitListRoutes } from '../app/modules/waitList/waitList.route';
+import { WaitListRoutes } from '../app/modules/wait-list/waitList.route';
 
 
 const router = express.Router();

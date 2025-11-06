@@ -422,3 +422,36 @@ Thu Nov 06 2025 10:47:25 [SERVER-NAME] info: [46m♻️  Application listening 
 Thu Nov 06 2025 10:47:26 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/notifications/user-preferences 200 - 59.056 ms
 Thu Nov 06 2025 10:47:37 [SERVER-NAME] info: 10.10.7.62 - PATCH /api/v1/notifications/user-preferences 200 - 12.875 ms
 Thu Nov 06 2025 10:49:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/notifications/user-preferences 200 - 6.044 ms
+Thu Nov 06 2025 10:51:5 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications/user-preferences 200 - 5.733 ms
+Thu Nov 06 2025 10:51:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 7.523 ms
+Thu Nov 06 2025 10:51:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 70.598 ms
+Thu Nov 06 2025 10:51:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/analysis 200 - 14.441 ms
+Thu Nov 06 2025 10:51:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/referrals/code 200 - 7.756 ms
+Thu Nov 06 2025 10:51:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 9.096 ms
+Thu Nov 06 2025 10:51:15 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/orders/past-order-analysis 200 - 11.563 ms
+Thu Nov 06 2025 10:51:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 13.491 ms
+Thu Nov 06 2025 10:51:17 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 7.804 ms
+Thu Nov 06 2025 10:51:17 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 3.358 ms
+Thu Nov 06 2025 10:52:19 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:52:19 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:52:19 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:52:19 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:52:22 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications/user-preferences 200 - 16.184 ms
+Thu Nov 06 2025 10:52:34 [SERVER-NAME] info: 10.10.7.14 - PATCH /api/v1/notifications/user-preferences 200 - 22.791 ms
+Thu Nov 06 2025 10:52:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/notifications/user-preferences 200 - 4.569 ms
+Thu Nov 06 2025 10:52:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:52:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:52:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:52:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:53:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:53:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:53:11 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:53:11 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:53:21 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:53:21 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:53:21 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:53:21 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:53:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 16.384 ms
+Thu Nov 06 2025 10:53:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/users/profile 200 - 22.460 ms
+Thu Nov 06 2025 10:53:38 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/withdrawals/cards 200 - 5.414 ms
+Thu Nov 06 2025 10:53:39 [SERVER-NAME] info: 10.10.7.14 - GET /image/cosmos-atos-keycap-press-button-close-up-crypto-currency-3d-illustration-render_476123-904-1762326263108.jpg 200 - 2.234 ms

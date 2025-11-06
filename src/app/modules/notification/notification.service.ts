@@ -71,6 +71,10 @@ const getUserPreference = async (userId: string): Promise<any> => {
 
 // update user preferences
 const updateUserPreference = async (userId: string, preferences: any): Promise<any> => {
+     const idExists = await UserPreference.exists({ userId });
+     if (!idExists) {
+         await UserPreference.create({ userId, ...preferences });
+     }
      const result = await UserPreference.findOneAndUpdate({ userId }, preferences, { new: true, upsert: true });
      return result;
 };

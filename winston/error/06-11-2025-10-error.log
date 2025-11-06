@@ -1,1 +1,6 @@
 Thu Nov 06 2025 10:10:47 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 9.665 ms
+Thu Nov 06 2025 10:14:59 [SERVER-NAME] error: 10.10.7.47 - GET /api/v1/users/profile 401 - 2.233 ms
+Thu Nov 06 2025 10:16:8 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.757 ms
+Thu Nov 06 2025 10:22:10 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/wait-list/create 401 - 1.188 ms
+Thu Nov 06 2025 10:22:10 [SERVER-NAME] error: 10.10.7.62 - POST /api/v1/wait-list/create 401 - 0.799 ms
+Thu Nov 06 2025 10:26:51 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 400 - 20.414 ms

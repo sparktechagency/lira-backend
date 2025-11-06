@@ -16,12 +16,13 @@ const createWaitList = catchAsync(async (req, res) => {
 })
 
 const getAllWaitList = catchAsync(async (req, res) => {
-    const result = await WaitListService.getAllWaitList();
+    const result = await WaitListService.getAllWaitList(req.query);
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
-        message: 'WaitList fetched successfully',
-        data: result,
+        message: 'WaitList retrieved successfully',
+        data: result.result,
+        meta: result.meta,
     });
 })
 
@@ -30,7 +31,7 @@ const getSingleWaitList = catchAsync(async (req, res) => {
     sendResponse(res, {
         statusCode: StatusCodes.OK,
         success: true,
-        message: 'WaitList fetched successfully',
+        message: 'WaitList retrieved successfully',
         data: result,
     });
 })

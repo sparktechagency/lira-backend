@@ -2,6 +2,7 @@ import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
 import { IWaitList } from "./waitList.interface";
 import { WaitListModel } from "./waitList.model";
+import QueryBuilder from "../../builder/QueryBuilder";
 
 const createWaitList = async (payload: IWaitList) => {
     const result = await WaitListModel.create(payload);
@@ -11,22 +12,24 @@ const createWaitList = async (payload: IWaitList) => {
     return result;
 }
 
-const getAllWaitList = async () => {
-    const result = await WaitListModel.find().populate('userId', 'name image email');
+const getAllWaitList = async (query: Record<string, unknown>) => {
+    const queryBuilder = new QueryBuilder(WaitListModel.find().populate('userId', 'name image email').populate('contestId', 'title image price name group category'), query);
+    const result = await queryBuilder.filter().fields().paginate().sort().modelQuery.exec();
+    const meta = await queryBuilder.countTotal();
+    return {
+        meta,
+        result
+    };
+}
+
+const getSingleWaitList = async (id: string) => {
+    const result = await WaitListModel.findById(id).populate('userId', 'name image email').populate('contestId', 'title image price name group category');
     if (!result) {
         throw new AppError(StatusCodes.BAD_REQUEST, 'WaitList fetch failed');
     }
     return result;
 }
 
-const getSingleWaitList = async (id: string) => {
-    const result = await WaitListModel.findById(id).populate('userId', 'name image email');
-    if (!result) {
-        throw new AppError(StatusCodes.BAD_REQUEST, 'WaitList fetch failed');
-    }
-    return result;
-}
-        
 const deleteWaitList = async (id: string) => {
     const result = await WaitListModel.findByIdAndDelete(id);
     if (!result) {

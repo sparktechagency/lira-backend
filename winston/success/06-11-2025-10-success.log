@@ -17,3 +17,239 @@ Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?k
 Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 7.263 ms
 Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 7.885 ms
 Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 67.995 ms
+Thu Nov 06 2025 10:14:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 2.340 ms
+Thu Nov 06 2025 10:14:54 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.031 ms
+Thu Nov 06 2025 10:14:59 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=social 200 - 6.830 ms
+Thu Nov 06 2025 10:14:59 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 3.844 ms
+Thu Nov 06 2025 10:14:59 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 4.571 ms
+Thu Nov 06 2025 10:14:59 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 6.470 ms
+Thu Nov 06 2025 10:15:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 2.629 ms
+Thu Nov 06 2025 10:15:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories 200 - 2.883 ms
+Thu Nov 06 2025 10:15:5 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 10.096 ms
+Thu Nov 06 2025 10:15:5 [SERVER-NAME] info: 10.10.7.47 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 6.596 ms
+Thu Nov 06 2025 10:15:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories 200 - 2.100 ms
+Thu Nov 06 2025 10:15:6 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list 200 - 5.678 ms
+Thu Nov 06 2025 10:15:7 [SERVER-NAME] info: 10.10.7.47 - GET /image/images09-1762342711968.png 200 - 2.092 ms
+Thu Nov 06 2025 10:15:7 [SERVER-NAME] info: 10.10.7.47 - GET /image/lamborghinilogo-1762341809890.png 200 - 1.348 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - POST /api/v1/auth/login 200 - 271.869 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 2.043 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.901 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 5.699 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=social 200 - 4.874 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 4.521 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 5.164 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 10.500 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=social 200 - 11.234 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 17.107 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 8.768 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 9.367 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 13.323 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 4.400 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.250 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 9.826 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/settings?key=social 200 - 7.323 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 9.222 ms
+Thu Nov 06 2025 10:15:14 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 9.912 ms
+Thu Nov 06 2025 10:15:15 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 13.466 ms
+Thu Nov 06 2025 10:15:18 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/groups 200 - 2.929 ms
+Thu Nov 06 2025 10:15:18 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories 200 - 3.721 ms
+Thu Nov 06 2025 10:15:18 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 7.182 ms
+Thu Nov 06 2025 10:15:19 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories 200 - 5.298 ms
+Thu Nov 06 2025 10:15:19 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/active/list 200 - 13.493 ms
+Thu Nov 06 2025 10:15:22 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/690b3738a60f7e247d3af98a 200 - 7.984 ms
+Thu Nov 06 2025 10:15:22 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/690b3738a60f7e247d3af98a/tiers 200 - 11.604 ms
+Thu Nov 06 2025 10:15:24 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/news 200 - 2725.347 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /image/images09-1762342711968.png 200 - 1.826 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 8.292 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 7.417 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 6.167 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 5.709 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 6.326 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 6.449 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 6.837 ms
+Thu Nov 06 2025 10:15:25 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest/contest/prediction/690b3738a60f7e247d3af98a/tiers/690b3738a60f7e247d3af98b 200 - 5.577 ms
+Thu Nov 06 2025 10:16:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 4.154 ms
+Thu Nov 06 2025 10:16:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 4.976 ms
+Thu Nov 06 2025 10:16:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 5.665 ms
+Thu Nov 06 2025 10:16:8 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.118 ms
+Thu Nov 06 2025 10:18:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 2.139 ms
+Thu Nov 06 2025 10:18:23 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories 200 - 2.921 ms
+Thu Nov 06 2025 10:18:24 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 4.988 ms
+Thu Nov 06 2025 10:18:24 [SERVER-NAME] info: 10.10.7.14 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 1.401 ms
+Thu Nov 06 2025 10:18:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories 200 - 1.993 ms
+Thu Nov 06 2025 10:18:25 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list 200 - 3.418 ms
+Thu Nov 06 2025 10:18:25 [SERVER-NAME] info: 10.10.7.14 - GET /image/lamborghinilogo-1762341809890.png 200 - 1.137 ms
+Thu Nov 06 2025 10:18:25 [SERVER-NAME] info: 10.10.7.14 - GET /image/images09-1762342711968.png 200 - 1.471 ms
+Thu Nov 06 2025 10:20:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list 200 - 18.560 ms
+Thu Nov 06 2025 10:20:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 11.402 ms
+Thu Nov 06 2025 10:22:57 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:22:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:22:57 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:22:57 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:6 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:6 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:6 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:6 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:13 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:13 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:34 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:34 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:41 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:41 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:41 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:41 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:42 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:42 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:42 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:44 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:44 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:44 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:44 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:47 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:47 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:55 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:55 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:23:57 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:23:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:23:57 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:23:57 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:3 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:3 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:9 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:9 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:9 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:20 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:20 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:22 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:22 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:22 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:22 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:25 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:25 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:25 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:39 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:40 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:40 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:45 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:45 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:45 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:45 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:46 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:46 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:24:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:24:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:24:50 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:24:50 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:25:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:25:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:25:2 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:25:2 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:25:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:25:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:25:4 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:25:4 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:25:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:25:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:25:12 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:25:12 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:25:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:25:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:25:14 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:25:14 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:25:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:25:29 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:25:29 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:25:29 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:25:29 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:25:32 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:25:32 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:25:32 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:25:32 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:25:45 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 27.519 ms
+Thu Nov 06 2025 10:25:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 8.808 ms
+Thu Nov 06 2025 10:26:6 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:26:6 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:26:6 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:26:6 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:26:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 23.705 ms
+Thu Nov 06 2025 10:26:21 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 8.761 ms
+Thu Nov 06 2025 10:26:22 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 6.207 ms
+Thu Nov 06 2025 10:26:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 8.447 ms
+Thu Nov 06 2025 10:26:38 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:26:38 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:26:38 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:26:38 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:26:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 24.864 ms
+Thu Nov 06 2025 10:26:51 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:26:51 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:26:51 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:26:51 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:26:57 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:26:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:26:57 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:26:57 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:27:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 19.724 ms
+Thu Nov 06 2025 10:27:33 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/users/profile 200 - 5.939 ms
+Thu Nov 06 2025 10:27:33 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest?page=1&limit=10 204 - 0.131 ms
+Thu Nov 06 2025 10:27:33 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/categories/ 204 - 0.051 ms
+Thu Nov 06 2025 10:27:33 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/categories/ 200 - 24.808 ms
+Thu Nov 06 2025 10:27:33 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest?page=1&limit=10 200 - 94.401 ms
+Thu Nov 06 2025 10:27:42 [SERVER-NAME] info: 10.10.7.47 - OPTIONS /api/v1/contest?page=2&limit=10 204 - 0.062 ms
+Thu Nov 06 2025 10:27:42 [SERVER-NAME] info: 10.10.7.47 - GET /api/v1/contest?page=2&limit=10 200 - 8.334 ms
+Thu Nov 06 2025 10:29:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 174.515 ms
+Thu Nov 06 2025 10:29:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/wait-list/6909ddbcbf6f9c0dfd05df4d 200 - 17.062 ms

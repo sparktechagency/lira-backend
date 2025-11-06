@@ -1,7 +1,8 @@
 import { StatusCodes } from "http-status-codes";
-import catchAsync from "../../../shared/catchAsync"
 import sendResponse from "../../../shared/sendResponse";
+import catchAsync from "../../../shared/catchAsync";
 import { WaitListService } from "./waitList.service";
+
 
 const createWaitList = catchAsync(async (req, res) => {
     const { id } = req.user as { id: string }

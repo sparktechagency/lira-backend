@@ -1,8 +1,8 @@
 import { StatusCodes } from "http-status-codes";
-import AppError from "../../../errors/AppError";
 import { IWaitList } from "./waitList.interface";
 import { WaitListModel } from "./waitList.model";
 import QueryBuilder from "../../builder/QueryBuilder";
+import AppError from "../../../errors/AppError";
 
 const createWaitList = async (payload: IWaitList) => {
     const result = await WaitListModel.create(payload);

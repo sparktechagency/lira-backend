@@ -14,3 +14,7 @@ Wed Nov 05 2025 17:30:36 [SERVER-NAME] error: 10.10.7.47 - PATCH /api/v1/contest
 Wed Nov 05 2025 17:32:57 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b355863d26c6b2d43cba1/publish 500 - 6.501 ms
 Wed Nov 05 2025 17:34:49 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b355863d26c6b2d43cba1/publish 400 - 32.711 ms
 Wed Nov 05 2025 17:42:38 [SERVER-NAME] error: 10.10.7.62 - PATCH /api/v1/contest/690b382ca60f7e247d3afd30/publish 400 - 7.345 ms
+Wed Nov 05 2025 17:57:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 78.874 ms
+Wed Nov 05 2025 17:57:20 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 8.960 ms
+Wed Nov 05 2025 17:57:22 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 6.957 ms
+Wed Nov 05 2025 17:57:24 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 9.144 ms

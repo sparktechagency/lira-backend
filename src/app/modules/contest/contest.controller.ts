@@ -92,12 +92,17 @@ const getActiveContests = catchAsync(async (req, res) => {
 
 const getPredictionTiers = catchAsync(async (req, res) => {
     const { contestId, tierId } = req.params;
-    const result = await ContestService.getPredictionTiers(contestId, tierId);
+    const { minValue, maxValue, searchValue } = req.query;
+    const minValueNum = minValue ? Number(minValue) : undefined;
+    const maxValueNum = maxValue ? Number(maxValue) : undefined;
+    const searchValueNum = searchValue ? Number(searchValue) : undefined;
+    
+    const result = await ContestService.getPredictionTiers(contestId, tierId, minValueNum, maxValueNum, searchValueNum);
 
     sendResponse(res, {
         success: true,
         statusCode: StatusCodes.OK,
-        message: 'Upcoming contests retrieved successfully',
+        message: 'Prediction tiers retrieved successfully',
         data: result
     });
 });

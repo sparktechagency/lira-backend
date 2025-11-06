@@ -575,30 +575,73 @@ const getTiersContest = async (id: string) => {
 
     return result;
 }
-const getPredictionTiers = async (contestId: string, tierId: string) => {
+// const getPredictionTiers = async (contestId: string, tierId: string) => {
+//     const result = await Contest.findById(contestId);
+//     if (!result) {
+//         throw new AppError(StatusCodes.NOT_FOUND, 'Prediction not found');
+//     }
+//     if (result?.pricing?.predictionType === 'priceOnly') {
+//         const tier = result.predictions.generatedPredictions;
+//         if (!tier || tier.length === 0) {
+//             throw new AppError(StatusCodes.NOT_FOUND, 'Tier not found');
+//         }
+//         return tier;
+//     }
+//     const tier = result.predictions.generatedPredictions.filter((tier) => tier.tierId === tierId);
+//     if (!tier || tier.length === 0) {
+//         throw new AppError(StatusCodes.NOT_FOUND, 'Tier not found');
+//     }
+//     return tier;
+// }
+const getPredictionTiers = async (
+    contestId: string,
+    tierId: string,
+    minValue?: number,
+    maxValue?: number,
+    searchValue?: number
+) => {
     const result = await Contest.findById(contestId);
     if (!result) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Prediction not found');
     }
+
+    let tier;
+
     if (result?.pricing?.predictionType === 'priceOnly') {
-        const tier = result.predictions.generatedPredictions;
+        tier = result.predictions.generatedPredictions;
         if (!tier || tier.length === 0) {
             throw new AppError(StatusCodes.NOT_FOUND, 'Tier not found');
         }
-        return tier;
+    } else {
+        tier = result.predictions.generatedPredictions.filter((t) => t.tierId === tierId);
+        if (!tier || tier.length === 0) {
+            throw new AppError(StatusCodes.NOT_FOUND, 'Tier not found');
+        }
     }
-    const tier = result.predictions.generatedPredictions.filter((tier) => tier.tierId === tierId);
-    if (!tier || tier.length === 0) {
-        throw new AppError(StatusCodes.NOT_FOUND, 'Tier not found');
-    }
-    return tier;
-}
 
+    // Apply filters
+    let filteredTier = tier;
+
+    // Search by specific value
+    if (searchValue !== undefined) {
+        filteredTier = filteredTier.filter((t) => t.value === searchValue);
+    }
+
+    // Range filter (min and max)
+    if (minValue !== undefined) {
+        filteredTier = filteredTier.filter((t) => t.value >= minValue);
+    }
+    if (maxValue !== undefined) {
+        filteredTier = filteredTier.filter((t) => t.value <= maxValue);
+    }
+
+    return filteredTier;
+}
 const getContestByIdUser = async (id: string, userId: string) => {
     // Run queries in parallel for better performance
     const [isExistUser, result] = await Promise.all([
         User.findById(userId).select('state role').lean(),
-        Contest.findById(id).select('name description category categoryId entryFee endTime state image prize totalEntries').lean()
+        Contest.findById(id).select('name description category predictions categoryId entryFee endTime state image prize totalEntries').lean()
     ]);
 
     // Check user exists
@@ -615,6 +658,8 @@ const getContestByIdUser = async (id: string, userId: string) => {
     if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
         return result;
     }
+    const minValue = result?.predictions?.generatedPredictions?.[0]?.value;
+    const maxValue = result?.predictions?.generatedPredictions?.[result.predictions.generatedPredictions.length - 1]?.value;
     // if (!result.state.includes(isExistUser.state as US_STATES)) {
     //     throw new AppError(
     //         StatusCodes.FORBIDDEN,
@@ -624,6 +669,8 @@ const getContestByIdUser = async (id: string, userId: string) => {
     const getCategory = await Category.findById(result.categoryId);
     const data = {
         ...result,
+        minValue,
+        maxValue,
         group: getCategory?.group
     }
     return data;

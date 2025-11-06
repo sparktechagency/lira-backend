@@ -1,0 +1,19 @@
+Thu Nov 06 2025 10:0:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:0:1 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:0:1 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:0:1 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:0:10 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690af233ab230cf7e4f145e9 200 - 34.794 ms
+Thu Nov 06 2025 10:0:28 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690af233ab230cf7e4f145e9 200 - 10.246 ms
+Thu Nov 06 2025 10:1:18 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Thu Nov 06 2025 10:1:18 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Thu Nov 06 2025 10:1:18 [SERVER-NAME] info: [33m♻️  Socket is listening on same port 7008[39m
+Thu Nov 06 2025 10:1:18 [SERVER-NAME] info: [46m♻️  Application listening on http://10.10.7.62:7008[49m
+Thu Nov 06 2025 10:1:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690af233ab230cf7e4f145e9 200 - 21.157 ms
+Thu Nov 06 2025 10:2:44 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690af233ab230cf7e4f145e9/tiers/690af233ab230cf7e4f145ea?minValue=119000&maxValue=120000 200 - 10.170 ms
+Thu Nov 06 2025 10:3:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690af233ab230cf7e4f145e9/tiers/690af233ab230cf7e4f145ea?searchValue=120000 200 - 5.643 ms
+Thu Nov 06 2025 10:10:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 30.000 ms
+Thu Nov 06 2025 10:10:43 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 5.756 ms
+Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/settings?key=social 200 - 6.664 ms
+Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/groups 200 - 7.263 ms
+Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 7.885 ms
+Thu Nov 06 2025 10:10:47 [SERVER-NAME] info: 10.10.7.14 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 67.995 ms

@@ -20,7 +20,27 @@ export type IResetPassword = {
      otp: number;
 };
 
-
+export type WeeklySummaryData = {
+     email: string;
+     userName: string;
+     stats: {
+          totalEntries: number;
+          completedContests: number;
+          activeContests: number;
+          winRate: number;
+          totalSpent: number;
+          totalWinnings: number;
+          netProfit: number;
+          bestEntry?: {
+               contestName: string;
+               prizeAmount: number;
+          };
+          favoriteCategory: string;
+          wonContests: number;
+     };
+     weekStart: string;
+     weekEnd: string;
+};
 export interface IResetPasswordByEmail {
      email: string;
      resetUrl: string;

@@ -32,7 +32,8 @@ const getCommunityPosts = catchAsync(async (req, res) => {
         statusCode: StatusCodes.OK,
         success: true,
         message: 'Community posts retrieved successfully',
-        data: result,
+        data: result.result,
+        // meta: result.meta,
     });
 });
 const getSingleCommunityPost = catchAsync(async (req, res) => {

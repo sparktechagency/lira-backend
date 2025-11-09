@@ -34,7 +34,7 @@ const getCommunityPosts = async (query: Record<string, unknown>, userId?: string
     const result = await queryBuilder
         .filter()
         .sort()
-        .paginate()
+        // .paginate()
         .fields()
         .search(['title', 'description'])
         .modelQuery
@@ -57,10 +57,10 @@ const getCommunityPosts = async (query: Record<string, unknown>, userId?: string
         );
     }
 
-    const meta = await queryBuilder.countTotal();
+    // const meta = await queryBuilder.countTotal();
 
     return {
-        meta,
+        // meta,
         result: postsWithVotes,
     };
 }

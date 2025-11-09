@@ -1,7 +1,0 @@
-Wed Nov 05 2025 19:2:48 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 8.684 ms
-Wed Nov 05 2025 19:2:54 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 11.972 ms
-Wed Nov 05 2025 19:3:9 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 11.019 ms
-Wed Nov 05 2025 19:3:9 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 6.014 ms
-Wed Nov 05 2025 19:3:10 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 8.290 ms
-Wed Nov 05 2025 19:3:16 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 12.930 ms
-Wed Nov 05 2025 19:3:22 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 400 - 16.037 ms

@@ -1,7 +1,6 @@
 import { StatusCodes } from "http-status-codes";
 import AppError from "../../../errors/AppError";
 import { Contest } from "../contest/contest.model";
-import { contestResultService } from "../result/result.service";
 import { Order } from "../order/order.model";
 import { calculatePrizeForPlace, calculateWinners, updateOrderStatuses } from "./manuallyWinnerContest.helpers";
 import QueryBuilder from "../../builder/QueryBuilder";
@@ -12,37 +11,26 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
     if (!contest) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
-
+    if (contest.endTime && contest.endTime < new Date()) {
+        throw new AppError(
+            StatusCodes.BAD_REQUEST,
+            'Contest has already ended'
+        );
+    }
     if (contest.results && contest.results.prizeDistributed) {
         throw new AppError(
             StatusCodes.BAD_REQUEST,
             'Winners have already been determined for this contest'
         );
     }
-    let finalActualValue: number;
 
-    if (actualValue !== undefined && actualValue !== null) {
-        finalActualValue = Number(actualValue);
-        console.log(`📝 Using admin-provided actual value: ${finalActualValue}`);
-    } else {
-        console.log(`🔍 Fetching actual value from API...`);
-        const fetchedValue = await contestResultService.fetchContestResult(contest);
-
-        if (fetchedValue === null) {
-            throw new AppError(
-                StatusCodes.SERVICE_UNAVAILABLE,
-                'Could not fetch actual result value. Please provide it manually.'
-            );
-        }
-
-        finalActualValue = fetchedValue;
-    }
     // Get all valid orders for this contest
     const contestOrders = await Order.find({
         contestId: contest._id,
         status: { $nin: ['cancelled'] },
         isDeleted: false
     }).populate('userId', 'name email');
+
 
     if (contestOrders.length === 0) {
         // No entries - just finalize the contest
@@ -55,17 +43,17 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
 
         return {
             contestId: contest._id,
-            actualValue: finalActualValue,
+            actualValue: Number(actualValue),
             totalEntries: 0,
             winners: []
         }
     }
 
     // Calculate winners
-    const winnersData = calculateWinners(contestOrders, finalActualValue, contest);
+    const winnersData = calculateWinners(contestOrders, Number(actualValue), contest);
 
     // Update contest with results
-    contest.results.actualValue = finalActualValue;
+    contest.results.actualValue = Number(actualValue);
     contest.results.winningPredictions = winnersData.winningOrderIds;
     contest.results.prizeDistributed = true;
     contest.results.endedAt = new Date();
@@ -88,7 +76,7 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
     const data = {
         contestId: contest._id,
         contestName: contest.name,
-        actualValue: finalActualValue,
+        actualValue: Number(actualValue),
         totalEntries: contestOrders.length,
         totalWinners: winnersData.winners.length,
         prizePool: contest.prize.prizePool,
@@ -258,8 +246,8 @@ const getContestOrdersDetails = async (contestId: string) => {
         contestId: contestId,
         isDeleted: false
     })
-    .populate('userId', 'name email phone')
-    .sort({ createdAt: -1 }); // Latest orders first
+        .populate('userId', 'name email phone')
+        .sort({ createdAt: -1 }); // Latest orders first
 
     // Calculate statistics
     const totalOrders = orders.length;
@@ -273,15 +261,15 @@ const getContestOrdersDetails = async (contestId: string) => {
     const uniqueUsers = new Set(orders.map(order => order.userId._id.toString())).size;
 
     // Calculate predictions statistics
-    const allPredictions = orders.flatMap(order => 
+    const allPredictions = orders.flatMap(order =>
         [...(order.predictions || []), ...(order.customPrediction || [])]
             .map(p => p.predictionValue)
     );
-    
-    const avgPrediction = allPredictions.length > 0 
-        ? allPredictions.reduce((sum, val) => sum + val, 0) / allPredictions.length 
+
+    const avgPrediction = allPredictions.length > 0
+        ? allPredictions.reduce((sum, val) => sum + val, 0) / allPredictions.length
         : 0;
-    
+
     const minPrediction = allPredictions.length > 0 ? Math.min(...allPredictions) : 0;
     const maxPrediction = allPredictions.length > 0 ? Math.max(...allPredictions) : 0;
 

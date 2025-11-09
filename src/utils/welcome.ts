@@ -1,5 +1,7 @@
-export const welcome = () => {
-     const date = new Date(Date.now());
+import { formatUserFriendlyDate, getCurrentUserTime } from './timezone';
+
+export const welcome = (userTimezone?: string) => {
+     const date = getCurrentUserTime(userTimezone);
      const hours = date.getHours();
      let greeting = '';
 
@@ -75,7 +77,7 @@ export const welcome = () => {
                         <p class="greeting-text">${greeting}</p>
                         <div class="time-display">
                             <span class="time-label">Current Time</span>
-                            <span class="time-value">${date.toLocaleString()}</span>
+                            <span class="time-value">${formatUserFriendlyDate(date, userTimezone)}</span>
                         </div>
                     </div>
                 </div>

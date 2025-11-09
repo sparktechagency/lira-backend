@@ -1,0 +1,6 @@
+Sun Nov 09 2025 15:0:59 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 17.384 ms
+Sun Nov 09 2025 15:1:0 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 2.990 ms
+Sun Nov 09 2025 15:1:14 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.591 ms
+Sun Nov 09 2025 15:5:49 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 1.374 ms
+Sun Nov 09 2025 15:5:51 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/users/profile 401 - 0.668 ms
+Sun Nov 09 2025 15:42:11 [SERVER-NAME] error: 10.10.7.14 - GET /api/v1/categories/68dd0308cf3c6e7dd5f695b2 404 - 17.023 ms

@@ -110,6 +110,10 @@ export interface IContest extends Document {
         winningPredictions: Types.ObjectId[];
         prizeDistributed: boolean;
         endedAt: Date | null;
+        winnerSelectionMode: 'auto' | 'manual';
+        autoSelectionAttempted: boolean;
+        autoSelectionFailedAt: Date | null;
+        manualSelectionBy: Types.ObjectId | null;
     };
 
     // Instance methods

@@ -1,0 +1,52 @@
+Mon Nov 10 2025 12:5:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 148.287 ms
+Mon Nov 10 2025 12:6:31 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 12:6:31 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 12:6:31 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 12:6:31 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 12:6:31 [SERVER-NAME] info: [46m♻️  Worker 18240 listening on http://10.10.7.62:7008[49m
+Mon Nov 10 2025 12:6:31 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 18240[39m
+Mon Nov 10 2025 12:6:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 4.606 ms
+Mon Nov 10 2025 12:11:46 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 12:11:46 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 12:11:46 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 12:11:46 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 12:11:46 [SERVER-NAME] info: [46m♻️  Worker 43704 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 12:11:46 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 43704[39m
+Mon Nov 10 2025 12:33:50 [SERVER-NAME] info: 10.10.7.62 - GET / 200 - 97.698 ms
+Mon Nov 10 2025 12:34:47 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 12:34:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 12:34:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 12:34:48 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 12:34:48 [SERVER-NAME] info: [46m♻️  Worker 17076 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 12:34:48 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 17076[39m
+Mon Nov 10 2025 12:35:22 [SERVER-NAME] info: 10.10.7.62 - GET / 200 - 31.423 ms
+Mon Nov 10 2025 12:35:25 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback 302 - 4.300 ms
+Mon Nov 10 2025 12:36:4 [SERVER-NAME] info: 10.10.7.62 - GET / 200 - 2.272 ms
+Mon Nov 10 2025 12:36:13 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 12:36:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 12:36:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 12:36:14 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 12:36:14 [SERVER-NAME] info: [46m♻️  Worker 17108 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 12:36:14 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 17108[39m
+Mon Nov 10 2025 12:36:27 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 4.978 ms
+Mon Nov 10 2025 12:37:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 13.058 ms
+Mon Nov 10 2025 12:38:10 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 9.649 ms
+Mon Nov 10 2025 12:40:40 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 12:40:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 12:40:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 12:40:40 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 12:40:40 [SERVER-NAME] info: [46m♻️  Worker 20976 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 12:40:40 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 20976[39m
+Mon Nov 10 2025 12:41:40 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 12:41:40 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 12:41:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 12:41:40 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 12:41:40 [SERVER-NAME] info: [46m♻️  Worker 16872 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 12:41:40 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 16872[39m
+Mon Nov 10 2025 12:41:53 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 12:41:53 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 12:41:53 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 12:41:53 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 12:41:53 [SERVER-NAME] info: [46m♻️  Worker 36364 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 12:41:53 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 36364[39m
+Mon Nov 10 2025 12:42:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j90khkca6PYCfqhhAFlpOMCKZPrHU4LiPsBOdw2YNLe4aS-O7yp5wcCxK1K1E8LsQg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=6&prompt=consent 302 - 8149.541 ms

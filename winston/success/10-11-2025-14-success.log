@@ -1,0 +1,9 @@
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] info: [46m♻️  Worker 50448 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 50448[39m
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 3.127 ms
+Mon Nov 10 2025 14:49:15 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 1.012 ms
+Mon Nov 10 2025 14:49:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j91RvliuQTcHQ_MeFsOvdQJBcTNpZmWMkwGNRWWyCxKvnQ44GkOmE1kEm25clogmqA&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none 302 - 1760.100 ms

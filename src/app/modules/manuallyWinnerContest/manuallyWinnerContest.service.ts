@@ -4,19 +4,24 @@ import { Contest } from "../contest/contest.model";
 import { Order } from "../order/order.model";
 import { calculatePrizeForPlace, calculateWinners, updateOrderStatuses } from "./manuallyWinnerContest.helpers";
 import QueryBuilder from "../../builder/QueryBuilder";
+import { Schema } from "mongoose";
 
-const determineContestWinners = async (contestId: string, actualValue: number) => {
+const determineContestWinners = async (contestId: string, actualValue: number, adminId?: string) => {
     const contest = await Contest.findById(contestId);
 
     if (!contest) {
         throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
     }
-    if (contest.endTime && contest.endTime < new Date()) {
+
+    // Allow manual processing for contests with status 'Manual' or 'Active'
+    if (contest.status !== 'Active' && contest.status !== 'Manual' as any) {
         throw new AppError(
             StatusCodes.BAD_REQUEST,
-            'Contest has already ended'
+            `Cannot process contest with status: ${contest.status}`
         );
     }
+
+    // Check if already processed
     if (contest.results && contest.results.prizeDistributed) {
         throw new AppError(
             StatusCodes.BAD_REQUEST,
@@ -31,13 +36,14 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
         isDeleted: false
     }).populate('userId', 'name email');
 
-
     if (contestOrders.length === 0) {
         // No entries - just finalize the contest
         contest.results.actualValue = actualValue;
         contest.results.winningPredictions = [];
         contest.results.prizeDistributed = true;
         contest.results.endedAt = new Date();
+        contest.results.winnerSelectionMode = adminId ? 'manual' : 'auto';
+        contest.results.manualSelectionBy = adminId as any;
         contest.status = 'Completed';
         await contest.save();
 
@@ -45,7 +51,9 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
             contestId: contest._id,
             actualValue: Number(actualValue),
             totalEntries: 0,
-            winners: []
+            winners: [],
+            winnerSelectionMode: contest.results.winnerSelectionMode,
+            manualSelectionBy: contest.results.manualSelectionBy
         }
     }
 
@@ -57,6 +65,8 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
     contest.results.winningPredictions = winnersData.winningOrderIds;
     contest.results.prizeDistributed = true;
     contest.results.endedAt = new Date();
+    contest.results.winnerSelectionMode = adminId ? 'manual' : 'auto';
+    contest.results.manualSelectionBy = adminId as any;
     contest.status = 'Completed';
     await contest.save();
 
@@ -64,7 +74,7 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
     await updateOrderStatuses(contestOrders, winnersData.winningOrderIds);
 
     // Log winner information
-    console.log(`✅ Winners determined for contest: ${contest.name}`);
+    console.log(`✅ Winners determined ${adminId ? 'manually' : 'automatically'} for contest: ${contest.name}`);
     winnersData.winners.forEach(winner => {
         console.log(
             `   🏆 Place ${winner.place}: ${winner.userId.name} - ` +
@@ -80,6 +90,8 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
         totalEntries: contestOrders.length,
         totalWinners: winnersData.winners.length,
         prizePool: contest.prize.prizePool,
+        winnerSelectionMode: contest.results.winnerSelectionMode,
+        manualSelectionBy: contest.results.manualSelectionBy,
         winners: winnersData.winners.map(w => ({
             place: w.place,
             userId: w.userId._id,
@@ -94,7 +106,6 @@ const determineContestWinners = async (contestId: string, actualValue: number) =
     }
 
     return data;
-
 }
 const getContestResults = async (contestId: string) => {
     const contest = await Contest.findById(contestId)
@@ -166,14 +177,23 @@ const getContestResults = async (contestId: string) => {
 
 const getPendingContests = async (query: Record<string, unknown>) => {
     const now = new Date();
+    
+    // Get contests that are either Active (ended but not processed) or Manual (failed auto-processing)
     const queryBuilder = new QueryBuilder(Contest.find({
-        status: 'Active',
-        endTime: { $lte: now },
-        'results.prizeDistributed': false
-    }).populate('categoryId'), query)
+        $or: [
+            {
+                status: 'Active',
+                endTime: { $lte: now },
+                'results.prizeDistributed': false
+            },
+            {
+                status: 'Manual',
+                'results.prizeDistributed': false
+            }
+        ]
+    }).populate('categoryId'), query);
+    
     const pendingContests = await queryBuilder.paginate().sort().fields().filter().modelQuery.exec();
-
-
 
     const contestsWithStats = await Promise.all(
         pendingContests.map(async (contest) => {
@@ -187,13 +207,18 @@ const getPendingContests = async (query: Record<string, unknown>) => {
                 name: contest.name,
                 category: contest.category,
                 endTime: contest.endTime,
+                status: contest.status, // 'Active' or 'Manual'
+                requiresManualEntry: contest.results?.autoSelectionAttempted || false,
+                failedAutoProcessAt: contest.results?.autoSelectionFailedAt || null,
                 prizePool: contest.prize.prizePool,
                 totalEntries: entryCount,
                 hasMetadata: !!contest.metadata
             };
         })
     );
-    const meta = await queryBuilder.countTotal()
+    
+    const meta = await queryBuilder.countTotal();
+    
     return {
         meta,
         result: contestsWithStats

@@ -1,0 +1,230 @@
+Mon Nov 10 2025 16:0:30 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 399.974 ms
+Mon Nov 10 2025 16:0:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 26.263 ms
+Mon Nov 10 2025 16:0:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 14.124 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 12.470 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 5.152 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 10.571 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 8.277 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 85.318 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 235.718 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 5.180 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.173 ms
+Mon Nov 10 2025 16:0:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 4.666 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.570 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 29.191 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 26.037 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 27.239 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 19.027 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 11.774 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 13.914 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 15.603 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 12.154 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.076 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 5.625 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 9.583 ms
+Mon Nov 10 2025 16:0:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 12.689 ms
+Mon Nov 10 2025 16:0:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 9.335 ms
+Mon Nov 10 2025 16:0:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 10.297 ms
+Mon Nov 10 2025 16:0:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 11.325 ms
+Mon Nov 10 2025 16:0:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 20.717 ms
+Mon Nov 10 2025 16:0:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 31.919 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 2377.813 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 22.100 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 13.851 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 12.631 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 10.226 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.357 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 12.776 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.449 ms
+Mon Nov 10 2025 16:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.455 ms
+Mon Nov 10 2025 16:1:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 31.056 ms
+Mon Nov 10 2025 16:1:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 21.066 ms
+Mon Nov 10 2025 16:1:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 17.010 ms
+Mon Nov 10 2025 16:1:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 9.818 ms
+Mon Nov 10 2025 16:1:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 14.279 ms
+Mon Nov 10 2025 16:1:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 17.135 ms
+Mon Nov 10 2025 16:1:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/notifications/user-preferences 200 - 16.277 ms
+Mon Nov 10 2025 16:1:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 7.968 ms
+Mon Nov 10 2025 16:1:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/withdrawals/cards 200 - 23.116 ms
+Mon Nov 10 2025 16:1:50 [SERVER-NAME] info: 10.10.7.62 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 304 - 10.351 ms
+Mon Nov 10 2025 16:22:16 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:22:16 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:22:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:22:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:22:16 [SERVER-NAME] info: [46m♻️  Worker 34692 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:22:16 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 34692[39m
+Mon Nov 10 2025 16:22:36 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:22:36 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:22:36 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:22:36 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:22:36 [SERVER-NAME] info: [46m♻️  Worker 29212 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:22:36 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 29212[39m
+Mon Nov 10 2025 16:25:56 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:25:56 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:25:57 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:25:57 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:25:57 [SERVER-NAME] info: [46m♻️  Worker 33720 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:25:57 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 33720[39m
+Mon Nov 10 2025 16:26:17 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:26:17 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:26:17 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:26:17 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:26:17 [SERVER-NAME] info: [46m♻️  Worker 42016 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:26:17 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 42016[39m
+Mon Nov 10 2025 16:26:49 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:26:49 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:26:49 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:26:49 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:26:49 [SERVER-NAME] info: [46m♻️  Worker 5980 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:26:49 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 5980[39m
+Mon Nov 10 2025 16:27:4 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:27:4 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:27:4 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:27:4 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:27:4 [SERVER-NAME] info: [46m♻️  Worker 7544 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:27:4 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 7544[39m
+Mon Nov 10 2025 16:27:12 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:27:12 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:27:12 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:27:13 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:27:13 [SERVER-NAME] info: [46m♻️  Worker 51096 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:27:13 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 51096[39m
+Mon Nov 10 2025 16:27:28 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:27:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:27:28 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:27:28 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:27:28 [SERVER-NAME] info: [46m♻️  Worker 33460 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:27:28 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 33460[39m
+Mon Nov 10 2025 16:27:34 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:27:34 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:27:34 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:27:34 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:27:34 [SERVER-NAME] info: [46m♻️  Worker 37540 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:27:34 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 37540[39m
+Mon Nov 10 2025 16:27:50 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:27:50 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:27:50 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:27:50 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:27:50 [SERVER-NAME] info: [46m♻️  Worker 47632 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:27:50 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 47632[39m
+Mon Nov 10 2025 16:27:59 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:27:59 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:27:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:27:59 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:27:59 [SERVER-NAME] info: [46m♻️  Worker 31100 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:27:59 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 31100[39m
+Mon Nov 10 2025 16:28:5 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:28:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:28:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:28:5 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:28:5 [SERVER-NAME] info: [46m♻️  Worker 52424 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:28:5 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 52424[39m
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: [46m♻️  Worker 37812 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 37812[39m
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 24.071 ms
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 8.805 ms
+Mon Nov 10 2025 16:28:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.768 ms
+Mon Nov 10 2025 16:28:10 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.230 ms
+Mon Nov 10 2025 16:28:10 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 29.926 ms
+Mon Nov 10 2025 16:28:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.679 ms
+Mon Nov 10 2025 16:28:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 3.528 ms
+Mon Nov 10 2025 16:28:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 7.630 ms
+Mon Nov 10 2025 16:28:15 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:28:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:28:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:28:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:28:16 [SERVER-NAME] info: [46m♻️  Worker 44756 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:28:16 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 44756[39m
+Mon Nov 10 2025 16:28:59 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:28:59 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:28:59 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:28:59 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:28:59 [SERVER-NAME] info: [46m♻️  Worker 26344 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:28:59 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 26344[39m
+Mon Nov 10 2025 16:29:10 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:29:10 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:29:10 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:29:10 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:29:10 [SERVER-NAME] info: [46m♻️  Worker 14224 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:29:10 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 14224[39m
+Mon Nov 10 2025 16:29:42 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:29:42 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:29:42 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:29:42 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:29:42 [SERVER-NAME] info: [46m♻️  Worker 32460 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:29:42 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 32460[39m
+Mon Nov 10 2025 16:30:41 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:30:41 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:30:41 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:30:41 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:30:41 [SERVER-NAME] info: [46m♻️  Worker 40756 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:30:41 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 40756[39m
+Mon Nov 10 2025 16:30:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 26.182 ms
+Mon Nov 10 2025 16:30:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 11.289 ms
+Mon Nov 10 2025 16:30:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 2091.387 ms
+Mon Nov 10 2025 16:30:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 12.741 ms
+Mon Nov 10 2025 16:30:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.200 ms
+Mon Nov 10 2025 16:30:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 10.091 ms
+Mon Nov 10 2025 16:30:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.036 ms
+Mon Nov 10 2025 16:30:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.188 ms
+Mon Nov 10 2025 16:30:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 12.924 ms
+Mon Nov 10 2025 16:30:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 17.074 ms
+Mon Nov 10 2025 16:30:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.964 ms
+Mon Nov 10 2025 16:30:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.546 ms
+Mon Nov 10 2025 16:30:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.283 ms
+Mon Nov 10 2025 16:30:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.929 ms
+Mon Nov 10 2025 16:30:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.220 ms
+Mon Nov 10 2025 16:30:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 18.418 ms
+Mon Nov 10 2025 16:30:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.144 ms
+Mon Nov 10 2025 16:30:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 2.946 ms
+Mon Nov 10 2025 16:30:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 5.569 ms
+Mon Nov 10 2025 16:30:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 2.320 ms
+Mon Nov 10 2025 16:30:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 5.664 ms
+Mon Nov 10 2025 16:30:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b33b1a05487e84981b0bb 200 - 10.034 ms
+Mon Nov 10 2025 16:30:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b33b1a05487e84981b0bb/tiers 200 - 10.065 ms
+Mon Nov 10 2025 16:30:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Bitcoin&days=365 200 - 609.600 ms
+Mon Nov 10 2025 16:31:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/news 200 - 2668.658 ms
+Mon Nov 10 2025 16:31:1 [SERVER-NAME] info: 10.10.7.62 - GET /image/lamborghinilogo-1762341809890.png 304 - 2.204 ms
+Mon Nov 10 2025 16:31:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 6.858 ms
+Mon Nov 10 2025 16:31:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 6.687 ms
+Mon Nov 10 2025 16:31:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 5.171 ms
+Mon Nov 10 2025 16:31:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 7.220 ms
+Mon Nov 10 2025 16:31:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 7.236 ms
+Mon Nov 10 2025 16:31:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 6.021 ms
+Mon Nov 10 2025 16:31:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 5.833 ms
+Mon Nov 10 2025 16:31:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b33b1a05487e84981b0bb/tiers/690b33b1a05487e84981b0bc 200 - 6.573 ms
+Mon Nov 10 2025 16:31:11 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:31:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:31:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:31:11 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:31:11 [SERVER-NAME] info: [46m♻️  Worker 38552 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:31:11 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 38552[39m
+Mon Nov 10 2025 16:31:30 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 16:31:30 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 16:31:30 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 16:31:30 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 16:31:30 [SERVER-NAME] info: [46m♻️  Worker 42636 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 16:31:30 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 42636[39m
+Mon Nov 10 2025 16:32:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 28.995 ms
+Mon Nov 10 2025 16:32:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 12.112 ms
+Mon Nov 10 2025 16:32:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.716 ms
+Mon Nov 10 2025 16:32:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 7.922 ms
+Mon Nov 10 2025 16:32:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 48.795 ms
+Mon Nov 10 2025 16:32:26 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 3.569 ms
+Mon Nov 10 2025 16:32:26 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 15.365 ms
+Mon Nov 10 2025 16:32:26 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.436 ms
+Mon Nov 10 2025 16:32:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 61.917 ms
+Mon Nov 10 2025 16:32:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 27.611 ms
+Mon Nov 10 2025 16:32:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 1107.193 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 17.050 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 17.181 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.307 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.123 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 11.820 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.215 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 13.309 ms
+Mon Nov 10 2025 16:32:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.721 ms

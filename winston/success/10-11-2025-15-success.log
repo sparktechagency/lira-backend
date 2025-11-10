@@ -1,0 +1,527 @@
+Mon Nov 10 2025 15:0:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 63.400 ms
+Mon Nov 10 2025 15:0:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 14.383 ms
+Mon Nov 10 2025 15:0:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 17.697 ms
+Mon Nov 10 2025 15:0:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 6.192 ms
+Mon Nov 10 2025 15:0:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 8.104 ms
+Mon Nov 10 2025 15:0:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.048 ms
+Mon Nov 10 2025 15:0:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 32.608 ms
+Mon Nov 10 2025 15:0:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 12.287 ms
+Mon Nov 10 2025 15:0:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 5.973 ms
+Mon Nov 10 2025 15:0:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.506 ms
+Mon Nov 10 2025 15:0:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 8.063 ms
+Mon Nov 10 2025 15:0:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.510 ms
+Mon Nov 10 2025 15:0:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.887 ms
+Mon Nov 10 2025 15:0:14 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.293 ms
+Mon Nov 10 2025 15:0:14 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.764 ms
+Mon Nov 10 2025 15:0:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.003 ms
+Mon Nov 10 2025 15:0:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.239 ms
+Mon Nov 10 2025 15:0:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.449 ms
+Mon Nov 10 2025 15:0:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.628 ms
+Mon Nov 10 2025 15:0:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.436 ms
+Mon Nov 10 2025 15:0:25 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.988 ms
+Mon Nov 10 2025 15:0:25 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.764 ms
+Mon Nov 10 2025 15:0:25 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.412 ms
+Mon Nov 10 2025 15:0:27 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.946 ms
+Mon Nov 10 2025 15:0:27 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.378 ms
+Mon Nov 10 2025 15:0:27 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.189 ms
+Mon Nov 10 2025 15:0:28 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.584 ms
+Mon Nov 10 2025 15:0:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.778 ms
+Mon Nov 10 2025 15:0:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.412 ms
+Mon Nov 10 2025 15:0:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.014 ms
+Mon Nov 10 2025 15:0:34 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.999 ms
+Mon Nov 10 2025 15:0:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.666 ms
+Mon Nov 10 2025 15:0:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.482 ms
+Mon Nov 10 2025 15:0:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.060 ms
+Mon Nov 10 2025 15:0:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.674 ms
+Mon Nov 10 2025 15:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.027 ms
+Mon Nov 10 2025 15:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.600 ms
+Mon Nov 10 2025 15:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.953 ms
+Mon Nov 10 2025 15:0:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.335 ms
+Mon Nov 10 2025 15:0:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 2.730 ms
+Mon Nov 10 2025 15:0:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 0.597 ms
+Mon Nov 10 2025 15:0:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j91R8uCRBvVEV4expIraXASpNLeTW0rmlc6CqWoREa813T24K9djyDq7RCO1rBhV7Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid&authuser=0&prompt=none 302 - 1812.954 ms
+Mon Nov 10 2025 15:0:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.327 ms
+Mon Nov 10 2025 15:0:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.341 ms
+Mon Nov 10 2025 15:0:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.636 ms
+Mon Nov 10 2025 15:0:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.236 ms
+Mon Nov 10 2025 15:0:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.853 ms
+Mon Nov 10 2025 15:0:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.651 ms
+Mon Nov 10 2025 15:0:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 6.221 ms
+Mon Nov 10 2025 15:1:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.602 ms
+Mon Nov 10 2025 15:1:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.146 ms
+Mon Nov 10 2025 15:5:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 9.476 ms
+Mon Nov 10 2025 15:5:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.060 ms
+Mon Nov 10 2025 15:5:21 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.021 ms
+Mon Nov 10 2025 15:5:21 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.160 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 8.900 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.637 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 4.916 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 6.604 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 1.696 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 34.692 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 8.859 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 9.798 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 18.168 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 20.763 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 9.911 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 26.637 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 6.974 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 14.000 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.422 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 10.042 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 7.612 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 9.320 ms
+Mon Nov 10 2025 15:5:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 10.445 ms
+Mon Nov 10 2025 15:5:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.127 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.920 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.446 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 3.375 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.363 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 4.520 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.383 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.627 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.704 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.639 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.957 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 6.963 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 5.775 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.061 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.744 ms
+Mon Nov 10 2025 15:6:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 9.369 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.904 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 4.457 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.446 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.850 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.404 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.942 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.600 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.379 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.380 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.195 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 4.196 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.867 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.306 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 7.889 ms
+Mon Nov 10 2025 15:6:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.858 ms
+Mon Nov 10 2025 15:6:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 3.545 ms
+Mon Nov 10 2025 15:6:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 29.314 ms
+Mon Nov 10 2025 15:6:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 88.119 ms
+Mon Nov 10 2025 15:6:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 67.090 ms
+Mon Nov 10 2025 15:6:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 10.508 ms
+Mon Nov 10 2025 15:6:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 12.154 ms
+Mon Nov 10 2025 15:6:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.112 ms
+Mon Nov 10 2025 15:6:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 1.915 ms
+Mon Nov 10 2025 15:6:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.073 ms
+Mon Nov 10 2025 15:6:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.433 ms
+Mon Nov 10 2025 15:6:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.066 ms
+Mon Nov 10 2025 15:7:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.611 ms
+Mon Nov 10 2025 15:7:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 6.593 ms
+Mon Nov 10 2025 15:7:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 8.662 ms
+Mon Nov 10 2025 15:7:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 4.189 ms
+Mon Nov 10 2025 15:7:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 6.656 ms
+Mon Nov 10 2025 15:7:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 6.651 ms
+Mon Nov 10 2025 15:7:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.397 ms
+Mon Nov 10 2025 15:7:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.320 ms
+Mon Nov 10 2025 15:7:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.739 ms
+Mon Nov 10 2025 15:7:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.658 ms
+Mon Nov 10 2025 15:7:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.497 ms
+Mon Nov 10 2025 15:13:52 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 36.522 ms
+Mon Nov 10 2025 15:13:52 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 37.944 ms
+Mon Nov 10 2025 15:13:52 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 14.085 ms
+Mon Nov 10 2025 15:13:52 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.175 ms
+Mon Nov 10 2025 15:14:15 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:14:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:14:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:14:15 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:14:15 [SERVER-NAME] info: [46m♻️  Worker 16668 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:14:15 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 16668[39m
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 240.051 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.300 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.635 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 12.054 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 5.885 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.934 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 9.159 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 5.768 ms
+Mon Nov 10 2025 15:14:23 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.080 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.063 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.877 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.129 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.582 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 16.382 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.930 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.662 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 7.240 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 5.870 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 6.396 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.200 ms
+Mon Nov 10 2025 15:14:24 [SERVER-NAME] info: 10.10.7.62 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 200 - 2.062 ms
+Mon Nov 10 2025 15:14:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 1.153 ms
+Mon Nov 10 2025 15:14:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 0.650 ms
+Mon Nov 10 2025 15:14:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j91x3lj42l4xiwu2zenHc8Tov3BsZyDwKY4qUOK3MtqOXarLlv2fj-wg7Jb7hYjaKg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none 302 - 847.988 ms
+Mon Nov 10 2025 15:14:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.363 ms
+Mon Nov 10 2025 15:14:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.667 ms
+Mon Nov 10 2025 15:14:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.969 ms
+Mon Nov 10 2025 15:14:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.348 ms
+Mon Nov 10 2025 15:14:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.215 ms
+Mon Nov 10 2025 15:14:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.263 ms
+Mon Nov 10 2025 15:14:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.808 ms
+Mon Nov 10 2025 15:15:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 7.281 ms
+Mon Nov 10 2025 15:15:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 16.655 ms
+Mon Nov 10 2025 15:15:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 10.788 ms
+Mon Nov 10 2025 15:15:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 4.542 ms
+Mon Nov 10 2025 15:15:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 12.274 ms
+Mon Nov 10 2025 15:15:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 9.140 ms
+Mon Nov 10 2025 15:15:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.951 ms
+Mon Nov 10 2025 15:15:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.734 ms
+Mon Nov 10 2025 15:15:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.923 ms
+Mon Nov 10 2025 15:15:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.556 ms
+Mon Nov 10 2025 15:15:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.885 ms
+Mon Nov 10 2025 15:17:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 9.662 ms
+Mon Nov 10 2025 15:17:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 12.132 ms
+Mon Nov 10 2025 15:17:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 16.791 ms
+Mon Nov 10 2025 15:17:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 11.826 ms
+Mon Nov 10 2025 15:17:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.891 ms
+Mon Nov 10 2025 15:17:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.085 ms
+Mon Nov 10 2025 15:17:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 8.972 ms
+Mon Nov 10 2025 15:17:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 10.489 ms
+Mon Nov 10 2025 15:17:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 8.789 ms
+Mon Nov 10 2025 15:17:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 7.751 ms
+Mon Nov 10 2025 15:17:58 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 9.299 ms
+Mon Nov 10 2025 15:18:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.561 ms
+Mon Nov 10 2025 15:18:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.559 ms
+Mon Nov 10 2025 15:18:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.686 ms
+Mon Nov 10 2025 15:18:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 1.794 ms
+Mon Nov 10 2025 15:18:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.529 ms
+Mon Nov 10 2025 15:18:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 1.531 ms
+Mon Nov 10 2025 15:18:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 0.503 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j92BnsgFDuc06wy5J7U8NENHBpZ7G7i-aJIZR1Rlkg1AtqMcgHWfZRAHRTH1GEYfWw&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none 302 - 1756.819 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.075 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.441 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 3.856 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.708 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 1.888 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.811 ms
+Mon Nov 10 2025 15:18:43 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.212 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 15.363 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 11.362 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 11.225 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.987 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.481 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 6.451 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 6.098 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.508 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 14.385 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.861 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.941 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.402 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.366 ms
+Mon Nov 10 2025 15:28:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 1.605 ms
+Mon Nov 10 2025 15:28:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 7.559 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.425 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.831 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 15.235 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 17.668 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 18.814 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 25.386 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 26.476 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 27.459 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.175 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.564 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.582 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.433 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.169 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.666 ms
+Mon Nov 10 2025 15:28:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.430 ms
+Mon Nov 10 2025 15:32:2 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 11.675 ms
+Mon Nov 10 2025 15:32:4 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 0.927 ms
+Mon Nov 10 2025 15:32:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j93S4vGk0xS14zW_S193Zaj1L9xfMhmr30fMijXaRt_GPa1gRSyp8OoRo1lC4HVgEg&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile&authuser=0&prompt=none 302 - 1997.257 ms
+Mon Nov 10 2025 15:32:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 5.703 ms
+Mon Nov 10 2025 15:32:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.884 ms
+Mon Nov 10 2025 15:32:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.439 ms
+Mon Nov 10 2025 15:32:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.737 ms
+Mon Nov 10 2025 15:32:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.970 ms
+Mon Nov 10 2025 15:32:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.198 ms
+Mon Nov 10 2025 15:32:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 14.162 ms
+Mon Nov 10 2025 15:32:19 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.525 ms
+Mon Nov 10 2025 15:32:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 8.441 ms
+Mon Nov 10 2025 15:32:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 7.800 ms
+Mon Nov 10 2025 15:32:21 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 3.880 ms
+Mon Nov 10 2025 15:32:21 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 6.869 ms
+Mon Nov 10 2025 15:32:22 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 9.688 ms
+Mon Nov 10 2025 15:33:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.792 ms
+Mon Nov 10 2025 15:33:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 7.078 ms
+Mon Nov 10 2025 15:33:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.568 ms
+Mon Nov 10 2025 15:33:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.936 ms
+Mon Nov 10 2025 15:33:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.173 ms
+Mon Nov 10 2025 15:33:29 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.748 ms
+Mon Nov 10 2025 15:33:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.777 ms
+Mon Nov 10 2025 15:33:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 8.614 ms
+Mon Nov 10 2025 15:33:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.687 ms
+Mon Nov 10 2025 15:33:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.065 ms
+Mon Nov 10 2025 15:33:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.421 ms
+Mon Nov 10 2025 15:33:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 6.575 ms
+Mon Nov 10 2025 15:34:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 3.127 ms
+Mon Nov 10 2025 15:34:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j92e2ZCg7zOkosjSskONy_J8R9D04IpPRqaZjJbTWua0b0R3gMgKYzJUfHCJNq2KlQ&scope=email+profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none 302 - 1779.940 ms
+Mon Nov 10 2025 15:34:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.622 ms
+Mon Nov 10 2025 15:34:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 6.942 ms
+Mon Nov 10 2025 15:34:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 9.359 ms
+Mon Nov 10 2025 15:34:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.910 ms
+Mon Nov 10 2025 15:34:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.235 ms
+Mon Nov 10 2025 15:34:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.233 ms
+Mon Nov 10 2025 15:34:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.338 ms
+Mon Nov 10 2025 15:35:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.111 ms
+Mon Nov 10 2025 15:35:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 7.377 ms
+Mon Nov 10 2025 15:35:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 8.480 ms
+Mon Nov 10 2025 15:35:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 5.606 ms
+Mon Nov 10 2025 15:35:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 5.974 ms
+Mon Nov 10 2025 15:35:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 7.619 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.185 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 1.530 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.685 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.934 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.370 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.649 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 1.820 ms
+Mon Nov 10 2025 15:35:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.026 ms
+Mon Nov 10 2025 15:37:42 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 12.639 ms
+Mon Nov 10 2025 15:37:42 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=termsOfService 200 - 19.359 ms
+Mon Nov 10 2025 15:37:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=privacyPolicy 200 - 3.620 ms
+Mon Nov 10 2025 15:37:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.548 ms
+Mon Nov 10 2025 15:38:29 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 233.766 ms
+Mon Nov 10 2025 15:38:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.110 ms
+Mon Nov 10 2025 15:38:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.787 ms
+Mon Nov 10 2025 15:38:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.030 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.063 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.739 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.661 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.463 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.919 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 1.683 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.208 ms
+Mon Nov 10 2025 15:38:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 5.985 ms
+Mon Nov 10 2025 15:38:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.550 ms
+Mon Nov 10 2025 15:38:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 17.898 ms
+Mon Nov 10 2025 15:38:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.027 ms
+Mon Nov 10 2025 15:38:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 5.548 ms
+Mon Nov 10 2025 15:38:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 10.802 ms
+Mon Nov 10 2025 15:38:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 9.509 ms
+Mon Nov 10 2025 15:38:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.905 ms
+Mon Nov 10 2025 15:38:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 9.456 ms
+Mon Nov 10 2025 15:39:30 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.995 ms
+Mon Nov 10 2025 15:39:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.017 ms
+Mon Nov 10 2025 15:39:33 [SERVER-NAME] info: 10.10.7.62 - GET /image/cee46b462e10d9c4886f067bcbe143ae8f884c1f-1761625450537.jpg 304 - 6.333 ms
+Mon Nov 10 2025 15:39:44 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.626 ms
+Mon Nov 10 2025 15:39:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.841 ms
+Mon Nov 10 2025 15:39:47 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.890 ms
+Mon Nov 10 2025 15:39:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.226 ms
+Mon Nov 10 2025 15:39:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.488 ms
+Mon Nov 10 2025 15:39:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 7.630 ms
+Mon Nov 10 2025 15:39:52 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 8.865 ms
+Mon Nov 10 2025 15:39:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 6.350 ms
+Mon Nov 10 2025 15:39:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 9.078 ms
+Mon Nov 10 2025 15:39:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 14.820 ms
+Mon Nov 10 2025 15:40:4 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 225.473 ms
+Mon Nov 10 2025 15:40:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 7.234 ms
+Mon Nov 10 2025 15:40:8 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.214 ms
+Mon Nov 10 2025 15:40:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 5.059 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.612 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.087 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.518 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.641 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 4.443 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.785 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.358 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.306 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 6.889 ms
+Mon Nov 10 2025 15:40:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.752 ms
+Mon Nov 10 2025 15:40:12 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.000 ms
+Mon Nov 10 2025 15:40:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 6.478 ms
+Mon Nov 10 2025 15:40:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 5.025 ms
+Mon Nov 10 2025 15:40:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 4.074 ms
+Mon Nov 10 2025 15:40:13 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.156 ms
+Mon Nov 10 2025 15:40:15 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 4.723 ms
+Mon Nov 10 2025 15:40:33 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.554 ms
+Mon Nov 10 2025 15:40:34 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.050 ms
+Mon Nov 10 2025 15:40:35 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.707 ms
+Mon Nov 10 2025 15:40:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 4.141 ms
+Mon Nov 10 2025 15:40:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.107 ms
+Mon Nov 10 2025 15:40:36 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 5.643 ms
+Mon Nov 10 2025 15:40:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 8.907 ms
+Mon Nov 10 2025 15:40:38 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 10.379 ms
+Mon Nov 10 2025 15:40:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 7.132 ms
+Mon Nov 10 2025 15:40:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 6.928 ms
+Mon Nov 10 2025 15:44:3 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google 302 - 13.973 ms
+Mon Nov 10 2025 15:44:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/auth/google/callback?code=4%2F0Ab32j91oZDYD2F_rPFhB4Awr_3L696W69wsV_61Vq04t_BFaHVD0KS6lQ3fipTzOp1587Q&scope=email+profile+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.profile+openid+https%3A%2F%2Fwww.googleapis.com%2Fauth%2Fuserinfo.email&authuser=0&prompt=none 302 - 1948.010 ms
+Mon Nov 10 2025 15:44:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.926 ms
+Mon Nov 10 2025 15:44:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.872 ms
+Mon Nov 10 2025 15:44:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 9.098 ms
+Mon Nov 10 2025 15:44:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 7.707 ms
+Mon Nov 10 2025 15:44:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.747 ms
+Mon Nov 10 2025 15:44:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 3.331 ms
+Mon Nov 10 2025 15:44:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 19.688 ms
+Mon Nov 10 2025 15:47:47 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:47:47 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:47:47 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:47:47 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:47:47 [SERVER-NAME] info: [46m♻️  Worker 39972 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:47:47 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 39972[39m
+Mon Nov 10 2025 15:48:55 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:48:55 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:48:55 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:48:55 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:48:55 [SERVER-NAME] info: [46m♻️  Worker 49160 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:48:55 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 49160[39m
+Mon Nov 10 2025 15:48:58 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:48:58 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:48:58 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:48:58 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:48:58 [SERVER-NAME] info: [46m♻️  Worker 44604 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:48:58 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 44604[39m
+Mon Nov 10 2025 15:49:3 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:49:3 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:49:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:49:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:49:3 [SERVER-NAME] info: [46m♻️  Worker 36060 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:49:3 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 36060[39m
+Mon Nov 10 2025 15:49:5 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:49:5 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:49:5 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:49:5 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:49:5 [SERVER-NAME] info: [46m♻️  Worker 51488 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:49:5 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 51488[39m
+Mon Nov 10 2025 15:49:25 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:49:25 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:49:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:49:25 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:49:25 [SERVER-NAME] info: [46m♻️  Worker 44804 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:49:25 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 44804[39m
+Mon Nov 10 2025 15:49:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 31.098 ms
+Mon Nov 10 2025 15:49:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 21.075 ms
+Mon Nov 10 2025 15:49:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 13.515 ms
+Mon Nov 10 2025 15:49:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 8.022 ms
+Mon Nov 10 2025 15:49:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 7.685 ms
+Mon Nov 10 2025 15:49:46 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 11.414 ms
+Mon Nov 10 2025 15:49:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.362 ms
+Mon Nov 10 2025 15:49:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 5.956 ms
+Mon Nov 10 2025 15:49:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 3.738 ms
+Mon Nov 10 2025 15:49:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 2.860 ms
+Mon Nov 10 2025 15:49:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.447 ms
+Mon Nov 10 2025 15:49:53 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 19.476 ms
+Mon Nov 10 2025 15:50:14 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:50:14 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:50:14 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:50:14 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:50:14 [SERVER-NAME] info: [46m♻️  Worker 40756 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:50:14 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 40756[39m
+Mon Nov 10 2025 15:50:20 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:50:20 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:50:20 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:50:20 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:50:20 [SERVER-NAME] info: [46m♻️  Worker 10220 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:50:20 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 10220[39m
+Mon Nov 10 2025 15:55:0 [SERVER-NAME] info: 10.10.7.62 - POST /api/v1/auth/login 200 - 589.371 ms
+Mon Nov 10 2025 15:55:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 22.622 ms
+Mon Nov 10 2025 15:55:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 13.384 ms
+Mon Nov 10 2025 15:55:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 19.528 ms
+Mon Nov 10 2025 15:55:0 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.059 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 14.608 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 16.356 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 5.845 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 19.454 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 14.535 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 15.077 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 15.182 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.634 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 92.468 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 5.982 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 4.492 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories?groupId=68d21f76dd68b7214c680dd0 200 - 4.633 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 9.941 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 21.840 ms
+Mon Nov 10 2025 15:55:1 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f70a47a2b62f7d25c0c204 200 - 8.279 ms
+Mon Nov 10 2025 15:55:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.740 ms
+Mon Nov 10 2025 15:55:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 4.788 ms
+Mon Nov 10 2025 15:55:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list?categoryId=68f5dacd3e9929e57d16319a 200 - 9.556 ms
+Mon Nov 10 2025 15:55:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories 200 - 4.554 ms
+Mon Nov 10 2025 15:55:9 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/active/list 200 - 8.693 ms
+Mon Nov 10 2025 15:55:9 [SERVER-NAME] info: 10.10.7.62 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 200 - 6.379 ms
+Mon Nov 10 2025 15:55:9 [SERVER-NAME] info: 10.10.7.62 - GET /image/lamborghinilogo-1762341809890.png 200 - 1.456 ms
+Mon Nov 10 2025 15:55:16 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 13.518 ms
+Mon Nov 10 2025 15:55:16 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 13.587 ms
+Mon Nov 10 2025 15:55:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 1154.508 ms
+Mon Nov 10 2025 15:55:18 [SERVER-NAME] info: 10.10.7.62 - GET /image/gemini_generated_image_kb8wljkb8wljkb8w-1762344190490.png 304 - 1.448 ms
+Mon Nov 10 2025 15:55:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 18.363 ms
+Mon Nov 10 2025 15:55:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 16.247 ms
+Mon Nov 10 2025 15:55:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 12.872 ms
+Mon Nov 10 2025 15:55:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 13.164 ms
+Mon Nov 10 2025 15:55:18 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 28.875 ms
+Mon Nov 10 2025 15:55:19 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.856 ms
+Mon Nov 10 2025 15:55:19 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 9.318 ms
+Mon Nov 10 2025 15:55:19 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 12.263 ms
+Mon Nov 10 2025 15:55:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 24.624 ms
+Mon Nov 10 2025 15:55:31 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 7.301 ms
+Mon Nov 10 2025 15:55:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 99.649 ms
+Mon Nov 10 2025 15:55:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=60 200 - 6.698 ms
+Mon Nov 10 2025 15:55:32 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=60 200 - 7.059 ms
+Mon Nov 10 2025 15:55:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.249 ms
+Mon Nov 10 2025 15:55:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 10.344 ms
+Mon Nov 10 2025 15:55:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d 200 - 6.599 ms
+Mon Nov 10 2025 15:55:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d?minValue=1&maxValue=60 200 - 8.201 ms
+Mon Nov 10 2025 15:55:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d?minValue=1&maxValue=60 200 - 6.179 ms
+Mon Nov 10 2025 15:55:39 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d 200 - 5.656 ms
+Mon Nov 10 2025 15:55:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 9.153 ms
+Mon Nov 10 2025 15:55:40 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 10.253 ms
+Mon Nov 10 2025 15:55:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.580 ms
+Mon Nov 10 2025 15:55:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=60 200 - 7.236 ms
+Mon Nov 10 2025 15:55:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=60 200 - 6.907 ms
+Mon Nov 10 2025 15:55:41 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 7.350 ms
+Mon Nov 10 2025 15:55:48 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 5.869 ms
+Mon Nov 10 2025 15:55:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 6.401 ms
+Mon Nov 10 2025 15:55:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d 200 - 8.131 ms
+Mon Nov 10 2025 15:55:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d?minValue=1&maxValue=60 200 - 8.592 ms
+Mon Nov 10 2025 15:55:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d?minValue=1&maxValue=60 200 - 5.898 ms
+Mon Nov 10 2025 15:55:49 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d 200 - 5.265 ms
+Mon Nov 10 2025 15:55:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 4.706 ms
+Mon Nov 10 2025 15:55:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 9.101 ms
+Mon Nov 10 2025 15:55:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.051 ms
+Mon Nov 10 2025 15:55:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=60 200 - 5.308 ms
+Mon Nov 10 2025 15:55:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=60 200 - 4.998 ms
+Mon Nov 10 2025 15:55:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 8.622 ms
+Mon Nov 10 2025 15:55:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.561 ms
+Mon Nov 10 2025 15:55:54 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 6.215 ms
+Mon Nov 10 2025 15:55:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=100 200 - 4.444 ms
+Mon Nov 10 2025 15:55:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=100 200 - 11.674 ms
+Mon Nov 10 2025 15:56:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 7.498 ms
+Mon Nov 10 2025 15:56:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 7.389 ms
+Mon Nov 10 2025 15:56:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d 200 - 5.111 ms
+Mon Nov 10 2025 15:56:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d?minValue=1&maxValue=100 200 - 7.003 ms
+Mon Nov 10 2025 15:56:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d?minValue=1&maxValue=100 200 - 5.663 ms
+Mon Nov 10 2025 15:56:5 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5d 200 - 5.781 ms
+Mon Nov 10 2025 15:56:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 5.608 ms
+Mon Nov 10 2025 15:56:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 5.155 ms
+Mon Nov 10 2025 15:56:6 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 6.426 ms
+Mon Nov 10 2025 15:56:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=100 200 - 4.802 ms
+Mon Nov 10 2025 15:56:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c?minValue=1&maxValue=100 200 - 5.852 ms
+Mon Nov 10 2025 15:56:7 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/prediction/690b3cfea60f7e247d3b0f5b/tiers/690b3cfea60f7e247d3b0f5c 200 - 5.843 ms
+Mon Nov 10 2025 15:57:11 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:57:11 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:57:11 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:57:11 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:57:11 [SERVER-NAME] info: [46m♻️  Worker 14500 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:57:11 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 14500[39m
+Mon Nov 10 2025 15:57:18 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 15:57:18 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 15:57:18 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 15:57:19 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 15:57:19 [SERVER-NAME] info: [46m♻️  Worker 2356 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 15:57:19 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 2356[39m
+Mon Nov 10 2025 15:58:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 100.061 ms
+Mon Nov 10 2025 15:58:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/690b3cfea60f7e247d3b0f5b/tiers 200 - 30.590 ms
+Mon Nov 10 2025 15:58:12 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 200 - 609.133 ms
+Mon Nov 10 2025 15:59:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/users/profile 200 - 43.111 ms
+Mon Nov 10 2025 15:59:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 200 - 38.086 ms
+Mon Nov 10 2025 15:59:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/analysis 200 - 15.434 ms
+Mon Nov 10 2025 15:59:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/referrals/code 200 - 6.626 ms
+Mon Nov 10 2025 15:59:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 200 - 14.339 ms
+Mon Nov 10 2025 15:59:11 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 200 - 17.612 ms

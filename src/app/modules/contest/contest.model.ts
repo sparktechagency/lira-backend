@@ -208,7 +208,7 @@ const ContestSchema = new Schema<IContest>({
 
     status: {
         type: String,
-        enum: ['Draft', 'Active', 'Done', 'Deleted', 'Completed'],
+        enum: ['Draft', 'Active', 'Done', 'Deleted', 'Completed','Manual'],
         default: 'Draft'
     },
 
@@ -246,7 +246,24 @@ const ContestSchema = new Schema<IContest>({
             type: Boolean,
             default: false
         },
-        endedAt: { type: Date, default: null }
+        endedAt: { type: Date, default: null },
+        winnerSelectionMode: {
+            type: String,
+            enum: ['auto', 'manual'],
+            default: 'auto'
+        },
+        autoSelectionAttempted: {
+            type: Boolean,
+            default: false
+        },
+        autoSelectionFailedAt: {
+            type: Date,
+            default: null
+        },
+        manualSelectionBy: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'User'
+        }
     }
 }, {
     timestamps: true

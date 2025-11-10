@@ -39,8 +39,12 @@ const settingsSchema = new Schema<ISettings>(
                linkedin: {
                     type: String,
                     default: '',
-               },
+               }
           },
+          note: {
+               type: String,
+               default: '',
+          }
      },
      { timestamps: true },
 );

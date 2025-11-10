@@ -1,0 +1,30 @@
+Mon Nov 10 2025 18:38:2 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 18:38:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 18:38:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 18:38:2 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 18:38:2 [SERVER-NAME] info: [46m♻️  Worker 23968 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 18:38:2 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 23968[39m
+Mon Nov 10 2025 18:38:13 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 18:38:13 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 18:38:13 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 18:38:13 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 18:38:13 [SERVER-NAME] info: [46m♻️  Worker 752 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 18:38:13 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 752[39m
+Mon Nov 10 2025 18:38:22 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 18:38:22 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 18:38:22 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 18:38:23 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 18:38:23 [SERVER-NAME] info: [46m♻️  Worker 9968 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 18:38:23 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 9968[39m
+Mon Nov 10 2025 18:38:25 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 18:38:25 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 18:38:25 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 18:38:25 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 18:38:25 [SERVER-NAME] info: [46m♻️  Worker 13820 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 18:38:25 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 13820[39m
+Mon Nov 10 2025 18:38:28 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Mon Nov 10 2025 18:38:28 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Mon Nov 10 2025 18:38:28 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Mon Nov 10 2025 18:38:28 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Mon Nov 10 2025 18:38:28 [SERVER-NAME] info: [46m♻️  Worker 21528 listening on http://10.10.7.62:5000[49m
+Mon Nov 10 2025 18:38:28 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 21528[39m

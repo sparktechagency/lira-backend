@@ -1,0 +1,220 @@
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [44m[37m[39m[49m
+[44m[37m============================================================[39m[49m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [44m[37m  MASTER PROCESS 33756 STARTING  [39m[49m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [44m[37m  Workers: 12 | CPUs: 12  [39m[49m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [44m[37m============================================================[39m[49m
+[44m[37m[39m[49m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 1/12 (PID: 41740)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 2/12 (PID: 35720)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 3/12 (PID: 30928)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 4/12 (PID: 14696)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 5/12 (PID: 14244)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 6/12 (PID: 19652)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 7/12 (PID: 27612)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 8/12 (PID: 18444)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 9/12 (PID: 37060)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 10/12 (PID: 14968)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 11/12 (PID: 15080)[39m
+Tue Nov 11 2025 11:46:54 [SERVER-NAME] info: [36m🔧 Forking worker 12/12 (PID: 11040)[39m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [34mWorker 14696 initializing...[39m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [42m[37m✅ Worker 14696 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [34mWorker 27612 initializing...[39m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [42m[37m✅ Worker 27612 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [34mWorker 14968 initializing...[39m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [42m[37m✅ Worker 14968 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:1 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 41740 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 41740 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 35720 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 35720 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 30928 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 30928 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 19652 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 19652 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 37060 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 37060 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 18444 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 18444 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 15080 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 15080 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] error: [31mWorker 14696 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 14244 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 14244 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [34mWorker 11040 initializing...[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [42m[37m✅ Worker 11040 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] error: [31mWorker 35720 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 27612 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 19652 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 41740 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 14968 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 30928 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 18444 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 15080 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 37060 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 11040 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31mWorker 14244 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] info: [33m🔄 Restarting worker in 5000ms (attempt 1/5)[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 6864 forked to replace 14696[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 8268 forked to replace 35720[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 31260 forked to replace 27612[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 32744 forked to replace 19652[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 38816 forked to replace 41740[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 14316 forked to replace 14968[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 17756 forked to replace 18444[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 13356 forked to replace 30928[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 14696 forked to replace 37060[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 12776 forked to replace 15080[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 35568 forked to replace 11040[39m
+Tue Nov 11 2025 11:47:8 [SERVER-NAME] info: [36m🔧 New worker 40344 forked to replace 14244[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 14696 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 14696 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 35568 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 35568 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 31260 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 31260 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 17756 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 17756 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 8268 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 8268 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 38816 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 38816 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 12776 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 12776 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 14316 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 14316 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 6864 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 6864 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 40344 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 40344 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 32744 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 32744 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [34mWorker 13356 initializing...[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [42m[37m✅ Worker 13356 Process handlers registered successfully[39m[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] error: [31mWorker 14696 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 31260 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 17756 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 8268 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 6864 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 40344 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 35568 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 32744 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 38816 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 13356 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 14316 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31mWorker 12776 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] info: [33m🔄 Restarting worker in 10000ms (attempt 2/5)[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 36092 forked to replace 14696[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 32056 forked to replace 31260[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 6344 forked to replace 17756[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 29272 forked to replace 8268[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 32712 forked to replace 6864[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 19212 forked to replace 32744[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 5944 forked to replace 40344[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 29800 forked to replace 35568[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 41444 forked to replace 38816[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 35972 forked to replace 13356[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 33240 forked to replace 14316[39m
+Tue Nov 11 2025 11:47:26 [SERVER-NAME] info: [36m🔧 New worker 32928 forked to replace 12776[39m
+Tue Nov 11 2025 11:47:29 [SERVER-NAME] info: [43m[30m[39m[49m
+[43m[30m============================================================[39m[49m
+Tue Nov 11 2025 11:47:39 [SERVER-NAME] warn: Process handlers should not be set up in master process
+Tue Nov 11 2025 11:47:39 [SERVER-NAME] info: [32mConfig validation successful.[39m
+Tue Nov 11 2025 11:47:40 [SERVER-NAME] info: [46m🚀 Database connected successfully[49m
+Tue Nov 11 2025 11:47:40 [SERVER-NAME] info: [44m🚀 Agenda started successfully[49m
+Tue Nov 11 2025 11:47:40 [SERVER-NAME] info: [46m♻️  Worker 29820 listening on http://10.10.7.62:5000[49m
+Tue Nov 11 2025 11:47:40 [SERVER-NAME] info: [33m♻️  Socket.IO ready on worker 29820[39m
+Tue Nov 11 2025 11:47:45 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/contest/contest/690b3cfea60f7e247d3b0f5b 200 - 45.644 ms
+Tue Nov 11 2025 11:51:17 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=note 200 - 13.409 ms

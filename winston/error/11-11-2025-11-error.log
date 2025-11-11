@@ -1,0 +1,48 @@
+Tue Nov 11 2025 11:47:2 [SERVER-NAME] error: [31m❌ Worker 14696 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 14696 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 35720 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 27612 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 35720 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 27612 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 19652 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 41740 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 19652 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 14968 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 41740 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 30928 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 14968 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 18444 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 18444 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 30928 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 15080 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 37060 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 37060 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 11040 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 15080 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 14244 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 11040 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:3 [SERVER-NAME] error: [31m❌ Worker 14244 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:15 [SERVER-NAME] error: [31m❌ Worker 14696 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 14696 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 31260 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 31260 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 17756 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 8268 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 17756 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 8268 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 6864 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 40344 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 32744 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 35568 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 6864 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 38816 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 32744 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 40344 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 35568 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 13356 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 38816 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 14316 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 12776 failed to start:[39m bind EADDRNOTAVAIL 72.61.4.146:5000
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 13356 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 14316 exited with error code: 1[39m
+Tue Nov 11 2025 11:47:16 [SERVER-NAME] error: [31m❌ Worker 12776 exited with error code: 1[39m

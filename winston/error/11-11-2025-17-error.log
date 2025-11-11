@@ -1,0 +1,2 @@
+Tue Nov 11 2025 17:32:23 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 400 - 101.725 ms
+Tue Nov 11 2025 17:34:17 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/contest/crypto/price-history?crypto=Ethereum&days=365 400 - 42.695 ms

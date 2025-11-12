@@ -1,0 +1,4 @@
+Wed Nov 12 2025 5:45:16 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 10.279 ms
+Wed Nov 12 2025 5:45:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 6.717 ms
+Wed Nov 12 2025 5:45:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 3.252 ms
+Wed Nov 12 2025 5:45:20 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 2.041 ms

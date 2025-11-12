@@ -208,7 +208,7 @@ const ContestSchema = new Schema<IContest>({
 
     status: {
         type: String,
-        enum: ['Draft', 'Active', 'Done', 'Deleted', 'Completed','Manual'],
+        enum: ['Draft', 'Active', 'Done', 'Deleted', 'Completed', 'Manual', 'Canceled'],
         default: 'Draft'
     },
 

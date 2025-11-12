@@ -1,0 +1,10 @@
+Tue Nov 11 2025 22:12:12 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 3.090 ms
+Tue Nov 11 2025 22:24:6 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 2.822 ms
+Tue Nov 11 2025 22:38:10 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 2.895 ms
+Tue Nov 11 2025 22:38:30 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 0.710 ms
+Tue Nov 11 2025 22:38:30 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/analysis 401 - 1.457 ms
+Tue Nov 11 2025 22:38:30 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/my-orders?limit=2&page=1 401 - 0.998 ms
+Tue Nov 11 2025 22:38:31 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=1 401 - 1.442 ms
+Tue Nov 11 2025 22:38:31 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 401 - 0.772 ms
+Tue Nov 11 2025 22:54:25 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 14.296 ms
+Tue Nov 11 2025 22:55:55 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 1.654 ms

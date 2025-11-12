@@ -99,7 +99,7 @@ export interface IContest extends Document {
     endTime: Date;
     image?: string;
     endOffsetTime: Date;
-    status: 'Draft' | 'Published' | 'Active' | 'Deleted' | 'Completed';
+    status: 'Draft' | 'Published' | 'Active' | 'Deleted' | 'Completed' | "Canceled";
     totalEntries: number;
     maxEntries?: number;
     createdBy?: Types.ObjectId;

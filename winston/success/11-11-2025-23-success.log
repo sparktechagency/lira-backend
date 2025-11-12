@@ -1,0 +1,10 @@
+Tue Nov 11 2025 23:1:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=aboutUs 200 - 4.189 ms
+Tue Nov 11 2025 23:1:37 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 2.298 ms
+Tue Nov 11 2025 23:11:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 13.058 ms
+Tue Nov 11 2025 23:11:55 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 4.080 ms
+Tue Nov 11 2025 23:11:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/groups 200 - 1.881 ms
+Tue Nov 11 2025 23:11:56 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/categories/?groupId=68d21f76dd68b7214c680dd0 200 - 2.617 ms
+Tue Nov 11 2025 23:36:50 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 25.574 ms
+Tue Nov 11 2025 23:55:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=aboutUs 200 - 18.567 ms
+Tue Nov 11 2025 23:55:57 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 6.816 ms
+Tue Nov 11 2025 23:56:51 [SERVER-NAME] info: 10.10.7.62 - GET /api/v1/settings?key=social 200 - 3.055 ms

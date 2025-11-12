@@ -1,0 +1,6 @@
+Wed Nov 12 2025 0:6:11 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 9.299 ms
+Wed Nov 12 2025 0:6:11 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-orders?limit=3&page=async()=%3E{let%20a=await%20(0,u.A)(`/orders/past-orders?limit=3&page=${w}`,{method:%22GET%22,cache:%22no-store%22}),{data:b}=await%20(0,u.A)(%22/orders/past-order-analysis%22,{method:%22GET%22}),c=[{value:b?.totalEntries,label:%22Entries%22},{value:b?.totalContest,label:%22Contests%22,value2:b?.totalWon,label2:%22Won%22},{value:`$%20${b?.totalWin}`,label:%22Earnings%22}];return(0,d.jsx)(%22section%22,{children:(0,d.jsx)(v.A,{children:(0,d.jsx)(t,{statsData:c,allPastContests:a?.data})})})} 401 - 1.928 ms
+Wed Nov 12 2025 0:6:11 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/orders/past-order-analysis 401 - 1.027 ms
+Wed Nov 12 2025 0:16:37 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 10.379 ms
+Wed Nov 12 2025 0:27:24 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 25.584 ms
+Wed Nov 12 2025 0:32:8 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 0.990 ms

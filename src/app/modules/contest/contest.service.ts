@@ -83,6 +83,15 @@ const getContestById = async (id: string) => {
     }
     return result;
 };
+const updateStatus = async (id: string, status: string) => {
+    const result = await Contest.findByIdAndUpdate(id, { status }, {
+        new: true,
+    });
+    if (!result) {
+        throw new AppError(StatusCodes.BAD_REQUEST, 'Contest update failed');
+    }
+    return result;
+}
 const updateContest = async (id: string, payload: Partial<IContest>) => {
 
 
@@ -678,6 +687,44 @@ const getContestByIdUser = async (id: string, userId: string) => {
     }
     return data;
 }
+const getContestByIdAdmin = async (id: string, userId: string) => {
+    // Run queries in parallel for better performance
+    const [isExistUser, result] = await Promise.all([
+        User.findById(userId).select('state role').lean(),
+        Contest.findById(id).lean()
+    ]);
+
+    // Check user exists
+    if (!isExistUser) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'User not found');
+    }
+
+    // Check contest exists
+    if (!result) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+
+    // Implement state-based access control
+    if (isExistUser.role === USER_ROLES.SUPER_ADMIN) {
+        return result;
+    }
+    const minValue = result?.predictions?.generatedPredictions?.[0]?.value;
+    const maxValue = result?.predictions?.generatedPredictions?.[result.predictions.generatedPredictions.length - 1]?.value;
+    // if (!result.state.includes(isExistUser.state as US_STATES)) {
+    //     throw new AppError(
+    //         StatusCodes.FORBIDDEN,
+    //         'This contest is not available in your state'
+    //     );
+    // }
+    const getCategory = await Category.findById(result.categoryId);
+    const data = {
+        ...result,
+        minValue,
+        maxValue,
+        group: getCategory?.group
+    }
+    return data;
+}
 
 const getContestByCategoryId = async (id: string) => {
     const result = await Contest.find({ categoryId: id }).sort("serial").select("name category createdBy createdAt updatedAt maxEntries endTime status categoryId serial");
@@ -1042,4 +1089,4 @@ const getUnifiedForecastData = async (query: Record<string, unknown>) => {
     }
 };
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getEnergyData, getUnifiedForecastData, shuffleContestSerial }
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getEnergyData, getUnifiedForecastData, shuffleContestSerial, getContestByIdAdmin, updateStatus }

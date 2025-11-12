@@ -96,7 +96,7 @@ const getPredictionTiers = catchAsync(async (req, res) => {
     const minValueNum = minValue ? Number(minValue) : undefined;
     const maxValueNum = maxValue ? Number(maxValue) : undefined;
     const searchValueNum = searchValue ? Number(searchValue) : undefined;
-    
+
     const result = await ContestService.getPredictionTiers(contestId, tierId, minValueNum, maxValueNum, searchValueNum);
 
     sendResponse(res, {
@@ -118,7 +118,18 @@ const publishContest = catchAsync(async (req, res) => {
         data: result
     });
 });
+const updateStatus = catchAsync(async (req, res) => {
 
+    const { id } = req.params;
+    const { status } = req.body;
+    const result = await ContestService.updateStatus(id, status);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest status updated successfully',
+        data: result
+    });
+})
 const getTiersContest = catchAsync(async (req, res) => {
     const { id } = req.params;
     const result = await ContestService.getTiersContest(id);
@@ -135,6 +146,18 @@ const getContestByIdUser = catchAsync(async (req, res) => {
     const { id } = req.params;
     const { id: userId } = req.user as { id: string };
     const result = await ContestService.getContestByIdUser(id, userId);
+
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest retrieved successfully',
+        data: result
+    });
+});
+const getContestByIdByAdmin = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const { id: userId } = req.user as { id: string };
+    const result = await ContestService.getContestByIdAdmin(id, userId);
 
     sendResponse(res, {
         success: true,
@@ -277,5 +300,7 @@ export const ContestController = {
     getEntertainmentData,
     getUnifiedForecastData,
     getEnergyData,
-    shuffleContestSerial
+    shuffleContestSerial,
+    getContestByIdByAdmin,
+    updateStatus
 };

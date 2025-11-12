@@ -26,7 +26,11 @@ router.get(
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     ContestController.getAllContests
 );
-
+router.patch(
+    '/:id/update-status',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.updateStatus
+);
 router.get(
     '/category/:id',
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
@@ -82,6 +86,7 @@ router.get('/unified/forecast', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROL
 // Energy data route
 
 router.get('/contest/:id', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getContestByIdUser);
+router.get('/contest/admin/:id', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getContestByIdByAdmin);
 router.get('/:id/tiers', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getTiersContest);
 router.get('/contest/prediction/:contestId/tiers/:tierId', auth(USER_ROLES.USER, USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN), ContestController.getPredictionTiers);
 

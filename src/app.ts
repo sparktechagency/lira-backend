@@ -24,7 +24,7 @@ app.use(Morgan.errorHandler);
 //body parser
 app.use(
      cors({
-          origin: ['https://www.liramarkets.com', "https://liramarkets.com",'http://10.10.7.14:3000'],
+          origin: true,
           credentials: true,
      }),
 );

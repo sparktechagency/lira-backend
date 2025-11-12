@@ -262,7 +262,8 @@ const ContestSchema = new Schema<IContest>({
         },
         manualSelectionBy: {
             type: mongoose.Schema.Types.ObjectId,
-            ref: 'User'
+            ref: 'User',
+            default: null
         }
     }
 }, {

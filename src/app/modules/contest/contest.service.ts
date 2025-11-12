@@ -1098,6 +1098,16 @@ const copyContest = async (id: string) => {
     newContest.status = 'Draft';
     newContest._id = new Types.ObjectId();
     newContest.predictions.generatedPredictions = [];
+    newContest.results = {
+        actualValue: undefined,
+        winningPredictions: [],
+        prizeDistributed: false,
+        endedAt: null,
+        winnerSelectionMode: 'auto',
+        autoSelectionAttempted: false,
+        autoSelectionFailedAt: null,
+        manualSelectionBy: null,
+    };
     await newContest.save();
     return newContest;
 }

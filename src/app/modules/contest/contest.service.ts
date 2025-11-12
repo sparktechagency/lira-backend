@@ -1089,4 +1089,17 @@ const getUnifiedForecastData = async (query: Record<string, unknown>) => {
     }
 };
 
-export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getEnergyData, getUnifiedForecastData, shuffleContestSerial, getContestByIdAdmin, updateStatus }
+const copyContest = async (id: string) => {
+    const existingContest = await Contest.findById(id);
+    if (!existingContest) {
+        throw new AppError(StatusCodes.NOT_FOUND, 'Contest not found');
+    }
+    const newContest = new Contest(existingContest.toObject());
+    newContest.status = 'Draft';
+    newContest._id = new Types.ObjectId();
+    newContest.predictions.generatedPredictions = [];
+    await newContest.save();
+    return newContest;
+}
+
+export const ContestService = { createContest, getAllContests, getContestById, updateContest, deleteContest, publishContest, generateContestPredictions, getActiveContests, getPredictionTiers, getTiersContest, getContestByIdUser, getContestByCategoryId, getCryptoNews, getCryptoPriceHistory, getStockPriceHistory, getEconomicData, getSportsData, getEntertainmentData, getEnergyData, getUnifiedForecastData, shuffleContestSerial, getContestByIdAdmin, updateStatus, copyContest }

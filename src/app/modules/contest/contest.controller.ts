@@ -277,6 +277,16 @@ const getEnergyData = catchAsync(async (req, res) => {
     });
 });
 
+const copyContest = catchAsync(async (req, res) => {
+    const { id } = req.params;
+    const result = await ContestService.copyContest(id);
+    sendResponse(res, {
+        success: true,
+        statusCode: StatusCodes.OK,
+        message: 'Contest copied successfully',
+        data: result
+    });
+});
 
 
 export const ContestController = {
@@ -302,5 +312,6 @@ export const ContestController = {
     getEnergyData,
     shuffleContestSerial,
     getContestByIdByAdmin,
-    updateStatus
+    updateStatus,
+    copyContest,
 };

@@ -68,6 +68,11 @@ router.patch(
     auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
     ContestController.publishContest
 );
+router.post(
+    '/:id/copy',
+    auth(USER_ROLES.ADMIN, USER_ROLES.SUPER_ADMIN),
+    ContestController.copyContest
+);
 
 
 

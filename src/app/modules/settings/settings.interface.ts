@@ -13,5 +13,4 @@ export interface ISettings extends Document {
           instagram: string;
           linkedin: string;
      };
-     note: string;
 }

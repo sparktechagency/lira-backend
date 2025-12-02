@@ -4,6 +4,7 @@ import { Order } from '../app/modules/order/order.model';
 import { printBanner } from './printBanner';
 import config from '../config';
 import { contestResultService } from '../app/modules/result/result.service';
+import { logger } from '../shared/logger';
 
 /**
  * Determines winners for contests that have ended
@@ -19,9 +20,9 @@ const determineContestWinners = async () => {
           const now = new Date();
           console.log(now, 'Checking for contests that need winner determination...');
           const endedContests = await Contest.find({
-               status: 'Active',
-               endTime: { $lte: now },
-               'results.prizeDistributed': false
+               'status': 'Active',
+               'endTime': { $lte: now },
+               'results.prizeDistributed': false,
           });
 
           if (endedContests.length === 0) {
@@ -39,7 +40,6 @@ const determineContestWinners = async () => {
                     // Continue with next contest even if one fails
                }
           }
-
      } catch (error) {
           console.error('❌ Error in winner determination cron job:', error);
      }
@@ -65,7 +65,7 @@ const processContestWinners = async (contest: any) => {
      const contestOrders = await Order.find({
           contestId: contest._id,
           status: { $nin: ['cancelled'] },
-          isDeleted: false
+          isDeleted: false,
      }).populate('userId', 'name email');
 
      if (contestOrders.length === 0) {
@@ -101,7 +101,6 @@ const processContestWinners = async (contest: any) => {
  */
 const fetchActualResultValue = async (contest: any): Promise<number | null> => {
      try {
-
           // Use the service to fetch the result
           return await contestResultService.fetchContestResult(contest);
      } catch (error) {
@@ -115,38 +114,48 @@ const fetchActualResultValue = async (contest: any): Promise<number | null> => {
  */
 const calculateWinners = (orders: any[], actualValue: number, contest: any) => {
      // Calculate absolute difference for each prediction
-     const predictions = orders.flatMap(order => {
+     const predictions = orders.flatMap((order) => {
           // Handle both prediction formats
-          const allPredictions = [
-               ...(order.predictions || []),
-               ...(order.customPrediction || [])
-          ];
+          const allPredictions = [...(order.predictions || []), ...(order.customPrediction || [])];
 
-          return allPredictions.map(pred => ({
+          return allPredictions.map((pred) => ({
                orderId: order._id,
                userId: order.userId,
                predictionValue: pred.predictionValue,
                price: pred.price,
-               difference: Math.abs(pred.predictionValue - actualValue)
+               difference: Math.abs(pred.predictionValue - actualValue),
+               // 🆕 Use individual prediction time if available, otherwise order creation time
+               timestamp: pred.createdAt || order.createdAt,
           }));
      });
 
-     // Sort by difference (closest first)
-     predictions.sort((a, b) => a.difference - b.difference);
+     // 🆕 Sort by difference first, then by timestamp (earliest wins on tie)
+     predictions.sort((a, b) => {
+          if (a.difference !== b.difference) {
+               return a.difference - b.difference; // Closest prediction first
+          }
+          // If same difference, earlier timestamp wins
+          return new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime();
+     });
+
+     // 🆕 Log if there are ties detected
+     const tieCount = predictions.filter((pred, idx) => idx > 0 && pred.difference === predictions[idx - 1].difference).length;
+
+     if (tieCount > 0) {
+          console.log(`⚖️ Detected ${tieCount} tie(s) - resolved by timestamp (first prediction wins)`);
+     }
 
      // Get place percentages from contest
      const placePercentages = contest.predictions.placePercentages || new Map();
      const prizePool = contest.prize.prizePool;
 
      // Determine number of winners based on place percentages
-     const places = Array.from(placePercentages.keys()).sort((a, b) =>
-          parseInt(a as string) - parseInt(b as string)
-     );
+     const places = Array.from(placePercentages.keys()).sort((a, b) => parseInt(a as string) - parseInt(b as string));
 
      const winners: any[] = [];
      const winningOrderIds: any[] = [];
 
-     places.forEach(place => {
+     places.forEach((place) => {
           const placeIndex = parseInt(place as string) - 1;
           if (predictions[placeIndex]) {
                const pred = predictions[placeIndex];
@@ -161,11 +170,18 @@ const calculateWinners = (orders: any[], actualValue: number, contest: any) => {
                     actualValue: actualValue,
                     difference: pred.difference,
                     prizeAmount: prizeAmount,
-                    percentage: percentage
+                    percentage: percentage,
+                    timestamp: pred.timestamp, // 🆕 Include timestamp in winner data
                });
 
                winningOrderIds.push(pred.orderId);
           }
+     });
+
+     // 🆕 Enhanced logging for winners
+     logger.info(`🏆 Winners determined:`);
+     winners.forEach((w) => {
+          logger.info(`   Place ${w.place}: Prediction ${w.predictionValue}, Diff: ${w.difference}, Time: ${new Date(w.timestamp).toISOString()}`);
      });
 
      return { winners, winningOrderIds };
@@ -175,20 +191,21 @@ const calculateWinners = (orders: any[], actualValue: number, contest: any) => {
  * Update order statuses based on win/loss
  */
 const updateOrderStatuses = async (orders: any[], winningOrderIds: any[], winners: any[]) => {
-     // const winningIds = winningOrderIds.map(id => id.toString());
      for (const order of orders) {
-          // const user = await User.findById(order.userId);
-          // const isWinner = winningIds.includes(order._id.toString());
-            const isWinner = winningOrderIds.some(id => id.equals(order._id));
+          const isWinner = winningOrderIds.some((id) => id.equals(order._id));
+          const winnerData = isWinner ? winners.find((w) => w.orderId.equals(order._id)) : null;
+
           order.status = isWinner ? 'won' : 'lost';
           order.result = {
-               place: isWinner ? winners.find(w => w.orderId === order._id).place : null,
-               predictionValue: isWinner ? winners.find(w => w.orderId === order._id).predictionValue : 0,
-               actualValue: isWinner ? winners.find(w => w.orderId === order._id).actualValue : 0,
-               difference: isWinner ? winners.find(w => w.orderId === order._id).difference : 0,
-               prizeAmount: isWinner ? winners.find(w => w.orderId === order._id).prizeAmount : 0,
-               percentage: isWinner ? winners.find(w => w.orderId === order._id).percentage : 0
-          }
+               place: winnerData?.place || null,
+               predictionValue: winnerData?.predictionValue || 0,
+               actualValue: winnerData?.actualValue || 0,
+               difference: winnerData?.difference || 0,
+               prizeAmount: winnerData?.prizeAmount || 0,
+               percentage: winnerData?.percentage || 0,
+               predictionTime: winnerData?.timestamp || null, // 🆕 Store prediction time
+          };
+
           await order.save();
      }
 };

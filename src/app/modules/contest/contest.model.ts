@@ -108,6 +108,11 @@ const ContestSchema = new Schema<IContest>({
         trim: true,
         maxlength: [1000, 'Description cannot exceed 1000 characters']
     },
+    rule: {
+        type: String,
+        required: [true, 'Rule is required'],
+        trim: true
+    },
     state: [{
         type: String,
         required: true

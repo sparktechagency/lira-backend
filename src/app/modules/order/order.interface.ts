@@ -10,11 +10,13 @@ export interface IProductOrder extends Document {
           predictionValue: number;
           tierId: string;
           price: number;
+          createdAt: Date;
      }>;
      customPrediction: Array<{
           predictionValue: number;
           tierId: string;
           price: number;
+          createdAt: Date;
      }>;
      categoryId: Types.ObjectId;
      category: string;

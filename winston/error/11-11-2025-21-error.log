@@ -1,7 +1,0 @@
-Tue Nov 11 2025 21:10:30 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/faqs 401 - 27.904 ms
-Tue Nov 11 2025 21:10:30 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 2.859 ms
-Tue Nov 11 2025 21:21:6 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 1.321 ms
-Tue Nov 11 2025 21:28:31 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 1.253 ms
-Tue Nov 11 2025 21:29:4 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 1.499 ms
-Tue Nov 11 2025 21:42:8 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 2.138 ms
-Tue Nov 11 2025 21:49:48 [SERVER-NAME] error: 10.10.7.62 - GET /api/v1/users/profile 401 - 0.921 ms

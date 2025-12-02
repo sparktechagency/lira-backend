@@ -40,10 +40,6 @@ const settingsSchema = new Schema<ISettings>(
                     type: String,
                     default: '',
                }
-          },
-          note: {
-               type: String,
-               default: '',
           }
      },
      { timestamps: true },
